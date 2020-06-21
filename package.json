@@ -11,14 +11,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/camunda/camunda-modeler-plugin-example.git"
+    "url": "git+https://github.com/FlowSquad/camunda-modeler-i18n-plugin.git"
   },
   "keywords": [
     "camunda",
     "modeler",
     "plugin"
   ],
-  "author": "Philipp Fromme",
+  "author": "Dominik Horn",
   "license": "MIT",
   "devDependencies": {
     "camunda-modeler-plugin-helpers": "^3.1.0",
