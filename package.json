@@ -1,0 +1,29 @@
+{
+  "name": "camunda-modeler-i18n-plugin",
+  "version": "1.0.0",
+  "description": "An i18n plugin for the Camunda Modeler",
+  "main": "index.js",
+  "scripts": {
+    "all": "run-s bundle",
+    "bundle": "webpack",
+    "dev": "webpack -w",
+    "prepublishOnly": "run-s bundle"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camunda/camunda-modeler-plugin-example.git"
+  },
+  "keywords": [
+    "camunda",
+    "modeler",
+    "plugin"
+  ],
+  "author": "Philipp Fromme",
+  "license": "MIT",
+  "devDependencies": {
+    "camunda-modeler-plugin-helpers": "^3.1.0",
+    "npm-run-all": "^4.1.5",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.12"
+  }
+}
