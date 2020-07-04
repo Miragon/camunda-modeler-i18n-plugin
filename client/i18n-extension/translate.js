@@ -4,10 +4,13 @@ export default function Translator(eventBus, I18N) {
 
   var currentLanguage = de;
 
-  console.log(eventBus);
-  eventBus.on("language.changed", () =>{
-    console.log("test")
-    eventBus.fire('i18n.changed');
+
+  eventBus.on('editorActions.init', function(event) {
+    var editorActions = event.editorActions;
+
+    editorActions.register('language.changed', function() {
+      console.log("language.changed")
+    });
   });
 
    return (template, type) => {
