@@ -99,7 +99,8 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /* harmony default export */ __webpack_exports__["default"] = ({
-  translate: [ 'value', _translate__WEBPACK_IMPORTED_MODULE_0__["default"] ],
+  __init__: [ 'translate' ],
+  translate: [ 'type', _translate__WEBPACK_IMPORTED_MODULE_0__["default"] ]
 });
 
 
@@ -234,15 +235,26 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return translate; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Translator; });
 /* harmony import */ var _languages_de_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./languages/de.js */ "./client/i18n-extension/languages/de.js");
 
 
-function translate(template) {
+function Translator(eventBus, I18N) {
 
-  console.log(template);
-  return _languages_de_js__WEBPACK_IMPORTED_MODULE_0__["default"][template] || template;
+  var currentLanguage = _languages_de_js__WEBPACK_IMPORTED_MODULE_0__["default"];
+
+  console.log(eventBus);
+  eventBus.on("language.changed", () =>{
+    console.log("test")
+    eventBus.fire('i18n.changed');
+  });
+
+   return (template, type) => {
+    return currentLanguage[template] || template;
+  }
 }
+
+Translator.$inject = ['eventBus'];
 
 /***/ }),
 

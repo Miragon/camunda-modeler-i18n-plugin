@@ -1,5 +1,6 @@
 import translate from './translate';
 
 export default {
-  translate: [ 'value', translate ],
+  __init__: [ 'translate' ],
+  translate: [ 'type', translate ]
 };
