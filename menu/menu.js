@@ -1,6 +1,11 @@
 'use strict';
 
 module.exports = function(electronApp, menuState) {
+
+
+
+
+
     return [{
         label: 'Deutsch',
         enabled: function() {
@@ -12,7 +17,7 @@ module.exports = function(electronApp, menuState) {
         }
     },
         {
-            label: 'Englisch',
+            label: 'English',
             enabled: function() {
                 return true;
             },

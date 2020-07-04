@@ -2,7 +2,7 @@ export default {
 
     // Labels
     'General' : 'Teststring',
-    'Create StartEvent' : 'Startereignis erstellen',
+    'Create StartEvent' : 'Startereignis fsdfdsa',
     'Activate the global connect tool' : 'Globales Verbindungswerkzeug aktivieren',
     'Append {type}': '{type} anfügen',
     'Add Lane above': 'Lane oberhalb hinzufügen',
@@ -15,7 +15,7 @@ export default {
     'Connect using Sequence/MessageFlow or Association': 'Mit Sequenzfluss/Nachrichtenfluss oder Assoziation verbinden',
     'Connect using DataInputAssociation': 'Mit DataInputAssociation verbinden',
     'Remove': 'Löschen',
-    'Activate the hand tool': 'Hand-Tool aktivieren',
+    'Activate the hand tool': 'Hand-Tool fdsfdsa',
     'Activate the lasso tool': 'Lasso-Tool aktivieren',
     'Activate the create/remove space tool': 'Platz-hinzufügen/entfernen-Tool aktivieren',
     'Create expanded SubProcess': 'Erweiterten SubProcess erzeugen',
