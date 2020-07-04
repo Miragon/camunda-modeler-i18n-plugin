@@ -86,10 +86,29 @@
 /************************************************************************/
 /******/ ({
 
-/***/ "./client/i18n-extension/de.js":
-/*!*************************************!*\
-  !*** ./client/i18n-extension/de.js ***!
-  \*************************************/
+/***/ "./client/i18n-extension/index.js":
+/*!****************************************!*\
+  !*** ./client/i18n-extension/index.js ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _translate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./translate */ "./client/i18n-extension/translate.js");
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  translate: [ 'value', _translate__WEBPACK_IMPORTED_MODULE_0__["default"] ],
+});
+
+
+/***/ }),
+
+/***/ "./client/i18n-extension/languages/de.js":
+/*!***********************************************!*\
+  !*** ./client/i18n-extension/languages/de.js ***!
+  \***********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -206,25 +225,6 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./client/i18n-extension/index.js":
-/*!****************************************!*\
-  !*** ./client/i18n-extension/index.js ***!
-  \****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _translate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./translate */ "./client/i18n-extension/translate.js");
-
-
-/* harmony default export */ __webpack_exports__["default"] = ({
-  translate: [ 'value', _translate__WEBPACK_IMPORTED_MODULE_0__["default"] ]
-});
-
-
-/***/ }),
-
 /***/ "./client/i18n-extension/translate.js":
 /*!********************************************!*\
   !*** ./client/i18n-extension/translate.js ***!
@@ -235,19 +235,13 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return translate; });
-/* harmony import */ var _de_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./de.js */ "./client/i18n-extension/de.js");
+/* harmony import */ var _languages_de_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./languages/de.js */ "./client/i18n-extension/languages/de.js");
 
 
-function translate(template, replacements) {
-  replacements = replacements || {};
+function translate(template) {
 
-  // Translate
-  template = _de_js__WEBPACK_IMPORTED_MODULE_0__["default"][template] || template;
-
-  // Replace
-  return template.replace(/{([^}]+)}/g, function(_, key) {
-    return replacements[key] || '{' + key + '}';
-  });
+  console.log(template);
+  return _languages_de_js__WEBPACK_IMPORTED_MODULE_0__["default"][template] || template;
 }
 
 /***/ }),

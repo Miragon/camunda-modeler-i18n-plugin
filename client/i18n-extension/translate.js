@@ -1,13 +1,7 @@
-import translations from "./language.js"
+import translations from "./languages/de.js"
 
-export default function translate(template, replacements) {
-  replacements = replacements || {};
+export default function translate(template) {
 
-  // Translate
-  template = translations[template] || template;
-
-  // Replace
-  return template.replace(/{([^}]+)}/g, function(_, key) {
-    return replacements[key] || '{' + key + '}';
-  });
+  console.log(template);
+  return translations[template] || template;
 }
