@@ -190,113 +190,448 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony default export */ __webpack_exports__["default"] = ({
+/* harmony import */ var _de_bpmn_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./de/bpmn-js */ "./client/i18n-extension/languages/de/bpmn-js.js");
+/* harmony import */ var _de_dmn_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./de/dmn-js */ "./client/i18n-extension/languages/de/dmn-js.js");
+/* harmony import */ var _de_properties_panel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./de/properties-panel */ "./client/i18n-extension/languages/de/properties-panel.js");
+/* harmony import */ var _de_other__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./de/other */ "./client/i18n-extension/languages/de/other.js");
 
-    // Labels
-    'General' : 'Generelle Informationen',
-    'Create StartEvent' : 'Startereignis erstellen',
-    'Activate the global connect tool' : 'Globales Verbindungswerkzeug aktivieren',
+
+
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    ..._de_bpmn_js__WEBPACK_IMPORTED_MODULE_0__["default"],
+    ..._de_dmn_js__WEBPACK_IMPORTED_MODULE_1__["default"],
+    ..._de_properties_panel__WEBPACK_IMPORTED_MODULE_2__["default"],
+    ..._de_other__WEBPACK_IMPORTED_MODULE_3__["default"]
+});
+
+/***/ }),
+
+/***/ "./client/i18n-extension/languages/de/bpmn-js.js":
+/*!*******************************************************!*\
+  !*** ./client/i18n-extension/languages/de/bpmn-js.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Contains translations used in the bpmn-js repository
+
+/* harmony default export */ __webpack_exports__["default"] = ({
     'Append {type}': '{type} anfügen',
-    'Add Lane above': 'Lane oberhalb hinzufügen',
+    'Add Lane above': 'Lane darüber einfügen',
     'Divide into two Lanes': 'In zwei Lanes aufteilen',
     'Divide into three Lanes': 'In drei Lanes aufteilen',
-    'Add Lane below': 'Lane unterhalb hinzufügen',
-    'Append compensation activity': 'Kompensation hinzufügen',
+    'Add Lane below': 'Lane darunter einfügen',
+    'Append ReceiveTask': 'Receive-Task anfügen',
+    'Append MessageIntermediateCatchEvent': 'Message-Intermediate-Catch-Event anfügen',
+    'Append TimerIntermediateCatchEvent': 'Timer-Intermediate-Catch-Event anfügen',
+    'Append ConditionIntermediateCatchEvent': 'Condition-Intermediate-Catch-Event anfügen',
+    'Append SignalIntermediateCatchEvent': 'Signal-Intermediate-Catch-Event anfügen',
+    'Append compensation activity': 'Compensation-Aktivität anfügen',
+    'Append EndEvent': 'End-Event anfügen',
+    'Append Gateway': 'Gateway anfügen',
+    'Append Task': 'Task anfügen',
+    'Append Intermediate/Boundary Event': 'Intermediate/Boundary-Event anfügen',
     'Change type': 'Typ ändern',
     'Connect using Association': 'Mit Assoziation verbinden',
-    'Connect using Sequence/MessageFlow or Association': 'Mit Sequenzfluss/Nachrichtenfluss oder Assoziation verbinden',
+    'Connect using Sequence/MessageFlow or Association': 'Mit Sequenz-/Nachrichtenfluss oder Assoziation verbinden',
     'Connect using DataInputAssociation': 'Mit DataInputAssociation verbinden',
-    'Remove': 'Löschen',
+    'Remove': 'Entfernen',
+    'no shape type specified': 'Kein Formtyp angegeben',
+    'out of bounds release': 'Außerhalb der Grenzen losgelassen',
+    'more than {count} child lanes': 'mehr als {count} Kind-Lanes',
+    'element required': 'Element benötigt',
+    'no parent for {element} in {parent}': 'Kein Elternelement für {element} in {parent}',
+    'Create {type}': '{type} erzeugen',
     'Activate the hand tool': 'Hand-Tool aktivieren',
     'Activate the lasso tool': 'Lasso-Tool aktivieren',
-    'Activate the create/remove space tool': 'Platz-hinzufügen/entfernen-Tool aktivieren',
-    'Create expanded SubProcess': 'Erweiterten SubProcess erzeugen',
-    'Create IntermediateThrowEvent/BoundaryEvent' : 'IntermediateThrowEvent/BoundaryEvent erzeugen',
-    'Create Pool/Participant': 'Pool/Teilnehmer erzeugen',
-    'Parallel Multi Instance': 'Parallele Multi-Instanz',
-    'Sequential Multi Instance': 'Sequenzielle Multi-Instanz',
+    'Activate the create/remove space tool': 'Space-hinzufügen/entfernen-Tool aktivieren',
+    'Activate the global connect tool': 'Globales Verbindungstool aktivieren',
+    'Create StartEvent': 'Start-Event erzeugen',
+    'Create Intermediate/Boundary Event': 'Intermediate/Boundary-Event erzeugen',
+    'Create EndEvent': 'End-Event erzeugen',
+    'Create Gateway': 'Gateway erzeugen',
+    'Create Task': 'Task erzeugen',
+    'Create DataObjectReference': 'Data-Object-Reference erzeugen',
+    'Create DataStoreReference': 'Data-Store-Reference erzeugen',
+    'Create expanded SubProcess': 'Subprozess erzeugen',
+    'Create Pool/Participant': 'Pool/Participant erzeugen',
+    'Create Group': 'Gruppe erzeugen',
+    'Parallel Multi Instance': 'Parallele Multiinstanz',
+    'Sequential Multi Instance': 'Sequenzielle Multiinstanz',
     'Loop': 'Schleife',
     'Ad-hoc': 'Ad-hoc',
-    'Create {type}': '{type} erzeugen',
-    'Task': 'Aufgabe',
-    'Send Task': 'Senden Aufgabe',
-    'Receive Task': 'Empfangen Aufgabe',
-    'User Task': 'Benutzer Aufgabe',
-    'Manual Task': 'Manuelle Aufgabe',
-    'Business Rule Task': 'Geschäftsregel Aufgabe',
-    'Service Task': 'Service Aufgabe',
-    'Script Task': 'Script Aufgabe',
-    'Call Activity': 'Aufruf-Aktivität',
-    'Sub Process (collapsed)': 'Zugeklappter Prozess',
-    'Start Event': 'Startereignis',
-    'Intermediate Throw Event': 'Zwischenereignis',
-    'End Event': 'Endereignis',
-    'Message Start Event': 'Nachrichten-Startereignis',
-    'Timer Start Event': 'Zeit-Startereignis',
-    'Conditional Start Event': 'Bedingtes Startereignis',
-    'Signal Start Event': 'Signal-Startereignis',
-    'Error Start Event': 'Fehler-Startereignis',
-    'Escalation Start Event': 'Eskalations-Startereignis',
-    'Compensation Start Event': 'Kompensations-Startereignis',
-    'Message Start Event (non-interrupting)': 'Nachrichten-Startereignis (nicht unterbrechend)',
-    'Timer Start Event (non-interrupting)': 'Zeit-Startereignis (nicht unterbrechend)',
-    'Conditional Start Event (non-interrupting)': 'Bedingtes Startereignis (nicht unterbrechend)',
-    'Signal Start Event (non-interrupting)': 'Signal-Startereignis (nicht unterbrechend)',
-    'Escalation Start Event (non-interrupting)': 'Eskalations-Startereignis (nicht unterbrechend)',
-    'Message Intermediate Catch Event': 'Eintretendes Nachrichten-Zwischenereignis',
-    'Message Intermediate Throw Event': 'Ausgelöstes Nachrichten-Zwischenereignis',
-    'Timer Intermediate Catch Event': 'Eintretendes Zeit-Zwischenereignis',
-    'Escalation Intermediate Throw Event': 'Ausgelöstes Eskalations-Zwischenereignis',
-    'Conditional Intermediate Catch Event': 'Eintretendes bedingtes Zwischenereignis',
-    'Link Intermediate Catch Event': 'Eintretendes Link-Zwischenereignis',
-    'Link Intermediate Throw Event': 'Ausgelöstes Link-Zwischenereignis',
-    'Compensation Intermediate Throw Event': 'Ausgelöstes Kompensations-Zwischenereignis',
-    'Signal Intermediate Catch Event': 'Eintretendes Signal-Zwischenereignis',
-    'Signal Intermediate Throw Event': 'Ausgelöstes Signal-Zwischenereignis',
-    'Message End Event': 'Nachrichten-Endereignis',
-    'Escalation End Event': 'Eskalations-Endereignis',
-    'Error End Event': 'Fehler-Endereignis',
-    'Cancel End Event': 'Abbruchs-Endereignis',
-    'Compensation End Event': 'Kompensations-Endereignis',
-    'Signal End Event': 'Signal-Endereignis',
-    'Terminate End Event': 'Terminierungs-Endereignis',
-    'Message Boundary Event': 'Angeheftetes Nachrichten-Zwischenereignis',
-    'Message Boundary Event (non-interrupting)': 'Angeheftetes Nachrichten-Zwischenereignis (nicht unterbrechend)',
-    'Timer Boundary Event': 'Angeheftetes Zeit-Zwischenereignis',
-    'Timer Boundary Event (non-interrupting)': 'Angeheftetes Zeit-Zwischenereignis (nicht unterbrechend)',
-    'Escalation Boundary Event': 'Angeheftetes Eskalations-Zwischenereignis',
-    'Escalation Boundary Event (non-interrupting)': 'Angeheftetes Eskalations-Zwischenereignis (nicht unterbrechend)',
-    'Conditional Boundary Event': 'Angeheftetes bedingtes Zwischenereignis',
-    'Conditional Boundary Event (non-interrupting)': 'Angeheftetes bedingtes Zwischenereignis (nicht unterbrechend)',
-    'Error Boundary Event': 'Angeheftetes Fehler-Zwischenereignis',
-    'Cancel Boundary Event': 'Angeheftetes Abbruch-Zwischenereignis',
-    'Signal Boundary Event': 'Angeheftetes Signal-Zwischenereignis',
-    'Signal Boundary Event (non-interrupting)': 'Angeheftetes Signal-Zwischenereignis (nicht unterbrechend)',
-    'Compensation Boundary Event': 'Angeheftetes Kompensations-Zwischenereignis',
-    'Exclusive Gateway': 'Exklusives Gateway',
+    'element {element} referenced by {referenced}#{property} not yet drawn': 'Element {element}, referenziert durch {referenced}#{property}, wurde noch nicht gezeichnet',
+    'unknown di {di} for element {semantic}': 'Unbekannter DI {di} für Element {semantic}',
+    'missing {semantic}#attachedToRef': '{semantic}#attachedToRef fehlt',
+    '{semantic}#{side} Ref not specified': '{semantic}#{side} Ref nicht angegeben',
+    'already rendered {element}': '{element} wurde bereits gerendert',
+    'failed to import {element}': 'Import von {element} fehlgeschlagen',
+    'multiple DI elements defined for {element}': 'Mehrere DI-Elemente für {element} definiert',
+    'no bpmnElement referenced in {element}': 'Kein bpmnElement in {element} referenziert',
+    'diagram not part of bpmn:Definitions': 'Das Diagramm ist nicht Teil von bpmn:Definitions',
+    'no diagram to display': 'Kein Diagramm zum Anzeigen',
+    'no process or collaboration to display': 'Kein Prozess oder Collaboration zum Anzeigen',
+    'correcting missing bpmnElement on {plane} to {rootElement}': 'Korrigiere fehlendes bpmnElement auf {plane} zu {rootElement}',
+    'unsupported bpmnElement for {plane}: {rootElement}': 'Nicht unterstütztes bpmnElement für {plane}: {rootElement}',
+    'unrecognized flowElement {element} in context {context}': 'FlowElement {element} im Context {context} nicht erkannt',
+    'HELLO {you}!': 'HALLO {you}!'
+});
+
+/***/ }),
+
+/***/ "./client/i18n-extension/languages/de/dmn-js.js":
+/*!******************************************************!*\
+  !*** ./client/i18n-extension/languages/de/dmn-js.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Contains translations used in the dmn-js repository
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    'Activate the lasso tool': 'Lasso-Tool aktivieren',
+    'Add Cell Description': 'Zellenbeschreibung hinzufügen',
+    'Add Input': 'Input hinzufügen',
+    'Add Input Column Left': 'Input-Spalte links hinzufügen',
+    'Add Input Column Right': 'Input-Spalte rechts hinzufügen',
+    'Add Output': 'Output hinzufügen',
+    'Add Output Column Left': 'Output-Spalte links hinzufügen',
+    'Add Output Column Right': 'Output-Spalte rechts hinzufügen',
+    'Add Predefined Values': 'Vordefinierte Werte hinzufügen',
+    'Add Rule Above': 'Regel darüber hinzufügen',
+    'Add Rule Below': 'Regel darunter hinzufügen',
+    'Add Values': 'Werte hinzufügen',
+    'And': 'Und',
+    'Annotations': 'Annotationen',
+    'Append {type}': '{type} anfügen',
+    'cellInput': 'Zellen-Input',
+    'Change Cell Expression Language': 'Expression-Language für Zelle ändern',
+    'Change type': 'Typ ändern',
+    'Clear predefined values.': 'Vordefinierte Werte löschen',
+    'Copy Input Column': 'Input-Spalte kopieren',
+    'Copy Output Column': 'Output-Spalte kopieren',
+    'Copy Rule': 'Regel kopieren',
+    'Create Decision': 'Decision erstellen',
+    'Create Input Data': 'Input-Daten erstellen',
+    'Create Knowledge Model': 'Knowledge-Model erstellen',
+    'Create Knowledge Source': 'Knowledge-Source erstellen',
+    'Cut Input Column': 'Input-Spalte ausschneiden',
+    'Cut Output Column': 'Output-Spalte ausschneiden',
+    'Cut Rule': 'Regel ausschneiden',
+    'Edit String': 'String bearbeiten',
+    'Expression': 'Expression',
+    'Expression Language': 'Expression-Language',
+    'Input': 'Input',
+    'Input Expression': 'Input-Expression',
+    'Input Label': 'Input-Label',
+    'Input Type': 'Input-Type',
+    'Input Values': 'Input-Werte',
+    'Input Variable': 'Input-Variable',
+    'No values': 'Keine Werte',
+    'Output Label': 'Output-Label',
+    'Output Name': 'Output-Name',
+    'Output Type': 'Output-Type',
+    'Output Values': 'Output-Werte',
+    'Paste Input Column Left': 'Input-Spalte links einfügen',
+    'Paste Input Column Right': 'Input-Spalte rechts einfügen',
+    'Paste Output Column Left': 'Output-Spalte links einfügen',
+    'Paste Output Column Right': 'Output-Spalte rechts einfügen',
+    'Paste Rule Above': 'Regel darüber einfügen',
+    'Paste Rule Below': 'Regel darunter einfügen',
+    'Predefined Values': 'Vordefinierte Werte',
+    'Remove': 'Entfernen',
+    'Remove Cell Description': 'Zellenbeschreibung entfernen',
+    'Remove Input Column': 'Input-Spalte entfernen',
+    'Remove Output Column': 'Output-Spalte entfernen',
+    'Remove Rule': 'Regel entfernen',
+    'Set Value': 'Wert setzen',
+    'Strings must be in double quotes.': 'Strings müssen von doppelten Anführungszeichen umschlossen werden',
+    'Type': 'Typ',
+});
+
+/***/ }),
+
+/***/ "./client/i18n-extension/languages/de/other.js":
+/*!*****************************************************!*\
+  !*** ./client/i18n-extension/languages/de/other.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Contains translations used somewhere else
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    'Open minimap': 'Minimap öffnen',
+    'This maps to the process definition key.': 'Angabe wird zum Prozess-Definition-Key gemappt.',
+    'Key': 'Key',
+    'Intermediate Throw Event': 'Intermediate-Throw-Event',
+    'End Event': 'End-Event',
+    'Message Start Event': 'Message-Start-Event',
+    'Timer Start Event': 'Timer-Start-Event',
+    'Conditional Start Event': 'Conditional-Start-Event',
+    'Signal Start Event': 'Signal-Start-Event',
+    'Expand (not reversible)': 'Aufklappen (kann nicht rückgängig gemacht werden)',
+    'ID': 'ID',
+    'Start Event': 'Start-Event',
+    'Message End Event': 'Message-End-Event',
+    'Escalation End Event': 'Escalation-End-Event',
+    'Error End Event': 'Error-End-Event',
+    'Compensation End Event': 'Compensation-End-Event',
+    'Signal End Event': 'Signal-End-Event',
+    'Terminate End Event': 'Terminate-End-Event',
+    'Transaction': 'Transaktion',
+    'Event Sub Process': 'Event-Subprozess',
+    'Sub Process (collapsed)': 'Subprozess (eingeklappt)',
+    'Close minimap': 'Minimap schließen',
+    'Message Intermediate Catch Event': 'Message-Intermediate-Catch-Event',
+    'Message Intermediate Throw Event': 'Message-Intermediate-Throw-Event',
+    'Timer Intermediate Catch Event': 'Timer-Intermediate-Catch-Event',
+    'Escalation Intermediate Throw Event': 'Escalation-Intermediate-Throw-Event',
+    'Conditional Intermediate Catch Event': 'Conditional-Intermediate-Catch-Event',
+    'Link Intermediate Catch Event': 'Link-Intermediate-Catch-Event',
+    'Link Intermediate Throw Event': 'Link-Intermediate-Throw-Event',
+    'Compensation Intermediate Throw Event': 'Compensation-Intermediate-Throw-Event',
+    'Signal Intermediate Catch Event': 'Signal-Intermediate-Catch-Event',
+    'Signal Intermediate Throw Event': 'Signal-Intermediate-Throw-Event',
     'Parallel Gateway': 'Paralleles Gateway',
     'Inclusive Gateway': 'Inklusives Gateway',
     'Complex Gateway': 'Komplexes Gateway',
-    'Event based Gateway': 'Ereignis-basiertes Gateway',
-    'Transaction': 'Transaktion',
-    'Sub Process': 'Teilprozess',
-    'Event Sub Process': 'Ereignis-Teilprozess',
-    'Collapsed Pool': 'Zugeklappter Pool',
+    'Event based Gateway': 'Eventbasiertes Gateway',
+    'Exclusive Gateway': 'Exklusives Gateway',
+    'Send Task': 'Send-Task',
+    'Receive Task': 'Receive-Task',
+    'User Task': 'User-Task',
+    'Manual Task': 'Manueller Task',
+    'Business Rule Task': 'Business-Rule-Task',
+    'Service Task': 'Services-Task',
+    'Script Task': 'Skript-Task',
+    'Call Activity': 'Call-Activity',
+    'Sub Process (expanded)': 'Subprozess (ausgeklappt)',
+    'Sub Process': 'Subprozess',
+    'Task': 'Task',
+    'This maps to the task definition key.': 'Angabe wird zum Task-Definition-Key gemappt.',
+    'Collapsed Pool': 'Zusammengeklappter Pool',
     'Expanded Pool': 'Ausgeklappter Pool',
+    'flow elements must be children of pools/participants': 'Flow-Elemente müssen innerhalb von Pools/Participants platziert werden',
+    'The follow up date as an EL expression (e.g. ${someDate} or an ISO date (e.g. 2015-06-26T09:54:00)': 'Das Wiedervorlagedatum als EL-Expression (z.B. ${someDate}) oder als ISO-Datum (z.B. 2015-06-26T09:54:00)',
+    'Message Boundary Event': 'Message-Boundary-Event',
+    'Timer Boundary Event': 'Timer-Boundary-Event',
+    'Escalation Boundary Event': 'Escalation-Boundary-Event',
+    'Conditional Boundary Event': 'Conditional-Boundary-Event',
+    'Error Boundary Event': 'Error-Boundary-Event',
+    'Cancel Boundary Event': 'Cancel-Boundary-Event',
+    'Signal Boundary Event': 'Signal-Boundary-Event',
+    'Compensation Boundary Event': 'Compensation-Boundary-Event',
+    'Message Boundary Event (non-interrupting)': 'Message-Boundary-Event (nicht unterbrechend)',
+    'Timer Boundary Event (non-interrupting)': 'Timer-Boundary-Event (nicht unterbrechend)',
+    'Escalation Boundary Event (non-interrupting)': 'Escalation-Boundary-Event (nicht unterbrechend)',
+    'Conditional Boundary Event (non-interrupting)': 'Conditional-Boundary-Event (nicht unterbrechend)',
+    'Signal Boundary Event (non-interrupting)': 'Signal-Boundary-Event (nicht unterbrechend)',
+});
 
-    // Errors
-    'no parent for {element} in {parent}': 'kein Eltern-Element für {element} in {parent}',
-    'no shape type specified': 'kein Typ der Form angegeben',
-    'flow elements must be children of pools/participants': 'Fluss-Elemente müssen Kinder von Pools/Teilnehmern sein',
-    'out of bounds release': 'außerhalb der Grenzen Release',
-    'more than {count} child lanes': 'mehr als {count} Lane-Kinder',
-    'element required': 'Element benötigt',
-    'diagram not part of bpmn:Definitions': 'Prozessmodell ist nicht Teil von bpmn:Definitions',
-    'no diagram to display': 'kein Prozessmodell',
-    'no process or collaboration to display': 'kein Prozess/Kollaboration',
-    'element {element} referenced by {referenced}#{property} not yet drawn': 'von {referenced}#{property} referenziertes Element {element} noch nicht gezeichnet',
-    'already rendered {element}': '{element} bereits gerendert',
-    'failed to import {element}': '{element} konnte nicht importiert werden'
+/***/ }),
+
+/***/ "./client/i18n-extension/languages/de/properties-panel.js":
+/*!****************************************************************!*\
+  !*** ./client/i18n-extension/languages/de/properties-panel.js ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Contains translations used in the bpmn-js-properties-panel repository
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    'Activity Ref': 'Activity-Referenz',
+    'Add Constraint': 'Constraint hinzufügen',
+    'Add Entry': 'Eintrag hinzufügen',
+    'Add Property': 'Property hinzufügen',
+    'Add Value': 'Wert hinzufügen',
+    'All': 'Alle',
+    'Assignee': 'Bearbeiter',
+    'assignment': 'Aufgabe',
+    'Asynchronous After': 'Asynchronous After', // TODO
+    'Asynchronous Before': 'Asynchronous Before', // TODO
+    'Asynchronous Continuations': 'Asynchronous Continuations', // TODO
+    'Binding': 'Binding',
+    'Business Key': 'Business-Key',
+    'Business Key Expression': 'Business-Key-Expression',
+    'CallActivity Type': 'Call-Activity-Typ',
+    'Called Element': 'Aufgerufenes Element',
+    'Candidate Groups': 'Mögliche Bearbeiter-Gruppen',
+    'Candidate Starter Configuration': 'Candidate Starter Configuration', // TODO
+    'Candidate Starter Groups': 'Candidate Starter Groups', // TODO
+    'Candidate Starter Users': 'Candidate Starter Users', // TODO
+    'Candidate Users': 'Mögliche Bearbeiter',
+    'Case Ref': 'Case-Referenz',
+    'Category Value': 'Kategorie-Wert',
+    'Class': 'Klasse',
+    'Collection': 'Collection',
+    'complete': 'abschließen', // TODO
+    'Completion Condition': 'Abschlussbedingung',
+    'Condition': 'Bedingung',
+    'Condition Type': 'Bedingungstyp',
+    'Config': 'Konfiguration',
+    'Configure Connector': 'Connector konfigurieren',
+    'Connector': 'Connector',
+    'Connector Id': 'Connector-ID',
+    'create': 'erstellen',
+    'Custom Fields': 'Benutzerdefinierte Felder',
+    'Custom Fields for scope: ': 'Benutzerdefinierte Felder für Scope', // TODO
+    'Cycle': 'Zyklus',
+    'Date': 'Datum',
+    'Decision Ref': 'Decision-Referenz',
+    'Default Value': 'Standard-Wert',
+    'Delegate Expression': 'Delegate-Expression',
+    'Delegate Variable Mapping': 'Delegate-Variablenmapping',
+    'delete': 'löschen',
+    'deployment': 'Deployment',
+    'Details': 'Details',
+    'DMN': 'DMN',
+    'Documentation': 'Dokumentation',
+    'Due Date': 'Fälligskeitsdatum',
+    'Duration': 'Dauer',
+    'Element Documentation': 'Elementdokumentation',
+    'Element must have an unique id.': 'Element benötigt eine eindeutige ID',
+    'Element Template': 'Element-Template',
+    'Element Variable': 'Element-Variable',
+    'end': 'beenden', // TODO
+    'Error': 'Fehler',
+    'Error Code': 'Fehler-Code',
+    'Error Code Variable': 'Fehler-Code-Variable',
+    'Error Message': 'Fehlermeldung',
+    'Error Message Variable': 'Fehlermeldung-Variable',
+    'Error Name': 'Fehlername',
+    'Escalation': 'Eskalation',
+    'Escalation Code': 'Eskalationscode',
+    'Escalation Code Variable': 'Eskalationscode-Variable',
+    'Escalation Name': 'Eskalationsname',
+    'Event Type': 'Eventtyp',
+    'Exclusive': 'Exklusiv',
+    'Executable': 'Ausführbar',
+    'Execution Listener': 'Execution-Listener',
+    'Expression': 'Expression',
+    'Extensions': 'Erweiterungen',
+    'External': 'Extern',
+    'External Resource': 'Externe Ressource',
+    'External Task Configuration': 'Externe Task-Konfiguration',
+    'Field Injection': 'Feld-Injection',
+    'Field Injections': 'Feld-Injections',
+    'Fields': 'Felder',
+    'Follow Up Date': 'Wiedervorlagedatum',
+    'Form Field': 'Formularfeld',
+    'Form Fields': 'Formularfelder',
+    'Form Key': 'Formular-Key',
+    'Forms': 'Formulare',
+    'General': 'Allgemein',
+    'History Configuration': 'History-Konfiguration',
+    'History Time To Live': 'History-Aufbewahrungszeitraum',
+    'Id': 'ID',
+    'ID (process variable name)': 'ID (Prozessvariablen-Name)',
+    'Id must be a valid QName.': 'ID muss ein gültiger QName sein',
+    'Id must not contain prefix.': 'ID darf kein Prefix enthalten',
+    'Id must not contain spaces.': 'ID darf keine Leerzeichen enthalten',
+    'Implementation': 'Implementierung',
+    'Initiator': 'Auslöser', // TODO
+    'Inline Script': 'Inline-Skript',
+    'In Mapping': 'In-Mapping',
+    'Input/Output': 'Input/Output',
+    'Input Parameter': 'Input-Parameter',
+    'Input Parameters': 'Input-Parameter',
+    'Java Class': 'Java-Klasse',
+    'Job Configuration': 'Job-Konfiguration',
+    'Job Priority': 'Job-Priorität',
+    'Label': 'Label',
+    'latest': 'Neueste', // TODO
+    'Link Name': 'Link-Name',
+    'List': 'Liste',
+    'Listener Id': 'Listener-ID',
+    'Listeners': 'Listener',
+    'Listener Type': 'Listener-Typ',
+    'Local': 'Lokal',
+    'Loop Cardinality': 'Schleifen-Kardinalität',
+    'Map': 'Map', // TODO
+    'Map Decision Result': 'Decision-Ergebnis mappen', // TODO
+    'Mapping must have a target': 'Mapping benötigt ein Ziel',
+    'Mapping must have a value': 'Mapping benötigt einen Wert',
+    'Mapping must have a {value}': 'Mapping benötigt ein {value}',
+    'Message': 'Nachricht',
+    'Message Name': 'Nachrichtenname',
+    'Multi Instance ': 'Mehrfachinstanz ',
+    'Multi Instance': 'Mehrfachinstanz',
+    'Must configure Connector': 'Muss Connector konfigurieren',
+    'Must have max length {length}': 'Darf nicht länger sein als {length}',
+    'Must have min length {length}': 'Darf nicht kürzer sein als {length}',
+    'Must match pattern {pattern}': 'Muss dem Pattern {pattern} entsprechen',
+    'Must not be empty': 'Darf nicht leer sein',
+    'Must provide a value': 'Muss einen Wert enthalten',
+    'Must provide a value for timeout task listener': 'Muss einen Wert für den Timeout-Task-Listener enthalten',
+    'Must provide either loop cardinality or collection': 'Muss entweder Schleifen-Kardinalität oder Collection enthalten',
+    'Name': 'Name',
+    'Name must not contain spaces': 'Name darf keine Leerzeichen enthalten',
+    'Out Mapping': 'Out-Mapping',
+    'Output Parameter': 'Output-Parameter',
+    'Output Parameters': 'Output-Parameter',
+    'Parameter must have a name': 'Parameter muss einen Namen haben',
+    'Parameters': 'Parameter',
+    'Priority': 'Priorität',
+    'Process Documentation': 'Prozessdokumentation',
+    'Process Id': 'Prozess-ID',
+    'Process Name': 'Prozessname',
+    'Properties': 'Eigenschaften',
+    'Resource': 'Ressource',
+    'Result Variable': 'Ergebnisvariable',
+    'Retry Time Cycle': 'Retry-Zyklus',
+    'Script': 'Skript',
+    'Script Format': 'Skriptformat',
+    'Script Type': 'Skripttyp',
+    'Signal': 'Signal',
+    'Signal Name': 'Signalname',
+    'Source': 'Quelle',
+    'Source Expression': 'Quellen-Expression',
+    'Specify more than one group as a comma separated list.': 'Geben Sie mehr als eine Gruppe kommagetrennt an.',
+    'Specify more than one user as a comma separated list.': 'Geben Sie mehr als einen Nutzer kommagetrennt an.',
+    'Specify more than one variable change event as a comma separated list.': 'Geben Sie mehr als ein Variablen-Change-Event kommagetrennt an.',
+    'start': 'starten', // TODO
+    'Startable': 'Startbar',
+    'String': 'String',
+    'take': 'nehmen', // TODO
+    'Target': 'Ziel',
+    'Target must not contain whitespace': 'Ziel darf keine Leerzeichen enthalten',
+    'Tasklist Configuration': 'Tasklisten-Konfiguration',
+    'Task Listener': 'Task-Listener',
+    'Task Priority': 'Task-Priorität',
+    'Tenant Id': 'Tenant-ID',
+    'Text': 'Text',
+    'The due date as an EL expression (e.g. ${someDate} or an ISO date (e.g. 2015-06-26T09:54:00)': 'Das Fälligkeitsdatum als EL-Expression (z.B. ${someDate}) oder als ISO-Datum (z.B. 2015-06-26T09:54:00)',
+    'timeout': 'Zeitüberschreitung', // TODO
+    'Timer Definition': 'Timer-Definition',
+    'Timer Definition Type': 'Timer-Definition-Typ',
+    'Topic': 'Topic', // TODO
+    'Type': 'Typ',
+    'update': 'aktualisieren', // TODO
+    'Validation': 'Validierung',
+    'Value': 'Wert',
+    'Values': 'Werte',
+    'Variable Event': 'Variablen-Event',
+    'Variable Name': 'Variablenname',
+    'Variables': 'Variablen',
+    'version': 'Version',
+    'Version': 'Version',
+    'versionTag': 'Version-Tag',
+    'Version Tag': 'Version-Tag',
+    'Wait for Completion': 'Auf Abschluss warten',
+    '[unknown template: {templateId}]': '[Unbekanntes Template: {templateId}]',
+    '{label} must not contain whitespace': '{label} darf keine Leerzeichen enthalten'
 });
 
 /***/ }),
@@ -310,113 +645,448 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _en_bpmn_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./en/bpmn-js */ "./client/i18n-extension/languages/en/bpmn-js.js");
+/* harmony import */ var _en_dmn_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./en/dmn-js */ "./client/i18n-extension/languages/en/dmn-js.js");
+/* harmony import */ var _en_properties_panel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./en/properties-panel */ "./client/i18n-extension/languages/en/properties-panel.js");
+/* harmony import */ var _en_other__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./en/other */ "./client/i18n-extension/languages/en/other.js");
+
+
+
+
+
 /* harmony default export */ __webpack_exports__["default"] = ({
+    ..._en_bpmn_js__WEBPACK_IMPORTED_MODULE_0__["default"],
+    ..._en_dmn_js__WEBPACK_IMPORTED_MODULE_1__["default"],
+    ..._en_properties_panel__WEBPACK_IMPORTED_MODULE_2__["default"],
+    ..._en_other__WEBPACK_IMPORTED_MODULE_3__["default"]
+});
 
-    // Labels
-    'General' : 'Teststring',
-    'Create StartEvent' : 'Startereignis fsdfdsa',
-    'Activate the global connect tool' : 'Globales Verbindungswerkzeug aktivieren',
-    'Append {type}': '{type} anfügen',
-    'Add Lane above': 'Lane oberhalb hinzufügen',
-    'Divide into two Lanes': 'In zwei Lanes aufteilen',
-    'Divide into three Lanes': 'In drei Lanes aufteilen',
-    'Add Lane below': 'Lane unterhalb hinzufügen',
-    'Append compensation activity': 'Kompensation hinzufügen',
-    'Change type': 'Typ ändern',
-    'Connect using Association': 'Mit Assoziation verbinden',
-    'Connect using Sequence/MessageFlow or Association': 'Mit Sequenzfluss/Nachrichtenfluss oder Assoziation verbinden',
-    'Connect using DataInputAssociation': 'Mit DataInputAssociation verbinden',
-    'Remove': 'Löschen',
-    'Activate the hand tool': 'Hand-Tool fdsfdsa',
-    'Activate the lasso tool': 'Lasso-Tool aktivieren',
-    'Activate the create/remove space tool': 'Platz-hinzufügen/entfernen-Tool aktivieren',
-    'Create expanded SubProcess': 'Erweiterten SubProcess erzeugen',
-    'Create IntermediateThrowEvent/BoundaryEvent' : 'IntermediateThrowEvent/BoundaryEvent erzeugen',
-    'Create Pool/Participant': 'Pool/Teilnehmer erzeugen',
-    'Parallel Multi Instance': 'Parallele Multi-Instanz',
-    'Sequential Multi Instance': 'Sequenzielle Multi-Instanz',
-    'Loop': 'Schleife',
+/***/ }),
+
+/***/ "./client/i18n-extension/languages/en/bpmn-js.js":
+/*!*******************************************************!*\
+  !*** ./client/i18n-extension/languages/en/bpmn-js.js ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Contains translations used in the bpmn-js repository
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    'Append {type}': 'Append {type}',
+    'Add Lane above': 'Add Lane above',
+    'Divide into two Lanes': 'Divide into two Lanes',
+    'Divide into three Lanes': 'Divide into three Lanes',
+    'Add Lane below': 'Add Lane below',
+    'Append ReceiveTask': 'Append ReceiveTask',
+    'Append MessageIntermediateCatchEvent': 'Append MessageIntermediateCatchEvent',
+    'Append TimerIntermediateCatchEvent': 'Append TimerIntermediateCatchEvent',
+    'Append ConditionIntermediateCatchEvent': 'Append ConditionIntermediateCatchEvent',
+    'Append SignalIntermediateCatchEvent': 'Append SignalIntermediateCatchEvent',
+    'Append compensation activity': 'Append compensation activity',
+    'Append EndEvent': 'Append EndEvent',
+    'Append Gateway': 'Append Gateway',
+    'Append Task': 'Append Task',
+    'Append Intermediate/Boundary Event': 'Append Intermediate/Boundary Event',
+    'Change type': 'Change type',
+    'Connect using Association': 'Connect using Association',
+    'Connect using Sequence/MessageFlow or Association': 'Connect using Sequence/MessageFlow or Association',
+    'Connect using DataInputAssociation': 'Connect using DataInputAssociation',
+    'Remove': 'Remove',
+    'no shape type specified': 'no shape type specified',
+    'out of bounds release': 'out of bounds release',
+    'more than {count} child lanes': 'more than {count} child lanes',
+    'element required': 'element required',
+    'no parent for {element} in {parent}': 'no parent for {element} in {parent}',
+    'Create {type}': 'Create {type}',
+    'Activate the hand tool': 'Activate the hand tool',
+    'Activate the lasso tool': 'Activate the lasso tool',
+    'Activate the create/remove space tool': 'Activate the create/remove space tool',
+    'Activate the global connect tool': 'Activate the global connect tool',
+    'Create StartEvent': 'Create StartEvent',
+    'Create Intermediate/Boundary Event': 'Create Intermediate/Boundary Event',
+    'Create EndEvent': 'Create EndEvent',
+    'Create Gateway': 'Create Gateway',
+    'Create Task': 'Create Task',
+    'Create DataObjectReference': 'Create DataObjectReference',
+    'Create DataStoreReference': 'Create DataStoreReference',
+    'Create expanded SubProcess': 'Create expanded SubProcess',
+    'Create Pool/Participant': 'Create Pool/Participant',
+    'Create Group': 'Create Group',
+    'Parallel Multi Instance': 'Parallel Multi Instance',
+    'Sequential Multi Instance': 'Sequential Multi Instance',
+    'Loop': 'Loop',
     'Ad-hoc': 'Ad-hoc',
-    'Create {type}': '{type} erzeugen',
-    'Task': 'Aufgabe',
-    'Send Task': 'Senden Aufgabe',
-    'Receive Task': 'Empfangen Aufgabe',
-    'User Task': 'Benutzer Aufgabe',
-    'Manual Task': 'Manuelle Aufgabe',
-    'Business Rule Task': 'Geschäftsregel Aufgabe',
-    'Service Task': 'Service Aufgabe',
-    'Script Task': 'Script Aufgabe',
-    'Call Activity': 'Aufruf-Aktivität',
-    'Sub Process (collapsed)': 'Zugeklappter Prozess',
-    'Start Event': 'Startereignis',
-    'Intermediate Throw Event': 'Zwischenereignis',
-    'End Event': 'Endereignis',
-    'Message Start Event': 'Nachrichten-Startereignis',
-    'Timer Start Event': 'Zeit-Startereignis',
-    'Conditional Start Event': 'Bedingtes Startereignis',
-    'Signal Start Event': 'Signal-Startereignis',
-    'Error Start Event': 'Fehler-Startereignis',
-    'Escalation Start Event': 'Eskalations-Startereignis',
-    'Compensation Start Event': 'Kompensations-Startereignis',
-    'Message Start Event (non-interrupting)': 'Nachrichten-Startereignis (nicht unterbrechend)',
-    'Timer Start Event (non-interrupting)': 'Zeit-Startereignis (nicht unterbrechend)',
-    'Conditional Start Event (non-interrupting)': 'Bedingtes Startereignis (nicht unterbrechend)',
-    'Signal Start Event (non-interrupting)': 'Signal-Startereignis (nicht unterbrechend)',
-    'Escalation Start Event (non-interrupting)': 'Eskalations-Startereignis (nicht unterbrechend)',
-    'Message Intermediate Catch Event': 'Eintretendes Nachrichten-Zwischenereignis',
-    'Message Intermediate Throw Event': 'Ausgelöstes Nachrichten-Zwischenereignis',
-    'Timer Intermediate Catch Event': 'Eintretendes Zeit-Zwischenereignis',
-    'Escalation Intermediate Throw Event': 'Ausgelöstes Eskalations-Zwischenereignis',
-    'Conditional Intermediate Catch Event': 'Eintretendes bedingtes Zwischenereignis',
-    'Link Intermediate Catch Event': 'Eintretendes Link-Zwischenereignis',
-    'Link Intermediate Throw Event': 'Ausgelöstes Link-Zwischenereignis',
-    'Compensation Intermediate Throw Event': 'Ausgelöstes Kompensations-Zwischenereignis',
-    'Signal Intermediate Catch Event': 'Eintretendes Signal-Zwischenereignis',
-    'Signal Intermediate Throw Event': 'Ausgelöstes Signal-Zwischenereignis',
-    'Message End Event': 'Nachrichten-Endereignis',
-    'Escalation End Event': 'Eskalations-Endereignis',
-    'Error End Event': 'Fehler-Endereignis',
-    'Cancel End Event': 'Abbruchs-Endereignis',
-    'Compensation End Event': 'Kompensations-Endereignis',
-    'Signal End Event': 'Signal-Endereignis',
-    'Terminate End Event': 'Terminierungs-Endereignis',
-    'Message Boundary Event': 'Angeheftetes Nachrichten-Zwischenereignis',
-    'Message Boundary Event (non-interrupting)': 'Angeheftetes Nachrichten-Zwischenereignis (nicht unterbrechend)',
-    'Timer Boundary Event': 'Angeheftetes Zeit-Zwischenereignis',
-    'Timer Boundary Event (non-interrupting)': 'Angeheftetes Zeit-Zwischenereignis (nicht unterbrechend)',
-    'Escalation Boundary Event': 'Angeheftetes Eskalations-Zwischenereignis',
-    'Escalation Boundary Event (non-interrupting)': 'Angeheftetes Eskalations-Zwischenereignis (nicht unterbrechend)',
-    'Conditional Boundary Event': 'Angeheftetes bedingtes Zwischenereignis',
-    'Conditional Boundary Event (non-interrupting)': 'Angeheftetes bedingtes Zwischenereignis (nicht unterbrechend)',
-    'Error Boundary Event': 'Angeheftetes Fehler-Zwischenereignis',
-    'Cancel Boundary Event': 'Angeheftetes Abbruch-Zwischenereignis',
-    'Signal Boundary Event': 'Angeheftetes Signal-Zwischenereignis',
-    'Signal Boundary Event (non-interrupting)': 'Angeheftetes Signal-Zwischenereignis (nicht unterbrechend)',
-    'Compensation Boundary Event': 'Angeheftetes Kompensations-Zwischenereignis',
-    'Exclusive Gateway': 'Exklusives Gateway',
-    'Parallel Gateway': 'Paralleles Gateway',
-    'Inclusive Gateway': 'Inklusives Gateway',
-    'Complex Gateway': 'Komplexes Gateway',
-    'Event based Gateway': 'Ereignis-basiertes Gateway',
-    'Transaction': 'Transaktion',
-    'Sub Process': 'Teilprozess',
-    'Event Sub Process': 'Ereignis-Teilprozess',
-    'Collapsed Pool': 'Zugeklappter Pool',
-    'Expanded Pool': 'Ausgeklappter Pool',
+    'element {element} referenced by {referenced}#{property} not yet drawn': 'element {element} referenced by {referenced}#{property} not yet drawn',
+    'unknown di {di} for element {semantic}': 'unknown di {di} for element {semantic}',
+    'missing {semantic}#attachedToRef': 'missing {semantic}#attachedToRef',
+    '{semantic}#{side} Ref not specified': '{semantic}#{side} Ref not specified',
+    'already rendered {element}': 'already rendered {element}',
+    'failed to import {element}': 'failed to import {element}',
+    'multiple DI elements defined for {element}': 'multiple DI elements defined for {element}',
+    'no bpmnElement referenced in {element}': 'no bpmnElement referenced in {element}',
+    'diagram not part of bpmn:Definitions': 'diagram not part of bpmn:Definitions',
+    'no diagram to display': 'no diagram to display',
+    'no process or collaboration to display': 'no process or collaboration to display',
+    'correcting missing bpmnElement on {plane} to {rootElement}': 'correcting missing bpmnElement on {plane} to {rootElement}',
+    'unsupported bpmnElement for {plane}: {rootElement}': 'unsupported bpmnElement for {plane}: {rootElement}',
+    'unrecognized flowElement {element} in context {context}': 'unrecognized flowElement {element} in context {context}',
+    'HELLO {you}!': 'HALLO {you}!'
+});
 
-    // Errors
-    'no parent for {element} in {parent}': 'kein Eltern-Element für {element} in {parent}',
-    'no shape type specified': 'kein Typ der Form angegeben',
-    'flow elements must be children of pools/participants': 'Fluss-Elemente müssen Kinder von Pools/Teilnehmern sein',
-    'out of bounds release': 'außerhalb der Grenzen Release',
-    'more than {count} child lanes': 'mehr als {count} Lane-Kinder',
-    'element required': 'Element benötigt',
-    'diagram not part of bpmn:Definitions': 'Prozessmodell ist nicht Teil von bpmn:Definitions',
-    'no diagram to display': 'kein Prozessmodell',
-    'no process or collaboration to display': 'kein Prozess/Kollaboration',
-    'element {element} referenced by {referenced}#{property} not yet drawn': 'von {referenced}#{property} referenziertes Element {element} noch nicht gezeichnet',
-    'already rendered {element}': '{element} bereits gerendert',
-    'failed to import {element}': '{element} konnte nicht importiert werden'
+/***/ }),
+
+/***/ "./client/i18n-extension/languages/en/dmn-js.js":
+/*!******************************************************!*\
+  !*** ./client/i18n-extension/languages/en/dmn-js.js ***!
+  \******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Contains translations used in the dmn-js repository
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    'Activate the lasso tool': 'Activate the lasso tool',
+    'Add Cell Description': 'Add Cell Description',
+    'Add Input': 'Add Input',
+    'Add Input Column Left': 'Add Input Column Left',
+    'Add Input Column Right': 'Add Input Column Right',
+    'Add Output': 'Add Output',
+    'Add Output Column Left': 'Add Output Column Left',
+    'Add Output Column Right': 'Add Output Column Right',
+    'Add Predefined Values': 'Add Predefined Values',
+    'Add Rule Above': 'Add Rule Above',
+    'Add Rule Below': 'Add Rule Below',
+    'Add Values': 'Add Values',
+    'And': 'And',
+    'Annotations': 'Annotations',
+    'Append {type}': 'Append {type}',
+    'cellInput': 'cellInput',
+    'Change Cell Expression Language': 'Change Cell Expression Language',
+    'Change type': 'Change type',
+    'Clear predefined values.': 'Clear predefined values.',
+    'Copy Input Column': 'Copy Input Column',
+    'Copy Output Column': 'Copy Output Column',
+    'Copy Rule': 'Copy Rule',
+    'Create Decision': 'Create Decision',
+    'Create Input Data': 'Create Input Data',
+    'Create Knowledge Model': 'Create Knowledge Model',
+    'Create Knowledge Source': 'Create Knowledge Source',
+    'Cut Input Column': 'Cut Input Column',
+    'Cut Output Column': 'Cut Output Column',
+    'Cut Rule': 'Cut Rule',
+    'Edit String': 'Edit String',
+    'Expression': 'Expression',
+    'Expression Language': 'Expression Language',
+    'Input': 'Input',
+    'Input Expression': 'Input Expression',
+    'Input Label': 'Input Label',
+    'Input Type': 'Input Type',
+    'Input Values': 'Input Values',
+    'Input Variable': 'Input Variable',
+    'No values': 'No values',
+    'Output Label': 'Output Label',
+    'Output Name': 'Output Name',
+    'Output Type': 'Output Type',
+    'Output Values': 'Output Values',
+    'Paste Input Column Left': 'Paste Input Column Left',
+    'Paste Input Column Right': 'Paste Input Column Right',
+    'Paste Output Column Left': 'Paste Output Column Left',
+    'Paste Output Column Right': 'Paste Output Column Right',
+    'Paste Rule Above': 'Paste Rule Above',
+    'Paste Rule Below': 'Paste Rule Below',
+    'Predefined Values': 'Predefined Values',
+    'Remove': 'Remove',
+    'Remove Cell Description': 'Remove Cell Description',
+    'Remove Input Column': 'Remove Input Column',
+    'Remove Output Column': 'Remove Output Column',
+    'Remove Rule': 'Remove Rule',
+    'Set Value': 'Set Value',
+    'Strings must be in double quotes.': 'Strings must be in double quotes.',
+    'Type': 'Type',
+});
+
+/***/ }),
+
+/***/ "./client/i18n-extension/languages/en/other.js":
+/*!*****************************************************!*\
+  !*** ./client/i18n-extension/languages/en/other.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Contains translations used somewhere else
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    'Open minimap': 'Open minimap',
+    'This maps to the process definition key.': 'This maps to the process definition key.',
+    'Key': 'Key',
+    'Intermediate Throw Event': 'Intermediate Throw Event',
+    'End Event': 'End Event',
+    'Message Start Event': 'Message Start Event',
+    'Timer Start Event': 'Timer Start Event',
+    'Conditional Start Event': 'Conditional Start Event',
+    'Signal Start Event': 'Signal Start Event',
+    'Expand (not reversible)': 'Expand (not reversible)',
+    'ID': 'ID',
+    'Start Event': 'Start Event',
+    'Message End Event': 'Message End Event',
+    'Escalation End Event': 'Escalation End Event',
+    'Error End Event': 'Error End Event',
+    'Compensation End Event': 'Compensation End Event',
+    'Signal End Event': 'Signal End Event',
+    'Terminate End Event': 'Terminate End Event',
+    'Transaction': 'Transaction',
+    'Event Sub Process': 'Event Sub Process',
+    'Sub Process (collapsed)': 'Sub Process (collapsed)',
+    'Close minimap': 'Close minimap',
+    'Message Intermediate Catch Event': 'Message Intermediate Catch Event',
+    'Message Intermediate Throw Event': 'Message Intermediate Throw Event',
+    'Timer Intermediate Catch Event': 'Timer Intermediate Catch Event',
+    'Escalation Intermediate Throw Event': 'Escalation Intermediate Throw Event',
+    'Conditional Intermediate Catch Event': 'Conditional Intermediate Catch Event',
+    'Link Intermediate Catch Event': 'Link Intermediate Catch Event',
+    'Link Intermediate Throw Event': 'Link Intermediate Throw Event',
+    'Compensation Intermediate Throw Event': 'Compensation Intermediate Throw Event',
+    'Signal Intermediate Catch Event': 'Signal Intermediate Catch Event',
+    'Signal Intermediate Throw Event': 'Signal Intermediate Throw Event',
+    'Parallel Gateway': 'Parallel Gateway',
+    'Inclusive Gateway': 'Inclusive Gateway',
+    'Complex Gateway': 'Complex Gateway',
+    'Event based Gateway': 'Event based Gateway',
+    'Exclusive Gateway': 'Exclusive Gateway',
+    'Send Task': 'Send Task',
+    'Receive Task': 'Receive Task',
+    'User Task': 'User Task',
+    'Manual Task': 'Manual Task',
+    'Business Rule Task': 'Business Rule Task',
+    'Service Task': 'Service Task',
+    'Script Task': 'Script Task',
+    'Call Activity': 'Call Activity',
+    'Sub Process (expanded)': 'Sub Process (expanded)',
+    'Sub Process': 'Sub Process',
+    'Task': 'Task',
+    'This maps to the task definition key.': 'This maps to the task definition key.',
+    'Collapsed Pool': 'Collapsed Pool',
+    'Expanded Pool': 'Expanded Pool',
+    'flow elements must be children of pools/participants': 'flow elements must be children of pools/participants',
+    'The follow up date as an EL expression (e.g. ${someDate} or an ISO date (e.g. 2015-06-26T09:54:00)': 'The follow up date as an EL expression (e.g. ${someDate} or an ISO date (e.g. 2015-06-26T09:54:00)',
+    'Message Boundary Event': 'Message Boundary Event',
+    'Timer Boundary Event': 'Timer Boundary Event',
+    'Escalation Boundary Event': 'Escalation Boundary Event',
+    'Conditional Boundary Event': 'Conditional Boundary Event',
+    'Error Boundary Event': 'Error Boundary Event',
+    'Cancel Boundary Event': 'Cancel Boundary Event',
+    'Signal Boundary Event': 'Signal Boundary Event',
+    'Compensation Boundary Event': 'Compensation Boundary Event',
+    'Message Boundary Event (non-interrupting)': 'Message Boundary Event (non-interrupting)',
+    'Timer Boundary Event (non-interrupting)': 'Timer Boundary Event (non-interrupting)',
+    'Escalation Boundary Event (non-interrupting)': 'Escalation Boundary Event (non-interrupting)',
+    'Conditional Boundary Event (non-interrupting)': 'Conditional Boundary Event (non-interrupting)',
+    'Signal Boundary Event (non-interrupting)': 'Signal Boundary Event (non-interrupting)'
+});
+
+/***/ }),
+
+/***/ "./client/i18n-extension/languages/en/properties-panel.js":
+/*!****************************************************************!*\
+  !*** ./client/i18n-extension/languages/en/properties-panel.js ***!
+  \****************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+// Contains translations used in the bpmn-js-properties-panel repository
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+    'Activity Ref': 'Activity Ref',
+    'Add Constraint': 'Add Constraint',
+    'Add Entry': 'Add Entry',
+    'Add Property': 'Add Property',
+    'Add Value': 'Add Value',
+    'All': 'All',
+    'Assignee': 'Assignee',
+    'assignment': 'assignment',
+    'Asynchronous After': 'Asynchronous After',
+    'Asynchronous Before': 'Asynchronous Before',
+    'Asynchronous Continuations': 'Asynchronous Continuations',
+    'Binding': 'Binding',
+    'Business Key': 'Business Key',
+    'Business Key Expression': 'Business Key Expression',
+    'CallActivity Type': 'CallActivity Type',
+    'Called Element': 'Called Element',
+    'Candidate Groups': 'Candidate Groups',
+    'Candidate Starter Configuration': 'Candidate Starter Configuration',
+    'Candidate Starter Groups': 'Candidate Starter Groups',
+    'Candidate Starter Users': 'Candidate Starter Users',
+    'Candidate Users': 'Candidate Users',
+    'Case Ref': 'Case Ref',
+    'Category Value': 'Category Value',
+    'Class': 'Class',
+    'Collection': 'Collection',
+    'complete': 'complete',
+    'Completion Condition': 'Completion Condition',
+    'Condition': 'Condition',
+    'Condition Type': 'Condition Type',
+    'Config': 'Config',
+    'Configure Connector': 'Configure Connector',
+    'Connector': 'Connector',
+    'Connector Id': 'Connector Id',
+    'create': 'create',
+    'Custom Fields': 'Custom Fields',
+    'Custom Fields for scope: ': 'Custom Fields for scope: ',
+    'Cycle': 'Cycle',
+    'Date': 'Date',
+    'Decision Ref': 'Decision Ref',
+    'Default Value': 'Default Value',
+    'Delegate Expression': 'Delegate Expression',
+    'Delegate Variable Mapping': 'Delegate Variable Mapping',
+    'delete': 'delete',
+    'deployment': 'deployment',
+    'Details': 'Details',
+    'DMN': 'DMN',
+    'Documentation': 'Documentation',
+    'Due Date': 'Due Date',
+    'Duration': 'Duration',
+    'Element Documentation': 'Element Documentation',
+    'Element must have an unique id.': 'Element must have an unique id.',
+    'Element Template': 'Element Template',
+    'Element Variable': 'Element Variable',
+    'end': 'end',
+    'Error': 'Error',
+    'Error Code': 'Error Code',
+    'Error Code Variable': 'Error Code Variable',
+    'Error Message': 'Error Message',
+    'Error Message Variable': 'Error Message Variable',
+    'Error Name': 'Error Name',
+    'Escalation': 'Escalation',
+    'Escalation Code': 'Escalation Code',
+    'Escalation Code Variable': 'Escalation Code Variable',
+    'Escalation Name': 'Escalation Name',
+    'Event Type': 'Event Type',
+    'Exclusive': 'Exclusive',
+    'Executable': 'Executable',
+    'Execution Listener': 'Execution Listener',
+    'Expression': 'Expression',
+    'Extensions': 'Extensions',
+    'External': 'External',
+    'External Resource': 'External Resource',
+    'External Task Configuration': 'External Task Configuration',
+    'Field Injection': 'Field Injection',
+    'Field Injections': 'Field Injections',
+    'Fields': 'Fields',
+    'Follow Up Date': 'Follow Up Date',
+    'Form Field': 'Form Field',
+    'Form Fields': 'Form Fields',
+    'Form Key': 'Form Key',
+    'Forms': 'Forms',
+    'General': 'General',
+    'History Configuration': 'History Configuration',
+    'History Time To Live': 'History Time To Live',
+    'Id': 'Id',
+    'ID (process variable name)': 'ID (process variable name)',
+    'Id must be a valid QName.': 'Id must be a valid QName.',
+    'Id must not contain prefix.': 'Id must not contain prefix.',
+    'Id must not contain spaces.': 'Id must not contain spaces.',
+    'Implementation': 'Implementation',
+    'Initiator': 'Initiator',
+    'Inline Script': 'Inline Script',
+    'In Mapping': 'In Mapping',
+    'Input/Output': 'Input/Output',
+    'Input Parameter': 'Input Parameter',
+    'Input Parameters': 'Input Parameters',
+    'Java Class': 'Java Class',
+    'Job Configuration': 'Job Configuration',
+    'Job Priority': 'Job Priority',
+    'Label': 'Label',
+    'latest': 'latest',
+    'Link Name': 'Link Name',
+    'List': 'List',
+    'Listener Id': 'Listener Id',
+    'Listeners': 'Listeners',
+    'Listener Type': 'Listener Type',
+    'Local': 'Local',
+    'Loop Cardinality': 'Loop Cardinality',
+    'Map': 'Map',
+    'Map Decision Result': 'Map Decision Result',
+    'Mapping must have a target': 'Mapping must have a target',
+    'Mapping must have a value': 'Mapping must have a value',
+    'Mapping must have a {value}': 'Mapping must have a {value}',
+    'Message': 'Message',
+    'Message Name': 'Message Name',
+    'Multi Instance ': 'Multi Instance ',
+    'Multi Instance': 'Multi Instance',
+    'Must configure Connector': 'Must configure Connector',
+    'Must have max length {length}': 'Must have max length {length}',
+    'Must have min length {length}': 'Must have min length {length}',
+    'Must match pattern {pattern}': 'Must match pattern {pattern}',
+    'Must not be empty': 'Must not be empty',
+    'Must provide a value': 'Must provide a value',
+    'Must provide a value for timeout task listener': 'Must provide a value for timeout task listener',
+    'Must provide either loop cardinality or collection': 'Must provide either loop cardinality or collection',
+    'Name': 'Name',
+    'Name must not contain spaces': 'Name must not contain spaces',
+    'Out Mapping': 'Out Mapping',
+    'Output Parameter': 'Output Parameter',
+    'Output Parameters': 'Output Parameters',
+    'Parameter must have a name': 'Parameter must have a name',
+    'Parameters': 'Parameters',
+    'Priority': 'Priority',
+    'Process Documentation': 'Process Documentation',
+    'Process Id': 'Process Id',
+    'Process Name': 'Process Name',
+    'Properties': 'Properties',
+    'Resource': 'Resource',
+    'Result Variable': 'Result Variable',
+    'Retry Time Cycle': 'Retry Time Cycle',
+    'Script': 'Script',
+    'Script Format': 'Script Format',
+    'Script Type': 'Script Type',
+    'Signal': 'Signal',
+    'Signal Name': 'Signal Name',
+    'Source': 'Source',
+    'Source Expression': 'Source Expression',
+    'Specify more than one group as a comma separated list.': 'Specify more than one group as a comma separated list.',
+    'Specify more than one user as a comma separated list.': 'Specify more than one user as a comma separated list.',
+    'Specify more than one variable change event as a comma separated list.': 'Specify more than one variable change event as a comma separated list.',
+    'start': 'start',
+    'Startable': 'Startable',
+    'String': 'String',
+    'take': 'take',
+    'Target': 'Target',
+    'Target must not contain whitespace': 'Target must not contain whitespace',
+    'Tasklist Configuration': 'Tasklist Configuration',
+    'Task Listener': 'Task Listener',
+    'Task Priority': 'Task Priority',
+    'Tenant Id': 'Tenant Id',
+    'Text': 'Text',
+    'The due date as an EL expression (e.g. ${someDate} or an ISO date (e.g. 2015-06-26T09:54:00)': 'The due date as an EL expression (e.g. ${someDate} or an ISO date (e.g. 2015-06-26T09:54:00)',
+    'timeout': 'timeout',
+    'Timer Definition': 'Timer Definition',
+    'Timer Definition Type': 'Timer Definition Type',
+    'Topic': 'Topic',
+    'Type': 'Type',
+    'update': 'update',
+    'Validation': 'Validation',
+    'Value': 'Value',
+    'Values': 'Values',
+    'Variable Event': 'Variable Event',
+    'Variable Name': 'Variable Name',
+    'Variables': 'Variables',
+    'version': 'version',
+    'Version': 'Version',
+    'versionTag': 'versionTag',
+    'Version Tag': 'Version Tag',
+    'Wait for Completion': 'Wait for Completion',
+    '[unknown template: {templateId}]': '[unknown template: {templateId}]',
+    '{label} must not contain whitespace': '{label} darf keine Leerzeichen enthalten'
 });
 
 /***/ }),
@@ -438,35 +1108,49 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+const languages = {
+    de: _languages_de_js__WEBPACK_IMPORTED_MODULE_1__["default"], en: _languages_en_js__WEBPACK_IMPORTED_MODULE_2__["default"]
+};
+
+const CONFIG_KEY = "editor_language";
+const I18N_EVENT = "i18n.changed";
+const MENU_EVENT = "language.changed";
+
+const missing = [];
+
 function Translator(eventBus) {
+    let currentLanguage = _languages_en_js__WEBPACK_IMPORTED_MODULE_2__["default"];
 
-  const languages = {}
-  languages["de"] = _languages_de_js__WEBPACK_IMPORTED_MODULE_1__["default"];
-  languages["en"] = _languages_en_js__WEBPACK_IMPORTED_MODULE_2__["default"];
-  let currentLanguage = _languages_de_js__WEBPACK_IMPORTED_MODULE_1__["default"];
-
-  const value = _configuration__WEBPACK_IMPORTED_MODULE_0__["config"].get("editor_language");
-  value.then((language) => {
-    currentLanguage = languages[language];
-    eventBus.fire('i18n.changed');
-  })
-
-  eventBus.on('editorActions.init', function (event) {
-    const editorActions = event.editorActions;
-    editorActions.register('language.changed', function (language) {
-      currentLanguage = languages[language];
-      _configuration__WEBPACK_IMPORTED_MODULE_0__["config"].set("editor_language", language);
-      eventBus.fire('i18n.changed');
+    _configuration__WEBPACK_IMPORTED_MODULE_0__["config"].get(CONFIG_KEY).then((language) => {
+        currentLanguage = languages[language || "en"];
+        eventBus.fire(I18N_EVENT);
     });
-  });
 
-  return (template, type) => {
+    eventBus.on('editorActions.init', function (event) {
+        const editorActions = event.editorActions;
+        editorActions.register(MENU_EVENT, function (language) {
+            currentLanguage = languages[language];
+            _configuration__WEBPACK_IMPORTED_MODULE_0__["config"].set(CONFIG_KEY, language);
+            eventBus.fire(I18N_EVENT);
+            eventBus.fire('selection.changed', {newSelection: []});
+        });
+    });
 
-    //TODO Handling für bessere übersetzung
+    return (template, parameters) => {
+        if (!currentLanguage[template]) {
+            if (missing.indexOf(template) === -1) {
+                // Print missing translations to console out
+                console.log("Missing translation: " + template, parameters);
+                missing.push(template);
+            }
+        }
 
-    return currentLanguage[template] || template;
-  }
-}
+        const translation = currentLanguage[template] || template;
+        return translation.replace(/{([^}]+)}/g, function (_, key) {
+            return (parameters || {})[key] || '{' + key + '}';
+        });
+    };
+};
 
 Translator.$inject = ['eventBus'];
 

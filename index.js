@@ -1,7 +1,7 @@
 'use strict';
 
 module.exports = {
-  name: 'Languages',
+  name: 'Switch Language',
   script: './dist/client.js',
   menu: './menu/menu.js'
 };
