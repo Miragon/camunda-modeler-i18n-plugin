@@ -2,6 +2,8 @@
 
 This plugin allows you to translate or customize the strings used in the UI of the Camunda Modeler. It contains translations for German and English and can be easily extended or customized. 
 
+See it in action:
+
 ![Screenshot of Camunda Modeler in German](./img/screenshot.png)
 
 ## Installation
