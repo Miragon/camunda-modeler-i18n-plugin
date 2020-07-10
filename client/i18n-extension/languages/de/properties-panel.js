@@ -65,7 +65,7 @@ export default {
     'Details': 'Details',
     'DMN': 'DMN',
     'Documentation': 'Dokumentation',
-    'Due Date': 'Fälligskeitsdatum',
+    'Due Date': 'Fälligkeitsdatum',
     'Duration': 'Dauer',
     'Element Documentation': 'Elementdokumentation',
     'Element must have an unique id.': 'Element benötigt eine eindeutige ID',
