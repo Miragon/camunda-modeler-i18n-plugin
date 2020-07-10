@@ -2,7 +2,7 @@
 
 This plugin allows you to translate or customize the strings used in the UI of the Camunda Modeler. It contains translations for German and English and can be easily extended or customized. 
 
-> Attention: The dmn-js translations are currently not working. We are still trying to figure out, how to apply them.
+> The dmn-js translations are currently not working. We are still trying to figure out how to apply them.
 
 ## Installation
 
