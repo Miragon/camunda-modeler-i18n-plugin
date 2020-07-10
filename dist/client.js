@@ -97,32 +97,94 @@
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Config; });
 /* harmony import */ var _utils_generate_id__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../utils/generate-id */ "./client/utils/generate-id.js");
+/**
+ * Copyright 2020 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
 
+
+/**
+ * This class allows reading from and writing to the Camunda Modeler
+ * configuration. It is located in the {APP_DIRECTORY}/config.js file.
+ *
+ * You can use it as follows:
+ *
+ * @example
+ * import {config} from '../configuration';
+ * // ...
+ * const CONFIG_KEY = "any_key_you_want_to_use";
+ * config.set(CONFIG_KEY, "new_value");
+ * config.get(CONFIG_KEY).then((value) => {
+ *     console.log("Received value: " + value);
+ * });
+ */
 class Config {
-
+    /**
+     * Creates the config class.
+     *
+     * @param ipcRenderer The renderer used to display the application.
+     */
     constructor(ipcRenderer) {
         this.ipcRenderer = ipcRenderer;
     }
 
+    /**
+     * Use this function to set a key to the specified value.
+     *
+     * @param key The key to persist
+     * @param value The value to persist
+     */
+    set(key, value){
+        this.send("config:set", key, value);
+    }
+
+    /**
+     * Use this function to read the specified key.
+     *
+     * @param key The key to read
+     * @return A promise resolving with the read value
+     */
+    get(key) {
+        return this.send("config:get", key);
+    }
+
+    /**
+     * Listens once for the specified event and triggers the provided callback.
+     *
+     * @param event The event to listen for
+     * @param callback The callback to trigger
+     */
     once (event, callback) {
         this.ipcRenderer.once(event, callback);
     }
 
-    set(...args){
-        this.send("config:set", ...args);
-    }
-
-    get( ...args) {
-        return this.send("config:get", ...args);
-    }
-
+    /**
+     * Sends the event with the specified arguments to the backend.
+     *
+     * @param event The name of the event to send
+     * @param args The arguments to send
+     * @return A promise resolved with the response of the event
+     */
     send(event, ...args){
         return new Promise((resolve, reject) => {
-
             const id = Object(_utils_generate_id__WEBPACK_IMPORTED_MODULE_0__["default"])();
 
             this.once(event + ':response:' + id, function (evt, args) {
+                // args[0] = error
+                // args[1] = result
+
                 if (args[0] !== null) {
                     reject(args[0]);
                 }
@@ -134,7 +196,6 @@ class Config {
             this.ipcRenderer.send(event, id, args);
         });
     }
-
 }
 
 /***/ }),
@@ -150,8 +211,27 @@ class Config {
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "config", function() { return config; });
 /* harmony import */ var _Config__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Config */ "./client/configuration/Config.js");
+/**
+ * Copyright 2020 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
 
+
+/**
+ * Instantiates and exports the config class.
+ */
 const {
     ipcRenderer
 } = window.getAppPreload();
@@ -171,8 +251,27 @@ const config = new _Config__WEBPACK_IMPORTED_MODULE_0__["default"](ipcRenderer);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _translate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./translate */ "./client/i18n-extension/translate.js");
+/**
+ * Copyright 2020 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
 
+
+/**
+ * Creates the plugin structure and tells the modeler, how to initialize it.
+ */
 /* harmony default export */ __webpack_exports__["default"] = ({
   __init__: [ 'translate' ],
   translate: [ 'type', _translate__WEBPACK_IMPORTED_MODULE_0__["default"] ]
@@ -194,11 +293,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _de_dmn_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./de/dmn-js */ "./client/i18n-extension/languages/de/dmn-js.js");
 /* harmony import */ var _de_properties_panel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./de/properties-panel */ "./client/i18n-extension/languages/de/properties-panel.js");
 /* harmony import */ var _de_other__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./de/other */ "./client/i18n-extension/languages/de/other.js");
+/**
+ * Copyright 2020 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
 
 
 
 
+
+/**
+ * Joins and exports the translated strings.
+ */
 /* harmony default export */ __webpack_exports__["default"] = ({
     ..._de_bpmn_js__WEBPACK_IMPORTED_MODULE_0__["default"],
     ..._de_dmn_js__WEBPACK_IMPORTED_MODULE_1__["default"],
@@ -217,8 +335,25 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-// Contains translations used in the bpmn-js repository
+/**
+ * Copyright 2020 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
+/**
+ * This file contains the strings used in the bpmn-js module.
+ */
 /* harmony default export */ __webpack_exports__["default"] = ({
     'Append {type}': '{type} anfügen',
     'Add Lane above': 'Lane darüber einfügen',
@@ -292,8 +427,27 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-// Contains translations used in the dmn-js repository
+/**
+ * Copyright 2020 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
+/**
+ * This file contains the translated strings used in the dmn-js component.
+ * However, notice that these strings are currently not working. We are
+ * still investigating how to apply them.
+ */
 /* harmony default export */ __webpack_exports__["default"] = ({
     'Activate the lasso tool': 'Lasso-Tool aktivieren',
     'Add Cell Description': 'Zellenbeschreibung hinzufügen',
@@ -366,8 +520,25 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-// Contains translations used somewhere else
+/**
+ * Copyright 2020 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
+/**
+ * This file contains translations that were used in other components.
+ */
 /* harmony default export */ __webpack_exports__["default"] = ({
     'Open minimap': 'Minimap öffnen',
     'This maps to the process definition key.': 'Angabe wird zum Prozess-Definition-Key gemappt.',
@@ -448,8 +619,25 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-// Contains translations used in the bpmn-js-properties-panel repository
+/**
+ * Copyright 2020 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
+/**
+ * This file contains the translations used by the bpmn-js-properties-panel component.
+ */
 /* harmony default export */ __webpack_exports__["default"] = ({
     'Activity Ref': 'Activity-Referenz',
     'Add Constraint': 'Constraint hinzufügen',
@@ -649,11 +837,30 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _en_dmn_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./en/dmn-js */ "./client/i18n-extension/languages/en/dmn-js.js");
 /* harmony import */ var _en_properties_panel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./en/properties-panel */ "./client/i18n-extension/languages/en/properties-panel.js");
 /* harmony import */ var _en_other__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./en/other */ "./client/i18n-extension/languages/en/other.js");
+/**
+ * Copyright 2020 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
 
 
 
 
+
+/**
+ * Joins and exports the translated strings.
+ */
 /* harmony default export */ __webpack_exports__["default"] = ({
     ..._en_bpmn_js__WEBPACK_IMPORTED_MODULE_0__["default"],
     ..._en_dmn_js__WEBPACK_IMPORTED_MODULE_1__["default"],
@@ -672,8 +879,25 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-// Contains translations used in the bpmn-js repository
+/**
+ * Copyright 2020 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
+/**
+ * This file contains the strings used in the bpmn-js module.
+ */
 /* harmony default export */ __webpack_exports__["default"] = ({
     'Append {type}': 'Append {type}',
     'Add Lane above': 'Add Lane above',
@@ -747,8 +971,27 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-// Contains translations used in the dmn-js repository
+/**
+ * Copyright 2020 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
+/**
+ * This file contains the translated strings used in the dmn-js component.
+ * However, notice that these strings are currently not working. We are
+ * still investigating how to apply them.
+ */
 /* harmony default export */ __webpack_exports__["default"] = ({
     'Activate the lasso tool': 'Activate the lasso tool',
     'Add Cell Description': 'Add Cell Description',
@@ -821,8 +1064,25 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-// Contains translations used somewhere else
+/**
+ * Copyright 2020 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
+/**
+ * This file contains translations that were used in other components.
+ */
 /* harmony default export */ __webpack_exports__["default"] = ({
     'Open minimap': 'Open minimap',
     'This maps to the process definition key.': 'This maps to the process definition key.',
@@ -903,8 +1163,25 @@ __webpack_require__.r(__webpack_exports__);
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-// Contains translations used in the bpmn-js-properties-panel repository
+/**
+ * Copyright 2020 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
+/**
+ * This file contains the translations used by the bpmn-js-properties-panel component.
+ */
 /* harmony default export */ __webpack_exports__["default"] = ({
     'Activity Ref': 'Activity Ref',
     'Add Constraint': 'Add Constraint',
@@ -1104,54 +1381,113 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../configuration */ "./client/configuration/index.js");
 /* harmony import */ var _languages_de_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./languages/de.js */ "./client/i18n-extension/languages/de.js");
 /* harmony import */ var _languages_en_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./languages/en.js */ "./client/i18n-extension/languages/en.js");
+/**
+ * Copyright 2020 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
 
 
 
+
+/**
+ * All available languages.
+ */
 const languages = {
     de: _languages_de_js__WEBPACK_IMPORTED_MODULE_1__["default"], en: _languages_en_js__WEBPACK_IMPORTED_MODULE_2__["default"]
 };
 
+// The default language to use if none is specified in the configuration
+const defaultLanguage = "en";
+
+// The key in the configuration that specifies the language
 const CONFIG_KEY = "editor_language";
+
+// The events to listen to / send
 const I18N_EVENT = "i18n.changed";
 const MENU_EVENT = "language.changed";
+const INIT_ACTION = "editorActions.init";
+const SELECTION_EVENT = "selection.changed";
 
+// Contains all missing translations discovered to prevent logging them
+// multiple times.
 const missing = [];
 
+/**
+ * This function initializes the translation plugin.
+ *
+ * @param eventBus The application's event bus
+ * @return The translator function
+ */
 function Translator(eventBus) {
-    let currentLanguage = _languages_en_js__WEBPACK_IMPORTED_MODULE_2__["default"];
+    let currentLanguage = languages[defaultLanguage];
 
+    // Read the language from configuration
     _configuration__WEBPACK_IMPORTED_MODULE_0__["config"].get(CONFIG_KEY).then((language) => {
-        currentLanguage = languages[language || "en"];
-        eventBus.fire(I18N_EVENT);
+
+        // Check if the specified language exists
+        if (languages[language] && language !== defaultLanguage) {
+
+            // Set the language as current
+            currentLanguage = languages[language];
+
+            // Notify parts of the application that the language has changed. Triggers a re-rendering.
+            eventBus.fire(I18N_EVENT);
+            eventBus.fire(SELECTION_EVENT, {newSelection: []});
+        }
     });
 
-    eventBus.on('editorActions.init', function (event) {
+    // After the editor has initialized, register the menu listeners
+    eventBus.on(INIT_ACTION, function (event) {
         const editorActions = event.editorActions;
         editorActions.register(MENU_EVENT, function (language) {
-            currentLanguage = languages[language];
+
+            // Persist the new language
             _configuration__WEBPACK_IMPORTED_MODULE_0__["config"].set(CONFIG_KEY, language);
+
+            // Set the language as above
+            currentLanguage = languages[language];
             eventBus.fire(I18N_EVENT);
-            eventBus.fire('selection.changed', {newSelection: []});
+            eventBus.fire(SELECTION_EVENT, {newSelection: []});
         });
     });
 
+    // Return the translation function. It takes the template string and the parameters,
+    // translates it and returns it.
     return (template, parameters) => {
+
+        // If the requested string is not available in the current language
         if (!currentLanguage[template]) {
+            // Check if it was already printed to the console
             if (missing.indexOf(template) === -1) {
-                // Print missing translations to console out
+                // Print the missing translation to the console ´
                 console.log("Missing translation: " + template, parameters);
                 missing.push(template);
             }
         }
 
+        // Use the translated string or the original template string as fallback
         const translation = currentLanguage[template] || template;
+
+        // Replace all parameters in the template string with the provided values
         return translation.replace(/{([^}]+)}/g, function (_, key) {
             return (parameters || {})[key] || '{' + key + '}';
         });
     };
 };
 
+// Specify what values should be injected into the function above
 Translator.$inject = ['eventBus'];
 
 /***/ }),
@@ -1167,12 +1503,27 @@ Translator.$inject = ['eventBus'];
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var camunda_modeler_plugin_helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! camunda-modeler-plugin-helpers */ "./node_modules/camunda-modeler-plugin-helpers/index.js");
 /* harmony import */ var _i18n_extension__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./i18n-extension */ "./client/i18n-extension/index.js");
+/**
+ * Copyright 2020 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
 
 
 
 
 Object(camunda_modeler_plugin_helpers__WEBPACK_IMPORTED_MODULE_0__["registerBpmnJSPlugin"])(_i18n_extension__WEBPACK_IMPORTED_MODULE_1__["default"]);
-
 
 /***/ }),
 
@@ -1187,10 +1538,34 @@ Object(camunda_modeler_plugin_helpers__WEBPACK_IMPORTED_MODULE_0__["registerBpmn
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return generateId; });
 /* harmony import */ var ids__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ids */ "./node_modules/ids/dist/index.esm.js");
+/**
+ * Copyright 2020 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
 
+
+/**
+ * The ids to use.
+ */
 const ids = new ids__WEBPACK_IMPORTED_MODULE_0__["default"]([ 32, 36, 1 ]);
 
+/**
+ * Generates a new id.
+ *
+ * @return The new id
+ */
 function generateId() {
     return ids.next();
 }
