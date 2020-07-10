@@ -2,7 +2,7 @@
 
 This plugin allows you to translate or customize the strings used in the UI of the Camunda Modeler. It contains translations for German and English and can be easily extended or customized. 
 
-> The dmn-js translations are currently not working. We are still trying to figure out how to apply them.
+[Screenshot of Camunda Modeler in German]: ./img/screenshot.png "Logo Title Text 2"
 
 ## Installation
 
@@ -88,6 +88,12 @@ If you want to add a new language, follow these steps, after you setup your loca
    }
    // ...
    ```
+   
+## Known Issues
+
+### DMN.js translations are not working
+
+The translations for dmn-js are available, but are currently not being applied in the UI. We are still investigating why this is not working. If you have an idea, open an Issue or create a Pull Request.
 
 ## License
 
