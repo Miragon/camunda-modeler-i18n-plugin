@@ -32,7 +32,7 @@
         "i18n"
     ],
     "dependencies": {
-        "camunda-modeler-plugin-helpers": "^3.1.0",
+        "camunda-modeler-plugin-helpers": "^3.4.0-alpha.1",
         "ids": "^1.0.0"
     },
     "devDependencies": {

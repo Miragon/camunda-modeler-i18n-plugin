@@ -15,9 +15,11 @@
  */
 
 import {
-  registerBpmnJSPlugin
+  registerBpmnJSPlugin,
+  registerDmnJSPlugin
 } from 'camunda-modeler-plugin-helpers';
 
-import BpmnExtensionModule from './i18n-extension';
+import i18nExtensionModule from './i18n-extension';
 
-registerBpmnJSPlugin(BpmnExtensionModule);
+registerBpmnJSPlugin(i18nExtensionModule);
+registerDmnJSPlugin(i18nExtensionModule, ['drd','decisionTable','literalExpression']);
