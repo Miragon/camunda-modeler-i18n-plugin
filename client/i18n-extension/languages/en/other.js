@@ -83,5 +83,14 @@ export default {
     'Timer Boundary Event (non-interrupting)': 'Timer Boundary Event (non-interrupting)',
     'Escalation Boundary Event (non-interrupting)': 'Escalation Boundary Event (non-interrupting)',
     'Conditional Boundary Event (non-interrupting)': 'Conditional Boundary Event (non-interrupting)',
-    'Signal Boundary Event (non-interrupting)': 'Signal Boundary Event (non-interrupting)'
+    'Signal Boundary Event (non-interrupting)': 'Signal Boundary Event (non-interrupting)',
+    'Connect using Information/Knowledge/Authority Requirement or Association': 'Connect using Information/Knowledge/Authority Requirement or Association',
+    'Empty': 'Empty',
+    'Literal Expression': 'Literal Expression',
+    'This maps to the decision definition key.': 'This maps to the decision definition key.',
+    'Decision Table': 'Decision Table',
+    'Output': 'Output',
+    'Annotation': 'Annotation',
+    'Output Expression': 'Output Expression',
+    'Data Type': 'Data Type'
 }

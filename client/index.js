@@ -21,5 +21,8 @@ import {
 
 import i18nExtensionModule from './i18n-extension';
 
+// Register plugin for the BPMN part
 registerBpmnJSPlugin(i18nExtensionModule);
+
+// Register plugin for the DMN part
 registerDmnJSPlugin(i18nExtensionModule, ['drd','decisionTable','literalExpression']);

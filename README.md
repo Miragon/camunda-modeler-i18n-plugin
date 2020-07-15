@@ -14,7 +14,7 @@ To use this plugin in your installation, follow these simple steps:
 2. Download the latest release artifact
 3. Extract it and put it inside the "resources/plugins" directory relative to your `{APP_DATA_DIRECTORY}` or `{USER_DATA_DIRECTORY}`.
 4. Restart the modeler
-5. Click Plugins > Choose Language and select the language of your joice  
+5. Click Plugins > Choose Language and select the language of your choice  
 
 ## Development
 
@@ -32,11 +32,11 @@ To test it, build the plugin by using the command `npm build`. Then, copy the fo
 - `dist/`
 - `menu/`
 
-Then restart the modeler to see all changes in effect. If you just changed the translations, opening the devtools via `F12` and pressing `Ctrl-R` or `Cmd+R` is usually enough to reload the plugin. If you changed the menu, you have to completely restart the modeler though.
+Then restart the modeler to see all changes in effect. If you just changed the translations, opening the devtools via `F12` and pressing `Ctrl-R` or `Cmd+R` is usually enough to reload the plugin. If you changed the menu, you have to restart the modeler, though.
 
 ### Automate the local deployment
 
-If you don't want to copy the files manually into the "resources/plugins" directory all the time, you can automate that using a NPM task. For that, just install the package `copyfiles`:
+If you don't want to copy the files manually into the "resources/plugins" directory all the time, you can automate that using an NPM task. For that, install the package `copyfiles`:
 
 `npm install --dev copyfiles`
 
@@ -52,7 +52,7 @@ Now, if you run `npm run local`, the plugin will be built and automatically copi
 
 ## Add a new language
 
-If you want to add a new language, follow these steps, after you setup your local development environment:
+If you want to add a new language, follow these steps, after you set up your local development environment:
  
 1. Duplicate the "client/i18n-extension/languages/en" directory and adjust the name (we will use "fr" in this example)
 2. Translate the files in the duplicated folder
@@ -90,13 +90,8 @@ If you want to add a new language, follow these steps, after you setup your loca
    }
    // ...
    ```
+6. Create a pull request to this repository and help us with adding new languages and improving the existing ones! :)
    
-## Known Issues
-
-### DMN.js translations are not working
-
-The translations for dmn-js are available, but are currently not being applied in the UI. We are still investigating why this is not working. If you have an idea, open an Issue or create a Pull Request.
-
 ## License
 
 ```

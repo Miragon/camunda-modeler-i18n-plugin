@@ -84,4 +84,13 @@ export default {
     'Escalation Boundary Event (non-interrupting)': 'Escalation-Boundary-Event (nicht unterbrechend)',
     'Conditional Boundary Event (non-interrupting)': 'Conditional-Boundary-Event (nicht unterbrechend)',
     'Signal Boundary Event (non-interrupting)': 'Signal-Boundary-Event (nicht unterbrechend)',
+    'Connect using Information/Knowledge/Authority Requirement or Association': 'Mit Information/Knowledge/Authority Requirement oder Assoziation verbinden',
+    'Empty': 'Leer',
+    'Literal Expression': 'Literaler Ausdruck',
+    'This maps to the decision definition key.': 'Angabe wird zum Decision-Definition-Key gemappt.',
+    'Decision Table': 'Decision-Table',
+    'Output': 'Output',
+    'Annotation': 'Annotation',
+    'Output Expression': 'Output-Expression',
+    'Data Type': 'Datentyp'
 }
