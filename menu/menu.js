@@ -39,6 +39,13 @@ module.exports = function (electronApp, menuState) {
             action: function () {
                 electronApp.emit('menu:action', 'language.changed', 'en');
             }
+        },
+        {
+            label: 'Português (Brasil)',
+            enabled: () => menuState.bpmn,
+            action: function () {
+                electronApp.emit('menu:action', 'language.changed', 'pt_br');
+            }
         }
     ];
 };
