@@ -1386,19 +1386,19 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./client/i18n-extension/translate.js":
-/*!********************************************!*\
-  !*** ./client/i18n-extension/translate.js ***!
-  \********************************************/
+/***/ "./client/i18n-extension/languages/pt-br.js":
+/*!**************************************************!*\
+  !*** ./client/i18n-extension/languages/pt-br.js ***!
+  \**************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Translator; });
-/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../configuration */ "./client/configuration/index.js");
-/* harmony import */ var _languages_de_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./languages/de.js */ "./client/i18n-extension/languages/de.js");
-/* harmony import */ var _languages_en_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./languages/en.js */ "./client/i18n-extension/languages/en.js");
+/* harmony import */ var _pt_br_bpmn_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./pt-br/bpmn-js */ "./client/i18n-extension/languages/pt-br/bpmn-js.js");
+/* harmony import */ var _pt_br_dmn_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./pt-br/dmn-js */ "./client/i18n-extension/languages/pt-br/dmn-js.js");
+/* harmony import */ var _pt_br_properties_panel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pt-br/properties-panel */ "./client/i18n-extension/languages/pt-br/properties-panel.js");
+/* harmony import */ var _pt_br_other__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pt-br/other */ "./client/i18n-extension/languages/pt-br/other.js");
 /**
  * Copyright 2020 FlowSquad GmbH
  *
@@ -1419,11 +1419,571 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+/**
+ * Joins and exports the translated strings.
+ */
+/* harmony default export */ __webpack_exports__["default"] = ({
+  ..._pt_br_bpmn_js__WEBPACK_IMPORTED_MODULE_0__["default"],
+  ..._pt_br_dmn_js__WEBPACK_IMPORTED_MODULE_1__["default"],
+  ..._pt_br_properties_panel__WEBPACK_IMPORTED_MODULE_2__["default"],
+  ..._pt_br_other__WEBPACK_IMPORTED_MODULE_3__["default"]
+});
+
+
+/***/ }),
+
+/***/ "./client/i18n-extension/languages/pt-br/bpmn-js.js":
+/*!**********************************************************!*\
+  !*** ./client/i18n-extension/languages/pt-br/bpmn-js.js ***!
+  \**********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/**
+ * Copyright 2020 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * This file contains the strings used in the bpmn-js module.
+ */
+/* harmony default export */ __webpack_exports__["default"] = ({
+    'Append {type}': 'Adicionar {type}',
+    'Add Lane above': 'Adicionar Raia acima',
+    'Divide into two Lanes': 'Dividir em duas Raias',
+    'Divide into three Lanes': 'Dividir em três Raias',
+    'Add Lane below': 'Adicionar Raia abaixo',
+    'Append ReceiveTask': 'Adicionar Atividade de Recebimento',
+    'Append MessageIntermediateCatchEvent': 'Adicionar Evento Intermediário de Captura de Mensagem',
+    'Append TimerIntermediateCatchEvent': 'Adicionar Evento Intermediário de Captura de Tempo',
+    'Append ConditionIntermediateCatchEvent': 'Adicionar Evento Intermediário de Captura de Condição',
+    'Append SignalIntermediateCatchEvent': 'Adicionar Evento Intermediário de Captura de Sinal',
+    'Append compensation activity': 'Adicionar atividade de compensação',
+    'Append EndEvent': 'Adicionar Evento Final',
+    'Append Gateway': 'Adicionar Gateway',
+    'Append Task': 'Adicionar Atividade',
+    'Append Intermediate/Boundary Event': 'Adicionar Evento Intermediário ou de Borda',
+    'Change type': 'Mudar tipo',
+    'Connect using Association': 'Conectar usando Associação',
+    'Connect using Sequence/MessageFlow or Association': 'Conectar usando Sequência/Fluxo de Mensagem, ou Associação',
+    'Connect using DataInputAssociation': 'Conectar usando Associacao de Entrada de Dados',
+    'Remove': 'Remover',
+    'no shape type specified': 'nenhum tipo de forma especificado',
+    'out of bounds release': 'solto fora da região delimitada',
+    'more than {count} child lanes': 'mais que {count} raias filhas',
+    'element required': 'elemento necessário',
+    'no parent for {element} in {parent}': 'sem elemento pai para {element} em {parent}',
+    'Create {type}': 'Criar {type}',
+    'Activate the hand tool': 'Ativar ferramenta mão',
+    'Activate the lasso tool': 'Ativar ferramenta laço',
+    'Activate the create/remove space tool': 'Ativar ferramenta para criar/remover espaço',
+    'Activate the global connect tool': 'Ativar ferramenta de conexão global',
+    'Create StartEvent': 'Criar Evento de Início',
+    'Create Intermediate/Boundary Event': 'Criar Evento Intermediário ou de Borda',
+    'Create EndEvent': 'Criar Evento Final',
+    'Create Gateway': 'Criar Gateway',
+    'Create Task': 'Criar Atividade',
+    'Create DataObjectReference': 'Criar Referência à Objeto de Dados',
+    'Create DataStoreReference': 'Criar Referência à Armazenamento de Dados',
+    'Create expanded SubProcess': 'Criar SubProcesso expandido',
+    'Create Pool/Participant': 'Criar Piscina/Participante',
+    'Create Group': 'Criar Grupo',
+    'Parallel Multi Instance': 'Múltiplas Instâncias em Paralelo',
+    'Sequential Multi Instance': 'Múltiplas Instâncias em Sequência',
+    'Loop': 'Loop',
+    'Ad-hoc': 'Ad-hoc',
+    'element {element} referenced by {referenced}#{property} not yet drawn': 'elemento {element} referenciado por {referenced}#{property} ainda não renderizado',
+    'unknown di {di} for element {semantic}': 'di desconhecido {di} para elemento {semantic}',
+    'missing {semantic}#attachedToRef': 'faltando {semantic}#attachedToRef',
+    '{semantic}#{side} Ref not specified': '{semantic}#{side} Ref não especificada',
+    'already rendered {element}': 'já renderizado {element}',
+    'failed to import {element}': 'falha ao importar {element}',
+    'multiple DI elements defined for {element}': 'múltiplos elementos DI definidos para {element}',
+    'no bpmnElement referenced in {element}': 'nenhum bpmnElement referenciado em {element}',
+    'diagram not part of bpmn:Definitions': 'diagrama não faz parte de bpmn:Definitions',
+    'no diagram to display': 'nenhum diagrama para exibir',
+    'no process or collaboration to display': 'nenhum processo ou colaboração para exibir',
+    'correcting missing bpmnElement on {plane} to {rootElement}': 'corrigindo bpmnElement faltando no {plane} para {rootElement}',
+    'unsupported bpmnElement for {plane}: {rootElement}': 'bpmnElement não suportado para {plane}: {rootElement}',
+    'unrecognized flowElement {element} in context {context}': 'flowElement não reconhecido {element} no contexto {context}',
+    'HELLO {you}!': 'OLÁ {you}!'
+});
+
+
+/***/ }),
+
+/***/ "./client/i18n-extension/languages/pt-br/dmn-js.js":
+/*!*********************************************************!*\
+  !*** ./client/i18n-extension/languages/pt-br/dmn-js.js ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/**
+ * Copyright 2020 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * This file contains the translated strings used in the dmn-js component.
+ * However, notice that these strings are currently not working. We are
+ * still investigating how to apply them.
+ */
+/* harmony default export */ __webpack_exports__["default"] = ({
+    'Activate the lasso tool': 'Ativar ferramenta laço',
+    'Add Cell Description': 'Adicionar Descrição da Célula',
+    'Add Input': 'Adicionar Entrada',
+    'Add Input Column Left': 'Adicionar Coluna de Entrada à Esquerda',
+    'Add Input Column Right': 'Adicionar Coluna de Entrada à Direita',
+    'Add Output': 'Adicionar Saída',
+    'Add Output Column Left': 'Adicionar Coluna de Saída à Esquerda',
+    'Add Output Column Right': 'Adicionar Coluna de Saída à Direita',
+    'Add Predefined Values': 'Adicionar Valores Pré-Definidos',
+    'Add Rule Above': 'Adicionar Regra Acima',
+    'Add Rule Below': 'Adicionar Regra Abaixo',
+    'Add Values': 'Adicionar Valores',
+    'And': 'E',
+    'Annotations': 'Anotações',
+    'Append {type}': 'Adicionar {type}',
+    'cellInput': 'célula de Entrada',
+    'Change Cell Expression Language': 'Mudar Lingugem de Expressão da Célula',
+    'Change type': 'Mudar tipo',
+    'Clear predefined values.': 'Limpar valores pré-definidos.',
+    'Copy Input Column': 'Copiar Coluna de Entrada',
+    'Copy Output Column': 'Copiar Coluna de Saída',
+    'Copy Rule': 'Copiar Regra',
+    'Create Decision': 'Criar Decisão',
+    'Create Input Data': 'Criar Dado de Entrada',
+    'Create Knowledge Model': 'Criar Modelo de Conhecimento',
+    'Create Knowledge Source': 'Criar Origem de Conhecimento',
+    'Cut Input Column': 'Recortar Coluna de Entrada',
+    'Cut Output Column': 'Recortar Coluna de Saída',
+    'Cut Rule': 'Recortar Regra',
+    'Edit String': 'Editar String',
+    'Expression': 'Expressão',
+    'Expression Language': 'Linguagem de Expressão',
+    'Input': 'Entrada',
+    'Input Expression': 'Expressão de Entrada',
+    'Input Label': 'Rótulo de Entrada',
+    'Input Type': 'Tipo de Entrada',
+    'Input Values': 'Valores de Entrada',
+    'Input Variable': 'Variável de Entrada',
+    'No values': 'Sem valores',
+    'Output Label': 'Rótulo de Saída',
+    'Output Name': 'Nome de Saída',
+    'Output Type': 'Tipo de Saída',
+    'Output Values': 'Valores de Saída',
+    'Paste Input Column Left': 'Colar Coluna de Entrada à Esquerda',
+    'Paste Input Column Right': 'Colar Coluna de Entrada à Direita',
+    'Paste Output Column Left': 'Colar Coluna de Saída à Esquerda',
+    'Paste Output Column Right': 'Colar Coluna de Saída à Direita',
+    'Paste Rule Above': 'Colar Regra Acima',
+    'Paste Rule Below': 'Colar Regra Abaixo',
+    'Predefined Values': 'Valores Pré-Definidos',
+    'Remove': 'Remover',
+    'Remove Cell Description': 'Remover Descrição da Célula',
+    'Remove Input Column': 'Remover Coluna de Entrada',
+    'Remove Output Column': 'Remover Coluna de Saída',
+    'Remove Rule': 'Remover Regra',
+    'Set Value': 'Definir Valor',
+    'Strings must be in double quotes.': 'Strings devem estar em aspas duplas.',
+    'Type': 'Tipo',
+});
+
+
+/***/ }),
+
+/***/ "./client/i18n-extension/languages/pt-br/other.js":
+/*!********************************************************!*\
+  !*** ./client/i18n-extension/languages/pt-br/other.js ***!
+  \********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/**
+ * Copyright 2020 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * This file contains translations that were used in other components.
+ */
+/* harmony default export */ __webpack_exports__["default"] = ({
+    'Open minimap': 'Abrir mini-mapa',
+    'This maps to the process definition key.': 'Aponta para a chave de definição do processo.',
+    'Key': 'Chave',
+    'Intermediate Throw Event': 'Evento Intermediário de Lançamento',
+    'End Event': 'Evento Final',
+    'Message Start Event': 'Evento de Início de Mensagem',
+    'Timer Start Event': 'Evento de Início de Tempo',
+    'Conditional Start Event': 'Evento de Início Condicional',
+    'Signal Start Event': 'Evento de Início de Sinal',
+    'Expand (not reversible)': 'Expandir (não reversível)',
+    'ID': 'ID',
+    'Start Event': 'Evento de Início',
+    'Message End Event': 'Evento Final de Mensagem',
+    'Escalation End Event': 'Evento Final de Escalação',
+    'Error End Event': 'Evento Final de Erro',
+    'Compensation End Event': 'Evento Final de Compensação',
+    'Signal End Event': 'Evento Final de Sinal',
+    'Terminate End Event': 'Evento Final de Terminação',
+    'Transaction': 'Transação',
+    'Event Sub Process': 'Evento de SubProcesso',
+    'Sub Process (collapsed)': 'SubProcesso (colapsado)',
+    'Close minimap': 'Fechar mini-mapa',
+    'Message Intermediate Catch Event': 'Evento Intermediário de Captura de Mensagem',
+    'Message Intermediate Throw Event': 'Evento Intermediário de Lançamento de Mensagem',
+    'Timer Intermediate Catch Event': 'Evento Intermediário de Captura de Tempo',
+    'Escalation Intermediate Throw Event': 'Evento Intermediário de Lançamento de Escalação',
+    'Conditional Intermediate Catch Event': 'Evento Intermediário de Captura de Condição',
+    'Link Intermediate Catch Event': 'Evento Intermediário de Captura de Link',
+    'Link Intermediate Throw Event': 'Evento Intermediário de Lançamento de Línk',
+    'Compensation Intermediate Throw Event': 'Evento Intermediário de Lançamento de Compensação',
+    'Signal Intermediate Catch Event': 'Evento Intermediário de Captura de Sinal',
+    'Signal Intermediate Throw Event': 'Evento Intermediário de Lançamento de Sinal',
+    'Parallel Gateway': 'Gateway Paralelo',
+    'Inclusive Gateway': 'Gateway Inclusivo',
+    'Complex Gateway': 'Gateway Complexo',
+    'Event based Gateway': 'Gateway de Evento',
+    'Exclusive Gateway': 'Gateway Exclusivo',
+    'Send Task': 'Atividade de Envio de Mensagem',
+    'Receive Task': 'Atividade de Recebimento de Mensagem',
+    'User Task': 'Atividade de Usuário',
+    'Manual Task': 'Atividade Manual',
+    'Business Rule Task': 'Atividade de Regra de Negócios',
+    'Service Task': 'Atividade de Serviço',
+    'Script Task': 'Atividade de Script',
+    'Call Activity': 'Atividade de Chamada',
+    'Sub Process (expanded)': 'Sub Processo (expandido)',
+    'Sub Process': 'Sub Processo',
+    'Task': 'Atividade',
+    'This maps to the task definition key.': 'Aponta para a chave de definição da atividade.',
+    'Collapsed Pool': 'Piscina Colapsada',
+    'Expanded Pool': 'Piscina Expandida',
+    'flow elements must be children of pools/participants': 'elementos do fluxo devem ser filhos de piscina/participante',
+    'The follow up date as an EL expression (e.g. ${someDate} or an ISO date (e.g. 2015-06-26T09:54:00)': 'A data de acompanhamento é uma expressão EL (por exemplo: ${someDate} ou uma data ISO (por exemplo: 2015-06-26T09:54:00)',
+    'Message Boundary Event': 'Evento de Borda de Mensagem',
+    'Timer Boundary Event': 'Evento de Borda de Tempo',
+    'Escalation Boundary Event': 'Evento de Borda de Escalação',
+    'Conditional Boundary Event': 'Evento de Borda Condicional',
+    'Error Boundary Event': 'Evento de Borda de Erro',
+    'Cancel Boundary Event': 'Evento de Borda de Cancelamento',
+    'Signal Boundary Event': 'Evento de Borda de Sinal',
+    'Compensation Boundary Event': 'Evento de Borda de Compensação',
+    'Message Boundary Event (non-interrupting)': 'Evento de Borda de Mensagem (sem interrupção)',
+    'Timer Boundary Event (non-interrupting)': 'Evento de Borda de Tempo (sem interrupção)',
+    'Escalation Boundary Event (non-interrupting)': 'Evento de Borda de Escalação (sem interrupção)',
+    'Conditional Boundary Event (non-interrupting)': 'Evento de Borda Condicional (sem interrupção)',
+    'Signal Boundary Event (non-interrupting)': 'Evento de Borda de Sinal (sem interrupção)',
+    'Connect using Information/Knowledge/Authority Requirement or Association': 'Conecte usando Requerimento de Informação/Conhecimento/Autoridade ou Associação',
+    'Empty': 'Vazio',
+    'Literal Expression': 'Expressão Literal',
+    'This maps to the decision definition key.': 'Aponta para a chave de definicão da decisão.',
+    'Decision Table': 'Tabela de Decisão',
+    'Output': 'Saída',
+    'Annotation': 'Anotação',
+    'Output Expression': 'Expressão de Saída',
+    'Data Type': 'Tipo de Dado'
+});
+
+
+/***/ }),
+
+/***/ "./client/i18n-extension/languages/pt-br/properties-panel.js":
+/*!*******************************************************************!*\
+  !*** ./client/i18n-extension/languages/pt-br/properties-panel.js ***!
+  \*******************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/**
+ * Copyright 2020 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * This file contains the translations used by the bpmn-js-properties-panel component.
+ */
+/* harmony default export */ __webpack_exports__["default"] = ({
+    'Activity Ref': 'Ref Atividade',
+    'Add Constraint': 'Adicionar Restrição',
+    'Add Entry': 'Adicionar Registro',
+    'Add Property': 'Adicionar Propriedade',
+    'Add Value': 'Adicionar Valor',
+    'All': 'Tudo',
+    'Assignee': 'Usuário Atribuído',
+    'assignment': 'atribuição de usuário',
+    'Asynchronous After': 'Assíncrono Após',
+    'Asynchronous Before': 'Assíncrono Antes',
+    'Asynchronous Continuations': 'Continuação Assíncrona',
+    'Binding': 'Vínculo',
+    'Business Key': 'Chave de Negócios',
+    'Business Key Expression': 'Expressão da Chave de Negócios',
+    'CallActivity Type': 'Tipo de Chamada de Atividade',
+    'Called Element': 'Elemento Chamado',
+    'Candidate Groups': 'Grupos Candidatos',
+    'Candidate Starter Configuration': 'Configuração de Candidatos de Início',
+    'Candidate Starter Groups': 'Grupos Candidatos de Início',
+    'Candidate Starter Users': 'Usuários Candidatos de Início',
+    'Candidate Users': 'Usuários Candidatos',
+    'Case Ref': 'Ref Caso',
+    'Category Value': 'Valor de Categoria',
+    'Class': 'Classe',
+    'Collection': 'Coleção',
+    'complete': 'concluído',
+    'Completion Condition': 'Condição de Conclusão',
+    'Condition': 'Condição',
+    'Condition Type': 'Tipo de Condição',
+    'Config': 'Configuração',
+    'Configure Connector': 'Configuração de Conector',
+    'Connector': 'Conector',
+    'Connector Id': 'Id Conector',
+    'create': 'criar',
+    'Custom Fields': 'Campos Customizados',
+    'Custom Fields for scope: ': 'Campos Customizados para escopo: ',
+    'Cycle': 'Ciclo',
+    'Date': 'Data',
+    'Decision Ref': 'Ref Decisão',
+    'Default Value': 'Valor Padrão',
+    'Delegate Expression': 'Expressão Delegada',
+    'Delegate Variable Mapping': 'Mapeamento de Variáveis Delegadas',
+    'delete': 'apagar',
+    'deployment': 'implantação',
+    'Details': 'Detalhes',
+    'DMN': 'DMN',
+    'Documentation': 'Documentação',
+    'Due Date': 'Data de Vencimento',
+    'Duration': 'Duração',
+    'Element Documentation': 'Documentação do Elemento',
+    'Element must have an unique id.': 'Elemento deve ter um id único.',
+    'Element Template': 'Modelo de Elemento',
+    'Element Variable': 'Variável de Elemento',
+    'end': 'fim',
+    'Error': 'Erro',
+    'Error Code': 'Código do Erro',
+    'Error Code Variable': 'Variável do Código de Erro',
+    'Error Message': 'Mensagem de Erro',
+    'Error Message Variable': 'Variável da Mensagem de Erro',
+    'Error Name': 'Nome do Erro',
+    'Escalation': 'Escalação',
+    'Escalation Code': 'Código da Escalação',
+    'Escalation Code Variable': 'Variável do Código de Escalação',
+    'Escalation Name': 'Nome da Escalação',
+    'Event Type': 'Tipo de Evento',
+    'Exclusive': 'Exclusivo',
+    'Executable': 'Executável',
+    'Execution Listener': 'Listener de Execução',
+    'Expression': 'Expressão',
+    'Extensions': 'Extensões',
+    'External': 'Externo',
+    'External Resource': 'Recurso Externo',
+    'External Task Configuration': 'Configuração de Tarefas Externas',
+    'Field Injection': 'Injeção de Campo',
+    'Field Injections': 'Injeção de Campos',
+    'Fields': 'Campos',
+    'Follow Up Date': 'Data de Acompanhamento',
+    'Form Field': 'Campo de Formulário',
+    'Form Fields': 'Campos de Formulário',
+    'Form Key': 'Chave do Formulário',
+    'Forms': 'Formulários',
+    'General': 'Geral',
+    'History Configuration': 'Configuração de Histórico',
+    'History Time To Live': 'Tempo de Expiração do Histórico',
+    'Id': 'Id',
+    'ID (process variable name)': 'ID (nome da variável de processo)',
+    'Id must be a valid QName.': 'Id deve ser um QName válido.',
+    'Id must not contain prefix.': 'Id não deve conter prefixo.',
+    'Id must not contain spaces.': 'Id não deve conter espaços.',
+    'Implementation': 'Implementação',
+    'Initiator': 'Iniciador',
+    'Inline Script': 'Script Inline',
+    'In Mapping': 'Mapeamento de Entrada',
+    'Input/Output': 'Entrada/Saída',
+    'Input Parameter': 'Parâmetro de Entrada',
+    'Input Parameters': 'Parâmetros de Entrada',
+    'Java Class': 'Classe Java',
+    'Job Configuration': 'Configuração de Execução de Tarefa',
+    'Job Priority': 'Prioridade de Execução de Tarefa',
+    'Label': 'Rótulo',
+    'latest': 'mais recente',
+    'Link Name': 'Nome do Link',
+    'List': 'Lista',
+    'Listener Id': 'Id do Listener',
+    'Listeners': 'Listeners',
+    'Listener Type': 'Tipo do Listener',
+    'Local': 'Local',
+    'Loop Cardinality': 'Cardinalidade do Loop',
+    'Map': 'Mapa',
+    'Map Decision Result': 'Mapa de Resultado de Decisão',
+    'Mapping must have a target': 'Mapeamento deve ter um destino',
+    'Mapping must have a value': 'Mapeamento deve ter um valor',
+    'Mapping must have a {value}': 'Mapeamento deve ter um {value}',
+    'Message': 'Mensagem',
+    'Message Name': 'Nome da Mensagem',
+    'Multi Instance ': 'Múltiplas Instâncias ',
+    'Multi Instance': 'Múltiplas Instâncias',
+    'Must configure Connector': 'É necessário configurar o Conector',
+    'Must have max length {length}': 'Deve ter tamanho máximo {length}',
+    'Must have min length {length}': 'Deve ter tamanho mínimo {length}',
+    'Must match pattern {pattern}': 'Deve ser match com padrão {pattern}',
+    'Must not be empty': 'Não pode ser vazio',
+    'Must provide a value': 'É necessário fornecer um valor',
+    'Must provide a value for timeout task listener': 'É necessário fornecer um valor de timeout para o listener de atividade',
+    'Must provide either loop cardinality or collection': 'É necessário fornecer a cardinalidade do loop ou coleção',
+    'Name': 'Nome',
+    'Name must not contain spaces': 'Nome não deve conter espaços',
+    'Out Mapping': 'Mapeamento de Saída',
+    'Output Parameter': 'Parâmetro de Saída',
+    'Output Parameters': 'Parâmetros de Saída',
+    'Parameter must have a name': 'Parâmetro deve ter um nome',
+    'Parameters': 'Parâmetros',
+    'Priority': 'Prioridade',
+    'Process Documentation': 'Documentação do Processo',
+    'Process Id': 'Id do Processo',
+    'Process Name': 'Nome do Processo',
+    'Properties': 'Propriedades',
+    'Resource': 'Recurso',
+    'Result Variable': 'Variável de Resultado',
+    'Retry Time Cycle': 'Tempo para Tentar Novamente',
+    'Script': 'Script',
+    'Script Format': 'Formato do Script',
+    'Script Type': 'Tipo do Script',
+    'Signal': 'Sinal',
+    'Signal Name': 'Nome do Sinal',
+    'Source': 'Origem',
+    'Source Expression': 'Expressão da Origem',
+    'Specify more than one group as a comma separated list.': 'Especifique mais de um grupo numa lista separada por vírgulas.',
+    'Specify more than one user as a comma separated list.': 'Especifique mais de um usuário numa lista separada por vírgulas.',
+    'Specify more than one variable change event as a comma separated list.': 'Especifique mais de um evento de mudança de variável numa lista separada por vírgulas.',
+    'start': 'início',
+    'Startable': 'Iniciável',
+    'String': 'String',
+    'take': 'escolher',
+    'Target': 'Destino',
+    'Target must not contain whitespace': 'Destino não pode conter espaços',
+    'Tasklist Configuration': 'Configuração de Lista de Tarefas',
+    'Task Listener': 'Listener da Atividade',
+    'Task Priority': 'Prioridade da Atividade',
+    'Tenant Id': 'Id do Tenant',
+    'Text': 'Texto',
+    'The due date as an EL expression (e.g. ${someDate} or an ISO date (e.g. 2015-06-26T09:54:00)': 'A data de vencimento é uma expressão EL (por exemplo: ${someDate} ou uma data ISO (por exemplo: 2015-06-26T09:54:00)',
+    'timeout': 'tempo de expiração',
+    'Timer Definition': 'Definição de Tempo',
+    'Timer Definition Type': 'Tipo de Definição de Tempo',
+    'Topic': 'Tópico',
+    'Type': 'Tipo',
+    'update': 'atualizar',
+    'Validation': 'Validação',
+    'Value': 'Valor',
+    'Values': 'Valores',
+    'Variable Event': 'Evento Variável',
+    'Variable Name': 'Nome Variável',
+    'Variables': 'Variáveis',
+    'version': 'versão',
+    'Version': 'Versão',
+    'versionTag': 'rótulo de versão',
+    'Version Tag': 'Rótulo de Versão',
+    'Wait for Completion': 'Esperar por Conclusão',
+    '[unknown template: {templateId}]': '[modelo desconhecido: {templateId}]',
+    '{label} must not contain whitespace': '{label} não deve conter espaços'
+});
+
+
+/***/ }),
+
+/***/ "./client/i18n-extension/translate.js":
+/*!********************************************!*\
+  !*** ./client/i18n-extension/translate.js ***!
+  \********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return Translator; });
+/* harmony import */ var _configuration__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../configuration */ "./client/configuration/index.js");
+/* harmony import */ var _languages_de_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./languages/de.js */ "./client/i18n-extension/languages/de.js");
+/* harmony import */ var _languages_en_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./languages/en.js */ "./client/i18n-extension/languages/en.js");
+/* harmony import */ var _languages_pt_br_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./languages/pt-br.js */ "./client/i18n-extension/languages/pt-br.js");
+/**
+ * Copyright 2020 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+
+
+
+
+
 /**
  * All available languages.
  */
 const languages = {
-    de: _languages_de_js__WEBPACK_IMPORTED_MODULE_1__["default"], en: _languages_en_js__WEBPACK_IMPORTED_MODULE_2__["default"]
+    de: _languages_de_js__WEBPACK_IMPORTED_MODULE_1__["default"], en: _languages_en_js__WEBPACK_IMPORTED_MODULE_2__["default"], pt_br: _languages_pt_br_js__WEBPACK_IMPORTED_MODULE_3__["default"]
 };
 
 // The default language to use if none is specified in the configuration
@@ -1507,6 +2067,7 @@ function Translator(eventBus) {
 
 // Specify what values should be injected into the function above
 Translator.$inject = ['eventBus'];
+
 
 /***/ }),
 

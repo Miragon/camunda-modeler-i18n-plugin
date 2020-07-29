@@ -1,7 +1,7 @@
 {
     "name": "camunda-modeler-i18n-plugin",
     "version": "1.0.0",
-    "description": "This plugin for the Camunda Modeler allows to translate the strings used in the UI. It contains German and English and can easily be extended and customized.",
+    "description": "This plugin for the Camunda Modeler allows to translate the strings used in the UI. It contains German, English and Portuguese and can easily be extended and customized.",
     "author": "FlowSquad GmbH <info@flowsquad.io>",
     "homepage": "https://github.com/FlowSquad/camunda-modeler-i18n-plugin",
     "bugs": {
@@ -19,7 +19,7 @@
         "url": "ssh://git@github.com/FlowSquad/camunda-modeler-i18n-plugin.git"
     },
     "scripts": {
-        "build": "yarn run bundle",
+        "build": "run-s bundle",
         "all": "run-s bundle",
         "bundle": "webpack",
         "dev": "webpack -w",
@@ -36,6 +36,7 @@
         "ids": "^1.0.0"
     },
     "devDependencies": {
+        "npm-run-all": "^4.1.5",
         "webpack": "^4.43.0",
         "webpack-cli": "^3.3.12"
     }

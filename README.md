@@ -1,6 +1,6 @@
 # Camunda Modeler I18N-Plugin
 
-This plugin allows you to translate the UI of the Camunda Modeler. It contains translations for German and English and can be easily extended or customized.
+This plugin allows you to translate the UI of the Camunda Modeler. It contains translations for German, English and Portuguese and can be easily extended or customized.
 
 For more information see our blog post (in German): https://www.flowsquad.io/blog/2020-07-15-internationalization-plugin-f%C3%BCr-den-camunda-modeler/ 
 
