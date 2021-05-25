@@ -14,15 +14,7 @@
  * limitations under the License.
  */
 
-import {
-  registerBpmnJSPlugin,
-  registerDmnJSPlugin
-} from 'camunda-modeler-plugin-helpers';
+import {registerClientExtension} from 'camunda-modeler-plugin-helpers';
+import I18nPlugin from './config/I18nPlugin';
 
-import i18nExtensionModule from './i18n-extension';
-
-// Register plugin for the BPMN part
-registerBpmnJSPlugin(i18nExtensionModule);
-
-// Register plugin for the DMN part
-registerDmnJSPlugin(i18nExtensionModule, ['drd','decisionTable','literalExpression']);
+registerClientExtension(I18nPlugin);

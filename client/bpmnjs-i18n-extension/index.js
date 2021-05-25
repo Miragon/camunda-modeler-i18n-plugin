@@ -14,13 +14,13 @@
  * limitations under the License.
  */
 
-import Config from "./Config";
+import translate from './translate';
 
 /**
- * Instantiates and exports the config class.
+ * Creates the plugin structure and tells the modeler, how to initialize it.
  */
-const {
-    ipcRenderer
-} = window.getAppPreload();
-
-export const config = new Config(ipcRenderer);
+export default {
+    translateModule: translate,
+    __init__: ['translate'],
+    translate: ['type', translate]
+};

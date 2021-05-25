@@ -29,8 +29,9 @@ module.exports = function (electronApp, menuState) {
             label: 'Deutsch', // The display name of the entry
             enabled: () => true, // The entry should always be enabled
             action: function () { // What to do when the entry is clicked
-                // Notify the app (see client/i18n-extension/translate.js for the event listener)
+                // Notify the app (see client/bpmnjs-i18n-extension/translate.js for the event listener)
                 electronApp.emit('menu:action', 'language.changed', 'de');
+                electronApp.mainWindow.webContents.send('language.changed');
             }
         },
         {
