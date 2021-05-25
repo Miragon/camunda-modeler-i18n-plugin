@@ -42,17 +42,6 @@ const missing = [];
 export default function Translator(eventBus, config) {
     console.log(config);
     let currentLanguage = languages[this.currentLanguage()];
-    // After the editor has initialized, register the menu listeners
-    // eventBus.on(INIT_ACTION, function (event) {
-    //     const editorActions = event.editorActions;
-    //     editorActions.register(LANGUAGE_EVENT, function (language) {
-    //         // Set the language as above
-    //         currentLanguage = languages[language];
-    //         eventBus.fire(I18N_EVENT);
-    //         eventBus.fire(SELECTION_EVENT, {newSelection: []});
-    //
-    //     });
-    // });
 
     // Return the translation function. It takes the template string and the parameters,
     // translates it and returns it.

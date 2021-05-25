@@ -8,21 +8,19 @@
  /* eslint-disable no-unused-vars*/
 import React, {Fragment, PureComponent} from 'camunda-modeler-plugin-helpers/react';
 import {Fill} from 'camunda-modeler-plugin-helpers/components';
-import Select, {components} from 'react-select';
+import Select from 'react-select';
 import translate from "../bpmnjs-i18n-extension";
-
-// The events to listen to / send
-const LANGUAGE_EVENT = "language.changed";
+import ConfigModal from "./ConfigModal";
 
 // The default language
 const defaultLanguage = "en";
 
 //config key
-const configKey = "en";
-
+const configKey = "i18n";
 
 const defaultState = {
-    currentLanguage: defaultLanguage
+    currentLanguage: defaultLanguage,
+    modalOpen: false
 };
 
 const options = [
@@ -30,15 +28,6 @@ const options = [
     {value: 'en', label: 'English'},
     {value: 'pt_br', label: 'Português (Brasil)'}
 ]
-
-
-const Control = ({children, ...props}) => {
-    return (
-        <components.Control  {...props}>
-            {children}
-        </components.Control>
-    );
-};
 
 /**
  * An example client extension plugin to enable auto saving functionality
@@ -50,6 +39,7 @@ export default class I18nPlugin extends PureComponent {
         this.state = defaultState;
 
         this.handleLanguageChanged = this.handleLanguageChanged.bind(this);
+        this.handleClosed = this.handleClosed.bind(this);
     }
 
     componentDidMount() {
@@ -149,12 +139,13 @@ export default class I18nPlugin extends PureComponent {
     }
 
     handleLanguageChanged(language) {
-        // write in config
         this.props.config.setForPlugin(configKey, 'config', {currentLanguage: language})
             .catch(console.error);
+        this.setState({currentLanguage: language, modalOpen: true});
+    }
 
-        this.setState({currentLanguage: language});
-        // this.props.triggerAction(LANGUAGE_EVENT, language.value);
+    handleClosed() {
+        this.setState({...this.state, modalOpen: false});
     }
 
     render() {
@@ -164,18 +155,22 @@ export default class I18nPlugin extends PureComponent {
                     styles={{
                         control: provided => ({
                             ...provided,
-                            width: 120,
+                            width: 100,
                             height: 20
                         }),
                         menu: provided => ({...provided, zIndex: 101})
                     }}
-                    components={{Control}}
                     name="language_selection"
                     options={options}
                     onChange={this.handleLanguageChanged}
                     value={this.state.currentLanguage}
                 />
             </Fill>
+            {this.state.modalOpen && (
+                <ConfigModal
+                    onClose={this.handleClosed}
+                />
+            )}
         </Fragment>
 
     }

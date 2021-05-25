@@ -23,8 +23,8 @@ import other from './pt-br/other';
  * Joins and exports the translated strings.
  */
 export default {
-  ...bpmnJs,
-  ...dmnJs,
-  ...propertiesPanel,
-  ...other
+    ...bpmnJs,
+    ...dmnJs,
+    ...propertiesPanel,
+    ...other
 };
