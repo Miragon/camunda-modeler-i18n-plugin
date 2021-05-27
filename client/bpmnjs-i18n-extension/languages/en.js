@@ -1,5 +1,5 @@
 /**
- * Copyright 2020 FlowSquad GmbH
+ * Copyright 2021 FlowSquad GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,10 +14,10 @@
  * limitations under the License.
  */
 
-import bpmnJs from './de/bpmn-js';
-import dmnJs from './de/dmn-js';
-import propertiesPanel from './de/properties-panel';
-import other from './de/other';
+import bpmnJs from './en/bpmn-js';
+import dmnJs from './en/dmn-js';
+import propertiesPanel from './en/properties-panel';
+import other from './en/other';
 
 /**
  * Joins and exports the translated strings.

@@ -1,5 +1,5 @@
 /**
- * Copyright 2020 FlowSquad GmbH
+ * Copyright 2021 FlowSquad GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -17,7 +17,6 @@
 'use strict';
 
 module.exports = {
-  name: 'Switch Language',
-  script: './dist/client.js',
-  menu: './menu/menu.js'
-}; 
+    name: 'i18n Plugin',
+    script: './dist/client.js'
+};

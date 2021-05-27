@@ -1,5 +1,5 @@
 /**
- * Copyright 2020 FlowSquad GmbH
+ * Copyright 2021 FlowSquad GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,15 +14,7 @@
  * limitations under the License.
  */
 
-import {
-  registerBpmnJSPlugin,
-  registerDmnJSPlugin
-} from 'camunda-modeler-plugin-helpers';
+import {registerClientExtension} from 'camunda-modeler-plugin-helpers';
+import I18nPlugin from './config/I18nPlugin';
 
-import i18nExtensionModule from './i18n-extension';
-
-// Register plugin for the BPMN part
-registerBpmnJSPlugin(i18nExtensionModule);
-
-// Register plugin for the DMN part
-registerDmnJSPlugin(i18nExtensionModule, ['drd','decisionTable','literalExpression']);
+registerClientExtension(I18nPlugin);

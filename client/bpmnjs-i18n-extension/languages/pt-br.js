@@ -1,5 +1,5 @@
 /**
- * Copyright 2020 FlowSquad GmbH
+ * Copyright 2021 FlowSquad GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -23,8 +23,8 @@ import other from './pt-br/other';
  * Joins and exports the translated strings.
  */
 export default {
-  ...bpmnJs,
-  ...dmnJs,
-  ...propertiesPanel,
-  ...other
+    ...bpmnJs,
+    ...dmnJs,
+    ...propertiesPanel,
+    ...other
 };

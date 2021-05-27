@@ -1,5 +1,5 @@
 /**
- * Copyright 2020 FlowSquad GmbH
+ * Copyright 2021 FlowSquad GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -14,18 +14,17 @@
  * limitations under the License.
  */
 
-import Ids from 'ids';
+import bpmnJs from './de/bpmn-js';
+import dmnJs from './de/dmn-js';
+import propertiesPanel from './de/properties-panel';
+import other from './de/other';
 
 /**
- * The ids to use.
+ * Joins and exports the translated strings.
  */
-const ids = new Ids([ 32, 36, 1 ]);
-
-/**
- * Generates a new id.
- *
- * @return The new id
- */
-export default function generateId() {
-    return ids.next();
-}
+export default {
+    ...bpmnJs,
+    ...dmnJs,
+    ...propertiesPanel,
+    ...other
+};
