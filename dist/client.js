@@ -3929,9 +3929,23 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! camunda-modeler-plugin-helpers/react */ "./node_modules/camunda-modeler-plugin-helpers/react.js");
 /* harmony import */ var camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var camunda_modeler_plugin_helpers_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! camunda-modeler-plugin-helpers/components */ "./node_modules/camunda-modeler-plugin-helpers/components.js");
-/* eslint-disable no-unused-vars */
+/**
+ * Copyright 2020 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
- // polyfill upcoming structural components
+
 
 const Title = camunda_modeler_plugin_helpers_components__WEBPACK_IMPORTED_MODULE_1__.Modal.Title || (({
   children
@@ -3943,13 +3957,11 @@ const Body = camunda_modeler_plugin_helpers_components__WEBPACK_IMPORTED_MODULE_
 
 const Footer = camunda_modeler_plugin_helpers_components__WEBPACK_IMPORTED_MODULE_1__.Modal.Footer || (({
   children
-}) => /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, children)); // we can even use hooks to render into the application
-
+}) => /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, children));
 
 function ConfigModal({
   onClose
 }) {
-  // we can use the built-in styles, e.g. by adding "btn btn-primary" class names
   return /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(camunda_modeler_plugin_helpers_components__WEBPACK_IMPORTED_MODULE_1__.Modal, {
     onClose: onClose
   }, /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Title, null, "Language changed"), /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Body, null, /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Restart the modeler to apply the configuration.")), /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Footer, null, /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
@@ -3981,13 +3993,20 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../bpmnjs-i18n-extension */ "./client/bpmnjs-i18n-extension/index.js");
 /* harmony import */ var _ConfigModal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ConfigModal */ "./client/config/ConfigModal.js");
 /**
- import {config} from '../configuration';
- import de from "./languages/de.js";
- import en from "./languages/en.js";
- import pt_br from "./languages/pt-br.js";
-
-
- /* eslint-disable no-unused-vars*/
+ * Copyright 2020 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
 
 
 
@@ -4121,8 +4140,10 @@ class I18nPlugin extends camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_
     }, /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_select__WEBPACK_IMPORTED_MODULE_4__.default, {
       styles: {
         control: provided => ({ ...provided,
-          width: 100,
-          height: 20
+          width: 120,
+          height: 20,
+          borderRadius: "0",
+          padding: 0
         }),
         menu: provided => ({ ...provided,
           zIndex: 101

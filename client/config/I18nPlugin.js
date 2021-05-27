@@ -163,8 +163,10 @@ export default class I18nPlugin extends PureComponent {
                     styles={{
                         control: provided => ({
                             ...provided,
-                            width: 100,
-                            height: 20
+                            width: 120,
+                            height: 20,
+                            borderRadius: "0",
+                            padding: 0
                         }),
                         menu: provided => ({...provided, zIndex: 101})
                     }}
