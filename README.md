@@ -16,7 +16,7 @@ To use this plugin in your installation, follow these simple steps:
 2. Download the latest release artifact
 3. Extract it and put it inside the "resources/plugins" directory relative to your `{APP_DATA_DIRECTORY}` or `{USER_DATA_DIRECTORY}`.
 4. Restart the modeler
-5. Click Plugins > Choose Language and select the language of your choice  
+5. Click on the language dropdown in the toolbar and select the language of your choice
 
 ## Development
 
@@ -80,16 +80,13 @@ If you want to add a new language, follow these steps, after you set up your loc
    
    // ...
    ```
-5. Open the "menu/menu.js" file and add a new entry to it:
+5. Open the "config/I18NPlugin.js" file and add a new entry to the language options:
    ```javascript
    // ...
-   {
-       label: 'Français',
-       enabled: () => menuState.bpmn,
-       action: function () {
-           electronApp.emit('menu:action', 'language.changed', 'fr');
-       }
-   }
+   const options = [
+      // ...
+      {value: 'fr', label: 'Français'}
+   ]
    // ...
    ```
 6. Create a pull request to this repository and help us with adding new languages and improving the existing ones! :)
