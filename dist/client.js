@@ -2099,7 +2099,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _translate__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./translate */ "./client/bpmnjs-i18n-extension/translate.js");
 /**
- * Copyright 2020 FlowSquad GmbH
+ * Copyright 2021 FlowSquad GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -2142,7 +2142,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _de_properties_panel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./de/properties-panel */ "./client/bpmnjs-i18n-extension/languages/de/properties-panel.js");
 /* harmony import */ var _de_other__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./de/other */ "./client/bpmnjs-i18n-extension/languages/de/other.js");
 /**
- * Copyright 2020 FlowSquad GmbH
+ * Copyright 2021 FlowSquad GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -2184,7 +2184,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /**
- * Copyright 2020 FlowSquad GmbH
+ * Copyright 2021 FlowSquad GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -2278,7 +2278,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /**
- * Copyright 2020 FlowSquad GmbH
+ * Copyright 2021 FlowSquad GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -2373,7 +2373,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /**
- * Copyright 2020 FlowSquad GmbH
+ * Copyright 2021 FlowSquad GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -2483,7 +2483,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /**
- * Copyright 2020 FlowSquad GmbH
+ * Copyright 2021 FlowSquad GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -2721,7 +2721,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _en_properties_panel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./en/properties-panel */ "./client/bpmnjs-i18n-extension/languages/en/properties-panel.js");
 /* harmony import */ var _en_other__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./en/other */ "./client/bpmnjs-i18n-extension/languages/en/other.js");
 /**
- * Copyright 2020 FlowSquad GmbH
+ * Copyright 2021 FlowSquad GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -2763,7 +2763,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /**
- * Copyright 2020 FlowSquad GmbH
+ * Copyright 2021 FlowSquad GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -2857,7 +2857,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /**
- * Copyright 2020 FlowSquad GmbH
+ * Copyright 2021 FlowSquad GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -2952,7 +2952,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /**
- * Copyright 2020 FlowSquad GmbH
+ * Copyright 2021 FlowSquad GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -3062,7 +3062,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /**
- * Copyright 2020 FlowSquad GmbH
+ * Copyright 2021 FlowSquad GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -3282,7 +3282,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _pt_br_properties_panel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pt-br/properties-panel */ "./client/bpmnjs-i18n-extension/languages/pt-br/properties-panel.js");
 /* harmony import */ var _pt_br_other__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pt-br/other */ "./client/bpmnjs-i18n-extension/languages/pt-br/other.js");
 /**
- * Copyright 2020 FlowSquad GmbH
+ * Copyright 2021 FlowSquad GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -3324,7 +3324,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /**
- * Copyright 2020 FlowSquad GmbH
+ * Copyright 2021 FlowSquad GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -3418,7 +3418,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /**
- * Copyright 2020 FlowSquad GmbH
+ * Copyright 2021 FlowSquad GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -3513,7 +3513,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /**
- * Copyright 2020 FlowSquad GmbH
+ * Copyright 2021 FlowSquad GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -3623,7 +3623,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
 /**
- * Copyright 2020 FlowSquad GmbH
+ * Copyright 2021 FlowSquad GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -3842,7 +3842,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _languages_en_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./languages/en.js */ "./client/bpmnjs-i18n-extension/languages/en.js");
 /* harmony import */ var _languages_pt_br_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./languages/pt-br.js */ "./client/bpmnjs-i18n-extension/languages/pt-br.js");
 /**
- * Copyright 2020 FlowSquad GmbH
+ * Copyright 2021 FlowSquad GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -3873,15 +3873,12 @@ const defaultLanguage = "en"; // Contains all missing translations discovered to
 // multiple times.
 
 const missing = [];
+console.log("Please help us translate by creating a pull request!");
 /**
  * This function initializes the translation plugin.
- *
- * @param eventBus The application's event bus
- * @return The translator function
  */
 
-function Translator(eventBus, config) {
-  console.log(config);
+function Translator() {
   let currentLanguage = languages[this.currentLanguage()]; // Return the translation function. It takes the template string and the parameters,
   // translates it and returns it.
 
@@ -3891,7 +3888,7 @@ function Translator(eventBus, config) {
       // Check if it was already printed to the console
       if (missing.indexOf(template) === -1) {
         // Print the missing translation to the console ´
-        //console.log("Missing translation: " + template, parameters);
+        console.log(`Missing translation: ${template}`);
         missing.push(template);
       }
     } // Use the translated string or the original template string as fallback
@@ -3911,7 +3908,7 @@ Translator.prototype.currentLanguage = function () {
 }; // Specify what values should be injected into the function above
 
 
-Translator.$inject = ['eventBus', 'config'];
+Translator.$inject = [];
 
 /***/ }),
 
@@ -3930,7 +3927,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var camunda_modeler_plugin_helpers_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! camunda-modeler-plugin-helpers/components */ "./node_modules/camunda-modeler-plugin-helpers/components.js");
 /**
- * Copyright 2020 FlowSquad GmbH
+ * Copyright 2021 FlowSquad GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -3993,7 +3990,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../bpmnjs-i18n-extension */ "./client/bpmnjs-i18n-extension/index.js");
 /* harmony import */ var _ConfigModal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ConfigModal */ "./client/config/ConfigModal.js");
 /**
- * Copyright 2020 FlowSquad GmbH
+ * Copyright 2021 FlowSquad GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -4022,7 +4019,7 @@ const defaultState = {
 };
 const options = [{
   value: 'de',
-  label: 'German'
+  label: 'Deutsch'
 }, {
   value: 'en',
   label: 'English'
@@ -4140,13 +4137,21 @@ class I18nPlugin extends camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_
     }, /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_select__WEBPACK_IMPORTED_MODULE_4__.default, {
       styles: {
         control: provided => ({ ...provided,
-          width: 120,
-          height: 20,
-          borderRadius: "0",
-          padding: 0
+          width: 125,
+          minHeight: 24,
+          "&>div:first-of-type": {
+            padding: "0px 4px"
+          },
+          "&>div:last-child>div": {
+            padding: "0px 8px"
+          },
+          "&>div>span": {
+            display: "none"
+          }
         }),
         menu: provided => ({ ...provided,
-          zIndex: 101
+          zIndex: 101,
+          marginTop: 0
         })
       },
       name: "language_selection",
@@ -38921,7 +38926,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var camunda_modeler_plugin_helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! camunda-modeler-plugin-helpers */ "./node_modules/camunda-modeler-plugin-helpers/index.js");
 /* harmony import */ var _config_I18nPlugin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./config/I18nPlugin */ "./client/config/I18nPlugin.js");
 /**
- * Copyright 2020 FlowSquad GmbH
+ * Copyright 2021 FlowSquad GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.

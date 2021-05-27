@@ -1,5 +1,5 @@
 /**
- * Copyright 2020 FlowSquad GmbH
+ * Copyright 2021 FlowSquad GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -33,14 +33,12 @@ const defaultLanguage = "en";
 // multiple times.
 const missing = [];
 
+console.log("Please help us translate by creating a pull request!");
+
 /**
  * This function initializes the translation plugin.
- *
- * @param eventBus The application's event bus
- * @return The translator function
  */
-export default function Translator(eventBus, config) {
-    console.log(config);
+export default function Translator() {
     let currentLanguage = languages[this.currentLanguage()];
 
     // Return the translation function. It takes the template string and the parameters,
@@ -51,7 +49,7 @@ export default function Translator(eventBus, config) {
             // Check if it was already printed to the console
             if (missing.indexOf(template) === -1) {
                 // Print the missing translation to the console ´
-                //console.log("Missing translation: " + template, parameters);
+                console.log(`Missing translation: ${template}`);
                 missing.push(template);
             }
         }
@@ -62,7 +60,6 @@ export default function Translator(eventBus, config) {
         // Replace all parameters in the template string with the provided values
         return translation.replace(/{([^}]+)}/g, function (_, key) {
             return (parameters || {})[key] || '{' + key + '}'
-
         });
     };
 };
@@ -72,4 +69,4 @@ Translator.prototype.currentLanguage = function () {
 }
 
 // Specify what values should be injected into the function above
-Translator.$inject = ['eventBus', 'config'];
+Translator.$inject = [];

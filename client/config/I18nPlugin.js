@@ -1,5 +1,5 @@
 /**
- * Copyright 2020 FlowSquad GmbH
+ * Copyright 2021 FlowSquad GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -32,7 +32,7 @@ const defaultState = {
 };
 
 const options = [
-    {value: 'de', label: 'German'},
+    {value: 'de', label: 'Deutsch'},
     {value: 'en', label: 'English'},
     {value: 'pt_br', label: 'Português (Brasil)'}
 ]
@@ -163,12 +163,23 @@ export default class I18nPlugin extends PureComponent {
                     styles={{
                         control: provided => ({
                             ...provided,
-                            width: 120,
-                            height: 20,
-                            borderRadius: "0",
-                            padding: 0
+                            width: 125,
+                            minHeight: 24,
+                            "&>div:first-of-type": {
+                                padding: "0px 4px"
+                            },
+                            "&>div:last-child>div": {
+                                padding: "0px 8px",
+                            },
+                            "&>div>span": {
+                                display: "none"
+                            }
                         }),
-                        menu: provided => ({...provided, zIndex: 101})
+                        menu: provided => ({
+                            ...provided,
+                            zIndex: 101,
+                            marginTop: 0
+                        })
                     }}
                     name="language_selection"
                     options={options}
