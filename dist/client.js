@@ -3827,20 +3827,21 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./client/bpmnjs-i18n-extension/translate.js":
-/*!***************************************************!*\
-  !*** ./client/bpmnjs-i18n-extension/translate.js ***!
-  \***************************************************/
+/***/ "./client/bpmnjs-i18n-extension/languages/ru.js":
+/*!******************************************************!*\
+  !*** ./client/bpmnjs-i18n-extension/languages/ru.js ***!
+  \******************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Translator)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _languages_de_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./languages/de.js */ "./client/bpmnjs-i18n-extension/languages/de.js");
-/* harmony import */ var _languages_en_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./languages/en.js */ "./client/bpmnjs-i18n-extension/languages/en.js");
-/* harmony import */ var _languages_pt_br_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./languages/pt-br.js */ "./client/bpmnjs-i18n-extension/languages/pt-br.js");
+/* harmony import */ var _ru_bpmn_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./ru/bpmn-js */ "./client/bpmnjs-i18n-extension/languages/ru/bpmn-js.js");
+/* harmony import */ var _ru_dmn_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ru/dmn-js */ "./client/bpmnjs-i18n-extension/languages/ru/dmn-js.js");
+/* harmony import */ var _ru_properties_panel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ru/properties-panel */ "./client/bpmnjs-i18n-extension/languages/ru/properties-panel.js");
+/* harmony import */ var _ru_other__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ru/other */ "./client/bpmnjs-i18n-extension/languages/ru/other.js");
 /**
  * Copyright 2021 FlowSquad GmbH
  *
@@ -3859,6 +3860,582 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+/**
+ * Joins and exports the translated strings.
+ */
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({ ..._ru_bpmn_js__WEBPACK_IMPORTED_MODULE_0__.default,
+  ..._ru_dmn_js__WEBPACK_IMPORTED_MODULE_1__.default,
+  ..._ru_properties_panel__WEBPACK_IMPORTED_MODULE_2__.default,
+  ..._ru_other__WEBPACK_IMPORTED_MODULE_3__.default
+});
+
+/***/ }),
+
+/***/ "./client/bpmnjs-i18n-extension/languages/ru/bpmn-js.js":
+/*!**************************************************************!*\
+  !*** ./client/bpmnjs-i18n-extension/languages/ru/bpmn-js.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/**
+ * Copyright 2021 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * This file contains the strings used in the bpmn-js module.
+ */
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  'Append {type}': 'Добавить {type}',
+  'Add Lane above': 'Добавить дорожку выше',
+  'Divide into two Lanes': 'Разделить на две дорожки',
+  'Divide into three Lanes': 'Разделить на три дорожки',
+  'Add Lane below': 'Добавить дорожку ниже',
+  'Append ReceiveTask': 'Добавить задачу приема сообщения',
+  'Append MessageIntermediateCatchEvent': 'Добавить промежуточное событие приема сообщения',
+  'Append TimerIntermediateCatchEvent': 'Добавить промежуточное событие таймер',
+  'Append ConditionIntermediateCatchEvent': 'Добавить промежуточное событие условие',
+  'Append SignalIntermediateCatchEvent': 'Добавить промежуточное событие приема сигнала',
+  'Append compensation activity': 'Добавить событийный подпроцесс',
+  'Append EndEvent': 'Добавить конечное событие',
+  'Append Gateway': 'Добавить шлюз',
+  'Append Task': 'Добавить задачу',
+  'Append Intermediate/Boundary Event': 'Добавить промежуточное/граничащее событие',
+  'Append TextAnnotation': 'Добавить текстовую аннотацию',
+  'Change type': 'Изменить тип',
+  'Connect using Association': 'Соединить с помощью ассоциации',
+  'Connect using Sequence/MessageFlow or Association': 'Соединить с помощью потока управления/сообщений или ассоциации',
+  'Connect using DataInputAssociation': 'Соединить с помощью ассоциации',
+  'Remove': 'Удалить',
+  'no shape type specified': 'не указан тип фигуры',
+  'out of bounds release': 'выход за пределы',
+  'more than {count} child lanes': 'более {count} дочерних дорожек',
+  'element required': 'обязательный элемент',
+  'no parent for {element} in {parent}': 'нет родительского элемента для {element} в {parent}',
+  'Create {type}': 'Создать {type}',
+  'Activate the hand tool': 'Активировать инструмент свободного перемещения',
+  'Activate the lasso tool': 'Активировать интрумент лассо',
+  'Activate the create/remove space tool': 'Активировать инструмент создания/удаления пространства',
+  'Activate the global connect tool': 'Активировать инструмент соединения',
+  'Create StartEvent': 'Создать стартовое событие',
+  'Create Intermediate/Boundary Event': 'Создать промежуточное/граничащее событие',
+  'Create EndEvent': 'Создать конечное событие',
+  'Create Gateway': 'Создать шлюз',
+  'Create Task': 'Создать задачу',
+  'Create DataObjectReference': 'Создать объект данных',
+  'Create DataStoreReference': 'Создать хранилище данных',
+  'Create expanded SubProcess': 'Создать встроенные подпроцесс',
+  'Create Pool/Participant': 'Создать пул',
+  'Create Group': 'Создать группу',
+  'Parallel Multi Instance': 'Параллельный мультипроцесс',
+  'Sequential Multi Instance': 'Последовательный мультипроцесс',
+  'Loop': 'Цикл',
+  'Ad-hoc': 'Ad-hoc',
+  'element {element} referenced by {referenced}#{property} not yet drawn': 'элемент {element}, на который ссылается {referenced}#{property} еще не создан',
+  'unknown di {di} for element {semantic}': 'неизвестная директория {di} для элемента {semantic}',
+  'missing {semantic}#attachedToRef': 'потерянный {semantic}#attachedToRef',
+  '{semantic}#{side} Ref not specified': '{semantic}#{side} Ссылка не указана',
+  'already rendered {element}': 'уже используемый {element}',
+  'failed to import {element}': 'не удалось импортировать {element}',
+  'multiple DI elements defined for {element}': 'несколько элементов DI, определенных для {element}',
+  'no bpmnElement referenced in {element}': 'нет ссылки на элемент BPMN в {element}',
+  'diagram not part of bpmn:Definitions': 'диаграмма не является частью bpmn:Definitions',
+  'no diagram to display': 'нет диаграммы для отображения',
+  'no process or collaboration to display': 'нет процесса или совместной процесса для отображения',
+  'correcting missing bpmnElement on {plane} to {rootElement}': 'исправление отсутствующего элемента BPMN в {plane} для {rootElement}',
+  'unsupported bpmnElement for {plane}: {rootElement}': 'неподдреживаемый элемент BPMN для {plane}: {rootElement}',
+  'unrecognized flowElement {element} in context {context}': 'нераспознанный поток {element} в контексте {context}',
+  'HELLO {you}!': 'ПРИВЕТ {you}!'
+});
+
+/***/ }),
+
+/***/ "./client/bpmnjs-i18n-extension/languages/ru/dmn-js.js":
+/*!*************************************************************!*\
+  !*** ./client/bpmnjs-i18n-extension/languages/ru/dmn-js.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/**
+ * Copyright 2021 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * This file contains the translated strings used in the dmn-js component.
+ * However, notice that these strings are currently not working. We are
+ * still investigating how to apply them.
+ */
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  'Activate the lasso tool': 'Активировать инструмент лассо',
+  'Add Cell Description': 'Добавить описание ячейки',
+  'Add Input': 'Добавить Ввод',
+  'Add Input Column Left': 'Добавить столбец ввода слева',
+  'Add Input Column Right': 'Добавить столбец ввода справа',
+  'Add Output': 'Добавить Вывод',
+  'Add Output Column Left': 'Добавить столбец вывода слева',
+  'Add Output Column Right': 'Добавить столбец вывода справа',
+  'Add Predefined Values': 'Добавить предопределённые значения',
+  'Add Rule Above': 'Добавить правило выше',
+  'Add Rule Below': 'Добавить правило ниже',
+  'Add Values': 'Добавить значения',
+  'And': 'И',
+  'Annotations': 'Аннотации',
+  'Append {type}': 'Добавить {type}',
+  'cellInput': 'Ввод ячейки',
+  'Change Cell Expression Language': 'Изменить язык выражения ячеек',
+  'Change type': 'Изменить тип',
+  'Clear predefined values.': 'Очистить предопределённые значения.',
+  'Copy Input Column': 'Копировать столбец ввода',
+  'Copy Output Column': 'Копировать столбец вывода',
+  'Copy Rule': 'Копирвоать правило',
+  'Create Decision': 'Создать решение',
+  'Create Input Data': 'Создать входные данные',
+  'Create Knowledge Model': 'Создать модель знаний',
+  'Create Knowledge Source': 'Создать источник знаний',
+  'Cut Input Column': 'Вырезать столбец ввода',
+  'Cut Output Column': 'Вырезать столбец вывода',
+  'Cut Rule': 'Вырезать правило',
+  'Edit String': 'Изменить строку',
+  'Expression': 'Выражение',
+  'Expression Language': 'Язык выражений',
+  'Input': 'Ввод',
+  'Input Expression': 'Выражение ввода',
+  'Input Label': 'Заголовок ввода',
+  'Input Type': 'Тип ввода',
+  'Input Values': 'Значения ввода',
+  'Input Variable': 'Перменные ввода',
+  'No values': 'Нет значений',
+  'Output Label': 'Заголовок вывода',
+  'Output Name': 'Наименование вывода',
+  'Output Type': 'Тип вывода',
+  'Output Values': 'Значения вывода',
+  'Paste Input Column Left': 'Вставить столбец ввода слева',
+  'Paste Input Column Right': 'Вставить столбец ввода справа',
+  'Paste Output Column Left': 'Вставить столбец вывода слева',
+  'Paste Output Column Right': 'Вставить столбец вывода справа',
+  'Paste Rule Above': 'Вставить правило выше',
+  'Paste Rule Below': 'Вставить правило ниже',
+  'Predefined Values': 'Предопределённые значения',
+  'Remove': 'Удалить',
+  'Remove Cell Description': 'Удалить описание ячейки',
+  'Remove Input Column': 'Удалить столбец ввода',
+  'Remove Output Column': 'Удалить столбец вывода',
+  'Remove Rule': 'Удалить правило',
+  'Set Value': 'Установить значение',
+  'Strings must be in double quotes.': 'Строки должны быть в двойных кавыках.',
+  'Type': 'Тип'
+});
+
+/***/ }),
+
+/***/ "./client/bpmnjs-i18n-extension/languages/ru/other.js":
+/*!************************************************************!*\
+  !*** ./client/bpmnjs-i18n-extension/languages/ru/other.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/**
+ * Copyright 2021 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * This file contains translations that were used in other components.
+ */
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  'Open minimap': 'Открыть миникарту',
+  'This maps to the process definition key.': 'Это соответствует ключу процесса.',
+  'Key': 'Ключ',
+  'Intermediate Throw Event': 'Промежуточное событие отправления',
+  'End Event': 'Конечное событие',
+  'Message Start Event': 'Начально событие сообщение',
+  'Timer Start Event': 'Начальное событие таймер',
+  'Conditional Start Event': 'Начальное событие условие',
+  'Signal Start Event': 'Начальное событие сигнал',
+  'Expand (not reversible)': 'Расширение (необратимо)',
+  'ID': 'ID',
+  'Start Event': 'Начальное событие',
+  'Message End Event': 'Конечное событие сообщение',
+  'Escalation End Event': 'Конечнеое событие эскалация',
+  'Error End Event': 'Конечное событие ошибка',
+  'Compensation End Event': 'Конечное событие компенсация',
+  'Signal End Event': 'конченое событие сигнал',
+  'Terminate End Event': 'Конечное событие останов',
+  'Transaction': 'Транзакция',
+  'Event Sub Process': 'Событийный подпроцесс',
+  'Sub Process (collapsed)': 'Подпроцесс (разрушеный)',
+  'Close minimap': 'Закрыть миникарту',
+  'Message Intermediate Catch Event': 'Промежуточное событие приема сообщения',
+  'Message Intermediate Throw Event': 'Промежуточное событие отправки сообщения',
+  'Timer Intermediate Catch Event': 'Промежуточное событие таймер',
+  'Escalation Intermediate Throw Event': 'Промежуточное событие экалация',
+  'Conditional Intermediate Catch Event': 'Промежуточное событие условие',
+  'Link Intermediate Catch Event': 'Промежуточное событие приема ссылки',
+  'Link Intermediate Throw Event': 'Промежуточное событие отправки ссылки',
+  'Compensation Intermediate Throw Event': 'Промежуточное событие компенсация',
+  'Signal Intermediate Catch Event': 'Промежуточное событие приема сигнала',
+  'Signal Intermediate Throw Event': 'Промежуточное событие отправки сигнала',
+  'Parallel Gateway': 'Параллельный шлюз',
+  'Inclusive Gateway': 'Шлюз ИЛИ',
+  'Complex Gateway': 'Сложный шлюз',
+  'Event based Gateway': 'Событийный исключающий шлюз',
+  'Exclusive Gateway': 'Исключающий шлюз',
+  'Send Task': 'Задача отправки сообщения',
+  'Receive Task': 'Задача приема сообщения',
+  'User Task': 'Пользовательская задача',
+  'Manual Task': 'Ручная операция',
+  'Business Rule Task': 'Задача бизнес-правил',
+  'Service Task': 'Сервисная задача',
+  'Script Task': 'Задача-сценарий (скрипт)',
+  'Call Activity': 'Вызывающее действие',
+  'Sub Process (expanded)': 'Подпроцесс (расширенный)',
+  'Sub Process': 'Подпроцесс',
+  'Task': 'Задача',
+  'This maps to the task definition key.': 'Это соответствует ключу задачи.',
+  'Collapsed Pool': 'Разрушенный пул',
+  'Expanded Pool': 'Расширенный пул',
+  'flow elements must be children of pools/participants': 'элементы потока должны быть дочерними элементами пулов',
+  'The follow up date as an EL expression (e.g. ${someDate} or an ISO date (e.g. 2015-06-26T09:54:00)': 'Дата последующего обновления в виде выражения EL (например, ${someDate} или дата в формате ISO (например, 2015-06-26T09:54:00)',
+  'Message Boundary Event': 'Граничащее событие сообщение',
+  'Timer Boundary Event': 'Граничащее событие таймер',
+  'Escalation Boundary Event': 'Граничащее событие эскалация',
+  'Conditional Boundary Event': 'Граничащее событие условие',
+  'Error Boundary Event': 'Граничащее событие ошибка',
+  'Cancel Boundary Event': 'Граничащее событие отмена',
+  'Signal Boundary Event': 'Граничащее событие  сигнал',
+  'Compensation Boundary Event': 'Граничащее событие компенсация',
+  'Message Boundary Event (non-interrupting)': 'Граничащее событие сообщение (непрерывное)',
+  'Timer Boundary Event (non-interrupting)': 'Граничащее событие таймер (непрерывное)',
+  'Escalation Boundary Event (non-interrupting)': 'Граничащее событие эскалация (непрерывное)',
+  'Conditional Boundary Event (non-interrupting)': 'Граничащее событие компенсация (непрерывное)',
+  'Signal Boundary Event (non-interrupting)': 'Граничащее событие  сигнал (непрерывное)',
+  'Connect using Information/Knowledge/Authority Requirement or Association': 'Подключение с использованием Информации/Знаний/Авторитетных требований или Ассоциации',
+  'Empty': 'Пусто',
+  'Literal Expression': 'Буквенное выражение',
+  'This maps to the decision definition key.': 'Это соответствует ключу решение.',
+  'Decision Table': 'Таблица решений',
+  'Output': 'Выход',
+  'Annotation': 'Аннотация',
+  'Output Expression': 'Выходное выражение',
+  'Data Type': 'Тип данных',
+  'Create new BPMN Diagram (Camunda Platform)': 'Создать новую BPMN диграмму (Camunda Platform)'
+});
+
+/***/ }),
+
+/***/ "./client/bpmnjs-i18n-extension/languages/ru/properties-panel.js":
+/*!***********************************************************************!*\
+  !*** ./client/bpmnjs-i18n-extension/languages/ru/properties-panel.js ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/**
+ * Copyright 2021 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * This file contains the translations used by the bpmn-js-properties-panel component.
+ */
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  'Activity Ref': 'Ссылка на активность',
+  'Add Constraint': 'Добавить ограничения',
+  'Add Entry': 'Добавить запись',
+  'Add Property': 'Добавить свойство',
+  'Add Value': 'Добавить значение',
+  'All': 'Все',
+  'Assignee': 'Представитель',
+  'assignment': 'назначение',
+  'Asynchronous After': 'Асинхронный после',
+  'Asynchronous Before': 'Асинхронный до',
+  'Asynchronous Continuations': 'Асинхронные возобновления',
+  'Binding': 'Связь',
+  'Business Key': 'Бизнес-ключ',
+  'Business Key Expression': 'Выражение бизнес-ключа',
+  'CallActivity Type': 'Тип действия вызова',
+  'Called Element': 'Вызванный элемент',
+  'Candidate Groups': 'Кандидат групп',
+  'Candidate Starter Configuration': 'Начальная конфигурация кандидата',
+  'Candidate Starter Groups': 'Начальные группы кандидата',
+  'Candidate Starter Users': 'Начальные пользователи кандидата',
+  'Candidate Users': 'Кандидат пользователей',
+  'Case Ref': 'Ссылка на кейс',
+  'Category Value': 'Категория значения',
+  'Class': 'Класс',
+  'Collection': 'Коллекция',
+  'complete': 'выполнить',
+  'Completion Condition': 'Условие завершения',
+  'Condition': 'Условие',
+  'Condition Type': 'Тип условия',
+  'Config': 'Конфигурация',
+  'Configure Connector': 'Настроить соединитель',
+  'Connector': 'Соединитель',
+  'Connector Id': 'Соединитель Id',
+  'create': 'создать',
+  'Custom Fields': 'Пользовательские поля',
+  'Custom Fields for scope: ': 'Пользовательские поля для области действия: ',
+  'Cycle': 'Цикл',
+  'Date': 'Дата',
+  'Decision Ref': 'Ссылка на решение',
+  'Default Value': 'Значение по умолчанию',
+  'Delegate Expression': 'Выражение делегата',
+  'Delegate Variable Mapping': 'Делегация сопоставляемых перменных',
+  'delete': 'удалить',
+  'deployment': 'развёртывание',
+  'Details': 'Детали',
+  'DMN': 'DMN',
+  'Documentation': 'Документация',
+  'Due Date': 'Срок сдачи',
+  'Duration': 'Длительность',
+  'Element Documentation': 'Элемент документации',
+  'Element must have an unique id.': 'Элемент должен иметь уникальный ID.',
+  'Element Template': 'Элемент шаблона',
+  'Element Variable': 'Элемент переменной',
+  'end': 'конец',
+  'Error': 'Ошибка',
+  'Error Code': 'Код ошибки',
+  'Error Code Variable': 'Код ошибки перменной',
+  'Error Message': 'Сообщение об ошибке',
+  'Error Message Variable': 'Сообщение об ошибке переменной',
+  'Error Name': 'Название ошибки',
+  'Escalation': 'Эскалация',
+  'Escalation Code': 'Код эскалации',
+  'Escalation Code Variable': 'Код эскалации переменной',
+  'Escalation Name': 'Название эскалации',
+  'Event Type': 'Тип события',
+  'Exclusive': 'Эксклюзивный',
+  'Executable': 'Исполняемый',
+  'Execution Listener': 'Слушатель выполнения',
+  'Expression': 'Выражение',
+  'Extensions': 'Расширения',
+  'External': 'Внешний',
+  'External Resource': 'Внешний ресурс',
+  'External Task Configuration': 'Конфигурация внешней задачи',
+  'Field Injection': 'Поля для вставки',
+  'Field Injections': 'Поля для вставки',
+  'Fields': 'Поля',
+  'Follow Up Date': 'Дата обновления',
+  'Form Field': 'Поле формы',
+  'Form Fields': 'Поля формы',
+  'Form Key': 'Ключ формы',
+  'Forms': 'Формы',
+  'General': 'Общий',
+  'History Configuration': 'История конфигурации',
+  'History Time To Live': 'Время жизни истории',
+  'Id': 'Id',
+  'ID (process variable name)': 'ID (название переменной процесса)',
+  'Id must be a valid QName.': 'Id должен быть QName.',
+  'Id must not contain prefix.': 'Id не должен содеражть префикс.',
+  'Id must not contain spaces.': 'Id не должен содеражть пробелов.',
+  'Implementation': 'Реализация',
+  'Initiator': 'Инициатор',
+  'Inline Script': 'Встроенный скрипт',
+  'In Mapping': 'Соответствие на вход',
+  'Input/Output': 'Ввод/Вывод',
+  'Input Parameter': 'Входной параметр',
+  'Input Parameters': 'Входные параметры',
+  'Java Class': 'Класс Java',
+  'Job Configuration': 'Конфигурация задания',
+  'Job Priority': 'Очерёдность задания',
+  'Label': 'Заголовок',
+  'latest': 'последний',
+  'Link Name': 'Link Name',
+  'List': 'List',
+  'Listener Id': 'Слушатель Id',
+  'Listeners': 'Слушатели',
+  'Listener Type': 'Тип слушателя',
+  'Local': 'Локальный',
+  'Loop Cardinality': 'Количество повторений цикла',
+  'Map': 'Map',
+  'Map Decision Result': 'Результат решения Map',
+  'Mapping must have a target': 'Соответствие должно иметь цель',
+  'Mapping must have a value': 'Соответствие должно иметь значение',
+  'Mapping must have a {value}': 'Соответствие должно иметь {value}',
+  'Message': 'Сообщение',
+  'Message Name': 'Название сообщения',
+  'Multi Instance ': 'Мультиэкземпляр ',
+  'Multi Instance': 'Мультиэкземпляр',
+  'Must configure Connector': 'Необходимо настроить коннектор',
+  'Must have max length {length}': 'Должно иметь максимальную длину {length}',
+  'Must have min length {length}': 'Должно иметь минимальную длину {length}',
+  'Must match pattern {pattern}': 'Должно соответствовать образцу {pattern}',
+  'Must not be empty': 'Не должно быть пустым',
+  'Must provide a value': 'Должно быть указано значение',
+  'Must provide a value for timeout task listener': 'Необходимо указать значение для тайм-аута слушиателя задачи.',
+  'Must provide either loop cardinality or collection': 'Должен обеспечивать либо кардинальность цикла, либо коллекцию.',
+  'Name': 'Имя',
+  'Name must not contain spaces': 'Имя не должно содержать пробелов',
+  'Out Mapping': 'Соответствие на выход',
+  'Output Parameter': 'Выходной параметр',
+  'Output Parameters': 'Выходные параметры',
+  'Parameter must have a name': 'У параметра должно быть имя',
+  'Parameters': 'Параметры',
+  'Priority': 'Очередность',
+  'Process Documentation': 'Документация процесса',
+  'Process Id': 'Id процесса',
+  'Process Name': 'Имя процесса',
+  'Properties': 'Характеристики',
+  'Resource': 'Ресурс',
+  'Result Variable': 'Переменная результата',
+  'Retry Time Cycle': 'Цикл времени повтора',
+  'Script': 'Скрипт',
+  'Script Format': 'Формат скрипта',
+  'Script Type': 'Тип скрипта',
+  'Signal': 'Сигнал',
+  'Signal Name': 'Имя сигнала',
+  'Source': 'Источник',
+  'Source Expression': 'Исходное выражение',
+  'Specify more than one group as a comma separated list.': 'Укажите несколько групп в виде списка, разделенного запятыми.',
+  'Specify more than one user as a comma separated list.': 'Укажите более одного пользователя в виде списка, разделенного запятыми.',
+  'Specify more than one variable change event as a comma separated list.': 'Укажите более одного события изменения переменной в виде списка, разделенного запятыми.',
+  'start': 'старт',
+  'Startable': 'Запускаемый',
+  'String': 'String',
+  'take': 'взятие',
+  'Target': 'Цель',
+  'Target must not contain whitespace': 'Цель не должна задержать пробелы',
+  'Tasklist Configuration': 'Конфигурация списка задач',
+  'Task Listener': 'Слушатель задач',
+  'Task Priority': 'Очередность задачи',
+  'Tenant Id': 'Tenant Id',
+  'Text': 'Текст',
+  'The due date as an EL expression (e.g. ${someDate} or an ISO date (e.g. 2015-06-26T09:54:00)': 'Срок выполнения в виде выражения EL (например, ${someDate} или дата в формате ISO (например, 2015-06-26T09:54:00)',
+  'timeout': 'тайм-аут',
+  'Timer Definition': 'Определение таймера',
+  'Timer Definition Type': 'Тип определения таймера',
+  'Topic': 'Тема',
+  'Type': 'Тип',
+  'update': 'обновление',
+  'Validation': 'Проверка',
+  'Value': 'Значение',
+  'Values': 'Значения',
+  'Variable Event': 'Переменное событие',
+  'Variable Name': 'Имя переменной',
+  'Variables': 'Переменные',
+  'version': 'версия',
+  'Version': 'Версия',
+  'versionTag': 'тегВерсии',
+  'Version Tag': 'Тег версии',
+  'Wait for Completion': 'Дождитесь завершения',
+  '[unknown template: {templateId}]': '[неизвествный шаблон: {templateId}]',
+  '{label} must not contain whitespace': '{label} должен быть без пробелов',
+  'Camunda Forms': 'Формы Camunda',
+  'Form Ref': 'Ссылка на форму',
+  'Embedded or External Task Forms': 'Встроенные или внешние формы задач',
+  'Local Variable Name': 'Имя локальной переменной',
+  'Variable Assignment Type': 'Тип переменной',
+  'Variable Assignment Value': 'Значение переменной',
+  'Process Variable Name': 'Имя переменной процесса',
+  'Start typing "${}" to create an expression.': 'Начните вводить «${}», чтобы создать выражение.',
+  'String or Expression': 'String или выражение',
+  'No variables defined.': 'Переменные не определены.',
+  'Available process variables, identified in the diagram.': 'Доступные переменные процесса, указанные на диаграмме.',
+  'No variables found.': 'Переменные не найдены.'
+});
+
+/***/ }),
+
+/***/ "./client/bpmnjs-i18n-extension/translate.js":
+/*!***************************************************!*\
+  !*** ./client/bpmnjs-i18n-extension/translate.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Translator)
+/* harmony export */ });
+/* harmony import */ var _languages_de_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./languages/de.js */ "./client/bpmnjs-i18n-extension/languages/de.js");
+/* harmony import */ var _languages_en_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./languages/en.js */ "./client/bpmnjs-i18n-extension/languages/en.js");
+/* harmony import */ var _languages_pt_br_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./languages/pt-br.js */ "./client/bpmnjs-i18n-extension/languages/pt-br.js");
+/* harmony import */ var _languages_ru_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./languages/ru.js */ "./client/bpmnjs-i18n-extension/languages/ru.js");
+/**
+ * Copyright 2021 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+
+
+
 /**
  * All available languages.
  */
@@ -3866,7 +4443,8 @@ __webpack_require__.r(__webpack_exports__);
 const languages = {
   de: _languages_de_js__WEBPACK_IMPORTED_MODULE_0__.default,
   en: _languages_en_js__WEBPACK_IMPORTED_MODULE_1__.default,
-  pt_br: _languages_pt_br_js__WEBPACK_IMPORTED_MODULE_2__.default
+  pt_br: _languages_pt_br_js__WEBPACK_IMPORTED_MODULE_2__.default,
+  ru: _languages_ru_js__WEBPACK_IMPORTED_MODULE_3__.default
 }; // The default language to use if none is specified in the configuration
 
 const defaultLanguage = "en"; // Contains all missing translations discovered to prevent logging them
@@ -4026,6 +4604,9 @@ const options = [{
 }, {
   value: 'pt_br',
   label: 'Português (Brasil)'
+}, {
+  value: 'ru',
+  label: 'Русский'
 }];
 /**
  * An example client extension plugin to enable auto saving functionality

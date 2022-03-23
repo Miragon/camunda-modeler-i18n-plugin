@@ -17,12 +17,13 @@
 import de from "./languages/de.js";
 import en from "./languages/en.js";
 import pt_br from "./languages/pt-br.js";
+import ru from "./languages/ru.js"
 
 /**
  * All available languages.
  */
 const languages = {
-    de, en, pt_br
+    de, en, pt_br, ru
 };
 
 // The default language to use if none is specified in the configuration

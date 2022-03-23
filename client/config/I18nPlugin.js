@@ -34,7 +34,8 @@ const defaultState = {
 const options = [
     {value: 'de', label: 'Deutsch'},
     {value: 'en', label: 'English'},
-    {value: 'pt_br', label: 'Português (Brasil)'}
+    {value: 'pt_br', label: 'Português (Brasil)'},
+    {value: 'ru', label: 'Русский'}
 ]
 
 /**
