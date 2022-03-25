@@ -4402,21 +4402,21 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
-/***/ "./client/bpmnjs-i18n-extension/translate.js":
-/*!***************************************************!*\
-  !*** ./client/bpmnjs-i18n-extension/translate.js ***!
-  \***************************************************/
+/***/ "./client/bpmnjs-i18n-extension/languages/zh-Hans.js":
+/*!***********************************************************!*\
+  !*** ./client/bpmnjs-i18n-extension/languages/zh-Hans.js ***!
+  \***********************************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ Translator)
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
 /* harmony export */ });
-/* harmony import */ var _languages_de_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./languages/de.js */ "./client/bpmnjs-i18n-extension/languages/de.js");
-/* harmony import */ var _languages_en_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./languages/en.js */ "./client/bpmnjs-i18n-extension/languages/en.js");
-/* harmony import */ var _languages_pt_br_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./languages/pt-br.js */ "./client/bpmnjs-i18n-extension/languages/pt-br.js");
-/* harmony import */ var _languages_ru_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./languages/ru.js */ "./client/bpmnjs-i18n-extension/languages/ru.js");
+/* harmony import */ var _zh_Hans_bpmn_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./zh-Hans/bpmn-js */ "./client/bpmnjs-i18n-extension/languages/zh-Hans/bpmn-js.js");
+/* harmony import */ var _zh_Hans_dmn_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./zh-Hans/dmn-js */ "./client/bpmnjs-i18n-extension/languages/zh-Hans/dmn-js.js");
+/* harmony import */ var _zh_Hans_properties_panel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./zh-Hans/properties-panel */ "./client/bpmnjs-i18n-extension/languages/zh-Hans/properties-panel.js");
+/* harmony import */ var _zh_Hans_other__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./zh-Hans/other */ "./client/bpmnjs-i18n-extension/languages/zh-Hans/other.js");
 /**
  * Copyright 2021 FlowSquad GmbH
  *
@@ -4437,6 +4437,1204 @@ __webpack_require__.r(__webpack_exports__);
 
 
 /**
+ * Joins and exports the translated strings.
+ */
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({ ..._zh_Hans_bpmn_js__WEBPACK_IMPORTED_MODULE_0__.default,
+  ..._zh_Hans_dmn_js__WEBPACK_IMPORTED_MODULE_1__.default,
+  ..._zh_Hans_properties_panel__WEBPACK_IMPORTED_MODULE_2__.default,
+  ..._zh_Hans_other__WEBPACK_IMPORTED_MODULE_3__.default
+});
+
+/***/ }),
+
+/***/ "./client/bpmnjs-i18n-extension/languages/zh-Hans/bpmn-js.js":
+/*!*******************************************************************!*\
+  !*** ./client/bpmnjs-i18n-extension/languages/zh-Hans/bpmn-js.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/**
+ * Copyright 2021 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * This file contains the strings used in the bpmn-js module.
+ */
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  'Append {type}': '追加 {type}',
+  'Add Lane above': '在上方添加泳道',
+  'Divide into two Lanes': '拆分成两条泳道',
+  'Divide into three Lanes': '拆分成三条泳道',
+  'Add Lane below': '在下方添加泳道',
+  'Append ReceiveTask': '追加接收任务',
+  'Append MessageIntermediateCatchEvent': '追加消息中间捕获事件',
+  'Append TimerIntermediateCatchEvent': '追加时间中间捕获事件',
+  'Append ConditionIntermediateCatchEvent': '追加条件中间捕获事件',
+  'Append SignalIntermediateCatchEvent': '追加信号中间捕获事件',
+  'Append compensation activity': '追加补偿活动',
+  'Append EndEvent': '追加结束事件',
+  'Append Gateway': '追加网关',
+  'Append Task': '追加任务',
+  'Append TextAnnotation': '追加文本描述',
+  'TextAnnotation': '文本描述',
+  'Append Intermediate/Boundary Event': '追加中间/边界事件',
+  'Change type': '改变类型',
+  'Default Flow': '默认连线',
+  'Connect using Association': '使用关联连接',
+  'Connect using Sequence/MessageFlow or Association': '使用序列/消息流或关联进行连接',
+  'Connect using DataInputAssociation': '使用数据输入关联进行连接',
+  'Remove': '删除',
+  'no shape type specified': '未指定形状类型',
+  'out of bounds release': '越界释放',
+  'more than {count} child lanes': '超过 {count} 个子泳道',
+  'element required': '所需元素',
+  'no parent for {element} in {parent}': '{parent}中的{element}没有父元素',
+  'Create {type}': '创建{type}',
+  'Activate the hand tool': '激活手动工具',
+  'Activate the lasso tool': '激活套索工具',
+  'Activate the create/remove space tool': '激活创建/删除空间工具',
+  'Activate the global connect tool': '激活全局连接工具',
+  'Create StartEvent': '创建开始事件',
+  'Create Intermediate/Boundary Event': '创建中间/边界事件',
+  'Create EndEvent': '创建结束事件',
+  'Create Gateway': '创建网关',
+  'Create Task': '创建任务',
+  'Create DataObjectReference': '创建数据对象引用',
+  'Create DataStoreReference': '创建数据存储引用',
+  'Create expanded SubProcess': '创建展开子流程',
+  'Create Pool/Participant': '创建泳池/参与者',
+  'Create Group': '创建组',
+  'Parallel Multi Instance': '并行多实例',
+  'Sequential Multi Instance': '串行多实例',
+  'Loop': '循环',
+  'Ad-hoc': '临时的',
+  'element {element} referenced by {referenced}#{property} not yet drawn': '由{referenced}{property}引用的元素{element}尚未绘制',
+  'unknown di {di} for element {semantic}': '元素{semantic}的未知di{di}',
+  'missing {semantic}#attachedToRef': '缺少{semantic}的附加到引用',
+  '{semantic}#{side} Ref not specified': '未指定{semantic}的{side}引用',
+  'already rendered {element}': '已呈现 {element}',
+  'failed to import {element}': '无法导入 {element}',
+  'multiple DI elements defined for {element}': '{element}定义了多个DI元素',
+  'no bpmnElement referenced in {element}': '{element}中没有引用bpmn元素',
+  'diagram not part of bpmn:Definitions': '流程图不属于bpmn:Definitions',
+  'no diagram to display': '没有要显示的流程图',
+  'no process or collaboration to display': '没有要显示的流程或协作',
+  'correcting missing bpmnElement on {plane} to {rootElement}': '正在将{plane}上缺少的bpmn元素更正为{rootElement}',
+  'unsupported bpmnElement for {plane}: {rootElement}': '{plane}:{rootElement}的bpmn元素不受支持',
+  'unrecognized flowElement {element} in context {context}': '上下文{context}中无法识别的流程元素{element}',
+  'HELLO {you}!': '你好 {you}!'
+});
+
+/***/ }),
+
+/***/ "./client/bpmnjs-i18n-extension/languages/zh-Hans/dmn-js.js":
+/*!******************************************************************!*\
+  !*** ./client/bpmnjs-i18n-extension/languages/zh-Hans/dmn-js.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/**
+ * Copyright 2021 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * This file contains the translated strings used in the dmn-js component.
+ * However, notice that these strings are currently not working. We are
+ * still investigating how to apply them.
+ */
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  /*'Activate the lasso tool': '激活套索工具',*/
+  'Add Cell Description': '添加单元格描述',
+  'Add Input': '添加输入',
+  'Add Input Column Left': '向左添加输入列',
+  'Add Input Column Right': '向右添加输入列',
+  'Add Output': '添加输出',
+  'Add Output Column Left': '向左添加输出列',
+  'Add Output Column Right': '向右添加输出列',
+  'Add Predefined Values': '添加预定义值',
+  'Add Rule': '添加规则',
+  'Add Rule Above': '在上方添加规则',
+  'Add Rule Below': '在下方添加规则',
+  'Add Values': '添加值',
+  'Append Decision': '追加决策',
+  'Append Knowledge Source': '追加知识源',
+  'Append Business Knowledge Model': '追加知识模型',
+  'Append Input Data': '追加输入数据',
+  'And': '并且',
+  'Annotations': '注释',
+
+  /*'Append {type}': '追加 {type}',*/
+  'cellInput': '输入单元格',
+  'Change Cell Expression Language': '更改单元格表达式语言',
+
+  /*'Change type': '修改类型',*/
+  'Clear predefined values.': '清除预定义值。',
+  'Copy Input Column': '复制输入列',
+  'Copy Output Column': '复制输出列',
+  'Copy Rule': '复制规则',
+  'Create Decision': '创建决策',
+  'Create Input Data': '创建输入数据',
+  'Create Knowledge Model': '创建知识模型',
+  'Create Knowledge Source': '创建知识源',
+  'Cut Input Column': '剪切输入列',
+  'Cut Output Column': '剪切输出列',
+  'Cut Rule': '剪切规则',
+  'Edit String': '编辑字符串',
+  'Expression': '表达式',
+  'Expression Language': '表达式语言',
+  'Input': '输入',
+  'input': '输入',
+  'Input Expression': '输入表达式',
+  'Input Label': '输入标签',
+  'Input Type': '输入类型',
+  'Input Values': '输入值',
+  'Input Variable': '输入变量',
+  'No values': '没有值',
+  'Output Label': '输出标签',
+  'Output Name': '输出名称',
+  'Output Type': '输出类型',
+  'Output Values': '输出值',
+  'Paste Input Column Left': '向左粘贴输入列',
+  'Paste Input Column Right': '向右粘贴输入列',
+  'Paste Output Column Left': '向左粘贴输出列',
+  'Paste Output Column Right': '向右粘贴输出列',
+  'Paste Rule Above': '在上方粘贴规则',
+  'Paste Rule Below': '在下方粘贴规则',
+  'Predefined Values': '预定义值',
+
+  /*'Remove': '删除',*/
+  'Remove Cell Description': '删除单元格描述',
+  'Remove Input Column': '删除输入列',
+  'Remove Output Column': '删除输出列',
+  'Remove Rule': '删除规则',
+  'Set Value': '设定值',
+  'Strings must be in double quotes.': '字符串必须使用双引号。',
+
+  /*'Type': '类型',*/
+  'Edit DRD': "编辑DRD",
+  "Close OverView": "关闭预览",
+  "Open OverView": "打开预览",
+  "Hit Policy": "命中策略",
+  "When": "当",
+  "Then": "然后",
+  "enterExpression": "请输入表达式",
+  "Move Input": "移动输入",
+  "Move Output": "移动输出"
+});
+
+/***/ }),
+
+/***/ "./client/bpmnjs-i18n-extension/languages/zh-Hans/other.js":
+/*!*****************************************************************!*\
+  !*** ./client/bpmnjs-i18n-extension/languages/zh-Hans/other.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/**
+ * Copyright 2021 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * This file contains translations that were used in other components.
+ */
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  'Open minimap': '打开缩略图',
+  'This maps to the process definition key.': '映射为流程定义Key.',
+  'Key': 'Key',
+  'Intermediate Throw Event': '中间抛出事件',
+  'End Event': '结束事件',
+  'Message Start Event': '消息开始事件',
+  'Timer Start Event': '时间开始事件',
+  'Conditional Start Event': '条件开始事件',
+  'Signal Start Event': '信号开始事件',
+  'Expand (not reversible)': '展开 (不可逆)',
+  'ID': 'ID',
+  'Start Event': '开始事件',
+  'Message End Event': '消息结束事件',
+  'Escalation End Event': '升级结束事件',
+  'Error End Event': '错误结束事件',
+  'Compensation End Event': '补偿结束事件',
+  'Signal End Event': '信号结束时间',
+  'Terminate End Event': '终止结束事件',
+  'Transaction': '事务',
+  'Event Sub Process': '事件子流程',
+  'Sub Process (collapsed)': '子流程 (折叠)',
+  'Close minimap': '收起缩略图',
+  'Message Intermediate Catch Event': '消息中间捕获事件',
+  'Message Intermediate Throw Event': '消息中间抛出事件',
+  'Timer Intermediate Catch Event': '时间中间捕获事件',
+  'Escalation Intermediate Throw Event': '升级中间抛出事件',
+  'Conditional Intermediate Catch Event': '条件中间捕获事件',
+  'Link Intermediate Catch Event': '链接中间捕获事件',
+  'Link Intermediate Throw Event': '链接中间抛出事件',
+  'Compensation Intermediate Throw Event': '补偿中间抛出事件',
+  'Signal Intermediate Catch Event': '信号中间捕获事件',
+  'Signal Intermediate Throw Event': '信号中间抛出事件',
+  'Parallel Gateway': '并行网关',
+  'Inclusive Gateway': '包容网关',
+  'Complex Gateway': '复杂网关',
+  'Event based Gateway': '事件网关',
+  'Exclusive Gateway': '排它网关',
+  'Send Task': '发送任务',
+  'Receive Task': '接收任务',
+  'User Task': '人工任务',
+  'Manual Task': '手工任务',
+  'Business Rule Task': '业务规则任务',
+  'Service Task': '服务任务',
+  'Script Task': '脚本任务',
+  'Call Activity': '调用活动',
+  'Sub Process (expanded)': '子流程 (展开)',
+  'Sub Process': '子流程',
+  'Task': '任务',
+  'This maps to the task definition key.': '映射为任务定义Key.',
+  'Collapsed Pool': '折叠泳道',
+  'Expanded Pool': '展开泳道',
+  'flow elements must be children of pools/participants': '流程元素必须是泳池/参与者的子元素',
+  'The follow up date as an EL expression (e.g. ${someDate} or an ISO date (e.g. 2015-06-26T09:54:00)': '跟进日期可为EL表达式（例如${someDate}或ISO日期（例如2015-06-26T09:54:00）',
+  'Message Boundary Event': '消息边界事件',
+  'Timer Boundary Event': '时间边界事件',
+  'Escalation Boundary Event': '升级边界事件',
+  'Conditional Boundary Event': '条件边界事件',
+  'Error Boundary Event': '错误边界事件',
+  'Cancel Boundary Event': '取消边界事件',
+  'Signal Boundary Event': '信号边界事件',
+  'Compensation Boundary Event': '补偿边界事件',
+  'Message Boundary Event (non-interrupting)': '消息边界事件（非中断）',
+  'Timer Boundary Event (non-interrupting)': '时间边界事件（非中断）',
+  'Escalation Boundary Event (non-interrupting)': '升级边界事件 (非中断)',
+  'Conditional Boundary Event (non-interrupting)': '条件边界事件 (非中断)',
+  'Signal Boundary Event (non-interrupting)': '信号边界事件 (非中断)',
+  'Connect using Information/Knowledge/Authority Requirement or Association': '使用信息/知识/权限要求或关联进行连接',
+  'Empty': '空',
+  'Literal Expression': '文字表达式',
+  'This maps to the decision definition key.': '映射为决策定义Key。',
+  'Decision Table': '决策表',
+  'Output': '输出',
+  'Annotation': '注释',
+  'Output Expression': '输出表达式',
+  'Data Type': '数据类型',
+  'Copy': '复制',
+  'Paste': '粘贴',
+  'Template': '模版',
+  'Errors': '错误',
+  'No errors defined.': '没有定义错误。'
+});
+
+/***/ }),
+
+/***/ "./client/bpmnjs-i18n-extension/languages/zh-Hans/properties-panel.js":
+/*!****************************************************************************!*\
+  !*** ./client/bpmnjs-i18n-extension/languages/zh-Hans/properties-panel.js ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/**
+ * Copyright 2021 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * This file contains the translations used by the bpmn-js-properties-panel component.
+ */
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  'Activity Ref': '活动参考',
+  'Add Constraint': '添加约束',
+  'Add Entry': '添加条目',
+  'Add Property': '添加属性',
+  'Add Value': '添加值',
+  'All': '所有',
+  'Available process variables, identified in the diagram.': '图中标识的可用流程变量。',
+  'Assignee': '处理人',
+  'assignment': '分配',
+  'Asynchronous After': '异步后',
+  'Asynchronous Before': '异步前',
+  'Asynchronous Continuations': '异步延续',
+  'Binding': '绑定',
+  'Business Key': '业务主键',
+  'Business Key Expression': '业务主键表达式',
+  'CallActivity Type': '调用活动类型',
+  'Called Element': '被调元素',
+  'Candidate Groups': '候选组',
+  'Candidate Starter Configuration': '候选发起配置',
+  'Candidate Starter Groups': '候选发起用户组',
+  'Candidate Starter Users': '候选发起用户',
+  'Candidate Users': '候选人',
+  'Case Ref': '案例参考',
+  'Category Value': '类别值',
+  'Class': '类',
+  'Collection': '集合',
+  'complete': '完成',
+  'Completion Condition': '完成条件',
+  'Condition': '条件',
+  'Condition Type': '条件类型',
+  'Config': '配置',
+  'Configure Connector': '配置连接器',
+  'Connector': '连接器',
+  'Connector Id': '连接器Id',
+  'create': '创建',
+  'Custom Fields': '自定义字段',
+  'Custom Fields for scope: ': '自定义字段范围: ',
+  'Cycle': '循环',
+  'Date': '日期',
+  'Decision Ref': '决策参考',
+  'Default Value': '默认值',
+  'Delegate Expression': '委托表达式',
+  'Delegate Variable Mapping': '委托变量映射',
+  'delete': '删除',
+  'deployment': '部署',
+  'Details': '详情',
+  'DMN': 'DMN',
+  'Documentation': '文档',
+  'Due Date': '截止日期',
+  'Duration': '持续时间',
+  'Element Documentation': '元素文档',
+  'Element must have an unique id.': '元素Id必须唯一.',
+  'Element Template': '元素模版',
+  'Element Variable': '元素变量',
+  'end': '结束',
+  'Error': '错误',
+  'Error Code': '错误代码',
+  'Error Code Variable': '错误代码变量',
+  'Error Message': '错误消息',
+  'Error Message Variable': '错误消息变量',
+  'Error Name': '错误名称',
+  'Escalation': '升级',
+  'Escalation Code': '升级代码',
+  'Escalation Code Variable': '升级代码变量',
+  'Escalation Name': '升级名称',
+  'Event Type': '事件类型',
+  'Exclusive': '排它',
+  'Executable': '可执行',
+  'Execution Listener': '执行监听器',
+  'Expression': '表达式',
+  'Extensions': '扩展',
+  'External': '外部',
+  'External Resource': '外部资源',
+  'External Task Configuration': '外部任务配置',
+  'Field Injection': '字段注入',
+  'Field Injections': '字段注入',
+  'Fields': '字段',
+  'Follow Up Date': '跟进日期',
+  'Form Field': '表单字段',
+  'Form Fields': '表单字段',
+  'Form Key': '表单键值',
+  'Forms': '表单',
+  'Form Ref': '绑定表单',
+  'General': '常规',
+  'Global Message referenced': '引用的全局消息',
+  'History Configuration': '历史配置',
+  'History Time To Live': '历史存活时间',
+  'Id': 'ID',
+  'ID (process variable name)': 'ID (流程变量名)',
+  'Id must be a valid QName.': 'Id必须是有效的命名.',
+  'Id must not contain prefix.': 'Id不能包含前缀.',
+  'Id must not contain spaces.': 'Id不能包含空格.',
+  'Implementation': '实现',
+  'Initiator': '发起人',
+  'Inline Script': '内联脚本',
+  'In Mapping': '输入映射',
+  'Input/Output': '输入/输出',
+  'Input Parameter': '输入参数',
+  'Input Parameters': '输入参数',
+  'Java Class': 'Java类',
+  'Job Configuration': '调度配置',
+  'Job Priority': '调度优先级',
+  'Label': '标签',
+  'latest': '最新版',
+  'Link Name': '链接名称',
+  'List': '列表',
+  'Listener Id': '监听器Id',
+  'Listeners': '监听器',
+  'Listener Type': '监听器类型',
+  'Local': '本地',
+  'Loop Cardinality': '循环基数',
+  'Map': 'Map对象',
+  'Map Decision Result': '映射决策结果',
+  'Mapping must have a target': '映射必须有一个目标',
+  'Mapping must have a value': '映射必须有一个值',
+  'Mapping must have a {value}': '映射必须有{value}值',
+  'Message': '消息',
+  'Message Name': '消息名称',
+  'Multi Instance ': '多实例 ',
+  'Multi Instance': '多实例',
+  'Must configure Connector': '必须配置连接器',
+  'Must have max length {length}': '必须有最大长度 {length}',
+  'Must have min length {length}': '必须有最小长度 {length}',
+  'Must match pattern {pattern}': '必须匹配模式 {pattern}',
+  'Must not be empty': '不能为空',
+  'Must provide a value': '必须提供一个值',
+  'Must provide a value for timeout task listener': '必须为超时任务监听器提供一个值',
+  'Must provide either loop cardinality or collection': '必须提供循环基数或集合',
+  'Name': '名称',
+  'Name must not contain spaces': '名称不能包含空格',
+  'No variables found.': '未找到任何变量。',
+  'No variables defined.': '没有定义变量。',
+  'Out Mapping': '输出映射',
+  'Output Parameter': '输出参数',
+  'Output Parameters': '输出参数',
+  'Parameter must have a name': '参数必须有一个名称',
+  'Parameters': '参数',
+  'Priority': '优先级',
+  'Process Documentation': '流程文档',
+  'Process Id': '流程定义Id',
+  'Process Name': '流程定义名称',
+  'Properties': '属性',
+  'Properties Panel': '属性面板',
+  'Resource': '资源',
+  'Result Variable': '结果变量',
+  'Retry Time Cycle': '重试时间周期',
+  'Script': '脚本',
+  'Script Format': '脚本格式',
+  'Script Type': '脚本类型',
+  'Signal': '信号',
+  'Signal Name': '信号名称',
+  'Source': '来源',
+  'Source Expression': '来源表达式',
+  'Specify more than one group as a comma separated list.': '若有多个组请用逗号分隔。',
+  'Specify more than one user as a comma separated list.': '若有多个用户请用逗号分隔。',
+  'Specify more than one variable change event as a comma separated list.': '若有多个变量更改事件请用逗号分隔。',
+  'start': '启动',
+  'Startable': '可启动',
+  'String': '字符串',
+  'take': '获取',
+  'Target': '目标',
+  'Target must not contain whitespace': '目标不能包含空格',
+  'Tasklist Configuration': '任务列表配置',
+  'Task Listener': '任务监听器',
+  'Task Priority': '任务优先级',
+  'Tenant Id': '租户Id',
+  'Text': '文本',
+  'The due date as an EL expression (e.g. ${someDate} or an ISO date (e.g. 2015-06-26T09:54:00)': '截止日期可为EL表达式（例如${someDate}或ISO日期（例如2015-06-26T09:54:00）',
+  'timeout': '超时',
+  'Timer Definition': '定时器定义',
+  'Timer Definition Type': '定时器定义类型',
+  'Topic': '主题',
+  'Type': '类型',
+  'update': '更新',
+  'Validation': '验证',
+  'Value': '值',
+  'Values': '值',
+  'Variable Event': '变量事件',
+  'Variable Name': '变量名',
+  'Variables': '流程变量',
+  'version': '指定版本',
+  'Version': '版本',
+  'versionTag': '版本号',
+  'Version Tag': '版本号',
+  'Wait for Completion': '等待完成',
+  '[unknown template: {templateId}]': '[未知模版: {templateId}]',
+  '{label} must not contain whitespace': '{label} 不能包含空格',
+  '<none>': '无',
+  'Embedded or External Task Forms': '嵌入式或外部任务表单',
+  'Camunda Forms': 'Camunda表单'
+});
+
+/***/ }),
+
+/***/ "./client/bpmnjs-i18n-extension/languages/zh-Hant.js":
+/*!***********************************************************!*\
+  !*** ./client/bpmnjs-i18n-extension/languages/zh-Hant.js ***!
+  \***********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _zh_Hant_bpmn_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./zh-Hant/bpmn-js */ "./client/bpmnjs-i18n-extension/languages/zh-Hant/bpmn-js.js");
+/* harmony import */ var _zh_Hant_dmn_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./zh-Hant/dmn-js */ "./client/bpmnjs-i18n-extension/languages/zh-Hant/dmn-js.js");
+/* harmony import */ var _zh_Hant_properties_panel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./zh-Hant/properties-panel */ "./client/bpmnjs-i18n-extension/languages/zh-Hant/properties-panel.js");
+/* harmony import */ var _zh_Hant_other__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./zh-Hant/other */ "./client/bpmnjs-i18n-extension/languages/zh-Hant/other.js");
+/**
+ * Copyright 2021 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+
+
+
+/**
+ * Joins and exports the translated strings.
+ */
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({ ..._zh_Hant_bpmn_js__WEBPACK_IMPORTED_MODULE_0__.default,
+  ..._zh_Hant_dmn_js__WEBPACK_IMPORTED_MODULE_1__.default,
+  ..._zh_Hant_properties_panel__WEBPACK_IMPORTED_MODULE_2__.default,
+  ..._zh_Hant_other__WEBPACK_IMPORTED_MODULE_3__.default
+});
+
+/***/ }),
+
+/***/ "./client/bpmnjs-i18n-extension/languages/zh-Hant/bpmn-js.js":
+/*!*******************************************************************!*\
+  !*** ./client/bpmnjs-i18n-extension/languages/zh-Hant/bpmn-js.js ***!
+  \*******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/**
+ * Copyright 2021 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * This file contains the strings used in the bpmn-js module.
+ */
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  'Append TextAnnotation': '追加文本注釋',
+  'Append {type}': '追加 {type}',
+  'Add Lane above': '在上方添加泳道',
+  'Divide into two Lanes': '拆分成兩條泳道',
+  'Divide into three Lanes': '拆分成三條泳道',
+  'Add Lane below': '在下发添加泳道',
+  'Append ReceiveTask': '追加接收任务',
+  'Append MessageIntermediateCatchEvent': '追加消息中間捕獲事件',
+  'Append TimerIntermediateCatchEvent': '追加中間捕獲事件',
+  'Append ConditionIntermediateCatchEvent': '追加条件間捕獲事件',
+  'Append SignalIntermediateCatchEvent': '追加信号間捕獲事件',
+  'Append compensation activity': '追加補償活動',
+  'Append EndEvent': '追加結束事件',
+  'Append Gateway': '追加網關',
+  'Append Task': '追加任務',
+  'TextAnnotation': '文本注釋',
+  'Append Intermediate/Boundary Event': '追加中間/邊界事件',
+  'Change type': '改變类型',
+  'Default Flow': '默認連綫',
+  'Connect using Association': '使用關聯鏈接',
+  'Connect using Sequence/MessageFlow or Association': '使用序列/消息流或關聯進行鏈接',
+  'Connect using DataInputAssociation': '使用数据输入關聯進行鏈接',
+  'Remove': '删除',
+  'no shape type specified': '未指定形狀類型',
+  'out of bounds release': '越界釋放',
+  'more than {count} child lanes': '超過 {count} 個子泳道',
+  'element required': '所需元素',
+  'no parent for {element} in {parent}': '{parent}中的{element}沒有父元素',
+  'Create {type}': '創建{type}',
+  'Activate the hand tool': '激活手動工具',
+  'Activate the lasso tool': '激活套索工具',
+  'Activate the create/remove space tool': '激活創建/刪除空間工具',
+  'Activate the global connect tool': '激活全局鏈接工具',
+  'Create StartEvent': '創建開始事件',
+  'Create Intermediate/Boundary Event': '創建中間/邊界事件',
+  'Create EndEvent': '創建結束事件',
+  'Create Gateway': '創建網關',
+  'Create Task': '創建任務',
+  'Create DataObjectReference': '創建數據對象引用',
+  'Create DataStoreReference': '創建數據存儲引用',
+  'Create expanded SubProcess': '創建展開子流程',
+  'Create Pool/Participant': '創建泳池/參與者',
+  'Create Group': '創建組',
+  'Parallel Multi Instance': '并行多實例',
+  'Sequential Multi Instance': '串行多實例',
+  'Loop': '循環',
+  'Ad-hoc': '臨時的',
+  'element {element} referenced by {referenced}#{property} not yet drawn': '由{referenced}{property}引用的元素{element}尚未繪製',
+  'unknown di {di} for element {semantic}': '元素{semantic}的未知di{di}',
+  'missing {semantic}#attachedToRef': '缺少{semantic}的附加的引用',
+  '{semantic}#{side} Ref not specified': '未指定{semantic}的{side}引用',
+  'already rendered {element}': '已呈現 {element}',
+  'failed to import {element}': '無法導入 {element}',
+  'multiple DI elements defined for {element}': '{element}定义了多个DI元素',
+  'no bpmnElement referenced in {element}': '{element}中没有引用bpmn元素',
+  'diagram not part of bpmn:Definitions': '流程圖不屬於bpmn:Definitions',
+  'no diagram to display': '沒有要顯示的流程图',
+  'no process or collaboration to display': '没有要顯示的流程或協作',
+  'correcting missing bpmnElement on {plane} to {rootElement}': '正在將{plane}上缺少的bpmn元素更正為{rootElement}',
+  'unsupported bpmnElement for {plane}: {rootElement}': '{plane}:{rootElement}的bpmn元素不受支持',
+  'unrecognized flowElement {element} in context {context}': '上下文{context}中无法識別的流程元素{element}',
+  'HELLO {you}!': '你好 {you}!'
+});
+
+/***/ }),
+
+/***/ "./client/bpmnjs-i18n-extension/languages/zh-Hant/dmn-js.js":
+/*!******************************************************************!*\
+  !*** ./client/bpmnjs-i18n-extension/languages/zh-Hant/dmn-js.js ***!
+  \******************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/**
+ * Copyright 2021 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * This file contains the translated strings used in the dmn-js component.
+ * However, notice that these strings are currently not working. We are
+ * still investigating how to apply them.
+ */
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  /*'Activate the lasso tool': '激活套索工具',*/
+  'Add Cell Description': '添加单元格描述',
+  'Add Input': '添加输入',
+  'Add Input Column Left': '向左添加输入列',
+  'Add Input Column Right': '向右添加输入列',
+  'Add Output': '添加输出',
+  'Add Output Column Left': '向左添加输出列',
+  'Add Output Column Right': '向右添加输出列',
+  'Add Predefined Values': '添加预定义值',
+  'Add Rule': '添加规则',
+  'Add Rule Above': '在上方添加规则',
+  'Add Rule Below': '在下方添加规则',
+  'Add Values': '添加值',
+  'Append Decision': '追加决策',
+  'Append Knowledge Source': '追加知识源',
+  'Append Business Knowledge Model': '追加知识模型',
+  'Append Input Data': '追加输入数据',
+  'And': '并且',
+  'Annotations': '注释',
+
+  /*'Append {type}': '追加 {type}',*/
+  'cellInput': '输入单元格',
+  'Change Cell Expression Language': '更改单元格表达式语言',
+
+  /*'Change type': '修改类型',*/
+  'Clear predefined values.': '清除预定义值。',
+  'Copy Input Column': '复制输入列',
+  'Copy Output Column': '复制输出列',
+  'Copy Rule': '复制规则',
+  'Create Decision': '创建决策',
+  'Create Input Data': '创建输入数据',
+  'Create Knowledge Model': '创建知识模型',
+  'Create Knowledge Source': '创建知识源',
+  'Cut Input Column': '剪切输入列',
+  'Cut Output Column': '剪切输出列',
+  'Cut Rule': '剪切规则',
+  'Edit String': '编辑字符串',
+  'Expression': '表达式',
+  'Expression Language': '表达式语言',
+  'Input': '输入',
+  'input': '输入',
+  'Input Expression': '输入表达式',
+  'Input Label': '输入标签',
+  'Input Type': '输入类型',
+  'Input Values': '输入值',
+  'Input Variable': '输入变量',
+  'No values': '没有值',
+  'Output Label': '输出标签',
+  'Output Name': '输出名称',
+  'Output Type': '输出类型',
+  'Output Values': '输出值',
+  'Paste Input Column Left': '向左粘贴输入列',
+  'Paste Input Column Right': '向右粘贴输入列',
+  'Paste Output Column Left': '向左粘贴输出列',
+  'Paste Output Column Right': '向右粘贴输出列',
+  'Paste Rule Above': '在上方粘贴规则',
+  'Paste Rule Below': '在下方粘贴规则',
+  'Predefined Values': '预定义值',
+
+  /*'Remove': '删除',*/
+  'Remove Cell Description': '删除单元格描述',
+  'Remove Input Column': '删除输入列',
+  'Remove Output Column': '删除输出列',
+  'Remove Rule': '删除规则',
+  'Set Value': '设定值',
+  'Strings must be in double quotes.': '字符串必须使用双引号。',
+
+  /*'Type': '类型',*/
+  'Edit DRD': "编辑DRD",
+  "Close OverView": "关闭预览",
+  "Open OverView": "打开预览",
+  "Hit Policy": "命中策略",
+  "When": "当",
+  "Then": "然后",
+  "enterExpression": "请输入表达式",
+  "Move Input": "移动输入",
+  "Move Output": "移动输出"
+});
+
+/***/ }),
+
+/***/ "./client/bpmnjs-i18n-extension/languages/zh-Hant/other.js":
+/*!*****************************************************************!*\
+  !*** ./client/bpmnjs-i18n-extension/languages/zh-Hant/other.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/**
+ * Copyright 2021 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * This file contains translations that were used in other components.
+ */
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  'Open minimap': '打開縮略圖',
+  'This maps to the process definition key.': '映射為流程定義Key.',
+  'Key': 'Key',
+  'Intermediate Throw Event': '中間抛出事件',
+  'End Event': '結束事件',
+  'Message Start Event': '消息開始事件',
+  'Timer Start Event': '時間開始事件',
+  'Conditional Start Event': '條件開始事件',
+  'Signal Start Event': '信號開始事件',
+  'Expand (not reversible)': '展開 (不可逆)',
+  'ID': 'ID',
+  'Start Event': '開始事件',
+  'Message End Event': '消息結束事件',
+  'Escalation End Event': '升級結束事件',
+  'Error End Event': '错误結束事件',
+  'Compensation End Event': '補償結束事件',
+  'Signal End Event': '信號結束時間',
+  'Terminate End Event': '终止結束事件',
+  'Transaction': 'Transaction',
+  'Event Sub Process': '事件子流程',
+  'Sub Process (collapsed)': '子流程 (摺叠)',
+  'Close minimap': '收起縮略圖',
+  'Message Intermediate Catch Event': '消息中間捕获事件',
+  'Message Intermediate Throw Event': '消息中間抛出事件',
+  'Timer Intermediate Catch Event': '時間中間捕获事件',
+  'Escalation Intermediate Throw Event': '升級中間抛出事件',
+  'Conditional Intermediate Catch Event': '條件中間捕获事件',
+  'Link Intermediate Catch Event': '鏈接中間捕获事件',
+  'Link Intermediate Throw Event': '鏈接中間抛出事件',
+  'Compensation Intermediate Throw Event': '補償中間抛出事件',
+  'Signal Intermediate Catch Event': '信號中間捕获事件',
+  'Signal Intermediate Throw Event': '信號中間抛出事件',
+  'Parallel Gateway': '并行網關',
+  'Inclusive Gateway': '包容網關',
+  'Complex Gateway': '复杂網關',
+  'Event based Gateway': '事件網關',
+  'Exclusive Gateway': '排它網關',
+  'Send Task': '發送任務',
+  'Receive Task': '接收任務',
+  'User Task': '人工任務',
+  'Manual Task': '手工任務',
+  'Business Rule Task': '業務規則任務',
+  'Service Task': '服務任務',
+  'Script Task': '脚本任務',
+  'Call Activity': '調用活動',
+  'Sub Process (expanded)': '子流程 (展開)',
+  'Sub Process': '子流程',
+  'Task': '任務',
+  'This maps to the task definition key.': '映射為任務定义Key.',
+  'Collapsed Pool': '折叠泳道',
+  'Expanded Pool': '展開泳道',
+  'flow elements must be children of pools/participants': '流程元素必須是泳池/參與者的子元素',
+  'The follow up date as an EL expression (e.g. ${someDate} or an ISO date (e.g. 2015-06-26T09:54:00)': '跟進日期可為EL表達式（例如${someDate}或ISO日期（例如2015-06-26T09:54:00）',
+  'Message Boundary Event': '消息邊界事件',
+  'Timer Boundary Event': '時間邊界事件',
+  'Escalation Boundary Event': '升級邊界事件',
+  'Conditional Boundary Event': '條件邊界事件',
+  'Error Boundary Event': '错误邊界事件',
+  'Cancel Boundary Event': '取消邊界事件',
+  'Signal Boundary Event': '信號邊界事件',
+  'Compensation Boundary Event': '補償邊界事件',
+  'Message Boundary Event (non-interrupting)': '消息邊界事件（非中斷）',
+  'Timer Boundary Event (non-interrupting)': '時間邊界事件（非中斷）',
+  'Escalation Boundary Event (non-interrupting)': '升級邊界事件 (非中斷)',
+  'Conditional Boundary Event (non-interrupting)': '條件邊界事件 (非中斷)',
+  'Signal Boundary Event (non-interrupting)': '信號邊界事件 (非中斷)',
+  'Connect using Information/Knowledge/Authority Requirement or Association': '使用信息/知識/權限要求或關聯進行鏈接',
+  'Empty': '空',
+  'Literal Expression': '文字表達式',
+  'This maps to the decision definition key.': '映射為決策定義Key。',
+  'Decision Table': '決策錶',
+  'Output': '輸出',
+  'Annotation': '注釋',
+  'Output Expression': '輸出表達式',
+  'Data Type': '數據類型',
+  'Copy': '複製',
+  'Paste': '粘貼',
+  'Template': '模板',
+  'Errors': '錯誤',
+  'No errors defined.': '沒有定義錯誤。'
+});
+
+/***/ }),
+
+/***/ "./client/bpmnjs-i18n-extension/languages/zh-Hant/properties-panel.js":
+/*!****************************************************************************!*\
+  !*** ./client/bpmnjs-i18n-extension/languages/zh-Hant/properties-panel.js ***!
+  \****************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/**
+ * Copyright 2021 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * This file contains the translations used by the bpmn-js-properties-panel component.
+ */
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  'Activity Ref': '活動參考',
+  'Add Constraint': '添加約束',
+  'Add Entry': '添加條目',
+  'Add Property': '添加屬性',
+  'Add Value': '添加值',
+  'All': '所有',
+  'Available process variables, identified in the diagram.': '圖中標識的可用流程變量。',
+  'Assignee': '處理人',
+  'assignment': '分配',
+  'Asynchronous After': '異步后',
+  'Asynchronous Before': '異步前',
+  'Asynchronous Continuations': '異步延續',
+  'Binding': '綁定',
+  'Business Key': '業務主键',
+  'Business Key Expression': '業務主键表達式',
+  'CallActivity Type': '調用活動類型',
+  'Called Element': '被调元素',
+  'Candidate Groups': '候选組',
+  'Candidate Starter Configuration': '候选发起配置',
+  'Candidate Starter Groups': '候选发起用戶組',
+  'Candidate Starter Users': '候选发起用戶',
+  'Candidate Users': '候选人',
+  'Case Ref': '案例參考',
+  'Category Value': '類别值',
+  'Class': '類',
+  'Collection': '集合',
+  'complete': '完成',
+  'Completion Condition': '完成條件',
+  'Condition': '條件',
+  'Condition Type': '條件類型',
+  'Config': '配置',
+  'Configure Connector': '配置連接器',
+  'Connector': '連接器',
+  'Connector Id': '連接器Id',
+  'create': '創建',
+  'Custom Fields': '自定義字段',
+  'Custom Fields for scope: ': '自定義字段範圍: ',
+  'Cycle': '循環',
+  'Date': '日期',
+  'Decision Ref': '決策參考',
+  'Default Value': '默認值',
+  'Delegate Expression': '委托表達式',
+  'Delegate Variable Mapping': '委托變量映射',
+  'delete': '刪除',
+  'deployment': '部署',
+  'Details': '詳情',
+  'DMN': 'DMN',
+  'Documentation': '文檔',
+  'Due Date': '截止日期',
+  'Duration': '持續時間',
+  'Element Documentation': '元素文檔',
+  'Element must have an unique id.': '元素Id必須唯一.',
+  'Element Template': '元素模版',
+  'Element Variable': '元素變量',
+  'end': '結束',
+  'Error': '錯誤',
+  'Error Code': '錯誤代碼',
+  'Error Code Variable': '錯誤代碼變量',
+  'Error Message': '錯誤消息',
+  'Error Message Variable': '錯誤消息變量',
+  'Error Name': '錯誤名稱',
+  'Escalation': '升级',
+  'Escalation Code': '升级代碼',
+  'Escalation Code Variable': '升级代碼變量',
+  'Escalation Name': '升级名稱',
+  'Event Type': '事件類型',
+  'Exclusive': '排它',
+  'Executable': '可执行',
+  'Execution Listener': '执行監聽器',
+  'Expression': '表達式',
+  'Extensions': '扩展',
+  'External': '外部',
+  'External Resource': '外部資源',
+  'External Task Configuration': '外部任務配置',
+  'Field Injection': '字段注入',
+  'Field Injections': '字段注入',
+  'Fields': '字段',
+  'Follow Up Date': '跟进日期',
+  'Form Field': '表单字段',
+  'Form Fields': '表单字段',
+  'Form Key': '表单键值',
+  'Forms': '表单',
+  'Form Ref': '綁定表单',
+  'General': '常规',
+  'Global Message referenced': '引用的全局消息',
+  'History Configuration': '历史配置',
+  'History Time To Live': '历史存活時間',
+  'Id': 'ID',
+  'ID (process variable name)': 'ID (流程變量名)',
+  'Id must be a valid QName.': 'Id必須是有效的命名.',
+  'Id must not contain prefix.': 'Id不能包含前缀.',
+  'Id must not contain spaces.': 'Id不能包含空格.',
+  'Implementation': '实现',
+  'Initiator': '发起人',
+  'Inline Script': '内联脚本',
+  'In Mapping': '输入映射',
+  'Input/Output': '输入/输出',
+  'Input Parameter': '输入参数',
+  'Input Parameters': '输入参数',
+  'Java Class': 'Java類',
+  'Job Configuration': '调度配置',
+  'Job Priority': '调度優先級',
+  'Label': '标签',
+  'latest': '最新版',
+  'Link Name': '链接名稱',
+  'List': '列表',
+  'Listener Id': '監聽器Id',
+  'Listeners': '監聽器',
+  'Listener Type': '監聽器類型',
+  'Local': '本地',
+  'Loop Cardinality': '循環基数',
+  'Map': 'Map對象',
+  'Map Decision Result': '映射決策結果',
+  'Mapping must have a target': '映射必須有一個目標',
+  'Mapping must have a value': '映射必須有一個值',
+  'Mapping must have a {value}': '映射必須有{value}值',
+  'Message': '消息',
+  'Message Name': '消息名稱',
+  'Multi Instance ': '多實例 ',
+  'Multi Instance': '多實例',
+  'Must configure Connector': '必須配置連接器',
+  'Must have max length {length}': '必須有最大长度 {length}',
+  'Must have min length {length}': '必須有最小长度 {length}',
+  'Must match pattern {pattern}': '必須匹配模式 {pattern}',
+  'Must not be empty': '不能為空',
+  'Must provide a value': '必須提供一个值',
+  'Must provide a value for timeout task listener': '必須为超時任務監聽器提供一个值',
+  'Must provide either loop cardinality or collection': '必須提供循環基数或集合',
+  'Name': '名稱',
+  'Name must not contain spaces': '名稱不能包含空格',
+  'No variables found.': '未找到任何變量。',
+  'No variables defined.': '没有定義變量。',
+  'Out Mapping': '输出映射',
+  'Output Parameter': '输出参数',
+  'Output Parameters': '输出参数',
+  'Parameter must have a name': '參數必須有一個名稱',
+  'Parameters': '參數',
+  'Priority': '優先級',
+  'Process Documentation': '流程文檔',
+  'Process Id': '流程定義Id',
+  'Process Name': '流程定義名稱',
+  'Properties': '屬性',
+  'Properties Panel': '屬性面板',
+  'Resource': '資源',
+  'Result Variable': '結果變量',
+  'Retry Time Cycle': '重试時間周期',
+  'Script': '脚本',
+  'Script Format': '脚本格式',
+  'Script Type': '脚本類型',
+  'Signal': '信號',
+  'Signal Name': '信號名稱',
+  'Source': '來源',
+  'Source Expression': '來源表達式',
+  'Specify more than one group as a comma separated list.': '若有多個組請用逗號分隔。',
+  'Specify more than one user as a comma separated list.': '若有多個用戶請用逗號分隔。',
+  'Specify more than one variable change event as a comma separated list.': '若有多個變量更改事件請用逗號分隔。',
+  'start': '啓動',
+  'Startable': '可啓動',
+  'String': '字符串',
+  'take': '獲取',
+  'Target': '目標',
+  'Target must not contain whitespace': '目標不能包含空格',
+  'Tasklist Configuration': '任務列表配置',
+  'Task Listener': '任務監聽器',
+  'Task Priority': '任務優先級',
+  'Tenant Id': '租戶Id',
+  'Text': '文本',
+  'The due date as an EL expression (e.g. ${someDate} or an ISO date (e.g. 2015-06-26T09:54:00)': '截止日期可为EL表達式（例如${someDate}或ISO日期（例如2015-06-26T09:54:00）',
+  'timeout': '超時',
+  'Timer Definition': '定時器定義',
+  'Timer Definition Type': '定時器定義類型',
+  'Topic': '主題',
+  'Type': '類型',
+  'update': '更新',
+  'Validation': '驗證',
+  'Value': '值',
+  'Values': '值',
+  'Variable Event': '變量事件',
+  'Variable Name': '變量名',
+  'Variables': '流程變量',
+  'version': '指定版本',
+  'Version': '版本',
+  'versionTag': '版本號',
+  'Version Tag': '版本號',
+  'Wait for Completion': '等待完成',
+  '[unknown template: {templateId}]': '[未知模板: {templateId}]',
+  '{label} must not contain whitespace': '{label} 不能包含空格',
+  '<none>': '無',
+  'Embedded or External Task Forms': '嵌入式或外部任務表单',
+  'Camunda Forms': 'Camunda表单'
+});
+
+/***/ }),
+
+/***/ "./client/bpmnjs-i18n-extension/translate.js":
+/*!***************************************************!*\
+  !*** ./client/bpmnjs-i18n-extension/translate.js ***!
+  \***************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Translator)
+/* harmony export */ });
+/* harmony import */ var _languages_de_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./languages/de.js */ "./client/bpmnjs-i18n-extension/languages/de.js");
+/* harmony import */ var _languages_en_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./languages/en.js */ "./client/bpmnjs-i18n-extension/languages/en.js");
+/* harmony import */ var _languages_pt_br_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./languages/pt-br.js */ "./client/bpmnjs-i18n-extension/languages/pt-br.js");
+/* harmony import */ var _languages_zh_Hans_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./languages/zh-Hans.js */ "./client/bpmnjs-i18n-extension/languages/zh-Hans.js");
+/* harmony import */ var _languages_zh_Hant_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./languages/zh-Hant.js */ "./client/bpmnjs-i18n-extension/languages/zh-Hant.js");
+/* harmony import */ var _languages_ru_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./languages/ru.js */ "./client/bpmnjs-i18n-extension/languages/ru.js");
+/**
+ * Copyright 2021 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+
+
+
+
+
+/**
  * All available languages.
  */
 
@@ -4444,7 +5642,9 @@ const languages = {
   de: _languages_de_js__WEBPACK_IMPORTED_MODULE_0__.default,
   en: _languages_en_js__WEBPACK_IMPORTED_MODULE_1__.default,
   pt_br: _languages_pt_br_js__WEBPACK_IMPORTED_MODULE_2__.default,
-  ru: _languages_ru_js__WEBPACK_IMPORTED_MODULE_3__.default
+  zh_Hans: _languages_zh_Hans_js__WEBPACK_IMPORTED_MODULE_3__.default,
+  zh_Hant: _languages_zh_Hant_js__WEBPACK_IMPORTED_MODULE_4__.default,
+  ru: _languages_ru_js__WEBPACK_IMPORTED_MODULE_5__.default
 }; // The default language to use if none is specified in the configuration
 
 const defaultLanguage = "en"; // Contains all missing translations discovered to prevent logging them
@@ -4604,6 +5804,12 @@ const options = [{
 }, {
   value: 'pt_br',
   label: 'Português (Brasil)'
+}, {
+  value: 'zh_Hans',
+  label: '简体中文'
+}, {
+  value: 'zh_Hant',
+  label: '繁体中文'
 }, {
   value: 'ru',
   label: 'Русский'
