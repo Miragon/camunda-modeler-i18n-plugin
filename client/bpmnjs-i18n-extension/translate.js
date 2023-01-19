@@ -19,12 +19,13 @@ import en from "./languages/en.js";
 import pt_br from "./languages/pt-br.js";
 import zh_Hans from "./languages/zh-Hans.js";
 import zh_Hant from "./languages/zh-Hant.js";
+import ru from "./languages/ru.js";
 
 /**
  * All available languages.
  */
 const languages = {
-    de, en, pt_br, zh_Hans, zh_Hant
+    de, en, pt_br, zh_Hans, zh_Hant, ru
 };
 
 // The default language to use if none is specified in the configuration
