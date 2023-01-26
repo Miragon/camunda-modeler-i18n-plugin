@@ -1,4 +1,5 @@
 # Camunda Modeler I18N-Plugin
+[![Compatible with Camunda Modeler version 5.0](https://img.shields.io/badge/Camunda%20Modeler-5.0+-blue.svg)](https://github.com/camunda/camunda-modeler)
 
 This plugin allows you to translate the UI of the Camunda Modeler. It contains translations for German, English and Portuguese and can be easily extended or customized.
 
