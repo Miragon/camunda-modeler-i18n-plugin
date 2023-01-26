@@ -5965,47 +5965,17 @@ class I18nPlugin extends camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "NotCompatible": () => (/* binding */ NotCompatible),
 /* harmony export */   "Fill": () => (/* binding */ Fill),
-/* harmony export */   "Modal": () => (/* binding */ Modal),
-/* harmony export */   "Overlay": () => (/* binding */ Overlay),
-/* harmony export */   "Section": () => (/* binding */ Section),
-/* harmony export */   "ToggleSwitch": () => (/* binding */ ToggleSwitch)
+/* harmony export */   "Modal": () => (/* binding */ Modal)
 /* harmony export */ });
 if (!window.components) {
-  throw notCompatible('3.4');
+  throw new Error('Not compatible with Camunda Modeler < 3.4');
 }
-
-function notCompatible(requiredVersion) {
-  return new Error('Not compatible with Camunda Modeler < v' + requiredVersion);
-}
-
-const NotCompatible = function(requiredVersion) {
-  return function NotCompatibleComponent() {
-    throw notCompatible(requiredVersion);
-  };
-};
 
 /**
- * Fill component. Set `slot` to "toolbar" to include in the top toolbar.
- * Use `group` and `priority=0` to place for correct ordering. The higher
- * the priority, the earlier the Fill is displayed within the group.
+ * Fill component.
  *
- * @type {import('react').ComponentType<{ slot: string, group?: string, priority?: Number }>}
- *
- * @example
- *
- * import { Fill } from 'camunda-modeler-plugin-helpers/components';
- *
- * function CustomFill(props) {
- *   return (
- *     <Fill group="4_export" slot="toolbar" priority={100}>
- *       <button type="button" onClick={ props.openExportTool }>
- *         Open Export Tool
- *       </button>
- *     </Fill>
- *   );
- * }
+ * @type {import('react').ComponentType<{ group: string, name: string }>}
  */
 const Fill = window.components.Fill;
 
@@ -6013,125 +5983,8 @@ const Fill = window.components.Fill;
  * Modal component.
  *
  * @type {import('react').ComponentType<{ onClose: Function }>}
- *
- * @example
- *
- * import { Modal } from 'camunda-modeler-plugin-helpers/components';
- *
- * function CustomModal(props) {
- *   return (
- *    <Modal onClose={ props.onClose }>
- *      <Modal.Title>
- *        Custom Modal
- *      </Modal.Title>
- *      <Modal.Body>
- *        Hello world!
- *      </Modal.Body>
- *      <Modal.Footer>
- *        <button type="button" onClick={ props.onClose }>
- *          Close
- *        </button>
- *      </Modal.Footer>
- *    </Modal>
- *   );
- * }
  */
 const Modal = window.components.Modal;
-
-/**
- * Overlay component.
- *
- * @type {import('react').ComponentType<{ 
- *  onClose: Function, 
- *  anchor: Node, 
- *  offset?: { top?: number, bottom?: number, left?: number, right?: number }, 
- *  maxWidth?: number | string,
- *  maxHeight?: number | string,
- *  minWidth?: number | string,
- *  minHeight?: number | string
- * }>}
- *
- * @example
- * 
- * import { Overlay } from 'camunda-modeler-plugin-helpers/components';
- *
- * function CustomOverlay(props) {
- *   return (
- *    <Overlay onClose={ props.onClose } anchor={ props.btn_ref } offset={ props.anchor }>
- *      <Overlay.Title>
- *        Custom Modal
- *      </Overlay.Title>
- *      <Overlay.Body>
- *        Hello world!
- *      </Overlay.Body>
- *      <Overlay.Footer>
- *        <button type="button" onClick={ props.onClose }>
- *          Close
- *        </button>
- *      </Overlay.Footer>
- *    </Overlay>
- *   );
- * }
- */
- const Overlay = window.components.Overlay || NotCompatible('5.0');
-
- /**
- * Section component.
- *
- * @type {import('react').ComponentType<{ maxHeight: Number | String, relativePos: Boolean } }>}
- *
- * @example
- * 
- * import { Section } from 'camunda-modeler-plugin-helpers/components';
- *
- * function CustomSection(props) {
- *   return (
- *    <Section maxHeight="240px">
- *     <Section.Header>
- *       Custom section
- *     </Section.Header>
- *     <Section.Body>
- *       Hello world!
- *     </Section.Body>
- *     <Section.Actions>
- *      <button type="button" onClick={ props.onClose }>
- *        Close
- *      </button>
- *     </Section.Actions>
- *    </Section>
- *   );
- * }
- */
-const Section = window.components.Section || NotCompatible('5.0');
-
- /**
- * ToggleSwitch component.
- *
- * @type {import('react').ComponentType<{ id: string, name: string, label?: string, switcherLabel?: string, description?: string }>}
- *
- * @example
- * 
- * import { ToggleSwitch } from 'camunda-modeler-plugin-helpers/components';
- *
- * function CustomToggle(props) {
- *   return (
- *    <Formik initialValues={ initialValues } onSubmit={ this.onSubmit }>
- *      {() => (
- *        <Form>
- *          <Field
- *            component={ ToggleSwitch }
- *            switcherLabel="Switcher label"
- *            id={ id }
- *            name={ name }
- *            description="Toggle description"
- *          />
- *        </Form>
- *       )}
- *    </Formik>
- *   );
- * }
- */
-const ToggleSwitch = window.components.ToggleSwitch || NotCompatible('5.0');
 
 /***/ }),
 
@@ -6147,17 +6000,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "registerClientPlugin": () => (/* binding */ registerClientPlugin),
 /* harmony export */   "registerClientExtension": () => (/* binding */ registerClientExtension),
 /* harmony export */   "registerBpmnJSPlugin": () => (/* binding */ registerBpmnJSPlugin),
-/* harmony export */   "registerPlatformBpmnJSPlugin": () => (/* binding */ registerPlatformBpmnJSPlugin),
-/* harmony export */   "registerCloudBpmnJSPlugin": () => (/* binding */ registerCloudBpmnJSPlugin),
 /* harmony export */   "registerBpmnJSModdleExtension": () => (/* binding */ registerBpmnJSModdleExtension),
-/* harmony export */   "registerPlatformBpmnJSModdleExtension": () => (/* binding */ registerPlatformBpmnJSModdleExtension),
-/* harmony export */   "registerCloudBpmnJSModdleExtension": () => (/* binding */ registerCloudBpmnJSModdleExtension),
 /* harmony export */   "registerDmnJSModdleExtension": () => (/* binding */ registerDmnJSModdleExtension),
-/* harmony export */   "registerCloudDmnJSModdleExtension": () => (/* binding */ registerCloudDmnJSModdleExtension),
-/* harmony export */   "registerPlatformDmnJSModdleExtension": () => (/* binding */ registerPlatformDmnJSModdleExtension),
 /* harmony export */   "registerDmnJSPlugin": () => (/* binding */ registerDmnJSPlugin),
-/* harmony export */   "registerCloudDmnJSPlugin": () => (/* binding */ registerCloudDmnJSPlugin),
-/* harmony export */   "registerPlatformDmnJSPlugin": () => (/* binding */ registerPlatformDmnJSPlugin),
 /* harmony export */   "getModelerDirectory": () => (/* binding */ getModelerDirectory),
 /* harmony export */   "getPluginsDirectory": () => (/* binding */ getPluginsDirectory)
 /* harmony export */ });
@@ -6223,50 +6068,6 @@ function registerBpmnJSPlugin(module) {
 }
 
 /**
- * Validate and register a platform specific bpmn-js plugin.
- *
- * @param {Object} module
- *
- * @example
- *
- * import {
- *   registerPlatformBpmnJSPlugin
- * } from 'camunda-modeler-plugin-helpers';
- *
- * const BpmnJSModule = {
- *   __init__: [ 'myService' ],
- *   myService: [ 'type', ... ]
- * };
- *
- * registerPlatformBpmnJSPlugin(BpmnJSModule);
- */
-function registerPlatformBpmnJSPlugin(module) {
-  registerClientPlugin(module, 'bpmn.platform.modeler.additionalModules');
-}
-
-/**
- * Validate and register a cloud specific bpmn-js plugin.
- *
- * @param {Object} module
- *
- * @example
- *
- * import {
- *   registerCloudBpmnJSPlugin
- * } from 'camunda-modeler-plugin-helpers';
- *
- * const BpmnJSModule = {
- *   __init__: [ 'myService' ],
- *   myService: [ 'type', ... ]
- * };
- *
- * registerCloudBpmnJSPlugin(BpmnJSModule);
- */
-function registerCloudBpmnJSPlugin(module) {
-  registerClientPlugin(module, 'bpmn.cloud.modeler.additionalModules');
-}
-
-/**
  * Validate and register a bpmn-moddle extension plugin.
  *
  * @param {Object} descriptor
@@ -6288,54 +6089,6 @@ function registerCloudBpmnJSPlugin(module) {
  */
 function registerBpmnJSModdleExtension(descriptor) {
   registerClientPlugin(descriptor, 'bpmn.modeler.moddleExtension');
-}
-
-/**
- * Validate and register a platform specific bpmn-moddle extension plugin.
- *
- * @param {Object} descriptor
- *
- * @example
- * import {
- *   registerPlatformBpmnJSModdleExtension
- * } from 'camunda-modeler-plugin-helpers';
- *
- * var moddleDescriptor = {
- *   name: 'my descriptor',
- *   uri: 'http://example.my.company.localhost/schema/my-descriptor/1.0',
- *   prefix: 'mydesc',
- *
- *   ...
- * };
- *
- * registerPlatformBpmnJSModdleExtension(moddleDescriptor);
- */
-function registerPlatformBpmnJSModdleExtension(descriptor) {
-  registerClientPlugin(descriptor, 'bpmn.platform.modeler.moddleExtension');
-}
-
-/**
- * Validate and register a cloud specific bpmn-moddle extension plugin.
- *
- * @param {Object} descriptor
- *
- * @example
- * import {
- *   registerCloudBpmnJSModdleExtension
- * } from 'camunda-modeler-plugin-helpers';
- *
- * var moddleDescriptor = {
- *   name: 'my descriptor',
- *   uri: 'http://example.my.company.localhost/schema/my-descriptor/1.0',
- *   prefix: 'mydesc',
- *
- *   ...
- * };
- *
- * registerCloudBpmnJSModdleExtension(moddleDescriptor);
- */
-function registerCloudBpmnJSModdleExtension(descriptor) {
-  registerClientPlugin(descriptor, 'bpmn.cloud.modeler.moddleExtension');
 }
 
 /**
@@ -6363,54 +6116,6 @@ function registerDmnJSModdleExtension(descriptor) {
 }
 
 /**
- * Validate and register a cloud specific dmn-moddle extension plugin.
- *
- * @param {Object} descriptor
- *
- * @example
- * import {
- *   registerCloudDmnJSModdleExtension
- * } from 'camunda-modeler-plugin-helpers';
- *
- * var moddleDescriptor = {
- *   name: 'my descriptor',
- *   uri: 'http://example.my.company.localhost/schema/my-descriptor/1.0',
- *   prefix: 'mydesc',
- *
- *   ...
- * };
- *
- * registerCloudDmnJSModdleExtension(moddleDescriptor);
- */
-function registerCloudDmnJSModdleExtension(descriptor) {
-  registerClientPlugin(descriptor, 'dmn.cloud.modeler.moddleExtension');
-}
-
-/**
- * Validate and register a platform specific dmn-moddle extension plugin.
- *
- * @param {Object} descriptor
- *
- * @example
- * import {
- *   registerPlatformDmnJSModdleExtension
- * } from 'camunda-modeler-plugin-helpers';
- *
- * var moddleDescriptor = {
- *   name: 'my descriptor',
- *   uri: 'http://example.my.company.localhost/schema/my-descriptor/1.0',
- *   prefix: 'mydesc',
- *
- *   ...
- * };
- *
- * registerPlatformDmnJSModdleExtension(moddleDescriptor);
- */
-function registerPlatformDmnJSModdleExtension(descriptor) {
-  registerClientPlugin(descriptor, 'dmn.platform.modeler.moddleExtension');
-}
-
-/**
  * Validate and register a dmn-js plugin.
  *
  * @param {Object} module
@@ -6435,63 +6140,7 @@ function registerDmnJSPlugin(module, components) {
     components = [ components ]
   }
 
-  components.forEach(c => registerClientPlugin(module, `dmn.modeler.${c}.additionalModules`));
-}
-
-/**
- * Validate and register a cloud specific dmn-js plugin.
- *
- * @param {Object} module
- *
- * @example
- *
- * import {
- *   registerCloudDmnJSPlugin
- * } from 'camunda-modeler-plugin-helpers';
- *
- * const DmnJSModule = {
- *   __init__: [ 'myService' ],
- *   myService: [ 'type', ... ]
- * };
- *
- * registerCloudDmnJSPlugin(DmnJSModule, [ 'drd', 'literalExpression' ]);
- * registerCloudDmnJSPlugin(DmnJSModule, 'drd')
- */
-function registerCloudDmnJSPlugin(module, components) {
-
-  if (!Array.isArray(components)) {
-    components = [ components ]
-  }
-
-  components.forEach(c => registerClientPlugin(module, `dmn.cloud.modeler.${c}.additionalModules`));
-}
-
-/**
- * Validate and register a platform specific dmn-js plugin.
- *
- * @param {Object} module
- *
- * @example
- *
- * import {
- *   registerPlatformDmnJSPlugin
- * } from 'camunda-modeler-plugin-helpers';
- *
- * const DmnJSModule = {
- *   __init__: [ 'myService' ],
- *   myService: [ 'type', ... ]
- * };
- *
- * registerPlatformDmnJSPlugin(DmnJSModule, [ 'drd', 'literalExpression' ]);
- * registerPlatformDmnJSPlugin(DmnJSModule, 'drd')
- */
-function registerPlatformDmnJSPlugin(module, components) {
-
-  if (!Array.isArray(components)) {
-    components = [ components ]
-  }
-
-  components.forEach(c => registerClientPlugin(module, `dmn.platform.modeler.${c}.additionalModules`));
+  components.forEach(c => registerClientPlugin(module, `dmn.modeler.${c}.additionalModules`)); 
 }
 
 /**
