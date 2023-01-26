@@ -168,6 +168,8 @@ export default class I18nPlugin extends PureComponent {
                             ...provided,
                             width: 125,
                             minHeight: 24,
+                            marginRight: 10,
+                            marginTop: 2,
                             "&>div:first-of-type": {
                                 padding: "0px 4px"
                             },

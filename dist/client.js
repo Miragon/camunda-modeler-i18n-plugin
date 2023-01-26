@@ -5926,6 +5926,8 @@ class I18nPlugin extends camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_
         control: provided => ({ ...provided,
           width: 125,
           minHeight: 24,
+          marginRight: 10,
+          marginTop: 2,
           "&>div:first-of-type": {
             padding: "0px 4px"
           },
