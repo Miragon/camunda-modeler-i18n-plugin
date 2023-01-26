@@ -20,12 +20,13 @@ import pt_br from "./languages/pt-br.js";
 import zh_Hans from "./languages/zh-Hans.js";
 import zh_Hant from "./languages/zh-Hant.js";
 import ru from "./languages/ru.js";
+import nl_nl from "./languages/nl-nl.js";
 
 /**
  * All available languages.
  */
 const languages = {
-    de, en, pt_br, zh_Hans, zh_Hant, ru
+    de, en, pt_br, zh_Hans, zh_Hant, ru, nl_nl
 };
 
 // The default language to use if none is specified in the configuration

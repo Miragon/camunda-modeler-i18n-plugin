@@ -1,6 +1,6 @@
 # Camunda Modeler I18N-Plugin
 
-This plugin allows you to translate the UI of the Camunda Modeler. It contains translations for German, English and Portuguese and can be easily extended or customized.
+This plugin allows you to translate the UI of the Camunda Modeler. It contains translations for German, English, Portuguese, Chinese, Russian and Dutch and can be easily extended or customized.
 
 For more information see our blog post (in German): https://www.flowsquad.io/blog/2020-07-15-internationalization-plugin-f%C3%BCr-den-camunda-modeler/ 
 
@@ -28,7 +28,7 @@ Check the repository out and install all dependencies by using the command `npm 
 
 ### Testing
 
-To test it, build the plugin by using the command `npm build`. Then, copy the following files into the "resources/plugins" directory (for more see section Installation above):
+To test it, build the plugin by using the command `npm run build`. Then, copy the following files into the "resources/plugins" directory (for more see section Installation above):
 
 - `index.js`
 - `dist/`
@@ -56,9 +56,9 @@ Now, if you run `npm run local`, the plugin will be built and automatically copi
 
 If you want to add a new language, follow these steps, after you set up your local development environment:
  
-1. Duplicate the "client/i18n-extension/languages/en" directory and adjust the name (we will use "fr" in this example)
+1. Duplicate the "client/bpmnjs-i18n-extension/languages/en" directory and adjust the name (we will use "fr" in this example)
 2. Translate the files in the duplicated folder
-3. Duplicate the "client/i18n-extension/languages/en.js" file and adjust the name and the imports inside it so your newly translated files are used:
+3. Duplicate the "client/bpmnjs-i18n-extension/languages/en.js" file and adjust the name and the imports inside it so your newly translated files are used:
     ```javascript
     import bpmnJs from './fr/bpmn-js';
     import dmnJs from './fr/dmn-js';
@@ -67,7 +67,7 @@ If you want to add a new language, follow these steps, after you set up your loc
     
     // ...
     ```
-4. Open the "client/i18n-extension/translate.js" file, import the new language and add it to the `languages` object:
+4. Open the "client/bpmnjs-i18n-extension/translate.js" file, import the new language and add it to the `languages` object:
    ```javascript
    import {config} from '../configuration';
    import de from "./languages/de.js";
