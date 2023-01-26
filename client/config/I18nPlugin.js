@@ -161,7 +161,7 @@ export default class I18nPlugin extends PureComponent {
 
     render() {
         return <Fragment>
-            <Fill slot="toolbar" group="9_language">
+            <Fill slot="tab-actions" group="9_language">
                 <Select
                     styles={{
                         control: provided => ({
