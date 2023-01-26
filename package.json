@@ -32,7 +32,6 @@
         "i18n"
     ],
     "dependencies": {
-        "camunda-modeler-plugin-helpers": "^3.4.0-alpha.1",
         "ids": "^1.0.0",
         "react-dom": "^17.0.2",
         "react-select": "^4.3.1"
@@ -41,6 +40,8 @@
         "@babel/core": "^7.14.0",
         "@babel/preset-react": "^7.13.13",
         "babel-loader": "^8.2.2",
+        "camunda-modeler-plugin-helpers": "^5.1.0",
+        "install": "^0.13.0",
         "npm-run-all": "^4.1.5",
         "webpack": "^5.37.1",
         "webpack-cli": "^4.7.0"
