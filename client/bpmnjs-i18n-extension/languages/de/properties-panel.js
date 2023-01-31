@@ -205,25 +205,25 @@ export default {
     'Timer': 'Timer',
     'History cleanup': 'Verlauf löschen',
     'Tasklist': 'Taskliste',
-    'Candidate starter': 'Kandidatenstarter', // TODO
-    'External task': 'Exterer Task',
+    'Candidate starter': 'Candidate starter',
+    'External task': 'Externer Task',
     'Process variables': 'Prozessvariablen',
     'User assignment': 'Benutzeraufgabe',
     'Form fields': 'Formfelder',
     'Start initiator': 'Start-Initiator',
-    'Called element': 'Aufgerufenes Element', // TODO
-    'Asynchronous continuations': 'Asynchrone Fortsetzung', // TODO
+    'Called element': 'Aufgerufenes Element',
+    'Asynchronous continuations': 'Asynchrone Fortsetzung',
     'Job execution': 'Jobausführung',
-    'In mapping propagation': 'In mapping propagation', // TODO
-    'In mapping': 'In mapping', // TODO
+    'In mapping propagation': 'In mapping propagation',
+    'In mapping': 'In mapping',
     'Inputs': 'Eingaben',
-    'Connector inputs': 'Connector-Eingaben',
+    'Connector inputs': 'Connector-Inputs',
     'Out mapping propagation': 'Out mapping propagation',
     'Out mappings': 'Out mappings',
-    'Outputs': 'Ausgaben',
+    'Outputs': 'Outputs',
     'Connector outputs': 'Connector-Ausgaben',
     'Execution listeners': 'Ausführungs-Listener',
-    'Extension properties': 'Zusätzliche Eigenschaften', // TODO
+    'Extension properties': 'Zusätzliche Eigenschaften',
     'Field injections': 'Feld-Injektion',
     'Business key': 'Business key',
     'Version tag': 'Versions-Tag',
@@ -242,7 +242,7 @@ export default {
     'In mappings': 'In mappings',
     'Set Color': 'In mappings',
     '<none>': ' - ',
-    'Camunda Forms': 'Camunda Formen',
+    'Camunda Forms': 'Camunda Formulare',
     'Before': 'Vor',
     'After': 'Nach',
     'Local variable name': 'Lokaler Variablenname',
@@ -257,6 +257,6 @@ export default {
     'Process variable name': 'Prozess-Variablenname',
     'Embedded or External Task Forms': 'Eingebettete oder externe Task-Formen',
     'Generated Task Forms': 'Generierte Task-Formen',
-    'Form key': 'Form-Key',
-    'Form reference': 'Form-Referenz'
+    'Form key': 'Formular Key',
+    'Form reference': 'Formular Referenz'
 };
