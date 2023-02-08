@@ -1,6 +1,6 @@
 {
     "name": "camunda-modeler-i18n-plugin",
-    "version": "1.1.0",
+    "version": "2.0.0",
     "description": "This plugin for the Camunda Modeler allows to translate the strings used in the UI. It contains German, English and Portuguese and can easily be extended and customized.",
     "author": "FlowSquad GmbH <info@flowsquad.io>",
     "homepage": "https://github.com/FlowSquad/camunda-modeler-i18n-plugin",
@@ -23,7 +23,8 @@
         "all": "run-s bundle",
         "bundle": "webpack",
         "dev": "webpack -w",
-        "prepublishOnly": "run-s bundle"
+        "prepublishOnly": "run-s bundle",
+        "local": "npm run bundle && copyfiles dist/**/*.* index.js menu/**/*.* '/Users/raminakkar/Library/Application Support/camunda-modeler/plugins/i18n'"
     },
     "keywords": [
         "camunda",
@@ -32,7 +33,7 @@
         "i18n"
     ],
     "dependencies": {
-        "camunda-modeler-plugin-helpers": "^3.4.0-alpha.1",
+        "copyfiles": "^2.4.1",
         "ids": "^1.0.0",
         "react-dom": "^17.0.2",
         "react-select": "^4.3.1"
@@ -41,6 +42,8 @@
         "@babel/core": "^7.14.0",
         "@babel/preset-react": "^7.13.13",
         "babel-loader": "^8.2.2",
+        "camunda-modeler-plugin-helpers": "^5.1.0",
+        "install": "^0.13.0",
         "npm-run-all": "^4.1.5",
         "webpack": "^5.37.1",
         "webpack-cli": "^4.7.0"

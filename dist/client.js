@@ -2700,7 +2700,73 @@ __webpack_require__.r(__webpack_exports__);
   'Version Tag': 'Version-Tag',
   'Wait for Completion': 'Auf Abschluss warten',
   '[unknown template: {templateId}]': '[Unbekanntes Template: {templateId}]',
-  '{label} must not contain whitespace': '{label} darf keine Leerzeichen enthalten'
+  '{label} must not contain whitespace': '{label} darf keine Leerzeichen enthalten',
+  'Compensation': 'Kompensatiion',
+  'Link': 'Link',
+  'Multi-instance': 'Multi-Instanz',
+  'Timer': 'Timer',
+  'History cleanup': 'Verlauf löschen',
+  'Tasklist': 'Taskliste',
+  'Candidate starter': 'Kandidatenstarter',
+  // TODO
+  'External task': 'Exterer Task',
+  'Process variables': 'Prozessvariablen',
+  'User assignment': 'Benutzeraufgabe',
+  'Form fields': 'Formfelder',
+  'Start initiator': 'Start-Initiator',
+  'Called element': 'Aufgerufenes Element',
+  // TODO
+  'Asynchronous continuations': 'Asynchrone Fortsetzung',
+  // TODO
+  'Job execution': 'Jobausführung',
+  'In mapping propagation': 'In mapping propagation',
+  // TODO
+  'In mapping': 'In mapping',
+  // TODO
+  'Inputs': 'Eingaben',
+  'Connector inputs': 'Connector-Eingaben',
+  'Out mapping propagation': 'Out mapping propagation',
+  'Out mappings': 'Out mappings',
+  'Outputs': 'Ausgaben',
+  'Connector outputs': 'Connector-Ausgaben',
+  'Execution listeners': 'Ausführungs-Listener',
+  'Extension properties': 'Zusätzliche Eigenschaften',
+  // TODO
+  'Field injections': 'Feld-Injektion',
+  'Business key': 'Business key',
+  'Version tag': 'Versions-Tag',
+  'Element documentation': 'Element-Dokumentation',
+  'Time to live': 'Time to live',
+  'Candidate starter groups': 'Candidate Starter-Gruppen',
+  'Candidate starter users': 'Candidate Starter-Benutzer',
+  'Event type': 'Event-Typ',
+  'Listener type': 'Listener-Typ',
+  'Java class': 'Java Klasse',
+  'Delegate expression': 'Delegierte Expression',
+  'Field injection': 'Feld-Injektionen',
+  'Errors': 'Fehler',
+  'Task listener': 'Task listener',
+  'Task listeners': 'Task listener',
+  'In mappings': 'In mappings',
+  'Set Color': 'In mappings',
+  '<none>': ' - ',
+  'Camunda Forms': 'Camunda Formen',
+  'Before': 'Vor',
+  'After': 'Nach',
+  'Local variable name': 'Lokaler Variablenname',
+  'Assignment type': 'Aufgabentyp',
+  'String or expression': 'String oder Expression',
+  'Change element': 'Element ändern',
+  'Inline script': 'Inline-Skript',
+  'Format': 'Format',
+  'External resource': 'Externe Ressource',
+  'Start typing "${}" to create an expression.': 'Beginnen Sie mit der Eingabe von "${}", um eine Expression zu erstellen.',
+  'Created in': 'Erstellt in',
+  'Process variable name': 'Prozess-Variablenname',
+  'Embedded or External Task Forms': 'Eingebettete oder externe Task-Formen',
+  'Generated Task Forms': 'Generierte Task-Formen',
+  'Form key': 'Form-Key',
+  'Form reference': 'Form-Referenz'
 });
 
 /***/ }),
@@ -3262,6 +3328,567 @@ __webpack_require__.r(__webpack_exports__);
   'Wait for Completion': 'Wait for Completion',
   '[unknown template: {templateId}]': '[unknown template: {templateId}]',
   '{label} must not contain whitespace': '{label} darf keine Leerzeichen enthalten'
+});
+
+/***/ }),
+
+/***/ "./client/bpmnjs-i18n-extension/languages/nl-nl.js":
+/*!*********************************************************!*\
+  !*** ./client/bpmnjs-i18n-extension/languages/nl-nl.js ***!
+  \*********************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _nl_nl_bpmn_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./nl-nl/bpmn-js */ "./client/bpmnjs-i18n-extension/languages/nl-nl/bpmn-js.js");
+/* harmony import */ var _nl_nl_dmn_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./nl-nl/dmn-js */ "./client/bpmnjs-i18n-extension/languages/nl-nl/dmn-js.js");
+/* harmony import */ var _nl_nl_properties_panel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./nl-nl/properties-panel */ "./client/bpmnjs-i18n-extension/languages/nl-nl/properties-panel.js");
+/* harmony import */ var _nl_nl_other__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./nl-nl/other */ "./client/bpmnjs-i18n-extension/languages/nl-nl/other.js");
+/**
+ * Copyright 2021 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+
+
+
+/**
+ * Joins and exports the translated strings.
+ */
+
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({ ..._nl_nl_bpmn_js__WEBPACK_IMPORTED_MODULE_0__.default,
+  ..._nl_nl_dmn_js__WEBPACK_IMPORTED_MODULE_1__.default,
+  ..._nl_nl_properties_panel__WEBPACK_IMPORTED_MODULE_2__.default,
+  ..._nl_nl_other__WEBPACK_IMPORTED_MODULE_3__.default
+});
+
+/***/ }),
+
+/***/ "./client/bpmnjs-i18n-extension/languages/nl-nl/bpmn-js.js":
+/*!*****************************************************************!*\
+  !*** ./client/bpmnjs-i18n-extension/languages/nl-nl/bpmn-js.js ***!
+  \*****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/**
+ * Copyright 2021 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * This file contains the strings used in the bpmn-js module.
+ */
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  'Append {type}': 'Voeg {type} toe',
+  'Add Lane above': 'Voeg Lane erboven toe',
+  'Divide into two Lanes': 'Splits in twee Lanes',
+  'Divide into three Lanes': 'Splits in drie Lanes',
+  'Add Lane below': 'Voeg Lane eronder toe',
+  'Append ReceiveTask': 'Voeg Receive-Task toe',
+  'Append MessageIntermediateCatchEvent': 'Voeg Message-Intermediate-Catch-Event toe',
+  'Append TimerIntermediateCatchEvent': 'Voeg Timer-Intermediate-Catch-Event toe',
+  'Append ConditionIntermediateCatchEvent': 'Voeg Condition-Intermediate-Catch-Event toe',
+  'Append SignalIntermediateCatchEvent': 'Voeg Signal-Intermediate-Catch-Event toe',
+  'Append compensation activity': 'Voeg compensation activity toe',
+  'Append EndEvent': 'Voeg End-Event toe',
+  'Append Gateway': 'Voeg Gateway toe',
+  'Append Task': 'Voeg Task toe',
+  'Append Intermediate/Boundary Event': 'Voeg Intermediate/Boundary Event toe',
+  'Change type': 'Wijzig type',
+  'Connect using Association': 'Verbind met Association',
+  'Connect using Sequence/MessageFlow or Association': 'Verbind met Sequence/Message-Flow of Association',
+  'Connect using DataInputAssociation': 'Verbind met Data-Input-Association',
+  'Remove': 'Verwijder',
+  'no shape type specified': 'geen vorm type gekozen',
+  'out of bounds release': 'release buiten bereik',
+  'more than {count} child lanes': 'meer dan {count} child lanes',
+  'element required': 'element vereist',
+  'no parent for {element} in {parent}': 'geen ouderelement voor {element} in {parent}',
+  'Create {type}': 'Maak {type}',
+  'Activate the hand tool': 'Activeer het hand gereedschap',
+  'Activate the lasso tool': 'Activeer het lasso gereedschap',
+  'Activate the create/remove space tool': 'Activeer het maak/verwijder ruimte gereedschap',
+  'Activate the global connect tool': 'Activeer het globale verbinding gereedschap',
+  'Create StartEvent': 'Maak Start-Event',
+  'Create Intermediate/Boundary Event': 'Maak Intermediate/Boundary Event',
+  'Create EndEvent': 'Maak End-Event',
+  'Create Gateway': 'Maak Gateway',
+  'Create Task': 'Maak Task',
+  'Create DataObjectReference': 'Maak Data-Object-Reference',
+  'Create DataStoreReference': 'Maak Data-Store-Reference',
+  'Create expanded SubProcess': 'Maak uitgeklapt Sub-Process',
+  'Create Pool/Participant': 'Maak Pool/Participant',
+  'Create Group': 'Maak Group',
+  'Parallel Multi Instance': 'Parallel-Multi-Instance',
+  'Sequential Multi Instance': 'Sequential-Multi-Instance',
+  'Loop': 'Loop',
+  'Ad-hoc': 'Ad-hoc',
+  'element {element} referenced by {referenced}#{property} not yet drawn': 'element {element} gerefereerd door {referenced}#{property} nog niet getekend',
+  'unknown di {di} for element {semantic}': 'onbekende di {di} voor element {semantic}',
+  'missing {semantic}#attachedToRef': '{semantic}#attachedToRef ontbreekt',
+  '{semantic}#{side} Ref not specified': '{semantic}#{side} Ref niet gespecificeerd',
+  'already rendered {element}': '{element} reeds getekend',
+  'failed to import {element}': 'importeren van {element} gefaald',
+  'multiple DI elements defined for {element}': 'meerdere DI elementen gedefinieerd voor {element}',
+  'no bpmnElement referenced in {element}': 'geen bpmnElement gerefereerd in {element}',
+  'diagram not part of bpmn:Definitions': 'diagram geen onderdeel van bpmn:Definitions',
+  'no diagram to display': 'geen diagram om weer te geven',
+  'no process or collaboration to display': 'geen process of collaboration om weer te geven',
+  'correcting missing bpmnElement on {plane} to {rootElement}': 'corrigeer ontbrekend bpmnElement op {plane} naar {rootElement}',
+  'unsupported bpmnElement for {plane}: {rootElement}': 'bpmnElement voor {plane}: {rootElement} niet ondersteund',
+  'unrecognized flowElement {element} in context {context}': 'flowElement {element} in context {context} niet herkend',
+  'HELLO {you}!': 'HALLO {you}!'
+});
+
+/***/ }),
+
+/***/ "./client/bpmnjs-i18n-extension/languages/nl-nl/dmn-js.js":
+/*!****************************************************************!*\
+  !*** ./client/bpmnjs-i18n-extension/languages/nl-nl/dmn-js.js ***!
+  \****************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/**
+ * Copyright 2021 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * This file contains the translated strings used in the dmn-js component.
+ * However, notice that these strings are currently not working. We are
+ * still investigating how to apply them.
+ */
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  'Activate the lasso tool': 'Activeer het lasso gereedschap',
+  'Add Cell Description': 'Voeg celbeschrijving toe',
+  'Add Input': 'Voeg Input toe',
+  'Add Input Column Left': 'Voeg Input kolom links toe',
+  'Add Input Column Right': 'Voeg Input kolom rechts toe',
+  'Add Output': 'Voeg Output toe',
+  'Add Output Column Left': 'Voeg Output kolom links toe',
+  'Add Output Column Right': 'Voeg Output kolom rechts toe',
+  'Add Predefined Values': 'Voeg voorgedefinieerde waarden toe',
+  'Add Rule Above': 'Voeg Regel erboven toe',
+  'Add Rule Below': 'Voeg Regel eronder toe',
+  'Add Values': 'Voeg Waarden toe',
+  'And': 'En',
+  'Annotations': 'Annotaties',
+  'Append {type}': 'Voeg {type} toe',
+  'cellInput': 'celInvoer',
+  'Change Cell Expression Language': 'Verander expressietaal voor cel',
+  'Change type': 'Wijzig type',
+  'Clear predefined values.': 'Wis voorgedefinieerde waarden.',
+  'Copy Input Column': 'Kopieer Input kolom',
+  'Copy Output Column': 'Kopieer Output kolom',
+  'Copy Rule': 'Kopieer Regel',
+  'Create Decision': 'Maak Decision',
+  'Create Input Data': 'Maak Input-Data',
+  'Create Knowledge Model': 'Maak Knowledge-Model',
+  'Create Knowledge Source': 'Maak Knowledge-Source',
+  'Cut Input Column': 'Knip Input Kolom',
+  'Cut Output Column': 'Knip Output Kolom',
+  'Cut Rule': 'Knip Regel',
+  'Edit String': 'Bewerk Tekst',
+  'Expression': 'Expressie',
+  'Expression Language': 'Expressie Taal',
+  'Input': 'Input',
+  'Input Expression': 'Input-Expression',
+  'Input Label': 'Input-Label',
+  'Input Type': 'Input-Type',
+  'Input Values': 'Input Waarden',
+  'Input Variable': 'Input Variabele',
+  'No values': 'Geen waarden',
+  'Output Label': 'Output-Label',
+  'Output Name': 'Output-Naam',
+  'Output Type': 'Output-Type',
+  'Output Values': 'Output Waarden',
+  'Paste Input Column Left': 'Plak Input Kolom Links',
+  'Paste Input Column Right': 'Plak Input Kolom Rechts',
+  'Paste Output Column Left': 'Plak Output Kolom Links',
+  'Paste Output Column Right': 'Plak Output Kolom Rechts',
+  'Paste Rule Above': 'Plak Regel Erboven',
+  'Paste Rule Below': 'Plak Regel  Eronder',
+  'Predefined Values': 'Voorgedefinieerde Waarden',
+  'Remove': 'Verwijder',
+  'Remove Cell Description': 'Verwijder Celbeschrijving',
+  'Remove Input Column': 'Verwijder Input Kolom',
+  'Remove Output Column': 'Verwijder Output Kolom',
+  'Remove Rule': 'Verwijder Regel',
+  'Set Value': 'Geef Waarde',
+  'Strings must be in double quotes.': 'Teksten moeten tussen dubbele aanhalingstekens staan.',
+  'Type': 'Type'
+});
+
+/***/ }),
+
+/***/ "./client/bpmnjs-i18n-extension/languages/nl-nl/other.js":
+/*!***************************************************************!*\
+  !*** ./client/bpmnjs-i18n-extension/languages/nl-nl/other.js ***!
+  \***************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/**
+ * Copyright 2021 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * This file contains translations that were used in other components.
+ */
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  'Open minimap': 'Open minimap',
+  'This maps to the process definition key.': 'Dit wordt vertaald naar de process definition key.',
+  'Key': 'Key',
+  'Intermediate Throw Event': 'Intermediate-Throw-Event',
+  'End Event': 'End-Event',
+  'Message Start Event': 'Message-Start-Event',
+  'Timer Start Event': 'Timer-Start-Event',
+  'Conditional Start Event': 'Conditional-Start-Event',
+  'Signal Start Event': 'Signal-Start-Event',
+  'Expand (not reversible)': 'Uitklappen (niet omkeerbaar)',
+  'ID': 'ID',
+  'Start Event': 'Start-Event',
+  'Message End Event': 'Message-End-Event',
+  'Escalation End Event': 'Escalation-End-Event',
+  'Error End Event': 'Error-End-Event',
+  'Compensation End Event': 'Compensation-End-Event',
+  'Signal End Event': 'Signal-End-Event',
+  'Terminate End Event': 'Terminate-End-Event',
+  'Transaction': 'Transaction',
+  'Event Sub Process': 'Event-Sub-Process',
+  'Sub Process (collapsed)': 'Sub-Process (ingeklapt)',
+  'Close minimap': 'Sluit minimap',
+  'Message Intermediate Catch Event': 'Message-Intermediate-Catch-Event',
+  'Message Intermediate Throw Event': 'Message-Intermediate-Throw-Event',
+  'Timer Intermediate Catch Event': 'Timer-Intermediate-Catch-Event',
+  'Escalation Intermediate Throw Event': 'Escalation-Intermediate-Throw-Event',
+  'Conditional Intermediate Catch Event': 'Conditional-Intermediate-Catch-Event',
+  'Link Intermediate Catch Event': 'Link-Intermediate-Catch-Event',
+  'Link Intermediate Throw Event': 'Link-Intermediate-Throw-Event',
+  'Compensation Intermediate Throw Event': 'Compensation-Intermediate-Throw-Event',
+  'Signal Intermediate Catch Event': 'Signal-Intermediate-Catch-Event',
+  'Signal Intermediate Throw Event': 'Signal-Intermediate-Throw-Event',
+  'Parallel Gateway': 'Parallel-Gateway',
+  'Inclusive Gateway': 'Inclusive-Gateway',
+  'Complex Gateway': 'Complex-Gateway',
+  'Event based Gateway': 'Event-based-Gateway',
+  'Exclusive Gateway': 'Exclusive-Gateway',
+  'Send Task': 'Send-Task',
+  'Receive Task': 'Receive-Task',
+  'User Task': 'User-Task',
+  'Manual Task': 'Manual-Task',
+  'Business Rule Task': 'Business-Rule-Task',
+  'Service Task': 'Service-Task',
+  'Script Task': 'Script-Task',
+  'Call Activity': 'Call-Activity',
+  'Sub Process (expanded)': 'Sub-Process (uitgeklapt)',
+  'Sub Process': 'Sub-Process',
+  'Task': 'Task',
+  'This maps to the task definition key.': 'Dit wordt vertaald naar de task definition key.',
+  'Collapsed Pool': 'Ingeklapte Pool',
+  'Expanded Pool': 'Uitgeklapte Pool',
+  'flow elements must be children of pools/participants': 'flow elements moeten binnen pools/participants worden opgenomen',
+  'The follow up date as an EL expression (e.g. ${someDate} or an ISO date (e.g. 2015-06-26T09:54:00)': 'De opvolgdatum als EL expressie (bv. ${eenDatum}) of een ISO datum (bv. 2015-06-26T09:54:00)',
+  'Message Boundary Event': 'Message-Boundary-Event',
+  'Timer Boundary Event': 'Timer-Boundary-Event',
+  'Escalation Boundary Event': 'Escalation-Boundary-Event',
+  'Conditional Boundary Event': 'Conditional-Boundary-Event',
+  'Error Boundary Event': 'Error-Boundary-Event',
+  'Cancel Boundary Event': 'Cancel-Boundary-Event',
+  'Signal Boundary Event': 'Signal-Boundary-Event',
+  'Compensation Boundary Event': 'Compensation-Boundary-Event',
+  'Message Boundary Event (non-interrupting)': 'Message-Boundary-Event (non-interrupting)',
+  'Timer Boundary Event (non-interrupting)': 'Timer-Boundary-Event (non-interrupting)',
+  'Escalation Boundary Event (non-interrupting)': 'Escalation-Boundary-Event (non-interrupting)',
+  'Conditional Boundary Event (non-interrupting)': 'Conditional-Boundary-Event (non-interrupting)',
+  'Signal Boundary Event (non-interrupting)': 'Signal-Boundary-Event (non-interrupting)',
+  'Connect using Information/Knowledge/Authority Requirement or Association': 'Verbind met Information/Knowledge/Authority Requirement of Association',
+  'Empty': 'Leeg',
+  'Literal Expression': 'Literal-Expression',
+  'This maps to the decision definition key.': 'Dit wordt vertaald naar de decision definition key.',
+  'Decision Table': 'Decision-Table',
+  'Output': 'Output',
+  'Annotation': 'Annotation',
+  'Output Expression': 'Output-Expression',
+  'Data Type': 'Data-Type'
+});
+
+/***/ }),
+
+/***/ "./client/bpmnjs-i18n-extension/languages/nl-nl/properties-panel.js":
+/*!**************************************************************************!*\
+  !*** ./client/bpmnjs-i18n-extension/languages/nl-nl/properties-panel.js ***!
+  \**************************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/**
+ * Copyright 2021 FlowSquad GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * This file contains the translations used by the bpmn-js-properties-panel component.
+ */
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  'Activity Ref': 'Activity-Ref',
+  'Add Constraint': 'Voeg Constraint toe',
+  'Add Entry': 'Voeg Entry toe',
+  'Add Property': 'Voeg Property toe',
+  'Add Value': 'Voeg Value toe',
+  'All': 'Allemaal',
+  'Assignee': 'Assignee',
+  'assignment': 'toewijzing',
+  'Asynchronous After': 'Asynchronous-After',
+  'Asynchronous Before': 'Asynchronous-Before',
+  'Asynchronous Continuations': 'Asynchronous-Continuations',
+  'Binding': 'Binding',
+  'Business Key': 'Business-Key',
+  'Business Key Expression': 'Business-Key-Expression',
+  'CallActivity Type': 'Call-Activity-Type',
+  'Called Element': 'Called-Element',
+  'Candidate Groups': 'Candidate-Groups',
+  'Candidate Starter Configuration': 'Candidate-Starter-Configuration',
+  'Candidate Starter Groups': 'Candidate-Starter-Groups',
+  'Candidate Starter Users': 'Candidate-Starter-Users',
+  'Candidate Users': 'Candidate-Users',
+  'Case Ref': 'Case-Ref',
+  'Category Value': 'Category-Value',
+  'Class': 'Class',
+  'Collection': 'Collection',
+  'complete': 'voltooi',
+  'Completion Condition': 'Completion-Condition',
+  'Condition': 'Condition',
+  'Condition Type': 'Condition-Type',
+  'Config': 'Configuratie',
+  'Configure Connector': 'Configureer Connector',
+  'Connector': 'Connector',
+  'Connector Id': 'Connector-Id',
+  'create': 'maak',
+  'Custom Fields': 'Custom-Fields',
+  'Custom Fields for scope: ': 'Custom-Fields voor scope: ',
+  'Cycle': 'Cycle',
+  'Date': 'Date',
+  'Decision Ref': 'Decision-Ref',
+  'Default Value': 'Default-Value',
+  'Delegate Expression': 'Delegate-Expression',
+  'Delegate Variable Mapping': 'Delegate-Variable-Mapping',
+  'delete': 'verwijder',
+  'deployment': 'deployment',
+  'Details': 'Details',
+  'DMN': 'DMN',
+  'Documentation': 'Documentation',
+  'Due Date': 'Due-Date',
+  'Duration': 'Duration',
+  'Element Documentation': 'Element Documentatie',
+  'Element must have an unique id.': 'Element moet een unieke id hebben.',
+  'Element Template': 'Element-Template',
+  'Element Variable': 'Element-Variable',
+  'end': 'einde',
+  'Error': 'Error',
+  'Error Code': 'Error-Code',
+  'Error Code Variable': 'Error-Code-Variable',
+  'Error Message': 'Error-Message',
+  'Error Message Variable': 'Error-Message-Variable',
+  'Error Name': 'Error-Name',
+  'Escalation': 'Escalation',
+  'Escalation Code': 'Escalation-Code',
+  'Escalation Code Variable': 'Escalation-Code-Variable',
+  'Escalation Name': 'Escalation-Name',
+  'Event Type': 'Event-Type',
+  'Exclusive': 'Exclusive',
+  'Executable': 'Executeerbaar',
+  'Execution Listener': 'Execution-Listener',
+  'Expression': 'Expression',
+  'Extensions': 'Extensions',
+  'External': 'External',
+  'External Resource': 'External-Resource',
+  'External Task Configuration': 'External-Task-Configuration',
+  'Field Injection': 'Field-Injection',
+  'Field Injections': 'Field-Injections',
+  'Fields': 'Fields',
+  'Follow Up Date': 'Follow-Up-Date',
+  'Form Field': 'Form-Field',
+  'Form Fields': 'Form-Fields',
+  'Form Key': 'Form-Key',
+  'Forms': 'Forms',
+  'General': 'Algemeen',
+  'History Configuration': 'History-Configuration',
+  'History Time To Live': 'History-Time-To-Live',
+  'Id': 'Id',
+  'ID (process variable name)': 'ID (process-variable naam)',
+  'Id must be a valid QName.': 'Id moet een valide QName zijn.',
+  'Id must not contain prefix.': 'Id mag geen prefix bevatten.',
+  'Id must not contain spaces.': 'Id mag geen spaties bevatten.',
+  'Implementation': 'Implementation',
+  'Initiator': 'Initiator',
+  'Inline Script': 'Inline-Script',
+  'In Mapping': 'In-Mapping',
+  'Input/Output': 'Input/Output',
+  'Input Parameter': 'Input-Parameter',
+  'Input Parameters': 'Input-Parameters',
+  'Java Class': 'Java-Class',
+  'Job Configuration': 'Job-Configuration',
+  'Job Priority': 'Job-Priority',
+  'Label': 'Label',
+  'latest': 'latest',
+  'Link Name': 'Link-Name',
+  'List': 'Lijst',
+  'Listener Id': 'Listener-Id',
+  'Listeners': 'Listeners',
+  'Listener Type': 'Listener-Type',
+  'Local': 'Local',
+  'Loop Cardinality': 'Loop-Cardinality',
+  'Map': 'Map',
+  'Map Decision Result': 'Map Decision-Result',
+  'Mapping must have a target': 'Mapping moet een target hebben',
+  'Mapping must have a value': 'Mapping moet een waarde hebben',
+  'Mapping must have a {value}': 'Mapping moet een {value} hebben',
+  'Message': 'Message',
+  'Message Name': 'Message-Name',
+  'Multi Instance ': 'Multi-Instance ',
+  'Multi Instance': 'Multi-Instance',
+  'Must configure Connector': 'Moet Connector configureren',
+  'Must have max length {length}': 'Moet een maximale lengte van {length} hebben',
+  'Must have min length {length}': 'Moet een minimale lengte van {length} hebben',
+  'Must match pattern {pattern}': 'Moet hetzelfde zijn als patroon {pattern}',
+  'Must not be empty': 'Mag niet leeg zijn',
+  'Must provide a value': 'Moet een waarde bevatten',
+  'Must provide a value for timeout task listener': 'Moet een waarde bevatten voor timeout-task-listener',
+  'Must provide either loop cardinality or collection': 'Moet ofwel loop-cardinality of collection bevatten',
+  'Name': 'Name',
+  'Name must not contain spaces': 'Name mag geen spaties bevatten',
+  'Out Mapping': 'Out-Mapping',
+  'Output Parameter': 'Output-Parameter',
+  'Output Parameters': 'Output-Parameters',
+  'Parameter must have a name': 'Parameter moet een naam hebben',
+  'Parameters': 'Parameters',
+  'Priority': 'Priority',
+  'Process Documentation': 'Process-Documentation',
+  'Process Id': 'Process-Id',
+  'Process Name': 'Process-Name',
+  'Properties': 'Properties',
+  'Resource': 'Resource',
+  'Result Variable': 'Result-Variable',
+  'Retry Time Cycle': 'Retry-Time-Cycle',
+  'Script': 'Script',
+  'Script Format': 'Script-Format',
+  'Script Type': 'Script-Type',
+  'Signal': 'Signal',
+  'Signal Name': 'Signal-Name',
+  'Source': 'Source',
+  'Source Expression': 'Source-Expression',
+  'Specify more than one group as a comma separated list.': 'Specificeer meer dan één groep als een lijst gescheiden door komma\'s.',
+  'Specify more than one user as a comma separated list.': 'Specificeer meer dan één gebruiker als een lijst gescheiden door komma\'s.',
+  'Specify more than one variable change event as a comma separated list.': 'Specificeer meer dan één variable-change-event als een lijst gescheiden door komma\'s.',
+  'start': 'start',
+  'Startable': 'Startbaar',
+  'String': 'Tekst',
+  'take': 'neem',
+  'Target': 'Target',
+  'Target must not contain whitespace': 'Target mag geen witruimte bevatten',
+  'Tasklist Configuration': 'Tasklist-Configuration',
+  'Task Listener': 'Task-Listener',
+  'Task Priority': 'Task-Priority',
+  'Tenant Id': 'Tenant-Id',
+  'Text': 'Text',
+  'The due date as an EL expression (e.g. ${someDate} or an ISO date (e.g. 2015-06-26T09:54:00)': 'De due-date als een EL expression (bv. ${eenDatum} of een ISO date (bv. 2015-06-26T09:54:00)',
+  'timeout': 'timeout',
+  'Timer Definition': 'Timer-Definition',
+  'Timer Definition Type': 'Timer-Definition-Type',
+  'Topic': 'Topic',
+  'Type': 'Type',
+  'update': 'werk bi',
+  'Validation': 'Validation',
+  'Value': 'Value',
+  'Values': 'Values',
+  'Variable Event': 'Variable-Event',
+  'Variable Name': 'Variable-Name',
+  'Variables': 'Variables',
+  'version': 'version',
+  'Version': 'Version',
+  'versionTag': 'versionTag',
+  'Version Tag': 'Version-Tag',
+  'Wait for Completion': 'Wacht op voltooiing',
+  '[unknown template: {templateId}]': '[onbekend template: {templateId}]',
+  '{label} must not contain whitespace': '{label} mag geen witruimte bevatten'
 });
 
 /***/ }),
@@ -5613,6 +6240,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _languages_zh_Hans_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./languages/zh-Hans.js */ "./client/bpmnjs-i18n-extension/languages/zh-Hans.js");
 /* harmony import */ var _languages_zh_Hant_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./languages/zh-Hant.js */ "./client/bpmnjs-i18n-extension/languages/zh-Hant.js");
 /* harmony import */ var _languages_ru_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./languages/ru.js */ "./client/bpmnjs-i18n-extension/languages/ru.js");
+/* harmony import */ var _languages_nl_nl_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./languages/nl-nl.js */ "./client/bpmnjs-i18n-extension/languages/nl-nl.js");
 /**
  * Copyright 2021 FlowSquad GmbH
  *
@@ -5634,6 +6262,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 /**
  * All available languages.
  */
@@ -5644,7 +6273,8 @@ const languages = {
   pt_br: _languages_pt_br_js__WEBPACK_IMPORTED_MODULE_2__.default,
   zh_Hans: _languages_zh_Hans_js__WEBPACK_IMPORTED_MODULE_3__.default,
   zh_Hant: _languages_zh_Hant_js__WEBPACK_IMPORTED_MODULE_4__.default,
-  ru: _languages_ru_js__WEBPACK_IMPORTED_MODULE_5__.default
+  ru: _languages_ru_js__WEBPACK_IMPORTED_MODULE_5__.default,
+  nl_nl: _languages_nl_nl_js__WEBPACK_IMPORTED_MODULE_6__.default
 }; // The default language to use if none is specified in the configuration
 
 const defaultLanguage = "en"; // Contains all missing translations discovered to prevent logging them
@@ -5813,6 +6443,9 @@ const options = [{
 }, {
   value: 'ru',
   label: 'Русский'
+}, {
+  value: 'nl_nl',
+  label: 'Nederlands (Netherlands)'
 }];
 /**
  * An example client extension plugin to enable auto saving functionality
@@ -5919,13 +6552,15 @@ class I18nPlugin extends camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_
 
   render() {
     return /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(camunda_modeler_plugin_helpers_components__WEBPACK_IMPORTED_MODULE_1__.Fill, {
-      slot: "toolbar",
+      slot: "tab-actions",
       group: "9_language"
     }, /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_select__WEBPACK_IMPORTED_MODULE_4__.default, {
       styles: {
         control: provided => ({ ...provided,
           width: 125,
           minHeight: 24,
+          marginRight: 10,
+          marginTop: 2,
           "&>div:first-of-type": {
             padding: "0px 4px"
           },
@@ -5963,17 +6598,47 @@ class I18nPlugin extends camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "NotCompatible": () => (/* binding */ NotCompatible),
 /* harmony export */   "Fill": () => (/* binding */ Fill),
-/* harmony export */   "Modal": () => (/* binding */ Modal)
+/* harmony export */   "Modal": () => (/* binding */ Modal),
+/* harmony export */   "Overlay": () => (/* binding */ Overlay),
+/* harmony export */   "Section": () => (/* binding */ Section),
+/* harmony export */   "ToggleSwitch": () => (/* binding */ ToggleSwitch)
 /* harmony export */ });
 if (!window.components) {
-  throw new Error('Not compatible with Camunda Modeler < 3.4');
+  throw notCompatible('3.4');
 }
 
+function notCompatible(requiredVersion) {
+  return new Error('Not compatible with Camunda Modeler < v' + requiredVersion);
+}
+
+const NotCompatible = function(requiredVersion) {
+  return function NotCompatibleComponent() {
+    throw notCompatible(requiredVersion);
+  };
+};
+
 /**
- * Fill component.
+ * Fill component. Set `slot` to "toolbar" to include in the top toolbar.
+ * Use `group` and `priority=0` to place for correct ordering. The higher
+ * the priority, the earlier the Fill is displayed within the group.
  *
- * @type {import('react').ComponentType<{ group: string, name: string }>}
+ * @type {import('react').ComponentType<{ slot: string, group?: string, priority?: Number }>}
+ *
+ * @example
+ *
+ * import { Fill } from 'camunda-modeler-plugin-helpers/components';
+ *
+ * function CustomFill(props) {
+ *   return (
+ *     <Fill group="4_export" slot="toolbar" priority={100}>
+ *       <button type="button" onClick={ props.openExportTool }>
+ *         Open Export Tool
+ *       </button>
+ *     </Fill>
+ *   );
+ * }
  */
 const Fill = window.components.Fill;
 
@@ -5981,8 +6646,125 @@ const Fill = window.components.Fill;
  * Modal component.
  *
  * @type {import('react').ComponentType<{ onClose: Function }>}
+ *
+ * @example
+ *
+ * import { Modal } from 'camunda-modeler-plugin-helpers/components';
+ *
+ * function CustomModal(props) {
+ *   return (
+ *    <Modal onClose={ props.onClose }>
+ *      <Modal.Title>
+ *        Custom Modal
+ *      </Modal.Title>
+ *      <Modal.Body>
+ *        Hello world!
+ *      </Modal.Body>
+ *      <Modal.Footer>
+ *        <button type="button" onClick={ props.onClose }>
+ *          Close
+ *        </button>
+ *      </Modal.Footer>
+ *    </Modal>
+ *   );
+ * }
  */
 const Modal = window.components.Modal;
+
+/**
+ * Overlay component.
+ *
+ * @type {import('react').ComponentType<{ 
+ *  onClose: Function, 
+ *  anchor: Node, 
+ *  offset?: { top?: number, bottom?: number, left?: number, right?: number }, 
+ *  maxWidth?: number | string,
+ *  maxHeight?: number | string,
+ *  minWidth?: number | string,
+ *  minHeight?: number | string
+ * }>}
+ *
+ * @example
+ * 
+ * import { Overlay } from 'camunda-modeler-plugin-helpers/components';
+ *
+ * function CustomOverlay(props) {
+ *   return (
+ *    <Overlay onClose={ props.onClose } anchor={ props.btn_ref } offset={ props.anchor }>
+ *      <Overlay.Title>
+ *        Custom Modal
+ *      </Overlay.Title>
+ *      <Overlay.Body>
+ *        Hello world!
+ *      </Overlay.Body>
+ *      <Overlay.Footer>
+ *        <button type="button" onClick={ props.onClose }>
+ *          Close
+ *        </button>
+ *      </Overlay.Footer>
+ *    </Overlay>
+ *   );
+ * }
+ */
+ const Overlay = window.components.Overlay || NotCompatible('5.0');
+
+ /**
+ * Section component.
+ *
+ * @type {import('react').ComponentType<{ maxHeight: Number | String, relativePos: Boolean } }>}
+ *
+ * @example
+ * 
+ * import { Section } from 'camunda-modeler-plugin-helpers/components';
+ *
+ * function CustomSection(props) {
+ *   return (
+ *    <Section maxHeight="240px">
+ *     <Section.Header>
+ *       Custom section
+ *     </Section.Header>
+ *     <Section.Body>
+ *       Hello world!
+ *     </Section.Body>
+ *     <Section.Actions>
+ *      <button type="button" onClick={ props.onClose }>
+ *        Close
+ *      </button>
+ *     </Section.Actions>
+ *    </Section>
+ *   );
+ * }
+ */
+const Section = window.components.Section || NotCompatible('5.0');
+
+ /**
+ * ToggleSwitch component.
+ *
+ * @type {import('react').ComponentType<{ id: string, name: string, label?: string, switcherLabel?: string, description?: string }>}
+ *
+ * @example
+ * 
+ * import { ToggleSwitch } from 'camunda-modeler-plugin-helpers/components';
+ *
+ * function CustomToggle(props) {
+ *   return (
+ *    <Formik initialValues={ initialValues } onSubmit={ this.onSubmit }>
+ *      {() => (
+ *        <Form>
+ *          <Field
+ *            component={ ToggleSwitch }
+ *            switcherLabel="Switcher label"
+ *            id={ id }
+ *            name={ name }
+ *            description="Toggle description"
+ *          />
+ *        </Form>
+ *       )}
+ *    </Formik>
+ *   );
+ * }
+ */
+const ToggleSwitch = window.components.ToggleSwitch || NotCompatible('5.0');
 
 /***/ }),
 
@@ -5998,9 +6780,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   "registerClientPlugin": () => (/* binding */ registerClientPlugin),
 /* harmony export */   "registerClientExtension": () => (/* binding */ registerClientExtension),
 /* harmony export */   "registerBpmnJSPlugin": () => (/* binding */ registerBpmnJSPlugin),
+/* harmony export */   "registerPlatformBpmnJSPlugin": () => (/* binding */ registerPlatformBpmnJSPlugin),
+/* harmony export */   "registerCloudBpmnJSPlugin": () => (/* binding */ registerCloudBpmnJSPlugin),
 /* harmony export */   "registerBpmnJSModdleExtension": () => (/* binding */ registerBpmnJSModdleExtension),
+/* harmony export */   "registerPlatformBpmnJSModdleExtension": () => (/* binding */ registerPlatformBpmnJSModdleExtension),
+/* harmony export */   "registerCloudBpmnJSModdleExtension": () => (/* binding */ registerCloudBpmnJSModdleExtension),
 /* harmony export */   "registerDmnJSModdleExtension": () => (/* binding */ registerDmnJSModdleExtension),
+/* harmony export */   "registerCloudDmnJSModdleExtension": () => (/* binding */ registerCloudDmnJSModdleExtension),
+/* harmony export */   "registerPlatformDmnJSModdleExtension": () => (/* binding */ registerPlatformDmnJSModdleExtension),
 /* harmony export */   "registerDmnJSPlugin": () => (/* binding */ registerDmnJSPlugin),
+/* harmony export */   "registerCloudDmnJSPlugin": () => (/* binding */ registerCloudDmnJSPlugin),
+/* harmony export */   "registerPlatformDmnJSPlugin": () => (/* binding */ registerPlatformDmnJSPlugin),
 /* harmony export */   "getModelerDirectory": () => (/* binding */ getModelerDirectory),
 /* harmony export */   "getPluginsDirectory": () => (/* binding */ getPluginsDirectory)
 /* harmony export */ });
@@ -6066,6 +6856,50 @@ function registerBpmnJSPlugin(module) {
 }
 
 /**
+ * Validate and register a platform specific bpmn-js plugin.
+ *
+ * @param {Object} module
+ *
+ * @example
+ *
+ * import {
+ *   registerPlatformBpmnJSPlugin
+ * } from 'camunda-modeler-plugin-helpers';
+ *
+ * const BpmnJSModule = {
+ *   __init__: [ 'myService' ],
+ *   myService: [ 'type', ... ]
+ * };
+ *
+ * registerPlatformBpmnJSPlugin(BpmnJSModule);
+ */
+function registerPlatformBpmnJSPlugin(module) {
+  registerClientPlugin(module, 'bpmn.platform.modeler.additionalModules');
+}
+
+/**
+ * Validate and register a cloud specific bpmn-js plugin.
+ *
+ * @param {Object} module
+ *
+ * @example
+ *
+ * import {
+ *   registerCloudBpmnJSPlugin
+ * } from 'camunda-modeler-plugin-helpers';
+ *
+ * const BpmnJSModule = {
+ *   __init__: [ 'myService' ],
+ *   myService: [ 'type', ... ]
+ * };
+ *
+ * registerCloudBpmnJSPlugin(BpmnJSModule);
+ */
+function registerCloudBpmnJSPlugin(module) {
+  registerClientPlugin(module, 'bpmn.cloud.modeler.additionalModules');
+}
+
+/**
  * Validate and register a bpmn-moddle extension plugin.
  *
  * @param {Object} descriptor
@@ -6087,6 +6921,54 @@ function registerBpmnJSPlugin(module) {
  */
 function registerBpmnJSModdleExtension(descriptor) {
   registerClientPlugin(descriptor, 'bpmn.modeler.moddleExtension');
+}
+
+/**
+ * Validate and register a platform specific bpmn-moddle extension plugin.
+ *
+ * @param {Object} descriptor
+ *
+ * @example
+ * import {
+ *   registerPlatformBpmnJSModdleExtension
+ * } from 'camunda-modeler-plugin-helpers';
+ *
+ * var moddleDescriptor = {
+ *   name: 'my descriptor',
+ *   uri: 'http://example.my.company.localhost/schema/my-descriptor/1.0',
+ *   prefix: 'mydesc',
+ *
+ *   ...
+ * };
+ *
+ * registerPlatformBpmnJSModdleExtension(moddleDescriptor);
+ */
+function registerPlatformBpmnJSModdleExtension(descriptor) {
+  registerClientPlugin(descriptor, 'bpmn.platform.modeler.moddleExtension');
+}
+
+/**
+ * Validate and register a cloud specific bpmn-moddle extension plugin.
+ *
+ * @param {Object} descriptor
+ *
+ * @example
+ * import {
+ *   registerCloudBpmnJSModdleExtension
+ * } from 'camunda-modeler-plugin-helpers';
+ *
+ * var moddleDescriptor = {
+ *   name: 'my descriptor',
+ *   uri: 'http://example.my.company.localhost/schema/my-descriptor/1.0',
+ *   prefix: 'mydesc',
+ *
+ *   ...
+ * };
+ *
+ * registerCloudBpmnJSModdleExtension(moddleDescriptor);
+ */
+function registerCloudBpmnJSModdleExtension(descriptor) {
+  registerClientPlugin(descriptor, 'bpmn.cloud.modeler.moddleExtension');
 }
 
 /**
@@ -6114,6 +6996,54 @@ function registerDmnJSModdleExtension(descriptor) {
 }
 
 /**
+ * Validate and register a cloud specific dmn-moddle extension plugin.
+ *
+ * @param {Object} descriptor
+ *
+ * @example
+ * import {
+ *   registerCloudDmnJSModdleExtension
+ * } from 'camunda-modeler-plugin-helpers';
+ *
+ * var moddleDescriptor = {
+ *   name: 'my descriptor',
+ *   uri: 'http://example.my.company.localhost/schema/my-descriptor/1.0',
+ *   prefix: 'mydesc',
+ *
+ *   ...
+ * };
+ *
+ * registerCloudDmnJSModdleExtension(moddleDescriptor);
+ */
+function registerCloudDmnJSModdleExtension(descriptor) {
+  registerClientPlugin(descriptor, 'dmn.cloud.modeler.moddleExtension');
+}
+
+/**
+ * Validate and register a platform specific dmn-moddle extension plugin.
+ *
+ * @param {Object} descriptor
+ *
+ * @example
+ * import {
+ *   registerPlatformDmnJSModdleExtension
+ * } from 'camunda-modeler-plugin-helpers';
+ *
+ * var moddleDescriptor = {
+ *   name: 'my descriptor',
+ *   uri: 'http://example.my.company.localhost/schema/my-descriptor/1.0',
+ *   prefix: 'mydesc',
+ *
+ *   ...
+ * };
+ *
+ * registerPlatformDmnJSModdleExtension(moddleDescriptor);
+ */
+function registerPlatformDmnJSModdleExtension(descriptor) {
+  registerClientPlugin(descriptor, 'dmn.platform.modeler.moddleExtension');
+}
+
+/**
  * Validate and register a dmn-js plugin.
  *
  * @param {Object} module
@@ -6138,7 +7068,63 @@ function registerDmnJSPlugin(module, components) {
     components = [ components ]
   }
 
-  components.forEach(c => registerClientPlugin(module, `dmn.modeler.${c}.additionalModules`)); 
+  components.forEach(c => registerClientPlugin(module, `dmn.modeler.${c}.additionalModules`));
+}
+
+/**
+ * Validate and register a cloud specific dmn-js plugin.
+ *
+ * @param {Object} module
+ *
+ * @example
+ *
+ * import {
+ *   registerCloudDmnJSPlugin
+ * } from 'camunda-modeler-plugin-helpers';
+ *
+ * const DmnJSModule = {
+ *   __init__: [ 'myService' ],
+ *   myService: [ 'type', ... ]
+ * };
+ *
+ * registerCloudDmnJSPlugin(DmnJSModule, [ 'drd', 'literalExpression' ]);
+ * registerCloudDmnJSPlugin(DmnJSModule, 'drd')
+ */
+function registerCloudDmnJSPlugin(module, components) {
+
+  if (!Array.isArray(components)) {
+    components = [ components ]
+  }
+
+  components.forEach(c => registerClientPlugin(module, `dmn.cloud.modeler.${c}.additionalModules`));
+}
+
+/**
+ * Validate and register a platform specific dmn-js plugin.
+ *
+ * @param {Object} module
+ *
+ * @example
+ *
+ * import {
+ *   registerPlatformDmnJSPlugin
+ * } from 'camunda-modeler-plugin-helpers';
+ *
+ * const DmnJSModule = {
+ *   __init__: [ 'myService' ],
+ *   myService: [ 'type', ... ]
+ * };
+ *
+ * registerPlatformDmnJSPlugin(DmnJSModule, [ 'drd', 'literalExpression' ]);
+ * registerPlatformDmnJSPlugin(DmnJSModule, 'drd')
+ */
+function registerPlatformDmnJSPlugin(module, components) {
+
+  if (!Array.isArray(components)) {
+    components = [ components ]
+  }
+
+  components.forEach(c => registerClientPlugin(module, `dmn.platform.modeler.${c}.additionalModules`));
 }
 
 /**
