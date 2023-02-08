@@ -1,0 +1,15 @@
+version: 2
+updates:
+  # Fetch and update latest `npm` packages
+  - package-ecosystem: npm
+    directory: "/"
+    target-branch: "develop"
+    labels:
+      - "Technical Dept"
+    schedule:
+      interval: daily
+      time: "05:00"
+    commit-message:
+      prefix: fix
+      prefix-development: chore
+      include: scope
