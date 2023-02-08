@@ -24,7 +24,7 @@
         "bundle": "webpack",
         "dev": "webpack -w",
         "prepublishOnly": "run-s bundle",
-        "local": "npm run bundle && copyfiles dist/**/*.* index.js menu/**/*.* '{YOUR_PATH}/camunda-modeler/plugins/i18n'"
+        "local": "npm run bundle && copyfiles dist/**/*.* index.js menu/**/*.* '{PATH_TO_CAMUNDA_MODELER}/plugins/i18n'"
     },
     "keywords": [
         "camunda",
