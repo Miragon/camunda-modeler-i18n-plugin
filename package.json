@@ -39,7 +39,7 @@
         "react-select": "^4.3.1"
     },
     "devDependencies": {
-        "@babel/core": "^7.14.0",
+        "@babel/core": "^7.20.12",
         "@babel/preset-react": "^7.13.13",
         "babel-loader": "^8.2.2",
         "camunda-modeler-plugin-helpers": "^5.1.0",
