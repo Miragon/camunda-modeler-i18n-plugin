@@ -35,7 +35,7 @@
     "dependencies": {
         "copyfiles": "^2.4.1",
         "ids": "^1.0.0",
-        "react-dom": "^17.0.2",
+        "react-dom": "^18.2.0",
         "react-select": "^4.3.1"
     },
     "devDependencies": {
