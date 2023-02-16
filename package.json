@@ -35,11 +35,12 @@
     "dependencies": {
         "copyfiles": "^2.4.1",
         "ids": "^1.0.0",
-        "react-dom": "^17.0.2",
-        "react-select": "^4.3.1"
+        "react": "^18.2.0",
+        "react-dom": "^18.2.0",
+        "react-select": "^5.7.0"
     },
     "devDependencies": {
-        "@babel/core": "^7.20.12",
+        "@babel/core": "^7.14.0",
         "@babel/preset-react": "^7.13.13",
         "babel-loader": "^8.2.2",
         "camunda-modeler-plugin-helpers": "^5.1.0",
