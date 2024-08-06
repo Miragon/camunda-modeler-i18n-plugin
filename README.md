@@ -91,7 +91,14 @@ If you want to add a new language, follow these steps, after you set up your loc
    // ...
    ```
 6. Create a pull request to this repository and help us with adding new languages and improving the existing ones! :)
-   
+
+## Engage with the Miragon team
+
+If you have any questions or need support, feel free to reach out to us via email ([info@miragon.io](mailto:info@miragon.io)).
+We are here to help you, especially if you are considering introducing camunda-modeler-i18n-plugin in your organization.
+
+For inquiries and professional support, please contact us at: [info@miragon.io](mailto:info@miragon.io)
+
 ## License
 
 ```
