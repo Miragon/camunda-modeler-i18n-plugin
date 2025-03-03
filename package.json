@@ -1,11 +1,11 @@
 {
     "name": "camunda-modeler-i18n-plugin",
-    "version": "2.0.0",
-    "description": "This plugin for the Camunda Modeler allows to translate the strings used in the UI. It contains German, English and Portuguese and can easily be extended and customized.",
-    "author": "FlowSquad GmbH <info@flowsquad.io>",
-    "homepage": "https://github.com/FlowSquad/camunda-modeler-i18n-plugin",
+    "version": "2.1.0",
+    "description": "This plugin allows you to translate the UI of the Camunda Modeler. It contains translations for German, English, Portuguese, Russian, Chinese (Traditional and Simplified) and Dutch and can be easily extended or customized.",
+    "author": "Miragon GmbH <info@miragon.io>",
+    "homepage": "https://github.com/Miragon/camunda-modeler-i18n-plugin",
     "bugs": {
-        "url": "https://github.com/FlowSquad/camunda-modeler-i18n-plugin/issues"
+        "url": "https://github.com/Miragon/camunda-modeler-i18n-plugin/issues"
     },
     "license": "Apache-2.0",
     "files": [
@@ -16,15 +16,11 @@
     "main": "index.js",
     "repository": {
         "type": "git",
-        "url": "ssh://git@github.com/FlowSquad/camunda-modeler-i18n-plugin.git"
+        "url": "ssh://git@github.com/Miragon/camunda-modeler-i18n-plugin.git"
     },
     "scripts": {
-        "build": "run-s bundle",
-        "all": "run-s bundle",
-        "bundle": "webpack",
-        "dev": "webpack -w",
-        "prepublishOnly": "run-s bundle",
-        "local": "npm run bundle && copyfiles dist/**/*.* index.js menu/**/*.* '{PATH_TO_CAMUNDA_MODELER}/plugins/i18n'"
+        "build": "webpack",
+        "dev": "webpack -w"
     },
     "keywords": [
         "camunda",
@@ -33,20 +29,20 @@
         "i18n"
     ],
     "dependencies": {
-        "copyfiles": "^2.4.1",
-        "ids": "^1.0.0",
-        "react": "^18.2.0",
-        "react-dom": "^18.2.0",
-        "react-select": "^5.7.0"
+        "ids": "^1.0.5",
+        "react": "^19.0.0",
+        "react-dom": "^19.0.0",
+        "react-select": "^5.10.0"
     },
     "devDependencies": {
-        "@babel/core": "^7.14.0",
-        "@babel/preset-react": "^7.18.6",
-        "babel-loader": "^8.2.2",
+        "@babel/core": "^7.26.9",
+        "@babel/preset-react": "^7.26.3",
+        "babel-loader": "^10.0.0",
+        "copyfiles": "^2.4.1",
         "camunda-modeler-plugin-helpers": "^5.1.0",
         "install": "^0.13.0",
         "npm-run-all": "^4.1.5",
-        "webpack": "^5.75.0",
-        "webpack-cli": "^5.0.1"
+        "webpack": "^5.98.0",
+        "webpack-cli": "^6.0.1"
     }
 }

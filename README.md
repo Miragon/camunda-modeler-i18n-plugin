@@ -1,13 +1,13 @@
 # Camunda Modeler I18N-Plugin
 [![Compatible with Camunda Modeler version 5.0](https://img.shields.io/badge/Camunda%20Modeler-5.0+-blue.svg)](https://github.com/camunda/camunda-modeler)
 
-This plugin allows you to translate the UI of the Camunda Modeler. It contains translations for German, English, Portuguese, Chinese, Russian, Chinese (Traditional and Simplified) and Dutch and can be easily extended or customized.
+This plugin allows you to translate the UI of the Camunda Modeler. It contains translations for German, English, Portuguese, Russian, Chinese (Traditional and Simplified) and Dutch and can be easily extended or customized.
 
-For more information see our blog post (in German): https://www.flowsquad.io/blog/2020-07-15-internationalization-plugin-f%C3%BCr-den-camunda-modeler/ 
+For more information see our blog post (in German): [Internationalization Plugin für den Camunda Modeler](https://www.miragon.io/blog/internationalization-plugin-fur-den-camunda-modeler/) 
 
 See it in action:
 
-![Screenshot of Camunda Modeler in German](./img/screenshot.png)
+![Screenshot of Camunda Modeler in German](img/screenshot.png)
 
 ## Installation
 
@@ -15,9 +15,21 @@ To use this plugin in your installation, follow these simple steps:
 
 1. Click on releases
 2. Download the latest release artifact
-3. Extract it and put it inside the "resources/plugins" directory relative to your `{APP_DATA_DIRECTORY}` or `{USER_DATA_DIRECTORY}`.
+3. Extract and move it to the following folder depending on your OS:
+   1. Windows: %APPDATA%/camunda-modeler/plugins
+   2. Linux: ~/.config/camunda-modeler/plugins
+   3. macOS: ~/Library/Application Support/camunda-modeler/plugins
 4. Restart the modeler
-5. Click on the language dropdown in the toolbar and select the language of your choice
+5. Click on the language dropdown in the toolbar and select the language of your choice, then restart the modeler for the changes to take effect
+
+> Hint: If it does not work for you, make sure you have the correct folder structure:
+> ```
+> camunda-modeler
+> └─ plugins
+>    └─ i18n (or whatever the folder is called)
+>       ├─ index.js
+>       └─ dist
+> ```
 
 ## Development
 
@@ -25,32 +37,32 @@ If you want to extend the plugin or provide custom translations or languages, yo
 
 ### Setup
 
-Check the repository out and install all dependencies by using the command `npm install`. You can use any IDE of your choice such as WebStorm or Visual Studio Code. Every file contains comments that should help you get started.
+Check the repository out and install all dependencies by using the command `npm install`. You can use any IDE of your choice such as IntelliJ or Visual Studio Code. Every file contains comments that should help you get started.
 
 ### Testing
 
-To test it, build the plugin by using the command `npm run build`. Then, copy the following files into the "resources/plugins" directory (for more see section Installation above):
+To test it, build the plugin by using the command `npm run build`. Copy the following files into the "plugins/i18n" directory (for more see section Installation above):
 
 - `index.js`
 - `dist/`
-- `menu/`
 
 Then restart the modeler to see all changes in effect. If you just changed the translations, opening the devtools via `F12` and pressing `Ctrl-R` or `Cmd+R` is usually enough to reload the plugin. If you changed the menu, you have to restart the modeler, though.
 
 ### Automate the local deployment
 
-If you don't want to copy the files manually into the "resources/plugins" directory all the time, you can automate that using an NPM task. For that, install the package `copyfiles`:
+If you don't want to copy the files manually into the "plugins/i18n" directory all the time, you can automate that using an NPM task. For that, install the package `copyfiles`:
 
 `npm install --dev copyfiles`
 
-Then, add another task in your `package.json` file:
+Then, add another task in your `package.json` file and adjust the path according to the installation instructions above:
 
 ```
 "scripts": {
-    "local": "npm run bundle && copyfiles dist/**/*.* index.js menu/**/*.* 'path/to/modeler/resources/plugins/i18n'"
+    "local": "npm run build && copyfiles dist/**/*.* index.js 'path/to/plugins/i18n'"
 }
 ```
 
+Make sure that npm has the permissions to copy files into the destination directory.
 Now, if you run `npm run local`, the plugin will be built and automatically copied into the destination directory. No more `Ctrl+C` and `Ctrl+V` required!
 
 ## Add a new language
@@ -103,7 +115,7 @@ For inquiries and professional support, please contact us at: [info@miragon.io](
 
 ```
 /**
- * Copyright 2021 FlowSquad GmbH
+ * Copyright 2025 Miragon GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
