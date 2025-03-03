@@ -37,7 +37,7 @@ If you want to extend the plugin or provide custom translations or languages, yo
 
 ### Setup
 
-Check the repository out and install all dependencies by using the command `npm install`. You can use any IDE of your choice such as WebStorm or Visual Studio Code. Every file contains comments that should help you get started.
+Check the repository out and install all dependencies by using the command `npm install`. You can use any IDE of your choice such as IntelliJ or Visual Studio Code. Every file contains comments that should help you get started.
 
 ### Testing
 
@@ -115,7 +115,7 @@ For inquiries and professional support, please contact us at: [info@miragon.io](
 
 ```
 /**
- * Copyright 2024 Miragon GmbH
+ * Copyright 2025 Miragon GmbH
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
