@@ -38,7 +38,8 @@ const options = [
     {value: 'zh_Hans', label: '简体中文'},
     {value: 'zh_Hant', label: '繁体中文'},
     {value: 'ru', label: 'Русский'},
-    {value: 'nl_nl', label: 'Nederlands (Netherlands)'}
+    {value: 'nl_nl', label: 'Nederlands (Netherlands)'},
+    {value: 'fr', label: 'Français'},
 ]
 
 /**
