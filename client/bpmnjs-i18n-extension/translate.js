@@ -27,7 +27,7 @@ import nl_nl from "./languages/nl-nl.js";
  * All available languages.
  */
 const languages = {
-    de, en,fr, pt_br, zh_Hans, zh_Hant, ru, nl_nl
+    de, en, fr, pt_br, zh_Hans, zh_Hant, ru, nl_nl
 };
 
 // The default language to use if none is specified in the configuration
