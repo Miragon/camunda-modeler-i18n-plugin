@@ -70,7 +70,7 @@ jobs:
           retention-days: 7
 
       - name: Commit version bump
-        if: ${{ !inputs.dry-run && github.ref == 'refs/heads/main' }}
+        if: ${{ !inputs.dry-run && github.ref == 'refs/heads/develop' }}
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
@@ -79,13 +79,13 @@ jobs:
           git push
 
       - name: Create and push tag
-        if: ${{ !inputs.dry-run && github.ref == 'refs/heads/main' }}
+        if: ${{ !inputs.dry-run && github.ref == 'refs/heads/develop' }}
         run: |
           git tag -a "v${{ steps.bump.outputs.version }}" -m "Release v${{ steps.bump.outputs.version }}"
           git push origin "v${{ steps.bump.outputs.version }}"
 
       - name: Create GitHub Release
-        if: ${{ !inputs.dry-run && github.ref == 'refs/heads/main' }}
+        if: ${{ !inputs.dry-run && github.ref == 'refs/heads/develop' }}
         uses: softprops/action-gh-release@v2
         with:
           tag_name: v${{ steps.bump.outputs.version }}
