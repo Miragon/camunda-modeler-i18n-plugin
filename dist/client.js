@@ -1772,6 +1772,569 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./client/bpmnjs-i18n-extension/languages/fr.js":
+/*!******************************************************!*\
+  !*** ./client/bpmnjs-i18n-extension/languages/fr.js ***!
+  \******************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/* harmony import */ var _fr_bpmn_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./fr/bpmn-js */ "./client/bpmnjs-i18n-extension/languages/fr/bpmn-js.js");
+/* harmony import */ var _fr_dmn_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./fr/dmn-js */ "./client/bpmnjs-i18n-extension/languages/fr/dmn-js.js");
+/* harmony import */ var _fr_properties_panel__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./fr/properties-panel */ "./client/bpmnjs-i18n-extension/languages/fr/properties-panel.js");
+/* harmony import */ var _fr_other__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./fr/other */ "./client/bpmnjs-i18n-extension/languages/fr/other.js");
+/**
+ * Copyright 2025 Miragon GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+
+
+
+
+
+/**
+ * Joins and exports the translated strings.
+ */
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  ..._fr_bpmn_js__WEBPACK_IMPORTED_MODULE_0__["default"],
+  ..._fr_dmn_js__WEBPACK_IMPORTED_MODULE_1__["default"],
+  ..._fr_properties_panel__WEBPACK_IMPORTED_MODULE_2__["default"],
+  ..._fr_other__WEBPACK_IMPORTED_MODULE_3__["default"]
+});
+
+/***/ }),
+
+/***/ "./client/bpmnjs-i18n-extension/languages/fr/bpmn-js.js":
+/*!**************************************************************!*\
+  !*** ./client/bpmnjs-i18n-extension/languages/fr/bpmn-js.js ***!
+  \**************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/**
+ * Copyright 2025 Miragon GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * This file contains the strings used in the bpmn-js module.
+ */
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  'Append {type}': 'Ajouter {type}',
+  'Add Lane above': 'Ajouter une voie au-dessus',
+  'Divide into two Lanes': 'Diviser en deux voies',
+  'Divide into three Lanes': 'Diviser en trois voies',
+  'Add Lane below': 'Ajouter une voie en dessous',
+  'Append ReceiveTask': 'Ajouter une tâche de réception',
+  'Append MessageIntermediateCatchEvent': 'Ajouter un événement intermédiaire de capture de message',
+  'Append TimerIntermediateCatchEvent': 'Ajouter un événement intermédiaire de capture de minuterie',
+  'Append ConditionIntermediateCatchEvent': 'Ajouter un événement intermédiaire de capture de condition',
+  'Append SignalIntermediateCatchEvent': 'Ajouter un événement intermédiaire de capture de signal',
+  'Append compensation activity': 'Ajouter une activité de compensation',
+  'Append EndEvent': 'Ajouter un événement de fin',
+  'Append Gateway': 'Ajouter une passerelle',
+  'Append Task': 'Ajouter une tâche',
+  'Append Intermediate/Boundary Event': 'Ajouter un événement intermédiaire/limite',
+  'Change type': 'Changer le type',
+  'Connect using Association': 'Connecter en utilisant une association',
+  'Connect using Sequence/MessageFlow or Association': 'Connecter en utilisant une séquence/flux de message ou association',
+  'Connect using DataInputAssociation': 'Connecter en utilisant une association de données d\'entrée',
+  'Remove': 'Supprimer',
+  'no shape type specified': 'aucun type de forme spécifié',
+  'out of bounds release': 'libération hors limites',
+  'more than {count} child lanes': 'plus de {count} voies enfants',
+  'element required': 'élément requis',
+  'no parent for {element} in {parent}': 'pas de parent pour {element} dans {parent}',
+  'Create {type}': 'Créer {type}',
+  'Activate the hand tool': 'Activer l\'outil main',
+  'Activate the lasso tool': 'Activer l\'outil lasso',
+  'Activate the create/remove space tool': 'Activer l\'outil créer/supprimer espace',
+  'Activate the global connect tool': 'Activer l\'outil de connexion globale',
+  'Create StartEvent': 'Créer un événement de démarrage',
+  'Create Intermediate/Boundary Event': 'Créer un événement intermédiaire/limite',
+  'Create EndEvent': 'Créer un événement de fin',
+  'Create Gateway': 'Créer une passerelle',
+  'Create Task': 'Créer une tâche',
+  'Create DataObjectReference': 'Créer une référence d\'objet de données',
+  'Create DataStoreReference': 'Créer une référence de magasin de données',
+  'Create expanded SubProcess': 'Créer un sous-processus étendu',
+  'Create Pool/Participant': 'Créer un pool/participant',
+  'Create Group': 'Créer un groupe',
+  'Parallel Multi Instance': 'Multi-instance parallèle',
+  'Sequential Multi Instance': 'Multi-instance séquentielle',
+  'Loop': 'Boucle',
+  'Ad-hoc': 'Ad-hoc',
+  'element {element} referenced by {referenced}#{property} not yet drawn': 'élément {element} référencé par {referenced}#{property} pas encore dessiné',
+  'unknown di {di} for element {semantic}': 'di {di} inconnu pour l\'élément {semantic}',
+  'missing {semantic}#attachedToRef': '{semantic}#attachedToRef manquant',
+  '{semantic}#{side} Ref not specified': '{semantic}#{side} Ref non spécifié',
+  'already rendered {element}': '{element} déjà rendu',
+  'failed to import {element}': 'échec de l\'importation de {element}',
+  'multiple DI elements defined for {element}': 'plusieurs éléments DI définis pour {element}',
+  'no bpmnElement referenced in {element}': 'aucun bpmnElement référencé dans {element}',
+  'diagram not part of bpmn:Definitions': 'diagramme ne fait pas partie de bpmn:Definitions',
+  'no diagram to display': 'aucun diagramme à afficher',
+  'no process or collaboration to display': 'aucun processus ou collaboration à afficher',
+  'correcting missing bpmnElement on {plane} to {rootElement}': 'correction du bpmnElement manquant sur {plane} vers {rootElement}',
+  'unsupported bpmnElement for {plane}: {rootElement}': 'bpmnElement non pris en charge pour {plane}: {rootElement}',
+  'unrecognized flowElement {element} in context {context}': 'flowElement {element} non reconnu dans le contexte {context}',
+  'HELLO {you}!': 'BONJOUR {you}!'
+});
+
+/***/ }),
+
+/***/ "./client/bpmnjs-i18n-extension/languages/fr/dmn-js.js":
+/*!*************************************************************!*\
+  !*** ./client/bpmnjs-i18n-extension/languages/fr/dmn-js.js ***!
+  \*************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/**
+ * Copyright 2025 Miragon GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * This file contains the translated strings used in the dmn-js component.
+ * However, notice that these strings are currently not working. We are
+ * still investigating how to apply them.
+ */
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  'Activate the lasso tool': 'Activer l\'outil lasso',
+  'Add Cell Description': 'Ajouter une description de cellule',
+  'Add Input': 'Ajouter une entrée',
+  'Add Input Column Left': 'Ajouter une colonne d\'entrée à gauche',
+  'Add Input Column Right': 'Ajouter une colonne d\'entrée à droite',
+  'Add Output': 'Ajouter une sortie',
+  'Add Output Column Left': 'Ajouter une colonne de sortie à gauche',
+  'Add Output Column Right': 'Ajouter une colonne de sortie à droite',
+  'Add Predefined Values': 'Ajouter des valeurs prédéfinies',
+  'Add Rule Above': 'Ajouter une règle au-dessus',
+  'Add Rule Below': 'Ajouter une règle en dessous',
+  'Add Values': 'Ajouter des valeurs',
+  'And': 'Et',
+  'Annotations': 'Annotations',
+  'Append {type}': 'Ajouter {type}',
+  'cellInput': 'entréeCellule',
+  'Change Cell Expression Language': 'Changer le langage d\'expression de la cellule',
+  'Change type': 'Changer le type',
+  'Clear predefined values.': 'Effacer les valeurs prédéfinies.',
+  'Copy Input Column': 'Copier la colonne d\'entrée',
+  'Copy Output Column': 'Copier la colonne de sortie',
+  'Copy Rule': 'Copier la règle',
+  'Create Decision': 'Créer une décision',
+  'Create Input Data': 'Créer des données d\'entrée',
+  'Create Knowledge Model': 'Créer un modèle de connaissance',
+  'Create Knowledge Source': 'Créer une source de connaissance',
+  'Cut Input Column': 'Couper la colonne d\'entrée',
+  'Cut Output Column': 'Couper la colonne de sortie',
+  'Cut Rule': 'Couper la règle',
+  'Edit String': 'Modifier la chaîne',
+  'Expression': 'Expression',
+  'Expression Language': 'Langage d\'expression',
+  'Input': 'Entrée',
+  'Input Expression': 'Expression d\'entrée',
+  'Input Label': 'Libellé d\'entrée',
+  'Input Type': 'Type d\'entrée',
+  'Input Values': 'Valeurs d\'entrée',
+  'Input Variable': 'Variable d\'entrée',
+  'No values': 'Aucune valeur',
+  'Output Label': 'Libellé de sortie',
+  'Output Name': 'Nom de sortie',
+  'Output Type': 'Type de sortie',
+  'Output Values': 'Valeurs de sortie',
+  'Paste Input Column Left': 'Coller la colonne d\'entrée à gauche',
+  'Paste Input Column Right': 'Coller la colonne d\'entrée à droite',
+  'Paste Output Column Left': 'Coller la colonne de sortie à gauche',
+  'Paste Output Column Right': 'Coller la colonne de sortie à droite',
+  'Paste Rule Above': 'Coller la règle au-dessus',
+  'Paste Rule Below': 'Coller la règle en dessous',
+  'Predefined Values': 'Valeurs prédéfinies',
+  'Remove': 'Supprimer',
+  'Remove Cell Description': 'Supprimer la description de la cellule',
+  'Remove Input Column': 'Supprimer la colonne d\'entrée',
+  'Remove Output Column': 'Supprimer la colonne de sortie',
+  'Remove Rule': 'Supprimer la règle',
+  'Set Value': 'Définir la valeur',
+  'Strings must be in double quotes.': 'Les chaînes doivent être entre guillemets doubles.',
+  'Type': 'Type'
+});
+
+/***/ }),
+
+/***/ "./client/bpmnjs-i18n-extension/languages/fr/other.js":
+/*!************************************************************!*\
+  !*** ./client/bpmnjs-i18n-extension/languages/fr/other.js ***!
+  \************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/**
+ * Copyright 2025 Miragon GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * This file contains translations that were used in other components.
+ */
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  'Open minimap': 'Ouvrir la mini-carte',
+  'This maps to the process definition key.': 'Cela correspond à la clé de définition du processus.',
+  'Key': 'Clé',
+  'Intermediate Throw Event': 'Événement de lancement intermédiaire',
+  'End Event': 'Événement de fin',
+  'Message Start Event': 'Événement de démarrage de message',
+  'Timer Start Event': 'Événement de démarrage de minuterie',
+  'Conditional Start Event': 'Événement de démarrage conditionnel',
+  'Signal Start Event': 'Événement de démarrage de signal',
+  'Expand (not reversible)': 'Étendre (non réversible)',
+  'ID': 'ID',
+  'Start Event': 'Événement de démarrage',
+  'Message End Event': 'Événement de fin de message',
+  'Escalation End Event': 'Événement de fin d\'escalade',
+  'Error End Event': 'Événement de fin d\'erreur',
+  'Compensation End Event': 'Événement de fin de compensation',
+  'Signal End Event': 'Événement de fin de signal',
+  'Terminate End Event': 'Événement de fin de terminaison',
+  'Transaction': 'Transaction',
+  'Event Sub Process': 'Sous-processus d\'événement',
+  'Sub Process (collapsed)': 'Sous-processus (réduit)',
+  'Close minimap': 'Fermer la mini-carte',
+  'Message Intermediate Catch Event': 'Événement intermédiaire de capture de message',
+  'Message Intermediate Throw Event': 'Événement intermédiaire de lancement de message',
+  'Timer Intermediate Catch Event': 'Événement intermédiaire de capture de minuterie',
+  'Escalation Intermediate Throw Event': 'Événement intermédiaire de lancement d\'escalade',
+  'Conditional Intermediate Catch Event': 'Événement intermédiaire de capture conditionnel',
+  'Link Intermediate Catch Event': 'Événement intermédiaire de capture de lien',
+  'Link Intermediate Throw Event': 'Événement intermédiaire de lancement de lien',
+  'Compensation Intermediate Throw Event': 'Événement intermédiaire de lancement de compensation',
+  'Signal Intermediate Catch Event': 'Événement intermédiaire de capture de signal',
+  'Signal Intermediate Throw Event': 'Événement intermédiaire de lancement de signal',
+  'Parallel Gateway': 'Passerelle parallèle',
+  'Inclusive Gateway': 'Passerelle inclusive',
+  'Complex Gateway': 'Passerelle complexe',
+  'Event based Gateway': 'Passerelle basée sur les événements',
+  'Exclusive Gateway': 'Passerelle exclusive',
+  'Send Task': 'Tâche d\'envoi',
+  'Receive Task': 'Tâche de réception',
+  'User Task': 'Tâche utilisateur',
+  'Manual Task': 'Tâche manuelle',
+  'Business Rule Task': 'Tâche de règle métier',
+  'Service Task': 'Tâche de service',
+  'Script Task': 'Tâche de script',
+  'Call Activity': 'Activité d\'appel',
+  'Sub Process (expanded)': 'Sous-processus (étendu)',
+  'Sub Process': 'Sous-processus',
+  'Task': 'Tâche',
+  'This maps to the task definition key.': 'Cela correspond à la clé de définition de la tâche.',
+  'Collapsed Pool': 'Pool réduit',
+  'Expanded Pool': 'Pool étendu',
+  'flow elements must be children of pools/participants': 'les éléments de flux doivent être des enfants de pools/participants',
+  'The follow up date as an EL expression (e.g. ${someDate} or an ISO date (e.g. 2015-06-26T09:54:00)': 'La date de suivi sous forme d\'expression EL (par ex. ${someDate} ou une date ISO (par ex. 2015-06-26T09:54:00)',
+  'Message Boundary Event': 'Événement limite de message',
+  'Timer Boundary Event': 'Événement limite de minuterie',
+  'Escalation Boundary Event': 'Événement limite d\'escalade',
+  'Conditional Boundary Event': 'Événement limite conditionnel',
+  'Error Boundary Event': 'Événement limite d\'erreur',
+  'Cancel Boundary Event': 'Événement limite d\'annulation',
+  'Signal Boundary Event': 'Événement limite de signal',
+  'Compensation Boundary Event': 'Événement limite de compensation',
+  'Message Boundary Event (non-interrupting)': 'Événement limite de message (non interruptif)',
+  'Timer Boundary Event (non-interrupting)': 'Événement limite de minuterie (non interruptif)',
+  'Escalation Boundary Event (non-interrupting)': 'Événement limite d\'escalade (non interruptif)',
+  'Conditional Boundary Event (non-interrupting)': 'Événement limite conditionnel (non interruptif)',
+  'Signal Boundary Event (non-interrupting)': 'Événement limite de signal (non interruptif)',
+  'Connect using Information/Knowledge/Authority Requirement or Association': 'Connecter en utilisant une exigence d\'information/connaissance/autorité ou une association',
+  'Empty': 'Vide',
+  'Literal Expression': 'Expression littérale',
+  'This maps to the decision definition key.': 'Cela correspond à la clé de définition de la décision.',
+  'Decision Table': 'Table de décision',
+  'Output': 'Sortie',
+  'Annotation': 'Annotation',
+  'Output Expression': 'Expression de sortie',
+  'Data Type': 'Type de données'
+});
+
+/***/ }),
+
+/***/ "./client/bpmnjs-i18n-extension/languages/fr/properties-panel.js":
+/*!***********************************************************************!*\
+  !*** ./client/bpmnjs-i18n-extension/languages/fr/properties-panel.js ***!
+  \***********************************************************************/
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__)
+/* harmony export */ });
+/**
+ * Copyright 2025 Miragon GmbH
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+
+/**
+ * This file contains the translations used by the bpmn-js-properties-panel component.
+ */
+/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
+  'Activity Ref': 'Référence d\'activité',
+  'Add Constraint': 'Ajouter une contrainte',
+  'Add Entry': 'Ajouter une entrée',
+  'Add Property': 'Ajouter une propriété',
+  'Add Value': 'Ajouter une valeur',
+  'All': 'Tous',
+  'Assignee': 'Assigné',
+  'assignment': 'affectation',
+  'Asynchronous After': 'Asynchrone après',
+  'Asynchronous Before': 'Asynchrone avant',
+  'Asynchronous Continuations': 'Continuations asynchrones',
+  'Binding': 'Liaison',
+  'Business Key': 'Clé métier',
+  'Business Key Expression': 'Expression de clé métier',
+  'CallActivity Type': 'Type d\'activité d\'appel',
+  'Called Element': 'Élément appelé',
+  'Candidate Groups': 'Groupes candidats',
+  'Candidate Starter Configuration': 'Configuration du démarreur candidat',
+  'Candidate Starter Groups': 'Groupes de démarreurs candidats',
+  'Candidate Starter Users': 'Utilisateurs de démarreurs candidats',
+  'Candidate Users': 'Utilisateurs candidats',
+  'Case Ref': 'Référence de cas',
+  'Category Value': 'Valeur de catégorie',
+  'Class': 'Classe',
+  'Collection': 'Collection',
+  'complete': 'complet',
+  'Completion Condition': 'Condition d\'achèvement',
+  'Condition': 'Condition',
+  'Condition Type': 'Type de condition',
+  'Config': 'Configuration',
+  'Configure Connector': 'Configurer le connecteur',
+  'Connector': 'Connecteur',
+  'Connector Id': 'ID du connecteur',
+  'create': 'créer',
+  'Custom Fields': 'Champs personnalisés',
+  'Custom Fields for scope: ': 'Champs personnalisés pour la portée : ',
+  'Cycle': 'Cycle',
+  'Date': 'Date',
+  'Decision Ref': 'Référence de décision',
+  'Default Value': 'Valeur par défaut',
+  'Delegate Expression': 'Expression de délégation',
+  'Delegate Variable Mapping': 'Mappage de variable de délégation',
+  'delete': 'supprimer',
+  'deployment': 'déploiement',
+  'Details': 'Détails',
+  'DMN': 'DMN',
+  'Documentation': 'Documentation',
+  'Due Date': 'Date d\'échéance',
+  'Duration': 'Durée',
+  'Element Documentation': 'Documentation de l\'élément',
+  'Element must have an unique id.': 'L\'élément doit avoir un identifiant unique.',
+  'Element Template': 'Modèle d\'élément',
+  'Element Variable': 'Variable d\'élément',
+  'end': 'fin',
+  'Error': 'Erreur',
+  'Error Code': 'Code d\'erreur',
+  'Error Code Variable': 'Variable de code d\'erreur',
+  'Error Message': 'Message d\'erreur',
+  'Error Message Variable': 'Variable de message d\'erreur',
+  'Error Name': 'Nom d\'erreur',
+  'Escalation': 'Escalade',
+  'Escalation Code': 'Code d\'escalade',
+  'Escalation Code Variable': 'Variable de code d\'escalade',
+  'Escalation Name': 'Nom d\'escalade',
+  'Event Type': 'Type d\'événement',
+  'Exclusive': 'Exclusif',
+  'Executable': 'Exécutable',
+  'Execution Listener': 'Écouteur d\'exécution',
+  'Expression': 'Expression',
+  'Extensions': 'Extensions',
+  'External': 'Externe',
+  'External Resource': 'Ressource externe',
+  'External Task Configuration': 'Configuration de tâche externe',
+  'Field Injection': 'Injection de champ',
+  'Field Injections': 'Injections de champ',
+  'Fields': 'Champs',
+  'Follow Up Date': 'Date de suivi',
+  'Form Field': 'Champ de formulaire',
+  'Form Fields': 'Champs de formulaire',
+  'Form Key': 'Clé de formulaire',
+  'Forms': 'Formulaires',
+  'General': 'Général',
+  'History Configuration': 'Configuration de l\'historique',
+  'History Time To Live': 'Durée de vie de l\'historique',
+  'Id': 'ID',
+  'ID (process variable name)': 'ID (nom de variable de processus)',
+  'Id must be a valid QName.': 'L\'ID doit être un QName valide.',
+  'Id must not contain prefix.': 'L\'ID ne doit pas contenir de préfixe.',
+  'Id must not contain spaces.': 'L\'ID ne doit pas contenir d\'espaces.',
+  'Implementation': 'Implémentation',
+  'Initiator': 'Initiateur',
+  'Inline Script': 'Script en ligne',
+  'In Mapping': 'Mappage d\'entrée',
+  'Input/Output': 'Entrée/Sortie',
+  'Input Parameter': 'Paramètre d\'entrée',
+  'Input Parameters': 'Paramètres d\'entrée',
+  'Java Class': 'Classe Java',
+  'Job Configuration': 'Configuration de tâche',
+  'Job Priority': 'Priorité de tâche',
+  'Label': 'Libellé',
+  'latest': 'dernier',
+  'Link Name': 'Nom du lien',
+  'List': 'Liste',
+  'Listener Id': 'ID de l\'écouteur',
+  'Listeners': 'Écouteurs',
+  'Listener Type': 'Type d\'écouteur',
+  'Local': 'Local',
+  'Loop Cardinality': 'Cardinalité de boucle',
+  'Map': 'Carte',
+  'Map Decision Result': 'Résultat de décision de carte',
+  'Mapping must have a target': 'Le mappage doit avoir une cible',
+  'Mapping must have a value': 'Le mappage doit avoir une valeur',
+  'Mapping must have a {value}': 'Le mappage doit avoir un {value}',
+  'Message': 'Message',
+  'Message Name': 'Nom du message',
+  'Multi Instance ': 'Multi-instance ',
+  'Multi Instance': 'Multi-instance',
+  'Must configure Connector': 'Doit configurer le connecteur',
+  'Must have max length {length}': 'Doit avoir une longueur maximale de {length}',
+  'Must have min length {length}': 'Doit avoir une longueur minimale de {length}',
+  'Must match pattern {pattern}': 'Doit correspondre au modèle {pattern}',
+  'Must not be empty': 'Ne doit pas être vide',
+  'Must provide a value': 'Doit fournir une valeur',
+  'Must provide a value for timeout task listener': 'Doit fournir une valeur pour l\'écouteur de tâche de délai d\'attente',
+  'Must provide either loop cardinality or collection': 'Doit fournir soit la cardinalité de boucle soit la collection',
+  'Name': 'Nom',
+  'Name must not contain spaces': 'Le nom ne doit pas contenir d\'espaces',
+  'Out Mapping': 'Mappage de sortie',
+  'Output Parameter': 'Paramètre de sortie',
+  'Output Parameters': 'Paramètres de sortie',
+  'Parameter must have a name': 'Le paramètre doit avoir un nom',
+  'Parameters': 'Paramètres',
+  'Priority': 'Priorité',
+  'Process Documentation': 'Documentation du processus',
+  'Process Id': 'ID du processus',
+  'Process Name': 'Nom du processus',
+  'Properties': 'Propriétés',
+  'Resource': 'Ressource',
+  'Result Variable': 'Variable de résultat',
+  'Retry Time Cycle': 'Cycle de temps de nouvelle tentative',
+  'Script': 'Script',
+  'Script Format': 'Format de script',
+  'Script Type': 'Type de script',
+  'Signal': 'Signal',
+  'Signal Name': 'Nom du signal',
+  'Source': 'Source',
+  'Source Expression': 'Expression source',
+  'Specify more than one group as a comma separated list.': 'Spécifiez plusieurs groupes sous forme de liste séparée par des virgules.',
+  'Specify more than one user as a comma separated list.': 'Spécifiez plusieurs utilisateurs sous forme de liste séparée par des virgules.',
+  'Specify more than one variable change event as a comma separated list.': 'Spécifiez plusieurs événements de changement de variable sous forme de liste séparée par des virgules.',
+  'start': 'démarrer',
+  'Startable': 'Démarrable',
+  'String': 'Chaîne',
+  'take': 'prendre',
+  'Target': 'Cible',
+  'Target must not contain whitespace': 'La cible ne doit pas contenir d\'espaces',
+  'Tasklist Configuration': 'Configuration de la liste de tâches',
+  'Task Listener': 'Écouteur de tâche',
+  'Task Priority': 'Priorité de tâche',
+  'Tenant Id': 'ID du locataire',
+  'Text': 'Texte',
+  'The due date as an EL expression (e.g. ${someDate} or an ISO date (e.g. 2015-06-26T09:54:00)': 'La date d\'échéance sous forme d\'expression EL (par ex. ${someDate} ou une date ISO (par ex. 2015-06-26T09:54:00)',
+  'timeout': 'délai d\'attente',
+  'Timer Definition': 'Définition de minuterie',
+  'Timer Definition Type': 'Type de définition de minuterie',
+  'Topic': 'Sujet',
+  'Type': 'Type',
+  'update': 'mettre à jour',
+  'Validation': 'Validation',
+  'Value': 'Valeur',
+  'Values': 'Valeurs',
+  'Variable Event': 'Événement de variable',
+  'Variable Name': 'Nom de variable',
+  'Variables': 'Variables',
+  'version': 'version',
+  'Version': 'Version',
+  'versionTag': 'baliseVersion',
+  'Version Tag': 'Balise de version',
+  'Wait for Completion': 'Attendre l\'achèvement',
+  '[unknown template: {templateId}]': '[modèle inconnu : {templateId}]',
+  '{label} must not contain whitespace': '{label} ne doit pas contenir d\'espaces'
+});
+
+/***/ }),
+
 /***/ "./client/bpmnjs-i18n-extension/languages/nl-nl.js":
 /*!*********************************************************!*\
   !*** ./client/bpmnjs-i18n-extension/languages/nl-nl.js ***!
@@ -4738,11 +5301,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ });
 /* harmony import */ var _languages_de_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./languages/de.js */ "./client/bpmnjs-i18n-extension/languages/de.js");
 /* harmony import */ var _languages_en_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./languages/en.js */ "./client/bpmnjs-i18n-extension/languages/en.js");
-/* harmony import */ var _languages_pt_br_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./languages/pt-br.js */ "./client/bpmnjs-i18n-extension/languages/pt-br.js");
-/* harmony import */ var _languages_zh_Hans_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./languages/zh-Hans.js */ "./client/bpmnjs-i18n-extension/languages/zh-Hans.js");
-/* harmony import */ var _languages_zh_Hant_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./languages/zh-Hant.js */ "./client/bpmnjs-i18n-extension/languages/zh-Hant.js");
-/* harmony import */ var _languages_ru_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./languages/ru.js */ "./client/bpmnjs-i18n-extension/languages/ru.js");
-/* harmony import */ var _languages_nl_nl_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./languages/nl-nl.js */ "./client/bpmnjs-i18n-extension/languages/nl-nl.js");
+/* harmony import */ var _languages_fr_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./languages/fr.js */ "./client/bpmnjs-i18n-extension/languages/fr.js");
+/* harmony import */ var _languages_pt_br_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./languages/pt-br.js */ "./client/bpmnjs-i18n-extension/languages/pt-br.js");
+/* harmony import */ var _languages_zh_Hans_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./languages/zh-Hans.js */ "./client/bpmnjs-i18n-extension/languages/zh-Hans.js");
+/* harmony import */ var _languages_zh_Hant_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./languages/zh-Hant.js */ "./client/bpmnjs-i18n-extension/languages/zh-Hant.js");
+/* harmony import */ var _languages_ru_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./languages/ru.js */ "./client/bpmnjs-i18n-extension/languages/ru.js");
+/* harmony import */ var _languages_nl_nl_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./languages/nl-nl.js */ "./client/bpmnjs-i18n-extension/languages/nl-nl.js");
 /**
  * Copyright 2025 Miragon GmbH
  *
@@ -4767,17 +5331,19 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
 /**
  * All available languages.
  */
 const languages = {
   de: _languages_de_js__WEBPACK_IMPORTED_MODULE_0__["default"],
   en: _languages_en_js__WEBPACK_IMPORTED_MODULE_1__["default"],
-  pt_br: _languages_pt_br_js__WEBPACK_IMPORTED_MODULE_2__["default"],
-  zh_Hans: _languages_zh_Hans_js__WEBPACK_IMPORTED_MODULE_3__["default"],
-  zh_Hant: _languages_zh_Hant_js__WEBPACK_IMPORTED_MODULE_4__["default"],
-  ru: _languages_ru_js__WEBPACK_IMPORTED_MODULE_5__["default"],
-  nl_nl: _languages_nl_nl_js__WEBPACK_IMPORTED_MODULE_6__["default"]
+  fr: _languages_fr_js__WEBPACK_IMPORTED_MODULE_2__["default"],
+  pt_br: _languages_pt_br_js__WEBPACK_IMPORTED_MODULE_3__["default"],
+  zh_Hans: _languages_zh_Hans_js__WEBPACK_IMPORTED_MODULE_4__["default"],
+  zh_Hant: _languages_zh_Hant_js__WEBPACK_IMPORTED_MODULE_5__["default"],
+  ru: _languages_ru_js__WEBPACK_IMPORTED_MODULE_6__["default"],
+  nl_nl: _languages_nl_nl_js__WEBPACK_IMPORTED_MODULE_7__["default"]
 };
 
 // The default language to use if none is specified in the configuration
@@ -4937,6 +5503,9 @@ const options = [{
 }, {
   value: 'en',
   label: 'English'
+}, {
+  value: 'fr',
+  label: 'Français'
 }, {
   value: 'pt_br',
   label: 'Português (Brasil)'
