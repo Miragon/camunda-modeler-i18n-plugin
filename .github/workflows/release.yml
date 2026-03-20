@@ -1,0 +1,93 @@
+name: Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      release-type:
+        description: "Release type"
+        required: true
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
+      dry-run:
+        description: "Dry run (upload artifact only, no release)"
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Bump version
+        id: bump
+        run: |
+          npm version ${{ inputs.release-type }} --no-git-tag-version
+          VERSION=$(node -p "require('./package.json').version")
+          echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "Bumped to v$VERSION"
+
+      - name: Check tag does not exist
+        run: |
+          if git rev-parse "v${{ steps.bump.outputs.version }}" >/dev/null 2>&1; then
+            echo "::error::Tag v${{ steps.bump.outputs.version }} already exists"
+            exit 1
+          fi
+
+      - name: Build
+        run: npm run build
+
+      - name: Create ZIP
+        run: |
+          zip -r "camunda-modeler-i18n-plugin-v${{ steps.bump.outputs.version }}.zip" \
+            index.js dist/
+
+      - name: Upload artifact (dry-run)
+        if: inputs.dry-run
+        uses: actions/upload-artifact@v4
+        with:
+          name: camunda-modeler-i18n-plugin-v${{ steps.bump.outputs.version }}
+          path: camunda-modeler-i18n-plugin-v${{ steps.bump.outputs.version }}.zip
+          retention-days: 7
+
+      - name: Commit version bump
+        if: ${{ !inputs.dry-run && github.ref == 'refs/heads/main' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add package.json package-lock.json dist/
+          git commit -m "chore: release v${{ steps.bump.outputs.version }}"
+          git push
+
+      - name: Create and push tag
+        if: ${{ !inputs.dry-run && github.ref == 'refs/heads/main' }}
+        run: |
+          git tag -a "v${{ steps.bump.outputs.version }}" -m "Release v${{ steps.bump.outputs.version }}"
+          git push origin "v${{ steps.bump.outputs.version }}"
+
+      - name: Create GitHub Release
+        if: ${{ !inputs.dry-run && github.ref == 'refs/heads/main' }}
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: v${{ steps.bump.outputs.version }}
+          generate_release_notes: true
+          files: camunda-modeler-i18n-plugin-v${{ steps.bump.outputs.version }}.zip

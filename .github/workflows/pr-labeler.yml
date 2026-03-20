@@ -1,0 +1,71 @@
+name: PR Labeler
+
+on:
+  pull_request:
+    types: [opened, edited, synchronize]
+
+permissions:
+  pull-requests: write
+
+jobs:
+  label:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Label PR based on conventional commit prefix
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const title = context.payload.pull_request.title;
+            const prefixMatch = title.match(/^(\w+)(?:\(.+?\))?!?:/);
+
+            if (!prefixMatch) {
+              console.log(`No conventional commit prefix found in: "${title}"`);
+              return;
+            }
+
+            const prefix = prefixMatch[1].toLowerCase();
+
+            const prefixToLabel = {
+              feat: 'feature',
+              fix: 'bug',
+              refactor: 'refactoring',
+              perf: 'refactoring',
+              style: 'refactoring',
+              docs: 'docs',
+              chore: 'chore',
+              test: 'chore',
+              build: 'chore',
+              ci: 'chore',
+            };
+
+            const label = prefixToLabel[prefix];
+
+            if (!label) {
+              console.log(`Unknown prefix "${prefix}" in: "${title}"`);
+              return;
+            }
+
+            const currentLabels = context.payload.pull_request.labels.map(l => l.name);
+            const managedLabels = Object.values(prefixToLabel);
+            const labelsToRemove = currentLabels.filter(l => managedLabels.includes(l) && l !== label);
+
+            for (const old of labelsToRemove) {
+              await github.rest.issues.removeLabel({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.pull_request.number,
+                name: old,
+              });
+            }
+
+            if (!currentLabels.includes(label)) {
+              await github.rest.issues.addLabels({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                issue_number: context.payload.pull_request.number,
+                labels: [label],
+              });
+              console.log(`Added label: "${label}"`);
+            } else {
+              console.log(`Label "${label}" already present`);
+            }
