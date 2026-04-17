@@ -31,7 +31,7 @@
     "dependencies": {
         "ids": "^3.0.2",
         "react": "^19.2.4",
-        "react-dom": "^19.1.0",
+        "react-dom": "^19.2.5",
         "react-select": "^5.10.1"
     },
     "devDependencies": {
