@@ -15,7 +15,7 @@
  */
 
 import React, {Fragment, PureComponent} from 'camunda-modeler-plugin-helpers/react';
-import {Fill} from 'camunda-modeler-plugin-helpers/components';
+import Fill from 'camunda-modeler-plugin-helpers/components/Fill.js';
 import Select from 'react-select';
 import translate from "../bpmnjs-i18n-extension";
 import ConfigModal from "./ConfigModal";

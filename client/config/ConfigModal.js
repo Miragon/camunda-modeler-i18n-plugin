@@ -15,7 +15,7 @@
  */
 
 import React from 'camunda-modeler-plugin-helpers/react';
-import {Modal} from 'camunda-modeler-plugin-helpers/components';
+import Modal from 'camunda-modeler-plugin-helpers/components/Modal.js';
 
 const Title = Modal.Title || (({children}) => <h2>{children}</h2>);
 const Body = Modal.Body || (({children}) => <div>{children}</div>);
