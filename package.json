@@ -36,7 +36,7 @@
     },
     "devDependencies": {
         "@babel/core": "^7.29.0",
-        "@babel/preset-react": "^7.26.3",
+        "@babel/preset-react": "^7.28.5",
         "babel-loader": "^10.1.1",
         "copyfiles": "^2.4.1",
         "camunda-modeler-plugin-helpers": "^5.1.0",
