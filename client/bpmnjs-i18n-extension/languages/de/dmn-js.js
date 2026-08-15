@@ -48,6 +48,7 @@ export default {
     'Before': 'Vor',
     'Between': 'Zwischen',
     'Boolean value': 'Boolescher Wert',
+    'cellInput': 'Zelleneingabe',
     'Change cell expression language': 'Zell-Ausdruckssprache ändern',
     'Change type': 'Typ ändern',
     'Clear predefined values': 'Vordefinierte Werte löschen',
