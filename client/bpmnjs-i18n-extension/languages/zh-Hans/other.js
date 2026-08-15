@@ -82,7 +82,7 @@ export default {
     'Templates': '模板',
     'The template applied was not found. Therefore, its properties cannot be shown. Unlink to access the data.': '未找到已应用的模板，因此无法显示其属性。请解除链接以访问数据。',
     'This maps to the process definition key.': '映射为流程定义Key.',
-    'Key': 'Key',
+    'Key': '键',
     'End Event': '结束事件',
     'ID': 'ID',
     'Start Event': '开始事件',

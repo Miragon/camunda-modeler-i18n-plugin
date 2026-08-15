@@ -257,7 +257,7 @@ export default {
     'Link a form created with the Camunda Forms editor. Submitting this form will start a new process instance. ': 'Collega un form creato con l\'editor Camunda Forms. L\'invio di questo form avvierà una nuova istanza di processo. ',
     'Link a form created with the Camunda Forms editor. To associate a custom form, application, or URL to the user task, specify an external reference. ': 'Collega un modulo creato con l\'editor di Camunda Forms. Per associare un modulo personalizzato, un\'applicazione o un URL all\'attività utente, specifica un riferimento esterno. ',
     'Link or embed a form created with the Camunda Forms editor. To associate a custom form, application, or URL to the user task, specify a form key. ': 'Collega o incorpora un modulo creato con l\'editor di Camunda Forms. Per associare un modulo personalizzato, un\'applicazione o un URL all\'attività utente, specifica una chiave del modulo. ',
-    'Link': 'Link',
+    'Link': 'Collegamento',
     'List values': 'Valori dell\'elenco',
     'List': 'Elenco',
     'Listener ID': 'ID listener',
