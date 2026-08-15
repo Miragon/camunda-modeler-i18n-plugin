@@ -100,7 +100,7 @@ export default {
     'Start Event': 'Evento di inizio',
     'Sub Process': 'Sottoprocesso',
     'Task': 'Attività',
-    'Template': 'Template',
+    'Template': 'Modello',
     'Templates': 'Template',
     'The template applied was not found. Therefore, its properties cannot be shown. Unlink to access the data.': 'Il template applicato non è stato trovato. Pertanto le sue proprietà non possono essere visualizzate. Scollega per accedere ai dati.',
     'This maps to the decision definition key.': 'Questo si mappa alla chiave di definizione della decisione.',
