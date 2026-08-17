@@ -17,13 +17,19 @@ concurrency:
 
 jobs:
   build:
-    name: Build & test
+    name: Build & test (Node ${{ matrix.node }})
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        # 22 is the oldest release still receiving fixes, 24 is Active LTS and
+        # what `.nvmrc` pins. Node 20 went end-of-life on 2026-04-30.
+        node: [ 22, 24 ]
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
-          node-version: 20
+          node-version: ${{ matrix.node }}
           cache: npm
       - run: npm ci
 
@@ -37,7 +43,8 @@ jobs:
 
       # dist/ is committed and copied straight into a user's plugins folder, so a
       # stale bundle means merged translations reach nobody. Reuses the build
-      # above rather than repeating it in a job of its own.
+      # above rather than repeating it in a job of its own. Safe to run on every
+      # matrix entry: webpack emits a byte-identical bundle on 22 and 24.
       - name: Committed bundle is current
         run: |
           if ! git diff --exit-code --stat dist/; then
@@ -52,7 +59,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
       - run: npm ci
 
@@ -71,7 +78,7 @@ jobs:
       - uses: Miragon/pin-npm-dependencies@58fe24377aef66748a1444ff69ab05e3f938a798 # v1.2.1
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
       - run: npm ci
       - run: npm run build
@@ -101,7 +108,7 @@ jobs:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4.4.0
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4.4.0
         with:
-          node-version: 20
+          node-version: 24
           cache: npm
       - run: npm ci
 
