@@ -16,8 +16,8 @@
 
 /**
  * This file contains the translated strings used in the dmn-js component.
- * However, notice that these strings are currently not working. We are
- * still investigating how to apply them.
+ * They apply only when the translate module reaches all three DMN sub-editors
+ * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 export default {
     '-': '-',
@@ -37,15 +37,13 @@ export default {
     'Add rule': 'Add rule',
     'Add text annotation': 'Add text annotation',
     'Add values': 'Add values',
-    'After': 'After',
     'And': 'And',
-    'Annotation': 'Annotation',
     'Annotations': 'Annotations',
+    'Any': 'Any',
     'Append business knowledge model': 'Append business knowledge model',
     'Append decision': 'Append decision',
     'Append input data': 'Append input data',
     'Append knowledge source': 'Append knowledge source',
-    'Before': 'Before',
     'Between': 'Between',
     'Boolean value': 'Boolean value',
     'cellInput': 'cellInput',
@@ -72,7 +70,6 @@ export default {
     'Date and time value': 'Date and time value',
     'Date and time': 'Date and time',
     'Date value': 'Date value',
-    'Date': 'Date',
     'Decision name:': 'Decision name:',
     'Decision name': 'Decision name',
     'Definition ID': 'Definition ID',
@@ -109,7 +106,6 @@ export default {
     'Exclude': 'Exclude',
     'Expression language:': 'Expression language:',
     'Expression language': 'Expression language',
-    'Expression': 'Expression',
     'Function kind: {kind}': 'Function kind: {kind}',
     'Greater or equals': 'Greater or equals',
     'Greater': 'Greater',
@@ -134,15 +130,19 @@ export default {
     'Match one': 'Match one',
     'Move rule': 'Move rule',
     'name': 'name',
+    'No overlap is possible and all rules are disjoint. Only a single rule can be matched': 'No overlap is possible and all rules are disjoint. Only a single rule can be matched',
     'No values': 'No values',
     'No': 'No',
+    'number': 'number',
+    'Open decision table': 'Open decision table',
+    'Open literal expression': 'Open literal expression',
     'Output label:': 'Output label:',
     'Output label': 'Output label',
+    'Output label: ': 'Output label: ',
     'Output name:': 'Output name:',
     'Output name': 'Output name',
     'Output type': 'Output type',
     'Output values': 'Output values',
-    'Output': 'Output',
     'Paste input column left': 'Paste input column left',
     'Paste input column right': 'Paste input column right',
     'Paste output column left': 'Paste output column left',
@@ -176,13 +176,9 @@ export default {
     'Then': 'Then',
     'Time value': 'Time value',
     'Time': 'Time',
-    'Type': 'Type',
     'Use now': 'Use now',
     'Use today': 'Use today',
-    'Value': 'Value',
-    'Values': 'Values',
     'Variable name:': 'Variable name:',
-    'Variable name': 'Variable name',
     'Variable type:': 'Variable type:',
     'Variable type': 'Variable type',
     'Version tag by which this decision can be referenced.': 'Version tag by which this decision can be referenced.',

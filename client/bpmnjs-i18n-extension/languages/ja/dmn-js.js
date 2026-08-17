@@ -16,8 +16,8 @@
 
 /**
  * This file contains the translated strings used in the dmn-js component.
- * However, notice that these strings are currently not working. We are
- * still investigating how to apply them.
+ * They apply only when the translate module reaches all three DMN sub-editors
+ * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 export default {
     '-': '-',
@@ -37,15 +37,13 @@ export default {
     'Add rule': 'ルールを追加',
     'Add text annotation': 'テキスト注釈を追加',
     'Add values': '値を追加',
-    'After': '後',
     'And': 'かつ',
-    'Annotation': '注釈',
     'Annotations': '注釈',
+    'Any': '任意',
     'Append business knowledge model': 'ビジネス知識モデルを追加',
     'Append decision': '決定を追加',
     'Append input data': '入力データを追加',
     'Append knowledge source': '知識ソースを追加',
-    'Before': '前',
     'Between': '間',
     'Boolean value': 'ブール値',
     'cellInput': 'セル入力',
@@ -72,7 +70,6 @@ export default {
     'Date and time value': '日時値',
     'Date and time': '日時',
     'Date value': '日付値',
-    'Date': '日付',
     'Decision name:': '決定名：',
     'Decision name': '決定名',
     'Definition ID': '定義ID',
@@ -109,7 +106,6 @@ export default {
     'Exclude': '除外',
     'Expression language:': '式言語：',
     'Expression language': '式言語',
-    'Expression': '式',
     'Function kind: {kind}': '関数の種類: {kind}',
     'Greater or equals': '以上',
     'Greater': 'より大きい',
@@ -134,15 +130,19 @@ export default {
     'Match one': '1つ一致',
     'Move rule': 'ルールを移動',
     'name': '名前',
+    'No overlap is possible and all rules are disjoint. Only a single rule can be matched': '重複はなく、すべてのルールは互いに素です。一致するルールは 1 つだけです',
     'No values': '値なし',
     'No': 'いいえ',
+    'number': '数値',
+    'Open decision table': '決定テーブルを開く',
+    'Open literal expression': 'リテラル式を開く',
     'Output label:': '出力ラベル：',
     'Output label': '出力ラベル',
+    'Output label: ': '出力ラベル： ',
     'Output name:': '出力名：',
     'Output name': '出力名',
     'Output type': '出力タイプ',
     'Output values': '出力値',
-    'Output': '出力',
     'Paste input column left': '左に入力列を貼り付け',
     'Paste input column right': '右に入力列を貼り付け',
     'Paste output column left': '左に出力列を貼り付け',
@@ -176,13 +176,9 @@ export default {
     'Then': 'その時',
     'Time value': '時刻値',
     'Time': '時刻',
-    'Type': 'タイプ',
     'Use now': '現在を使用',
     'Use today': '今日を使用',
-    'Value': '値',
-    'Values': '値',
     'Variable name:': '変数名：',
-    'Variable name': '変数名',
     'Variable type:': '変数タイプ：',
     'Variable type': '変数タイプ',
     'Version tag by which this decision can be referenced.': 'この決定を参照するためのバージョンタグ。',

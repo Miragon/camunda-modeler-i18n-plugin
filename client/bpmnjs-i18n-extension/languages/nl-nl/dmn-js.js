@@ -16,8 +16,8 @@
 
 /**
  * This file contains the translated strings used in the dmn-js component.
- * However, notice that these strings are currently not working. We are
- * still investigating how to apply them.
+ * They apply only when the translate module reaches all three DMN sub-editors
+ * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 export default {
     '-': '-',
@@ -39,6 +39,7 @@ export default {
     'Add values': 'Voeg waarden toe',
     'And': 'En',
     'Annotations': 'Annotaties',
+    'Any': 'Elke',
     'Append business knowledge model': 'Voeg business knowledge model toe',
     'Append decision': 'Voeg decision toe',
     'Append input data': 'Voeg input data toe',
@@ -103,7 +104,6 @@ export default {
     'Equals': 'Gelijk aan',
     'Exactly': 'Precies',
     'Exclude': 'Uitsluiten',
-    'Expression': 'Expressie',
     'Expression language': 'Expression language',
     'Expression language:': 'Expression language:',
     'Function kind: {kind}': 'Functiesoort: {kind}',
@@ -132,9 +132,14 @@ export default {
     'Move rule': 'Verplaats regel',
     'name': 'naam',
     'No': 'Nee',
+    'No overlap is possible and all rules are disjoint. Only a single rule can be matched': 'Overlap is niet mogelijk en alle regels zijn disjunct. Er kan slechts één regel overeenkomen',
     'No values': 'Geen waarden',
+    'number': 'getal',
+    'Open decision table': 'Decision table openen',
+    'Open literal expression': 'Literal-Expression openen',
     'Output label': 'Output-label',
     'Output label:': 'Output-label:',
+    'Output label: ': 'Output-label: ',
     'Output name': 'Outputnaam',
     'Output name:': 'Outputnaam:',
     'Output type': 'Outputtype',
@@ -174,7 +179,6 @@ export default {
     'Then': 'Dan',
     'Time': 'Tijd',
     'Time value': 'Tijdwaarde',
-    'Type': 'Type',
     'Use now': 'Gebruik nu',
     'Use today': 'Gebruik vandaag',
     'value': 'waarde',

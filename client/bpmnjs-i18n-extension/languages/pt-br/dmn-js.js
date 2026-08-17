@@ -16,8 +16,8 @@
 
 /**
  * This file contains the translated strings used in the dmn-js component.
- * However, notice that these strings are currently not working. We are
- * still investigating how to apply them.
+ * They apply only when the translate module reaches all three DMN sub-editors
+ * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 export default {
     '-': '-',
@@ -39,6 +39,7 @@ export default {
     'Add values': 'Adicionar valores',
     'And': 'E',
     'Annotations': 'Anotações',
+    'Any': 'Qualquer',
     'Append business knowledge model': 'Anexar modelo de conhecimento de negócio',
     'Append decision': 'Anexar decisão',
     'Append input data': 'Anexar dados de entrada',
@@ -103,7 +104,6 @@ export default {
     'Equals': 'Igual a',
     'Exactly': 'Exatamente',
     'Exclude': 'Excluir do intervalo',
-    'Expression': 'Expressão',
     'Expression language': 'Linguagem de expressão',
     'Expression language:': 'Linguagem de expressão:',
     'Function kind: {kind}': 'Tipo de função: {kind}',
@@ -132,9 +132,14 @@ export default {
     'Move rule': 'Mover regra',
     'name': 'nome',
     'No': 'Não',
+    'No overlap is possible and all rules are disjoint. Only a single rule can be matched': 'Nenhuma sobreposição é possível e todas as regras são disjuntas. Apenas uma única regra pode corresponder',
     'No values': 'Sem valores',
+    'number': 'número',
+    'Open decision table': 'Abrir tabela de decisão',
+    'Open literal expression': 'Abrir expressão literal',
     'Output label': 'Rótulo de saída',
     'Output label:': 'Rótulo de saída:',
+    'Output label: ': 'Rótulo de saída: ',
     'Output name': 'Nome da saída',
     'Output name:': 'Nome da saída:',
     'Output type': 'Tipo de saída',
@@ -174,7 +179,6 @@ export default {
     'Then': 'Então',
     'Time': 'Hora',
     'Time value': 'Valor de hora',
-    'Type': 'Tipo',
     'Use now': 'Usar agora',
     'Use today': 'Usar hoje',
     'value': 'valor',

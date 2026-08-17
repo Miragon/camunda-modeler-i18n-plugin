@@ -16,8 +16,8 @@
 
 /**
  * This file contains the translated strings used in the dmn-js component.
- * However, notice that these strings are currently not working. We are
- * still investigating how to apply them.
+ * They apply only when the translate module reaches all three DMN sub-editors
+ * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 export default {
     '-': '-',
@@ -39,6 +39,7 @@ export default {
     'Add values': '添加值',
     'And': '并且',
     'Annotations': '注释',
+    'Any': '任意',
     'Append business knowledge model': '追加业务知识模型',
     'Append decision': '追加决策',
     'Append input data': '追加输入数据',
@@ -102,7 +103,6 @@ export default {
     'Equals': '等于',
     'Exactly': '恰好',
     'Exclude': '排除',
-    'Expression': '表达式',
     'Expression language': '表达式语言',
     'Expression language:': '表达式语言：',
     'Function kind: {kind}': '函数类型：{kind}',
@@ -131,9 +131,14 @@ export default {
     'Move rule': '移动规则',
     'name': '名称',
     'No': '否',
+    'No overlap is possible and all rules are disjoint. Only a single rule can be matched': '不允许重叠，所有规则互斥。只能匹配一条规则',
     'No values': '没有值',
+    'number': '数字',
+    'Open decision table': '打开决策表',
+    'Open literal expression': '打开字面量表达式',
     'Output label': '输出标签',
     'Output label:': '输出标签：',
+    'Output label: ': '输出标签： ',
     'Output name': '输出名称',
     'Output name:': '输出名称：',
     'Output type': '输出类型',

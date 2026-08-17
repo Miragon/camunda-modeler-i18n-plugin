@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/"
+             xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/"
+             xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/"
+             id="harvest"
+             name="Harvest"
+             namespace="http://miragon.io/i18n">
+  <decision id="Decision" name="Decision">
+    <decisionTable id="DecisionTable" hitPolicy="UNIQUE">
+      <input id="Input" label="Amount">
+        <inputExpression id="InputExpression" typeRef="number">
+          <text>amount</text>
+        </inputExpression>
+      </input>
+      <output id="Output" label="Result" name="result" typeRef="string"/>
+      <rule id="Rule">
+        <inputEntry id="InputEntry">
+          <text>&gt; 100</text>
+        </inputEntry>
+        <outputEntry id="OutputEntry">
+          <text>"high"</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <decision id="LiteralDecision" name="Literal">
+    <literalExpression id="LiteralExpression">
+      <text>1 + 1</text>
+    </literalExpression>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram id="Diagram">
+      <dmndi:DMNShape id="Decision_di" dmnElementRef="Decision">
+        <dc:Bounds x="160" y="100" width="180" height="80"/>
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="LiteralDecision_di" dmnElementRef="LiteralDecision">
+        <dc:Bounds x="160" y="240" width="180" height="80"/>
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>

@@ -16,8 +16,8 @@
 
 /**
  * This file contains the translated strings used in the dmn-js component.
- * However, notice that these strings are currently not working. We are
- * still investigating how to apply them.
+ * They apply only when the translate module reaches all three DMN sub-editors
+ * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 export default {
     '-': '-',
@@ -37,15 +37,13 @@ export default {
     'Add rule': '규칙 추가',
     'Add text annotation': '텍스트 주석 추가',
     'Add values': '값 추가',
-    'After': '후',
     'And': '그리고',
-    'Annotation': '주석',
     'Annotations': '주석',
+    'Any': '임의',
     'Append business knowledge model': '비즈니스 지식 모델 추가',
     'Append decision': '결정 추가',
     'Append input data': '입력 데이터 추가',
     'Append knowledge source': '지식 소스 추가',
-    'Before': '전',
     'Between': '사이',
     'Boolean value': '부울 값',
     'cellInput': '셀 입력',
@@ -72,7 +70,6 @@ export default {
     'Date and time value': '날짜 및 시간 값',
     'Date and time': '날짜 및 시간',
     'Date value': '날짜 값',
-    'Date': '날짜',
     'Decision name:': '결정 이름:',
     'Decision name': '결정 이름',
     'Definition ID': '정의 ID',
@@ -109,7 +106,6 @@ export default {
     'Exclude': '제외',
     'Expression language:': '표현식 언어:',
     'Expression language': '표현식 언어',
-    'Expression': '표현식',
     'Function kind: {kind}': '함수 종류: {kind}',
     'Greater or equals': '크거나 같음',
     'Greater': '큼',
@@ -134,15 +130,19 @@ export default {
     'Match one': '하나 일치',
     'Move rule': '규칙 이동',
     'name': '이름',
+    'No overlap is possible and all rules are disjoint. Only a single rule can be matched': '중복이 불가능하며 모든 규칙이 서로 배타적입니다. 단 하나의 규칙만 일치할 수 있습니다',
     'No values': '값 없음',
     'No': '아니오',
+    'number': '숫자',
+    'Open decision table': '결정 테이블 열기',
+    'Open literal expression': '리터럴 표현식 열기',
     'Output label:': '출력 레이블:',
     'Output label': '출력 레이블',
+    'Output label: ': '출력 레이블: ',
     'Output name:': '출력 이름:',
     'Output name': '출력 이름',
     'Output type': '출력 유형',
     'Output values': '출력 값',
-    'Output': '출력',
     'Paste input column left': '왼쪽에 입력 열 붙여넣기',
     'Paste input column right': '오른쪽에 입력 열 붙여넣기',
     'Paste output column left': '왼쪽에 출력 열 붙여넣기',
@@ -176,13 +176,9 @@ export default {
     'Then': '그러면',
     'Time value': '시간 값',
     'Time': '시간',
-    'Type': '유형',
     'Use now': '지금 사용',
     'Use today': '오늘 사용',
-    'Value': '값',
-    'Values': '값',
     'Variable name:': '변수 이름:',
-    'Variable name': '변수 이름',
     'Variable type:': '변수 유형:',
     'Variable type': '변수 유형',
     'Version tag by which this decision can be referenced.': '이 결정을 참조하는 데 사용되는 버전 태그입니다.',

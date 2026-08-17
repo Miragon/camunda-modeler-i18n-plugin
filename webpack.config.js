@@ -23,7 +23,7 @@ module.exports = {
     },
     resolve: {
         alias: {
-            react: 'camunda-modeler-plugin-helpers/react'
+            react: 'camunda-modeler-plugin-helpers/vendor/react'
         }
     },
     devtool: 'cheap-module-source-map'

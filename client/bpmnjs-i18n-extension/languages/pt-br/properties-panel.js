@@ -388,7 +388,6 @@ export default {
     'Version tag': 'Rótulo de Versão',
     'Element documentation': 'Documentação do Elemento',
     'Time to live': 'Tempo de Vida',
-    'Candidate starter groups': 'Grupos Candidatos de Início',
     'Candidate starter users': 'Usuários Candidatos de Início',
     'Event type': 'Tipo de Evento',
     'Listener type': 'Tipo de Listener',

@@ -16,8 +16,8 @@
 
 /**
  * This file contains the translated strings used in the dmn-js component.
- * However, notice that these strings are currently not working. We are
- * still investigating how to apply them.
+ * They apply only when the translate module reaches all three DMN sub-editors
+ * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 export default {
     '-': '-',
@@ -37,15 +37,13 @@ export default {
     'Add rule': 'Añadir regla',
     'Add text annotation': 'Añadir anotación de texto',
     'Add values': 'Añadir valores',
-    'After': 'Después',
     'And': 'Y',
-    'Annotation': 'Anotación',
     'Annotations': 'Anotaciones',
+    'Any': 'Cualquiera',
     'Append business knowledge model': 'Adjuntar modelo de conocimiento empresarial',
     'Append decision': 'Adjuntar decisión',
     'Append input data': 'Adjuntar datos de entrada',
     'Append knowledge source': 'Adjuntar fuente de conocimiento',
-    'Before': 'Antes',
     'Between': 'Entre',
     'Boolean value': 'Valor booleano',
     'cellInput': 'Entrada de celda',
@@ -72,7 +70,6 @@ export default {
     'Date and time value': 'Valor de fecha y hora',
     'Date and time': 'Fecha y hora',
     'Date value': 'Valor de fecha',
-    'Date': 'Fecha',
     'Decision name:': 'Nombre de la decisión:',
     'Decision name': 'Nombre de la decisión',
     'Definition ID': 'ID de definición',
@@ -109,7 +106,6 @@ export default {
     'Exclude': 'Excluir',
     'Expression language:': 'Lenguaje de expresión:',
     'Expression language': 'Lenguaje de expresión',
-    'Expression': 'Expresión',
     'Function kind: {kind}': 'Tipo de función: {kind}',
     'Greater or equals': 'Mayor o igual',
     'Greater': 'Mayor',
@@ -134,15 +130,19 @@ export default {
     'Match one': 'Una coincidencia',
     'Move rule': 'Mover regla',
     'name': 'Nombre',
+    'No overlap is possible and all rules are disjoint. Only a single rule can be matched': 'No es posible el solapamiento y todas las reglas son disjuntas. Solo se puede aplicar una única regla',
     'No values': 'Sin valores',
     'No': 'No',
+    'number': 'Número',
+    'Open decision table': 'Abrir tabla de decisión',
+    'Open literal expression': 'Abrir expresión literal',
     'Output label:': 'Etiqueta de salida:',
     'Output label': 'Etiqueta de salida',
+    'Output label: ': 'Etiqueta de salida: ',
     'Output name:': 'Nombre de salida:',
     'Output name': 'Nombre de salida',
     'Output type': 'Tipo de salida',
     'Output values': 'Valores de salida',
-    'Output': 'Salida',
     'Paste input column left': 'Pegar columna de entrada a la izquierda',
     'Paste input column right': 'Pegar columna de entrada a la derecha',
     'Paste output column left': 'Pegar columna de salida a la izquierda',
@@ -176,13 +176,9 @@ export default {
     'Then': 'Entonces',
     'Time value': 'Valor de hora',
     'Time': 'Hora',
-    'Type': 'Tipo',
     'Use now': 'Usar ahora',
     'Use today': 'Usar hoy',
-    'Value': 'Valor',
-    'Values': 'Valores',
     'Variable name:': 'Nombre de variable:',
-    'Variable name': 'Nombre de variable',
     'Variable type:': 'Tipo de variable:',
     'Variable type': 'Tipo de variable',
     'Version tag by which this decision can be referenced.': 'Etiqueta de versión por la que se puede referenciar esta decisión.',

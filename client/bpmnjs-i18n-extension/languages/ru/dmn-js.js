@@ -16,8 +16,8 @@
 
 /**
  * This file contains the translated strings used in the dmn-js component.
- * However, notice that these strings are currently not working. We are
- * still investigating how to apply them.
+ * They apply only when the translate module reaches all three DMN sub-editors
+ * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 export default {
     '-': '-',
@@ -39,6 +39,7 @@ export default {
     'Add values': 'Добавить значения',
     'And': 'И',
     'Annotations': 'Аннотации',
+    'Any': 'Любое',
     'Append business knowledge model': 'Добавить модель бизнес-знаний',
     'Append decision': 'Добавить решение',
     'Append input data': 'Добавить входные данные',
@@ -103,7 +104,6 @@ export default {
     'Equals': 'Равно',
     'Exactly': 'Точно',
     'Exclude': 'Исключить',
-    'Expression': 'Выражение',
     'Expression language': 'Язык выражений',
     'Expression language:': 'Язык выражений:',
     'Function kind: {kind}': 'Вид функции: {kind}',
@@ -132,9 +132,14 @@ export default {
     'Move rule': 'Переместить правило',
     'name': 'название',
     'No': 'Нет',
+    'No overlap is possible and all rules are disjoint. Only a single rule can be matched': 'Пересечение невозможно, все правила непересекающиеся. Может совпасть только одно правило',
     'No values': 'Нет значений',
+    'number': 'число',
+    'Open decision table': 'Открыть таблицу решений',
+    'Open literal expression': 'Открыть литеральное выражение',
     'Output label': 'Метка выхода',
     'Output label:': 'Метка выхода:',
+    'Output label: ': 'Метка выхода: ',
     'Output name': 'Название выхода',
     'Output name:': 'Название выхода:',
     'Output type': 'Тип выхода',
@@ -174,7 +179,6 @@ export default {
     'Then': 'Тогда',
     'Time': 'Время',
     'Time value': 'Значение времени',
-    'Type': 'Тип',
     'Use now': 'Использовать текущее время',
     'Use today': 'Использовать сегодняшнюю дату',
     'value': 'значение',

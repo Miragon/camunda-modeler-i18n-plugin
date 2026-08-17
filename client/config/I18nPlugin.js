@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import React, {Fragment, PureComponent} from 'camunda-modeler-plugin-helpers/react';
+import React, {Fragment, PureComponent} from 'camunda-modeler-plugin-helpers/vendor/react';
 import Fill from 'camunda-modeler-plugin-helpers/components/Fill.js';
 import Select from 'react-select';
 import translate from "../bpmnjs-i18n-extension";
@@ -25,11 +25,6 @@ const defaultLanguage = "en";
 
 //config key
 const configKey = "i18n";
-
-const defaultState = {
-    currentLanguage: defaultLanguage,
-    modalOpen: false
-};
 
 const options = [
     {value: 'de', label: 'Deutsch'},
@@ -45,6 +40,12 @@ const options = [
     {value: 'ja', label: '日本語'},
     {value: 'ko', label: '한국어'},
 ]
+
+// react-select renders the whole option, not the locale key.
+const defaultState = {
+    currentLanguage: options.find(option => option.value === defaultLanguage),
+    modalOpen: false
+};
 
 /**
  * An example client extension plugin to enable auto saving functionality
@@ -65,32 +66,39 @@ export default class I18nPlugin extends PureComponent {
             subscribe,
         } = this.props;
 
+        // Subscribe synchronously: inside the `if (config)` below, a fresh
+        // install never injected the translate module at all.
+        subscribe('bpmn.modeler.configure', (event) => {
+            const {
+                middlewares
+            } = event;
+            middlewares.push(this.addModule(translate));
+        });
+
+        subscribe('dmn.modeler.configure', (event) => {
+            const {
+                middlewares,
+            } = event;
+            middlewares.push(this.addDmdModule(translate));
+        });
+
         // retrieve plugin related information from the application configuration
         config.getForPlugin(configKey, 'config')
-            .then(config => {
-                if (config) {
-                    this.setState(config);
-
-                    translate.translateModule.prototype.currentLanguage = function () {
-                        return config.currentLanguage.value;
-                    }
-
-                    subscribe('bpmn.modeler.configure', (event) => {
-                        const {
-                            middlewares
-                        } = event;
-                        middlewares.push(this.addModule(translate));
-                    });
-
-                    subscribe('dmn.modeler.configure', (event) => {
-                        const {
-                            middlewares,
-                        } = event;
-                        middlewares.push(this.addDmdModule(translate));
-                    });
-
+            .then(stored => {
+                if (!stored || !stored.currentLanguage) {
+                    return;
                 }
-            });
+
+                this.setState(stored);
+
+                // Older versions persisted a plain string, current ones an option.
+                const language = stored.currentLanguage.value || stored.currentLanguage;
+
+                translate.translateModule.prototype.currentLanguage = function () {
+                    return language;
+                }
+            })
+            .catch(console.error);
     }
 
     /**

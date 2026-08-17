@@ -1,7 +1,7 @@
 # Camunda Modeler I18N-Plugin
 [![Compatible with Camunda Modeler version 5.0](https://img.shields.io/badge/Camunda%20Modeler-5.0+-blue.svg)](https://github.com/camunda/camunda-modeler)
 
-This plugin allows you to translate the UI of the Camunda Modeler. It contains translations for German, English, Portuguese, Russian, Chinese (Traditional and Simplified) and Dutch and can be easily extended or customized.
+This plugin allows you to translate the UI of the Camunda Modeler. It ships 12 languages - German, English, Spanish, French, Italian, Japanese, Korean, Portuguese (Brasil), Russian, Chinese (Simplified and Traditional) and Dutch - and can be easily extended or customized.
 
 For more information see our blog post (in German): [Internationalization Plugin für den Camunda Modeler](https://www.miragon.io/blog/internationalization-plugin-fur-den-camunda-modeler/) 
 
@@ -16,20 +16,23 @@ To use this plugin in your installation, follow these simple steps:
 1. Click on releases
 2. Download the latest release artifact
 3. Extract and move it to the following folder depending on your OS:
-   1. Windows: %APPDATA%/camunda-modeler/plugins
-   2. Linux: ~/.config/camunda-modeler/plugins
-   3. macOS: ~/Library/Application Support/camunda-modeler/plugins
+   1. Windows: %APPDATA%/camunda-modeler/resources/plugins
+   2. Linux: ~/.config/camunda-modeler/resources/plugins
+   3. macOS: ~/Library/Application Support/camunda-modeler/resources/plugins
 4. Restart the modeler
 5. Click on the language dropdown in the toolbar and select the language of your choice, then restart the modeler for the changes to take effect
 
 > Hint: If it does not work for you, make sure you have the correct folder structure:
 > ```
 > camunda-modeler
-> └─ plugins
->    └─ i18n (or whatever the folder is called)
->       ├─ index.js
->       └─ dist
+> └─ resources
+>    └─ plugins
+>       └─ i18n (or whatever the folder is called)
+>          ├─ index.js
+>          └─ dist
 > ```
+> The `resources` folder is required — the modeler only searches for
+> `plugins/*/index.js` underneath it.
 
 ## Development
 
@@ -39,7 +42,37 @@ If you want to extend the plugin or provide custom translations or languages, yo
 
 Check the repository out and install all dependencies by using the command `npm install`. You can use any IDE of your choice such as IntelliJ or Visual Studio Code. Every file contains comments that should help you get started.
 
-### Testing
+### Tests
+
+```bash
+npm test                     # locale invariants + plugin contract, no modeler needed
+npm run check:translations   # report UI strings the Modeler asks for but we do not translate
+```
+
+```bash
+npx playwright install chromium   # once, for the two suites below
+npm run test:integration     # real bpmn-js/dmn-js in a browser
+npm run harvest              # re-record the strings the editors ask for
+
+npm run e2e:setup            # download the Camunda Modeler release (~150 MB)
+npm run test:e2e             # install the plugin into a real Modeler and check the UI
+```
+
+`npm test` covers three things: that all 12 locales stay in sync (same keys, same
+`{placeholder}` interpolation), that the built bundle still satisfies the Modeler's plugin
+contract, and that we translate every string the Modeler asks for. The contract tests are
+what catch a breaking change in `camunda-modeler-plugin-helpers` before a release does.
+
+`npm run check:translations` compares our dictionaries against three sources: the key list
+bpmn-js publishes, literal `translate()` calls extracted from the bundles the Modeler loads,
+and the strings recorded by `npm run harvest` while driving real editors. The last one matters
+because roughly a third of the labels — palette entries, create menus — are built at runtime
+and no static analysis can find them.
+
+A weekly workflow reruns all of this against the newest Modeler release and opens (or updates)
+a single issue when new strings appear.
+
+### Manual testing in the modeler
 
 To test it, build the plugin by using the command `npm run build`. Copy the following files into the "plugins/i18n" directory (for more see section Installation above):
 
