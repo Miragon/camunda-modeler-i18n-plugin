@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bpmn:definitions xmlns:bpmn="http://www.omg.org/spec/BPMN/20100524/MODEL"
+                  xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI"
+                  xmlns:dc="http://www.omg.org/spec/DD/20100524/DC"
+                  xmlns:di="http://www.omg.org/spec/DD/20100524/DI"
+                  id="harvest"
+                  targetNamespace="http://miragon.io/i18n">
+  <bpmn:collaboration id="Collaboration">
+    <bpmn:participant id="Participant" name="Pool" processRef="Process"/>
+  </bpmn:collaboration>
+  <bpmn:process id="Process" isExecutable="true">
+    <bpmn:laneSet id="LaneSet">
+      <bpmn:lane id="Lane">
+        <bpmn:flowNodeRef>StartEvent</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>UserTask</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>ServiceTask</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>Gateway</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>SubProcess</bpmn:flowNodeRef>
+        <bpmn:flowNodeRef>EndEvent</bpmn:flowNodeRef>
+      </bpmn:lane>
+    </bpmn:laneSet>
+    <bpmn:startEvent id="StartEvent" name="Start">
+      <bpmn:outgoing>Flow1</bpmn:outgoing>
+    </bpmn:startEvent>
+    <bpmn:userTask id="UserTask" name="Review">
+      <bpmn:incoming>Flow1</bpmn:incoming>
+      <bpmn:outgoing>Flow2</bpmn:outgoing>
+    </bpmn:userTask>
+    <bpmn:exclusiveGateway id="Gateway">
+      <bpmn:incoming>Flow2</bpmn:incoming>
+      <bpmn:outgoing>Flow3</bpmn:outgoing>
+    </bpmn:exclusiveGateway>
+    <bpmn:serviceTask id="ServiceTask" name="Call">
+      <bpmn:incoming>Flow3</bpmn:incoming>
+      <bpmn:outgoing>Flow4</bpmn:outgoing>
+    </bpmn:serviceTask>
+    <bpmn:subProcess id="SubProcess" name="Sub">
+      <bpmn:incoming>Flow4</bpmn:incoming>
+      <bpmn:outgoing>Flow5</bpmn:outgoing>
+      <bpmn:startEvent id="InnerStart"/>
+    </bpmn:subProcess>
+    <bpmn:endEvent id="EndEvent" name="Done">
+      <bpmn:incoming>Flow5</bpmn:incoming>
+    </bpmn:endEvent>
+    <bpmn:boundaryEvent id="BoundaryEvent" attachedToRef="UserTask">
+      <bpmn:timerEventDefinition id="Timer"/>
+    </bpmn:boundaryEvent>
+    <bpmn:dataObjectReference id="DataObject" dataObjectRef="Data"/>
+    <bpmn:dataObject id="Data"/>
+    <bpmn:textAnnotation id="Annotation">
+      <bpmn:text>Note</bpmn:text>
+    </bpmn:textAnnotation>
+    <bpmn:sequenceFlow id="Flow1" sourceRef="StartEvent" targetRef="UserTask"/>
+    <bpmn:sequenceFlow id="Flow2" sourceRef="UserTask" targetRef="Gateway"/>
+    <bpmn:sequenceFlow id="Flow3" sourceRef="Gateway" targetRef="ServiceTask"/>
+    <bpmn:sequenceFlow id="Flow4" sourceRef="ServiceTask" targetRef="SubProcess"/>
+    <bpmn:sequenceFlow id="Flow5" sourceRef="SubProcess" targetRef="EndEvent"/>
+  </bpmn:process>
+  <bpmndi:BPMNDiagram id="Diagram">
+    <bpmndi:BPMNPlane id="Plane" bpmnElement="Collaboration">
+      <bpmndi:BPMNShape id="Participant_di" bpmnElement="Participant" isHorizontal="true">
+        <dc:Bounds x="120" y="80" width="1000" height="360"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Lane_di" bpmnElement="Lane" isHorizontal="true">
+        <dc:Bounds x="150" y="80" width="970" height="360"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="StartEvent_di" bpmnElement="StartEvent">
+        <dc:Bounds x="202" y="222" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="UserTask_di" bpmnElement="UserTask">
+        <dc:Bounds x="290" y="200" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="BoundaryEvent_di" bpmnElement="BoundaryEvent">
+        <dc:Bounds x="322" y="262" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_di" bpmnElement="Gateway" isMarkerVisible="true">
+        <dc:Bounds x="445" y="215" width="50" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="ServiceTask_di" bpmnElement="ServiceTask">
+        <dc:Bounds x="550" y="200" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="SubProcess_di" bpmnElement="SubProcess" isExpanded="false">
+        <dc:Bounds x="710" y="200" width="100" height="80"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="EndEvent_di" bpmnElement="EndEvent">
+        <dc:Bounds x="882" y="222" width="36" height="36"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="DataObject_di" bpmnElement="DataObject">
+        <dc:Bounds x="322" y="340" width="36" height="50"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Annotation_di" bpmnElement="Annotation">
+        <dc:Bounds x="560" y="330" width="100" height="30"/>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow1_di" bpmnElement="Flow1">
+        <di:waypoint x="238" y="240"/>
+        <di:waypoint x="290" y="240"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow2_di" bpmnElement="Flow2">
+        <di:waypoint x="390" y="240"/>
+        <di:waypoint x="445" y="240"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow3_di" bpmnElement="Flow3">
+        <di:waypoint x="495" y="240"/>
+        <di:waypoint x="550" y="240"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow4_di" bpmnElement="Flow4">
+        <di:waypoint x="650" y="240"/>
+        <di:waypoint x="710" y="240"/>
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow5_di" bpmnElement="Flow5">
+        <di:waypoint x="810" y="240"/>
+        <di:waypoint x="882" y="240"/>
+      </bpmndi:BPMNEdge>
+    </bpmndi:BPMNPlane>
+  </bpmndi:BPMNDiagram>
+</bpmn:definitions>

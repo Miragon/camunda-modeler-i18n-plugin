@@ -8,9 +8,9 @@
         "url": "https://github.com/Miragon/camunda-modeler-i18n-plugin/issues"
     },
     "license": "Apache-2.0",
+    "supportedModeler": "5.50.1",
     "files": [
         "dist",
-        "menu",
         "index.js"
     ],
     "main": "index.js",
@@ -20,7 +20,23 @@
     },
     "scripts": {
         "build": "webpack",
-        "dev": "webpack -w"
+        "check:translations": "node test/drift/report.mjs",
+        "check:translations:baseline": "node test/drift/report.mjs --update-baseline",
+        "check:translations:coverage": "node test/drift/report.mjs --write-coverage",
+        "check:translations:seed": "node test/drift/report.mjs --seed-runtime-keys",
+        "dev": "webpack -w",
+        "e2e:setup": "node test/e2e/setup.mjs",
+        "harvest": "node test/drift/harvest.mjs",
+        "harvest:check": "node test/drift/harvest.mjs --check",
+        "sync:modeler-deps": "node test/drift/sync.mjs --write-deps",
+        "sync:upstream-keys": "node test/drift/sync.mjs",
+        "test": "vitest run",
+        "test:e2e": "vitest run --config vitest.e2e.config.mjs",
+        "test:integration": "vitest run --config vitest.integration.config.mjs",
+        "test:watch": "vitest"
+    },
+    "engines": {
+        "node": ">=20"
     },
     "keywords": [
         "camunda",
@@ -37,12 +53,27 @@
     "devDependencies": {
         "@babel/core": "7.29.7",
         "@babel/preset-react": "7.29.7",
+        "@testing-library/react": "16.3.2",
         "babel-loader": "10.1.1",
+        "camunda-bpmn-js": "5.30.2",
+        "camunda-dmn-js": "3.8.1",
         "camunda-modeler-plugin-helpers": "6.0.0",
         "copyfiles": "2.4.1",
+        "esbuild": "0.28.2",
         "install": "0.13.0",
+        "jsdom": "26.1.0",
         "npm-run-all": "4.1.5",
+        "playwright": "1.62.1",
+        "vitest": "3.2.4",
         "webpack": "5.109.2",
         "webpack-cli": "7.2.2"
+    },
+    "overrides": {
+        "@bpmn-io/properties-panel": "3.48.0",
+        "bpmn-js": "18.22.1",
+        "bpmn-js-element-templates": "2.30.0",
+        "bpmn-js-properties-panel": "5.62.0",
+        "dmn-js": "17.10.1",
+        "dmn-js-properties-panel": "3.11.1"
     }
 }
