@@ -27,7 +27,7 @@ if (has('--seed-runtime-keys')) {
     console.log(`Wrote ${unknown.length} keys to ${path.relative(ROOT, RUNTIME_KEYS_FILE)}`);
 }
 
-const result = analyse();
+let result = analyse();
 
 if (has('--write-coverage')) {
     const file = path.join(ROOT, 'docs', 'COVERAGE.md');
@@ -40,6 +40,11 @@ if (has('--write-coverage')) {
 if (has('--update-baseline')) {
     fs.writeFileSync(BASELINE_FILE, JSON.stringify({ locales: result.locales }, null, 4) + '\n');
     console.log(`Baseline written to ${path.relative(ROOT, BASELINE_FILE)}`);
+
+    // Recompute against the floor we just wrote: the whole point of this flag is
+    // to accept the current numbers, so the ratchet must no longer report them as
+    // regressions. Genuine problems (missing, parity, placeholders) still block.
+    result = analyse();
 }
 
 console.log(has('--json') ? JSON.stringify(result, null, 2) : format(result));
