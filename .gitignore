@@ -2,3 +2,4 @@
 .idea
 yarn.lock
 .DS_Store
+.claude/logs/
