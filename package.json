@@ -36,7 +36,7 @@
         "test:watch": "vitest"
     },
     "engines": {
-        "node": ">=22"
+        "node": ">=24"
     },
     "keywords": [
         "camunda",

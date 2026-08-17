@@ -46,7 +46,7 @@ Everything lives under `test/`, with shared helpers in `test/lib/`:
 - **`test/integration/`** — real editors in Chromium via Playwright. jsdom implements
   no SVG layout, which is why bpmn-js tests itself in a browser too. Own config, own
   script: `npm test` must stay runnable without a browser, or the CI build job would
-  need Chromium on every Node version in the matrix.
+  need Chromium too.
 - **`test/e2e/`** — the real Camunda Modeler, driven through Playwright's Electron
   runner. Downloads the release named by `supportedModeler`, installs the plugin into
   a throwaway `--user-data-dir`, and asserts the palette and properties panel are
@@ -132,8 +132,8 @@ A barrel file at `client/bpmnjs-i18n-extension/languages/<locale>.js` merges all
 - **Prototype mutation for language state:** The translator uses `Translator.prototype.currentLanguage` to communicate the selected language at runtime. `I18nPlugin` overwrites this prototype method when config loads. This is the mechanism that bridges React state to the didi-injected translator — don't refactor it away without replacing this coupling.
 - **Locale key matching:** The language key in `translate.js`'s `languages` map must exactly match the `value` field in `I18nPlugin.js`'s `options` array (e.g., `pt_br` not `pt-br`, `nl_nl` not `nl-NL`). A mismatch now falls back to the default language — it used to reach `languages[undefined]` and throw on the first translated string, blanking the editor. `test/unit/locales.spec.mjs` asserts the two lists agree, so a mismatch fails CI rather than shipping.
 - **No duplicate keys.** A key repeated across the four files of a locale is silently shadowed by the barrel spread, so the earlier translation becomes dead code. All locales are now at zero and `test/unit/locales.spec.mjs` ratchets that; six keys had genuinely differing shadowed wordings before the cleanup, and the winning value was kept in each case.
-- **`dist/` is checked into git.** After making source changes, you must run `npm run build` and commit the updated `dist/client.js` bundle. CI enforces this: the `build` job rebuilds and fails if the committed bundle differs. Reproducibility rests on the lockfile, which is why the transitive `@emotion` versions react-select pulls in are pinned there — they used to float and changed the bundle. Node version does not matter: 22 and 24 emit a byte-identical bundle, verified.
-- **Node 22 is the floor, 24 is the default.** Node 20 went end-of-life on 2026-04-30. `.nvmrc` pins 24 (Active LTS) and `release.yml` builds the published artefact with it; the test matrix also covers 22, the oldest release still receiving fixes.
+- **`dist/` is checked into git.** After making source changes, you must run `npm run build` and commit the updated `dist/client.js` bundle. CI enforces this: the `build` job rebuilds and fails if the committed bundle differs. Reproducibility rests on the lockfile, which is why the transitive `@emotion` versions react-select pulls in are pinned there — they used to float and changed the bundle. Node version does not affect the output (22 and 24 emit a byte-identical bundle, verified), so the job is not run as a matrix.
+- **Node 24 everywhere.** Active LTS, pinned by `.nvmrc`, used by every workflow and by `release.yml` for the published artefact. Node 20 went end-of-life on 2026-04-30. There is no version matrix on purpose: the shipped bundle is webpack output running inside Electron, so a user's Node version never enters into it, and nothing here uses an API newer than `import.meta.dirname` (Node 20.11).
 
 ## Build & Deploy for Local Testing
 

@@ -17,20 +17,17 @@ concurrency:
 
 jobs:
   build:
-    name: Build & test (Node ${{ matrix.node }})
+    name: Build & test
     runs-on: ubuntu-latest
-    strategy:
-      fail-fast: false
-      matrix:
-        # 22 is the oldest release still receiving fixes, 24 is Active LTS and
-        # what `.nvmrc` pins. Node 20 went end-of-life on 2026-04-30.
-        node: [ 22, 24 ]
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
       - uses: Miragon/pin-npm-dependencies@58fe24377aef66748a1444ff69ab05e3f938a798 # v1.2.1
+      # 24 is Active LTS, what `.nvmrc` pins and what release.yml publishes with.
+      # No matrix: the shipped bundle is webpack output running inside Electron,
+      # so a user's Node version never enters into it.
       - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
-          node-version: ${{ matrix.node }}
+          node-version: 24
           cache: npm
       - run: npm ci
 
@@ -44,8 +41,7 @@ jobs:
 
       # dist/ is committed and copied straight into a user's plugins folder, so a
       # stale bundle means merged translations reach nobody. Reuses the build
-      # above rather than repeating it in a job of its own. Safe to run on every
-      # matrix entry: webpack emits a byte-identical bundle on 22 and 24.
+      # above rather than repeating it in a job of its own.
       - name: Committed bundle is current
         run: |
           if ! git diff --exit-code --stat dist/; then
