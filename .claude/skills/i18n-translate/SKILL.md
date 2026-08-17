@@ -82,7 +82,7 @@ Translate in batches per file. After each file, briefly summarize the count of t
 Each of the four files must follow this exact format. See [references/file-template.md](references/file-template.md) for the full template.
 
 Key points:
-- Include the Apache 2.0 license header (Copyright 2025 Miragon GmbH)
+- No per-file license header (the project is licensed Apache 2.0 centrally via `LICENSE`/`NOTICE`)
 - Use `export default { ... };` syntax
 - Keep keys in the same order as the German source file
 - One key-value pair per line, single-quoted strings, trailing comma on each entry
