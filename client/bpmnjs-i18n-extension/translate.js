@@ -48,7 +48,9 @@ console.log("Please help us translate by creating a pull request!");
  * This function initializes the translation plugin.
  */
 export default function Translator() {
-    let currentLanguage = languages[this.currentLanguage()];
+    // Fall back rather than trust the stored value: an unknown key used to throw
+    // on the first translated string and blank the editor.
+    let currentLanguage = languages[this.currentLanguage()] || languages[defaultLanguage];
 
     // Return the translation function. It takes the template string and the parameters,
     // translates it and returns it.

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-import React from 'camunda-modeler-plugin-helpers/react';
+import React from 'camunda-modeler-plugin-helpers/vendor/react';
 import Modal from 'camunda-modeler-plugin-helpers/components/Modal.js';
 
 const Title = Modal.Title || (({children}) => <h2>{children}</h2>);
@@ -35,7 +35,7 @@ export default function ConfigModal({onClose}) {
         </Body>
         <Footer>
             <div id="languageChangeButton">
-                <button type="button" class="btn btn-primary" onClick={() => onClose()}>Ok</button>
+                <button type="button" className="btn btn-primary" onClick={() => onClose()}>Ok</button>
             </div>
         </Footer>
     </Modal>);
