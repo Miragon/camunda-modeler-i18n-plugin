@@ -1,0 +1,13 @@
+"$schema" = "https://conductor.build/schemas/settings.repo.schema.json"
+
+[scripts]
+setup = "npm install"
+run_mode = "nonconcurrent"
+
+[scripts.run.dev]
+command = "npm run dev"
+icon = "flame"
+
+[scripts.run.build]
+command = "npm run build"
+icon = "hammer"
