@@ -158,7 +158,6 @@ export default {
     'enum': '枚舉',
     'Error': '錯誤',
     'Error event documentation': '錯誤事件說明文件',
-    'Errors': '錯誤',
     'Escalation': '升级',
     'Evaluate a business rule, for example a DMN decision. To add a custom implementation, use a job worker. ': '執行業務規則，例如 DMN 決策。如需新增自定义實作，請使用 job worker。 ',
     'Event Type': '事件類型',

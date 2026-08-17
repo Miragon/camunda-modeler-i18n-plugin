@@ -42,7 +42,7 @@ var identifierWithPointTracking = function identifierWithPointTracking(begin, po
       break;
     }
 
-    (0,stylis__WEBPACK_IMPORTED_MODULE_4__.next)();
+    ;(0,stylis__WEBPACK_IMPORTED_MODULE_4__.next)();
   }
 
   return (0,stylis__WEBPACK_IMPORTED_MODULE_4__.slice)(begin, stylis__WEBPACK_IMPORTED_MODULE_4__.position);
@@ -748,7 +748,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   u: () => (/* binding */ useTheme),
 /* harmony export */   w: () => (/* binding */ withEmotionCache)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/camunda-modeler-plugin-helpers/react.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/camunda-modeler-plugin-helpers/vendor/react.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _emotion_cache__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emotion/cache */ "./node_modules/@emotion/cache/dist/emotion-cache.browser.esm.js");
 /* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
@@ -1018,7 +1018,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   withEmotionCache: () => (/* reexport safe */ _emotion_element_6a883da9_browser_esm_js__WEBPACK_IMPORTED_MODULE_2__.w),
 /* harmony export */   withTheme: () => (/* reexport safe */ _emotion_element_6a883da9_browser_esm_js__WEBPACK_IMPORTED_MODULE_2__.b)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/camunda-modeler-plugin-helpers/react.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/camunda-modeler-plugin-helpers/vendor/react.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _emotion_cache__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @emotion/cache */ "./node_modules/@emotion/cache/dist/emotion-cache.browser.esm.js");
 /* harmony import */ var _emotion_element_6a883da9_browser_esm_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./emotion-element-6a883da9.browser.esm.js */ "./node_modules/@emotion/react/dist/emotion-element-6a883da9.browser.esm.js");
@@ -2015,7 +2015,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */   useInsertionEffectAlwaysWithSyncFallback: () => (/* binding */ useInsertionEffectAlwaysWithSyncFallback),
 /* harmony export */   useInsertionEffectWithLayoutFallback: () => (/* binding */ useInsertionEffectWithLayoutFallback)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/camunda-modeler-plugin-helpers/react.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/camunda-modeler-plugin-helpers/vendor/react.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 
@@ -2252,14 +2252,14 @@ __webpack_require__.r(__webpack_exports__);
   'A task done by a person without any tooling or UI': 'Eine Aufgabe, die eine Person ohne Werkzeug oder Oberfläche erledigt',
   'Activate create/remove space tool': 'Werkzeug zum Erstellen/Entfernen von Platz aktivieren',
   'Activate global connect tool': 'Globales Verbindungswerkzeug aktivieren',
-  'Activate hand tool': 'Handwerkzeug aktivieren',
-  'Activate lasso tool': 'Lassowerkzeug aktivieren',
   'Activities run in any order, any number of times': 'Aktivitäten laufen in beliebiger Reihenfolge und beliebig oft',
   'Activities run in any order; shown collapsed': 'Aktivitäten laufen in beliebiger Reihenfolge; zugeklappt dargestellt',
   'Ad-hoc': 'Ad-hoc',
+  'Ad-hoc sub-process': 'Ad-hoc-Teilprozess',
+  'Ad-hoc sub-process (collapsed)': 'Zugeklappter Ad-hoc-Teilprozess',
+  'Ad-hoc sub-process (expanded)': 'Aufgeklappter Ad-hoc-Teilprozess',
   'Add lane above': 'Lane oberhalb hinzufügen',
   'Add lane below': 'Lane unterhalb hinzufügen',
-  'Add text annotation': 'Anmerkung hinzufügen',
   'Align elements': 'Elemente ausrichten',
   'An unspecified step, often used as a placeholder': 'Ein nicht näher bestimmter Schritt, oft als Platzhalter verwendet',
   'Append compensation activity': 'Kompensationsaktivität anfügen',
@@ -2275,6 +2275,7 @@ __webpack_require__.r(__webpack_exports__);
   'Atomic units of work in a process': 'Atomare Arbeitsschritte in einem Prozess',
   'Attaches a compensation handler to the activity': 'Hängt eine Kompensationsbehandlung an die Aktivität an',
   'Automated work carried out by a job worker or connector': 'Automatisierte Arbeit, ausgeführt von einem Job Worker oder Konnektor',
+  'Boundary event': 'Grenzereignis',
   'Boundary events': 'Grenzereignisse',
   'Broadcasts a signal': 'Sendet ein Signal',
   'Business rule task': 'Regel Aufgabe',
@@ -2283,9 +2284,7 @@ __webpack_require__.r(__webpack_exports__);
   'Cancel boundary event': 'Abbruchs-Grenzereignis',
   'Cancel end event': 'Abbruchs-Endereignis',
   'Cancels the transaction and ends the path': 'Bricht die Transaktion ab und beendet den Pfad',
-  'Change element': 'Element ändern',
-  'Change type': 'Typ ändern',
-  'Collection': 'Sammlung',
+  'Collaboration': 'Kollaboration',
   'Compensation boundary event': 'Kompensations-Grenzereignis',
   'Compensation end event': 'Kompensations-Endereignis',
   'Compensation intermediate throw event': 'Kompensations-Zwischenereignis (auslösend)',
@@ -2314,18 +2313,19 @@ __webpack_require__.r(__webpack_exports__);
   'Create task': 'Aufgabe erzeugen',
   'Data': 'Daten',
   'Data created and used within a process instance': 'Daten, die innerhalb einer Prozessinstanz erzeugt und genutzt werden',
+  'Data object must be placed within a pool/participant.': 'Datenobjekt muss innerhalb eines Pools/Teilnehmers platziert werden.',
   'Data object reference': 'Datenobjekt',
   'Data store reference': 'Datenspeicher',
   'Data that persists beyond the process instance': 'Daten, die über die Prozessinstanz hinaus bestehen bleiben',
   'Data the process uses': 'Daten, die der Prozess verwendet',
   'Default flow': 'Standardfluss',
-  'Delete': 'Löschen',
   'Distribute elements horizontally': 'Elemente horizontal verteilen',
   'Distribute elements vertically': 'Elemente vertikal verteilen',
   'Divide into three lanes': 'In drei Lanes aufteilen',
   'Divide into two lanes': 'In zwei Lanes aufteilen',
   'element required': 'Element benötigt',
   'Emit an event, then continue': 'Lösen ein Ereignis aus und fahren dann fort',
+  'Empty pool/participant (removes content)': 'Leerer Pool/Teilnehmer (Inhalt wird entfernt)',
   'End event': 'Endereignis',
   'End events': 'Endereignisse',
   'Ends the current path': 'Beendet den aktuellen Pfad',
@@ -2384,6 +2384,7 @@ __webpack_require__.r(__webpack_exports__);
   'no diagram to display': 'Kein Diagramm zum Anzeigen',
   'no process or collaboration to display': 'Kein Prozess oder Kollaboration zum Anzeigen',
   'no shape type specified': 'Kein Formtyp angegeben',
+  'Open {element}': '{element} öffnen',
   'out of bounds release': 'Außerhalb der Grenzen losgelassen',
   'Parallel gateway': 'Paralleles Gateway (AND)',
   'Parallel multi-instance': 'Mehrfache Instanz',
@@ -2399,7 +2400,6 @@ __webpack_require__.r(__webpack_exports__);
   'Reacts when a condition is met; activity continues': 'Reagiert, wenn eine Bedingung erfüllt ist; die Aktivität läuft weiter',
   'Reacts when a transaction is canceled': 'Reagiert, wenn eine Transaktion abgebrochen wird',
   'Receive task': 'Aufgabe',
-  'Remove': 'Entfernen',
   'Route the flow: branch or merge paths': 'Steuern den Ablauf: Pfade verzweigen oder zusammenführen',
   'Routes the token down one path, based on data': 'Leitet den Token datenbasiert auf genau einen Pfad',
   'Runs a script': 'Führt ein Skript aus',
@@ -2438,7 +2438,6 @@ __webpack_require__.r(__webpack_exports__);
   'Systems or organizations involved': 'Beteiligte Systeme oder Organisationen',
   'Taken only when its condition is met': 'Wird nur genommen, wenn seine Bedingung erfüllt ist',
   'Takes every outgoing path whose condition is met': 'Nimmt jeden ausgehenden Pfad, dessen Bedingung erfüllt ist',
-  'Task': 'Aufgabe',
   'Tasks': 'Aufgaben',
   'Terminate end event': 'Terminierungsereignis',
   'The default path, taken when no other path condition is met': 'Der Standardpfad, der genommen wird, wenn keine andere Pfadbedingung erfüllt ist',
@@ -2449,7 +2448,6 @@ __webpack_require__.r(__webpack_exports__);
   'Timer start event (non-interrupting)': 'Zeitstartereignis (nicht unterbrechend)',
   'Timer start event': 'Zeitstartereignis',
   'Toggle non-interrupting': 'Auf nicht-unterbrechend umschalten',
-  'Transaction': 'Transaktion',
   'Triggers compensation of completed activities': 'Löst die Kompensation abgeschlossener Aktivitäten aus',
   'User task': 'Benutzer-Aufgabe',
   'Wait for something to happen before continuing': 'Warten auf ein Ereignis, bevor es weitergeht',
@@ -2495,8 +2493,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * This file contains the translated strings used in the dmn-js component.
- * However, notice that these strings are currently not working. We are
- * still investigating how to apply them.
+ * They apply only when the translate module reaches all three DMN sub-editors
+ * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   '-': '-',
@@ -2516,15 +2514,13 @@ __webpack_require__.r(__webpack_exports__);
   'Add rule': 'Regel hinzufügen',
   'Add text annotation': 'Textannotation hinzufügen',
   'Add values': 'Werte hinzufügen',
-  'After': 'Nach',
   'And': 'Und',
-  'Annotation': 'Anmerkung',
   'Annotations': 'Anmerkungen',
+  'Any': 'Beliebig',
   'Append business knowledge model': 'Geschäftswissensmodell anhängen',
   'Append decision': 'Entscheidung anhängen',
   'Append input data': 'Eingabedaten anhängen',
   'Append knowledge source': 'Wissensquelle anhängen',
-  'Before': 'Vor',
   'Between': 'Zwischen',
   'Boolean value': 'Boolescher Wert',
   'cellInput': 'Zelleneingabe',
@@ -2551,7 +2547,6 @@ __webpack_require__.r(__webpack_exports__);
   'Date and time value': 'Datum- und Uhrzeitwert',
   'Date and time': 'Datum und Uhrzeit',
   'Date value': 'Datumswert',
-  'Date': 'Datum',
   'Decision name:': 'Entscheidungsname:',
   'Decision name': 'Entscheidungsname',
   'Definition ID': 'Definitions-ID',
@@ -2588,7 +2583,6 @@ __webpack_require__.r(__webpack_exports__);
   'Exclude': 'Ausschließen',
   'Expression language:': 'Ausdruckssprache:',
   'Expression language': 'Ausdruckssprache',
-  'Expression': 'Ausdruck',
   'Function kind: {kind}': 'Funktionsart: {kind}',
   'Greater or equals': 'Größer oder gleich',
   'Greater': 'Größer',
@@ -2613,15 +2607,19 @@ __webpack_require__.r(__webpack_exports__);
   'Match one': 'Eine Übereinstimmung',
   'Move rule': 'Regel verschieben',
   'name': 'Name',
+  'No overlap is possible and all rules are disjoint. Only a single rule can be matched': 'Keine Überschneidung möglich, alle Regeln sind disjunkt. Es kann nur eine einzige Regel zutreffen',
   'No values': 'Keine Werte',
   'No': 'Nein',
+  'number': 'Zahl',
+  'Open decision table': 'Entscheidungstabelle öffnen',
+  'Open literal expression': 'Literalen Ausdruck öffnen',
   'Output label:': 'Ausgabebezeichnung:',
   'Output label': 'Ausgabebezeichnung',
+  'Output label: ': 'Ausgabebezeichnung: ',
   'Output name:': 'Ausgabename:',
   'Output name': 'Ausgabename',
   'Output type': 'Ausgabetyp',
   'Output values': 'Ausgabewerte',
-  'Output': 'Ausgabe',
   'Paste input column left': 'Eingabespalte links einfügen',
   'Paste input column right': 'Eingabespalte rechts einfügen',
   'Paste output column left': 'Ausgabespalte links einfügen',
@@ -2655,13 +2653,9 @@ __webpack_require__.r(__webpack_exports__);
   'Then': 'Dann',
   'Time value': 'Zeitwert',
   'Time': 'Zeit',
-  'Type': 'Typ',
   'Use now': 'Jetzt verwenden',
   'Use today': 'Heute verwenden',
-  'Value': 'Wert',
-  'Values': 'Werte',
   'Variable name:': 'Variablenname:',
-  'Variable name': 'Variablenname',
   'Variable type:': 'Variablentyp:',
   'Variable type': 'Variablentyp',
   'Version tag by which this decision can be referenced.': 'Versions-Tag, über das diese Entscheidung referenziert werden kann.',
@@ -3034,7 +3028,6 @@ __webpack_require__.r(__webpack_exports__);
   'ID must not contain spaces.': 'ID darf keine Leerzeichen enthalten.',
   'Id must not contain spaces.': 'ID darf keine Leerzeichen enthalten',
   'Id': 'ID',
-  'ID': 'ID',
   'Identifier computed from the process context that is used to correlate an incoming message (e.g. ': 'Bezeichner, der aus dem Prozesskontext berechnet wird und zur Korrelation einer eingehenden Nachricht dient (z. B. ',
   'If turned on, all variables from the child process instance will be propagated to the parent process instance.': 'Wenn aktiviert, werden alle Variablen der Kindprozessinstanz auf die Elternprozessinstanz übertragen.',
   'If turned on, all variables from the parent process instance will be propagated to the child process instance.': 'Wenn aktiviert, werden alle Variablen der Elternprozessinstanz auf die Kindprozessinstanz übertragen.',
@@ -3064,7 +3057,6 @@ __webpack_require__.r(__webpack_exports__);
   'Job type': 'Job-Typ',
   'Job worker': 'Job-Worker',
   'JSON contains errors': 'JSON enthält Fehler',
-  'Key': 'Schlüssel',
   'Label': 'Label',
   'latest': 'Neueste',
   'Latest binding': 'Bindung an neueste Version',
@@ -3123,7 +3115,6 @@ __webpack_require__.r(__webpack_exports__);
   'Parameters': 'Parameter',
   'Participant Name': 'Name des Teilnehmers',
   'Participant ID': 'Teilnehmer-ID',
-  'Priority': 'Priorität',
   'Process documentation': 'Prozessdokumentation',
   'Process Id': 'Prozess-ID',
   'Process ID': 'Prozess-ID',
@@ -3196,7 +3187,6 @@ __webpack_require__.r(__webpack_exports__);
   'The due date as an EL expression (e.g. ${someDate}) or an ISO date (e.g. 2015-06-26T09:54:00).': 'Das Fälligkeitsdatum als EL-Ausdruck (z. B. ${someDate}) oder als ISO-Datum (z. B. 2015-06-26T09:54:00).',
   'The follow up date as an EL expression (e.g. ${someDate}) or an ': 'Der Folgetermin als EL-Ausdruck (z. B. ${someDate}) oder als ',
   'The number of times the engine tries executing this activity if a worker signals a failure. The default is three.': 'Die Anzahl der Versuche, die die Engine unternimmt, um diese Aktivität auszuführen, wenn ein Worker einen Fehler signalisiert. Standard ist drei.',
-  'This maps to the process definition key.': 'Dies entspricht dem Prozessdefinitionsschlüssel.',
   'Throw expression': 'Ausnahmeausdruck',
   'Time to live': 'Lebensdauer',
   'timeout': 'Zeitlimit',
@@ -3333,14 +3323,14 @@ __webpack_require__.r(__webpack_exports__);
   'A task done by a person without any tooling or UI': 'A task done by a person without any tooling or UI',
   'Activate create/remove space tool': 'Activate create/remove space tool',
   'Activate global connect tool': 'Activate global connect tool',
-  'Activate hand tool': 'Activate hand tool',
-  'Activate lasso tool': 'Activate lasso tool',
   'Activities run in any order, any number of times': 'Activities run in any order, any number of times',
   'Activities run in any order; shown collapsed': 'Activities run in any order; shown collapsed',
   'Ad-hoc': 'Ad-hoc',
+  'Ad-hoc sub-process': 'Ad-hoc sub-process',
+  'Ad-hoc sub-process (collapsed)': 'Ad-hoc sub-process (collapsed)',
+  'Ad-hoc sub-process (expanded)': 'Ad-hoc sub-process (expanded)',
   'Add lane above': 'Add lane above',
   'Add lane below': 'Add lane below',
-  'Add text annotation': 'Add text annotation',
   'Align elements': 'Align elements',
   'An unspecified step, often used as a placeholder': 'An unspecified step, often used as a placeholder',
   'Append compensation activity': 'Append compensation activity',
@@ -3356,6 +3346,7 @@ __webpack_require__.r(__webpack_exports__);
   'Atomic units of work in a process': 'Atomic units of work in a process',
   'Attaches a compensation handler to the activity': 'Attaches a compensation handler to the activity',
   'Automated work carried out by a job worker or connector': 'Automated work carried out by a job worker or connector',
+  'Boundary event': 'Boundary event',
   'Boundary events': 'Boundary events',
   'Broadcasts a signal': 'Broadcasts a signal',
   'Business rule task': 'Business rule task',
@@ -3364,9 +3355,7 @@ __webpack_require__.r(__webpack_exports__);
   'Cancel boundary event': 'Cancel boundary event',
   'Cancel end event': 'Cancel end event',
   'Cancels the transaction and ends the path': 'Cancels the transaction and ends the path',
-  'Change element': 'Change element',
-  'Change type': 'Change type',
-  'Collection': 'Collection',
+  'Collaboration': 'Collaboration',
   'Compensation boundary event': 'Compensation boundary event',
   'Compensation end event': 'Compensation end event',
   'Compensation intermediate throw event': 'Compensation intermediate throw event',
@@ -3395,18 +3384,19 @@ __webpack_require__.r(__webpack_exports__);
   'Create task': 'Create task',
   'Data': 'Data',
   'Data created and used within a process instance': 'Data created and used within a process instance',
+  'Data object must be placed within a pool/participant.': 'Data object must be placed within a pool/participant.',
   'Data object reference': 'Data object reference',
   'Data store reference': 'Data store reference',
   'Data that persists beyond the process instance': 'Data that persists beyond the process instance',
   'Data the process uses': 'Data the process uses',
   'Default flow': 'Default flow',
-  'Delete': 'Delete',
   'Distribute elements horizontally': 'Distribute elements horizontally',
   'Distribute elements vertically': 'Distribute elements vertically',
   'Divide into three lanes': 'Divide into three lanes',
   'Divide into two lanes': 'Divide into two lanes',
   'element required': 'element required',
   'Emit an event, then continue': 'Emit an event, then continue',
+  'Empty pool/participant (removes content)': 'Empty pool/participant (removes content)',
   'End event': 'End event',
   'End events': 'End events',
   'Ends the current path': 'Ends the current path',
@@ -3465,6 +3455,7 @@ __webpack_require__.r(__webpack_exports__);
   'no diagram to display': 'no diagram to display',
   'no process or collaboration to display': 'no process or collaboration to display',
   'no shape type specified': 'no shape type specified',
+  'Open {element}': 'Open {element}',
   'out of bounds release': 'out of bounds release',
   'Parallel gateway': 'Parallel gateway',
   'Parallel multi-instance': 'Parallel multi-instance',
@@ -3480,7 +3471,6 @@ __webpack_require__.r(__webpack_exports__);
   'Reacts when a condition is met; activity continues': 'Reacts when a condition is met; activity continues',
   'Reacts when a transaction is canceled': 'Reacts when a transaction is canceled',
   'Receive task': 'Receive task',
-  'Remove': 'Remove',
   'Route the flow: branch or merge paths': 'Route the flow: branch or merge paths',
   'Routes the token down one path, based on data': 'Routes the token down one path, based on data',
   'Runs a script': 'Runs a script',
@@ -3519,7 +3509,6 @@ __webpack_require__.r(__webpack_exports__);
   'Systems or organizations involved': 'Systems or organizations involved',
   'Taken only when its condition is met': 'Taken only when its condition is met',
   'Takes every outgoing path whose condition is met': 'Takes every outgoing path whose condition is met',
-  'Task': 'Task',
   'Tasks': 'Tasks',
   'Terminate end event': 'Terminate end event',
   'The default path, taken when no other path condition is met': 'The default path, taken when no other path condition is met',
@@ -3530,7 +3519,6 @@ __webpack_require__.r(__webpack_exports__);
   'Timer start event (non-interrupting)': 'Timer start event (non-interrupting)',
   'Timer start event': 'Timer start event',
   'Toggle non-interrupting': 'Toggle non-interrupting',
-  'Transaction': 'Transaction',
   'Triggers compensation of completed activities': 'Triggers compensation of completed activities',
   'User task': 'User task',
   'Wait for something to happen before continuing': 'Wait for something to happen before continuing',
@@ -3576,8 +3564,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * This file contains the translated strings used in the dmn-js component.
- * However, notice that these strings are currently not working. We are
- * still investigating how to apply them.
+ * They apply only when the translate module reaches all three DMN sub-editors
+ * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   '-': '-',
@@ -3597,15 +3585,13 @@ __webpack_require__.r(__webpack_exports__);
   'Add rule': 'Add rule',
   'Add text annotation': 'Add text annotation',
   'Add values': 'Add values',
-  'After': 'After',
   'And': 'And',
-  'Annotation': 'Annotation',
   'Annotations': 'Annotations',
+  'Any': 'Any',
   'Append business knowledge model': 'Append business knowledge model',
   'Append decision': 'Append decision',
   'Append input data': 'Append input data',
   'Append knowledge source': 'Append knowledge source',
-  'Before': 'Before',
   'Between': 'Between',
   'Boolean value': 'Boolean value',
   'cellInput': 'cellInput',
@@ -3632,7 +3618,6 @@ __webpack_require__.r(__webpack_exports__);
   'Date and time value': 'Date and time value',
   'Date and time': 'Date and time',
   'Date value': 'Date value',
-  'Date': 'Date',
   'Decision name:': 'Decision name:',
   'Decision name': 'Decision name',
   'Definition ID': 'Definition ID',
@@ -3669,7 +3654,6 @@ __webpack_require__.r(__webpack_exports__);
   'Exclude': 'Exclude',
   'Expression language:': 'Expression language:',
   'Expression language': 'Expression language',
-  'Expression': 'Expression',
   'Function kind: {kind}': 'Function kind: {kind}',
   'Greater or equals': 'Greater or equals',
   'Greater': 'Greater',
@@ -3694,15 +3678,19 @@ __webpack_require__.r(__webpack_exports__);
   'Match one': 'Match one',
   'Move rule': 'Move rule',
   'name': 'name',
+  'No overlap is possible and all rules are disjoint. Only a single rule can be matched': 'No overlap is possible and all rules are disjoint. Only a single rule can be matched',
   'No values': 'No values',
   'No': 'No',
+  'number': 'number',
+  'Open decision table': 'Open decision table',
+  'Open literal expression': 'Open literal expression',
   'Output label:': 'Output label:',
   'Output label': 'Output label',
+  'Output label: ': 'Output label: ',
   'Output name:': 'Output name:',
   'Output name': 'Output name',
   'Output type': 'Output type',
   'Output values': 'Output values',
-  'Output': 'Output',
   'Paste input column left': 'Paste input column left',
   'Paste input column right': 'Paste input column right',
   'Paste output column left': 'Paste output column left',
@@ -3736,13 +3724,9 @@ __webpack_require__.r(__webpack_exports__);
   'Then': 'Then',
   'Time value': 'Time value',
   'Time': 'Time',
-  'Type': 'Type',
   'Use now': 'Use now',
   'Use today': 'Use today',
-  'Value': 'Value',
-  'Values': 'Values',
   'Variable name:': 'Variable name:',
-  'Variable name': 'Variable name',
   'Variable type:': 'Variable type:',
   'Variable type': 'Variable type',
   'Version tag by which this decision can be referenced.': 'Version tag by which this decision can be referenced.',
@@ -4115,7 +4099,6 @@ __webpack_require__.r(__webpack_exports__);
   'ID must not contain spaces.': 'ID must not contain spaces.',
   'Id must not contain spaces.': 'Id must not contain spaces.',
   'Id': 'Id',
-  'ID': 'ID',
   'Identifier computed from the process context that is used to correlate an incoming message (e.g. ': 'Identifier computed from the process context that is used to correlate an incoming message (e.g. ',
   'If turned on, all variables from the child process instance will be propagated to the parent process instance.': 'If turned on, all variables from the child process instance will be propagated to the parent process instance.',
   'If turned on, all variables from the parent process instance will be propagated to the child process instance.': 'If turned on, all variables from the parent process instance will be propagated to the child process instance.',
@@ -4145,7 +4128,6 @@ __webpack_require__.r(__webpack_exports__);
   'Job type': 'Job type',
   'Job worker': 'Job worker',
   'JSON contains errors': 'JSON contains errors',
-  'Key': 'Key',
   'Label': 'Label',
   'latest': 'latest',
   'Latest binding': 'Latest binding',
@@ -4204,7 +4186,6 @@ __webpack_require__.r(__webpack_exports__);
   'Parameters': 'Parameters',
   'Participant Name': 'Participant Name',
   'Participant ID': 'Participant ID',
-  'Priority': 'Priority',
   'Process documentation': 'Process documentation',
   'Process Id': 'Process Id',
   'Process ID': 'Process ID',
@@ -4277,7 +4258,6 @@ __webpack_require__.r(__webpack_exports__);
   'The due date as an EL expression (e.g. ${someDate}) or an ISO date (e.g. 2015-06-26T09:54:00).': 'The due date as an EL expression (e.g. ${someDate}) or an ISO date (e.g. 2015-06-26T09:54:00).',
   'The follow up date as an EL expression (e.g. ${someDate}) or an ': 'The follow up date as an EL expression (e.g. ${someDate}) or an ',
   'The number of times the engine tries executing this activity if a worker signals a failure. The default is three.': 'The number of times the engine tries executing this activity if a worker signals a failure. The default is three.',
-  'This maps to the process definition key.': 'This maps to the process definition key.',
   'Throw expression': 'Throw expression',
   'Time to live': 'Time to live',
   'timeout': 'timeout',
@@ -4414,14 +4394,14 @@ __webpack_require__.r(__webpack_exports__);
   'A task done by a person without any tooling or UI': 'Una tarea que realiza una persona sin herramientas ni interfaz',
   'Activate create/remove space tool': 'Activar herramienta para crear/eliminar espacio',
   'Activate global connect tool': 'Activar herramienta de conexión global',
-  'Activate hand tool': 'Activar herramienta de mano',
-  'Activate lasso tool': 'Activar herramienta de lazo',
   'Activities run in any order, any number of times': 'Las actividades se ejecutan en cualquier orden y cuantas veces sea necesario',
   'Activities run in any order; shown collapsed': 'Las actividades se ejecutan en cualquier orden; mostrado contraído',
   'Ad-hoc': 'Ad-hoc',
+  'Ad-hoc sub-process': 'Subproceso ad-hoc',
+  'Ad-hoc sub-process (collapsed)': 'Subproceso ad-hoc (contraído)',
+  'Ad-hoc sub-process (expanded)': 'Subproceso ad-hoc (expandido)',
   'Add lane above': 'Añadir carril arriba',
   'Add lane below': 'Añadir carril abajo',
-  'Add text annotation': 'Añadir anotación',
   'Align elements': 'Alinear elementos',
   'An unspecified step, often used as a placeholder': 'Un paso sin especificar, a menudo usado como marcador de posición',
   'Append compensation activity': 'Adjuntar actividad de compensación',
@@ -4437,6 +4417,7 @@ __webpack_require__.r(__webpack_exports__);
   'Atomic units of work in a process': 'Unidades atómicas de trabajo en un proceso',
   'Attaches a compensation handler to the activity': 'Adjunta un manejador de compensación a la actividad',
   'Automated work carried out by a job worker or connector': 'Trabajo automatizado realizado por un job worker o un conector',
+  'Boundary event': 'Evento de borde',
   'Boundary events': 'Eventos de borde',
   'Broadcasts a signal': 'Difunde una señal',
   'Business rule task': 'Tarea de regla de negocio',
@@ -4445,9 +4426,7 @@ __webpack_require__.r(__webpack_exports__);
   'Cancel boundary event': 'Evento de borde de cancelación',
   'Cancel end event': 'Evento de fin de cancelación',
   'Cancels the transaction and ends the path': 'Cancela la transacción y finaliza el camino',
-  'Change element': 'Cambiar elemento',
-  'Change type': 'Cambiar tipo',
-  'Collection': 'Colección',
+  'Collaboration': 'Colaboración',
   'Compensation boundary event': 'Evento de borde de compensación',
   'Compensation end event': 'Evento de fin de compensación',
   'Compensation intermediate throw event': 'Evento intermedio de compensación (de lanzamiento)',
@@ -4476,18 +4455,19 @@ __webpack_require__.r(__webpack_exports__);
   'Create task': 'Crear tarea',
   'Data': 'Datos',
   'Data created and used within a process instance': 'Datos creados y utilizados dentro de una instancia de proceso',
+  'Data object must be placed within a pool/participant.': 'El objeto de datos debe colocarse dentro de un pool/participante.',
   'Data object reference': 'Objeto de datos',
   'Data store reference': 'Almacén de datos',
   'Data that persists beyond the process instance': 'Datos que perduran más allá de la instancia de proceso',
   'Data the process uses': 'Datos que utiliza el proceso',
   'Default flow': 'Flujo predeterminado',
-  'Delete': 'Eliminar',
   'Distribute elements horizontally': 'Distribuir elementos horizontalmente',
   'Distribute elements vertically': 'Distribuir elementos verticalmente',
   'Divide into three lanes': 'Dividir en tres carriles',
   'Divide into two lanes': 'Dividir en dos carriles',
   'element required': 'Se requiere elemento',
   'Emit an event, then continue': 'Emiten un evento y luego continúan',
+  'Empty pool/participant (removes content)': 'Pool/participante vacío (se elimina el contenido)',
   'End event': 'Evento de fin',
   'End events': 'Eventos de fin',
   'Ends the current path': 'Finaliza el camino actual',
@@ -4546,6 +4526,7 @@ __webpack_require__.r(__webpack_exports__);
   'no diagram to display': 'No hay diagrama que mostrar',
   'no process or collaboration to display': 'No hay proceso ni colaboración que mostrar',
   'no shape type specified': 'No se ha especificado el tipo de forma',
+  'Open {element}': 'Abrir {element}',
   'out of bounds release': 'Liberado fuera de los límites',
   'Parallel gateway': 'Compuerta paralela (AND)',
   'Parallel multi-instance': 'Múltiples instancias paralelas',
@@ -4561,7 +4542,6 @@ __webpack_require__.r(__webpack_exports__);
   'Reacts when a condition is met; activity continues': 'Reacciona cuando se cumple una condición; la actividad continúa',
   'Reacts when a transaction is canceled': 'Reacciona cuando se cancela una transacción',
   'Receive task': 'Tarea de recepción',
-  'Remove': 'Eliminar',
   'Route the flow: branch or merge paths': 'Dirigen el flujo: bifurcan o unen caminos',
   'Routes the token down one path, based on data': 'Dirige el token por un único camino, según los datos',
   'Runs a script': 'Ejecuta un script',
@@ -4600,7 +4580,6 @@ __webpack_require__.r(__webpack_exports__);
   'Systems or organizations involved': 'Sistemas u organizaciones implicados',
   'Taken only when its condition is met': 'Se toma solo cuando se cumple su condición',
   'Takes every outgoing path whose condition is met': 'Toma todos los caminos salientes cuya condición se cumple',
-  'Task': 'Tarea',
   'Tasks': 'Tareas',
   'Terminate end event': 'Evento de fin de terminación',
   'The default path, taken when no other path condition is met': 'El camino predeterminado, que se toma cuando no se cumple ninguna otra condición',
@@ -4611,7 +4590,6 @@ __webpack_require__.r(__webpack_exports__);
   'Timer start event (non-interrupting)': 'Evento de inicio de temporizador (no interruptor)',
   'Timer start event': 'Evento de inicio de temporizador',
   'Toggle non-interrupting': 'Cambiar a no interruptor',
-  'Transaction': 'Transacción',
   'Triggers compensation of completed activities': 'Desencadena la compensación de las actividades completadas',
   'User task': 'Tarea de usuario',
   'Wait for something to happen before continuing': 'Esperan a que ocurra algo antes de continuar',
@@ -4657,8 +4635,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * This file contains the translated strings used in the dmn-js component.
- * However, notice that these strings are currently not working. We are
- * still investigating how to apply them.
+ * They apply only when the translate module reaches all three DMN sub-editors
+ * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   '-': '-',
@@ -4678,15 +4656,13 @@ __webpack_require__.r(__webpack_exports__);
   'Add rule': 'Añadir regla',
   'Add text annotation': 'Añadir anotación de texto',
   'Add values': 'Añadir valores',
-  'After': 'Después',
   'And': 'Y',
-  'Annotation': 'Anotación',
   'Annotations': 'Anotaciones',
+  'Any': 'Cualquiera',
   'Append business knowledge model': 'Adjuntar modelo de conocimiento empresarial',
   'Append decision': 'Adjuntar decisión',
   'Append input data': 'Adjuntar datos de entrada',
   'Append knowledge source': 'Adjuntar fuente de conocimiento',
-  'Before': 'Antes',
   'Between': 'Entre',
   'Boolean value': 'Valor booleano',
   'cellInput': 'Entrada de celda',
@@ -4713,7 +4689,6 @@ __webpack_require__.r(__webpack_exports__);
   'Date and time value': 'Valor de fecha y hora',
   'Date and time': 'Fecha y hora',
   'Date value': 'Valor de fecha',
-  'Date': 'Fecha',
   'Decision name:': 'Nombre de la decisión:',
   'Decision name': 'Nombre de la decisión',
   'Definition ID': 'ID de definición',
@@ -4750,7 +4725,6 @@ __webpack_require__.r(__webpack_exports__);
   'Exclude': 'Excluir',
   'Expression language:': 'Lenguaje de expresión:',
   'Expression language': 'Lenguaje de expresión',
-  'Expression': 'Expresión',
   'Function kind: {kind}': 'Tipo de función: {kind}',
   'Greater or equals': 'Mayor o igual',
   'Greater': 'Mayor',
@@ -4775,15 +4749,19 @@ __webpack_require__.r(__webpack_exports__);
   'Match one': 'Una coincidencia',
   'Move rule': 'Mover regla',
   'name': 'Nombre',
+  'No overlap is possible and all rules are disjoint. Only a single rule can be matched': 'No es posible el solapamiento y todas las reglas son disjuntas. Solo se puede aplicar una única regla',
   'No values': 'Sin valores',
   'No': 'No',
+  'number': 'Número',
+  'Open decision table': 'Abrir tabla de decisión',
+  'Open literal expression': 'Abrir expresión literal',
   'Output label:': 'Etiqueta de salida:',
   'Output label': 'Etiqueta de salida',
+  'Output label: ': 'Etiqueta de salida: ',
   'Output name:': 'Nombre de salida:',
   'Output name': 'Nombre de salida',
   'Output type': 'Tipo de salida',
   'Output values': 'Valores de salida',
-  'Output': 'Salida',
   'Paste input column left': 'Pegar columna de entrada a la izquierda',
   'Paste input column right': 'Pegar columna de entrada a la derecha',
   'Paste output column left': 'Pegar columna de salida a la izquierda',
@@ -4817,13 +4795,9 @@ __webpack_require__.r(__webpack_exports__);
   'Then': 'Entonces',
   'Time value': 'Valor de hora',
   'Time': 'Hora',
-  'Type': 'Tipo',
   'Use now': 'Usar ahora',
   'Use today': 'Usar hoy',
-  'Value': 'Valor',
-  'Values': 'Valores',
   'Variable name:': 'Nombre de variable:',
-  'Variable name': 'Nombre de variable',
   'Variable type:': 'Tipo de variable:',
   'Variable type': 'Tipo de variable',
   'Version tag by which this decision can be referenced.': 'Etiqueta de versión por la que se puede referenciar esta decisión.',
@@ -5196,7 +5170,6 @@ __webpack_require__.r(__webpack_exports__);
   'ID must not contain spaces.': 'El ID no debe contener espacios.',
   'Id must not contain spaces.': 'El ID no debe contener espacios',
   'Id': 'ID',
-  'ID': 'ID',
   'Identifier computed from the process context that is used to correlate an incoming message (e.g. ': 'Identificador calculado a partir del contexto del proceso que se usa para correlacionar un mensaje entrante (p. ej. ',
   'If turned on, all variables from the child process instance will be propagated to the parent process instance.': 'Si está activado, todas las variables de la instancia del proceso hijo se propagarán a la instancia del proceso padre.',
   'If turned on, all variables from the parent process instance will be propagated to the child process instance.': 'Si está activado, todas las variables de la instancia del proceso padre se propagarán a la instancia del proceso hijo.',
@@ -5226,7 +5199,6 @@ __webpack_require__.r(__webpack_exports__);
   'Job type': 'Tipo de job',
   'Job worker': 'Job worker',
   'JSON contains errors': 'El JSON contiene errores',
-  'Key': 'Clave',
   'Label': 'Etiqueta',
   'latest': 'Más reciente',
   'Latest binding': 'Vinculación a la última versión',
@@ -5285,7 +5257,6 @@ __webpack_require__.r(__webpack_exports__);
   'Parameters': 'Parámetros',
   'Participant Name': 'Nombre del participante',
   'Participant ID': 'ID del participante',
-  'Priority': 'Prioridad',
   'Process documentation': 'Documentación del proceso',
   'Process Id': 'ID del proceso',
   'Process ID': 'ID del proceso',
@@ -5358,7 +5329,6 @@ __webpack_require__.r(__webpack_exports__);
   'The due date as an EL expression (e.g. ${someDate}) or an ISO date (e.g. 2015-06-26T09:54:00).': 'La fecha de vencimiento como expresión EL (p. ej., ${someDate}) o como fecha ISO (p. ej., 2015-06-26T09:54:00).',
   'The follow up date as an EL expression (e.g. ${someDate}) or an ': 'La fecha de seguimiento como expresión EL (p. ej. ${someDate}) o como ',
   'The number of times the engine tries executing this activity if a worker signals a failure. The default is three.': 'El número de veces que el motor intenta ejecutar esta actividad si un worker indica un fallo. El valor predeterminado es tres.',
-  'This maps to the process definition key.': 'Esto se asigna a la clave de definición del proceso.',
   'Throw expression': 'Expresión de lanzamiento',
   'Time to live': 'Tiempo de vida',
   'timeout': 'Tiempo de espera',
@@ -5497,6 +5467,9 @@ __webpack_require__.r(__webpack_exports__);
   'Activate global connect tool': 'Activer l\'outil de connexion globale',
   'Activities run in any order, any number of times': 'Les activités s\'exécutent dans n\'importe quel ordre et autant de fois que nécessaire',
   'Activities run in any order; shown collapsed': 'Les activités s\'exécutent dans n\'importe quel ordre ; affiché réduit',
+  'Ad-hoc sub-process': 'Sous-processus ad-hoc',
+  'Ad-hoc sub-process (collapsed)': 'Sous-processus ad-hoc (réduit)',
+  'Ad-hoc sub-process (expanded)': 'Sous-processus ad-hoc (développé)',
   'Add lane above': 'Ajouter un couloir au-dessus',
   'Add lane below': 'Ajouter un couloir en dessous',
   'Align elements': 'Aligner les éléments',
@@ -5514,6 +5487,7 @@ __webpack_require__.r(__webpack_exports__);
   'Atomic units of work in a process': 'Unités de travail atomiques d\'un processus',
   'Attaches a compensation handler to the activity': 'Attache un gestionnaire de compensation à l\'activité',
   'Automated work carried out by a job worker or connector': 'Un travail automatisé réalisé par un job worker ou un connecteur',
+  'Boundary event': 'Événement de bordure',
   'Boundary events': 'Événements de bordure',
   'Broadcasts a signal': 'Diffuse un signal',
   'Business rule task': 'Tâche de règle métier',
@@ -5522,7 +5496,7 @@ __webpack_require__.r(__webpack_exports__);
   'Cancel boundary event': 'Événement de bordure d\'annulation',
   'Cancel end event': 'Événement de fin d\'annulation',
   'Cancels the transaction and ends the path': 'Annule la transaction et termine le chemin',
-  'Change type': 'Changer le type',
+  'Collaboration': 'Collaboration',
   'Compensation boundary event': 'Événement de bordure de compensation',
   'Compensation end event': 'Événement de fin de compensation',
   'Compensation intermediate throw event': 'Événement intermédiaire d\'émission de compensation',
@@ -5551,6 +5525,7 @@ __webpack_require__.r(__webpack_exports__);
   'Create task': 'Créer une tâche',
   'Data': 'Données',
   'Data created and used within a process instance': 'Données créées et utilisées au sein d\'une instance de processus',
+  'Data object must be placed within a pool/participant.': 'L\'objet de données doit être placé dans un pool/participant.',
   'Data object reference': 'Référence d\'objet de données',
   'Data store reference': 'Référence de magasin de données',
   'Data that persists beyond the process instance': 'Données qui persistent au-delà de l\'instance de processus',
@@ -5561,6 +5536,7 @@ __webpack_require__.r(__webpack_exports__);
   'Divide into three lanes': 'Diviser en trois couloirs',
   'Divide into two lanes': 'Diviser en deux couloirs',
   'Emit an event, then continue': 'Émettent un événement, puis continuent',
+  'Empty pool/participant (removes content)': 'Pool/participant vide (le contenu est supprimé)',
   'End event': 'Événement de fin',
   'End events': 'Événements de fin',
   'Ends the current path': 'Termine le chemin actuel',
@@ -5615,6 +5591,7 @@ __webpack_require__.r(__webpack_exports__);
   'Message start event (non-interrupting)': 'Événement de démarrage de message (non interruptif)',
   'Models complex branching or merging behavior': 'Modélise un comportement complexe de division ou de fusion',
   'Nested or reusable activities': 'Activités imbriquées ou réutilisables',
+  'Open {element}': 'Ouvrir {element}',
   'Parallel gateway': 'Passerelle parallèle (AND)',
   'Parallel multi-instance': 'Multi-instance parallèle',
   'Participant multiplicity': 'Multiplicité du participant',
@@ -5629,7 +5606,6 @@ __webpack_require__.r(__webpack_exports__);
   'Reacts when a condition is met; activity continues': 'Réagit lorsqu\'une condition est remplie ; l\'activité se poursuit',
   'Reacts when a transaction is canceled': 'Réagit lorsqu\'une transaction est annulée',
   'Receive task': 'Tâche de réception',
-  'Remove': 'Supprimer',
   'no shape type specified': 'aucun type de forme spécifié',
   'out of bounds release': 'libération hors limites',
   'element required': 'élément requis',
@@ -5730,8 +5706,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * This file contains the translated strings used in the dmn-js component.
- * However, notice that these strings are currently not working. We are
- * still investigating how to apply them.
+ * They apply only when the translate module reaches all three DMN sub-editors
+ * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   '-': '-',
@@ -5753,6 +5729,7 @@ __webpack_require__.r(__webpack_exports__);
   'Add values': 'Ajouter des valeurs',
   'And': 'Et',
   'Annotations': 'Annotations',
+  'Any': 'Quelconque',
   'Append business knowledge model': 'Ajouter un modèle de connaissance métier',
   'Append decision': 'Ajouter une décision',
   'Append input data': 'Ajouter des données d\'entrée',
@@ -5817,7 +5794,6 @@ __webpack_require__.r(__webpack_exports__);
   'Equals': 'Égal à',
   'Exactly': 'Exactement',
   'Exclude': 'Exclure',
-  'Expression': 'Expression',
   'Expression language': 'Langage d\'expression',
   'Expression language:': 'Langage d\'expression :',
   'Function kind: {kind}': 'Type de fonction : {kind}',
@@ -5846,9 +5822,14 @@ __webpack_require__.r(__webpack_exports__);
   'Move rule': 'Déplacer la règle',
   'name': 'nom',
   'No': 'Non',
+  'No overlap is possible and all rules are disjoint. Only a single rule can be matched': 'Aucun chevauchement n\'est possible et toutes les règles sont disjointes. Une seule règle peut correspondre',
   'No values': 'Aucune valeur',
+  'number': 'nombre',
+  'Open decision table': 'Ouvrir la table de décision',
+  'Open literal expression': 'Ouvrir l\'expression littérale',
   'Output label': 'Libellé de sortie',
   'Output label:': 'Libellé de sortie :',
+  'Output label: ': 'Libellé de sortie : ',
   'Output name': 'Nom de la sortie',
   'Output name:': 'Nom de la sortie :',
   'Output type': 'Type de sortie',
@@ -5888,7 +5869,6 @@ __webpack_require__.r(__webpack_exports__);
   'Then': 'Alors',
   'Time': 'Heure',
   'Time value': 'Valeur d\'heure',
-  'Type': 'Type',
   'Use now': 'Utiliser maintenant',
   'Use today': 'Utiliser aujourd\'hui',
   'value': 'valeur',
@@ -6552,14 +6532,14 @@ __webpack_require__.r(__webpack_exports__);
   'A task done by a person without any tooling or UI': 'Un\'attività svolta da una persona senza strumenti né interfaccia',
   'Activate create/remove space tool': 'Attiva strumento crea/rimuovi spazio',
   'Activate global connect tool': 'Attiva strumento di connessione globale',
-  'Activate hand tool': 'Attiva strumento mano',
-  'Activate lasso tool': 'Attiva strumento lazo',
   'Activities run in any order, any number of times': 'Le attività vengono eseguite in qualsiasi ordine e un numero qualsiasi di volte',
   'Activities run in any order; shown collapsed': 'Le attività vengono eseguite in qualsiasi ordine; mostrato compresso',
   'Ad-hoc': 'Ad-hoc',
+  'Ad-hoc sub-process': 'Sottoprocesso ad-hoc',
+  'Ad-hoc sub-process (collapsed)': 'Sottoprocesso ad-hoc (compresso)',
+  'Ad-hoc sub-process (expanded)': 'Sottoprocesso ad-hoc (espanso)',
   'Add lane above': 'Aggiungi corsia sopra',
   'Add lane below': 'Aggiungi corsia sotto',
-  'Add text annotation': 'Aggiungi annotazione',
   'Align elements': 'Allinea elementi',
   'An unspecified step, often used as a placeholder': 'Un passo non specificato, spesso usato come segnaposto',
   'Append compensation activity': 'Aggiungi attività di compensazione',
@@ -6575,6 +6555,7 @@ __webpack_require__.r(__webpack_exports__);
   'Atomic units of work in a process': 'Unità di lavoro atomiche di un processo',
   'Attaches a compensation handler to the activity': 'Collega un gestore di compensazione all\'attività',
   'Automated work carried out by a job worker or connector': 'Lavoro automatizzato svolto da un job worker o da un connettore',
+  'Boundary event': 'Evento di confine',
   'Boundary events': 'Eventi di confine',
   'Broadcasts a signal': 'Diffonde un segnale',
   'Business rule task': 'Attività di regola di business',
@@ -6583,9 +6564,7 @@ __webpack_require__.r(__webpack_exports__);
   'Cancel boundary event': 'Evento di confine di annullamento',
   'Cancel end event': 'Evento di fine di annullamento',
   'Cancels the transaction and ends the path': 'Annulla la transazione e termina il percorso',
-  'Change element': 'Cambia elemento',
-  'Change type': 'Cambia tipo',
-  'Collection': 'Collezione',
+  'Collaboration': 'Collaborazione',
   'Compensation boundary event': 'Evento di confine di compensazione',
   'Compensation end event': 'Evento di fine di compensazione',
   'Compensation intermediate throw event': 'Evento intermedio di compensazione (di lancio)',
@@ -6614,18 +6593,19 @@ __webpack_require__.r(__webpack_exports__);
   'Create task': 'Crea attività',
   'Data': 'Dati',
   'Data created and used within a process instance': 'Dati creati e utilizzati all\'interno di un\'istanza di processo',
+  'Data object must be placed within a pool/participant.': 'L\'oggetto dati deve essere posizionato all\'interno di un pool/partecipante.',
   'Data object reference': 'Oggetto dati',
   'Data store reference': 'Deposito dati',
   'Data that persists beyond the process instance': 'Dati che persistono oltre l\'istanza di processo',
   'Data the process uses': 'Dati utilizzati dal processo',
   'Default flow': 'Flusso predefinito',
-  'Delete': 'Elimina',
   'Distribute elements horizontally': 'Distribuisci elementi orizzontalmente',
   'Distribute elements vertically': 'Distribuisci elementi verticalmente',
   'Divide into three lanes': 'Dividi in tre corsie',
   'Divide into two lanes': 'Dividi in due corsie',
   'element required': 'Elemento richiesto',
   'Emit an event, then continue': 'Emettono un evento e poi proseguono',
+  'Empty pool/participant (removes content)': 'Pool/partecipante vuoto (il contenuto viene rimosso)',
   'End event': 'Evento di fine',
   'End events': 'Eventi di fine',
   'Ends the current path': 'Termina il percorso corrente',
@@ -6684,6 +6664,7 @@ __webpack_require__.r(__webpack_exports__);
   'no diagram to display': 'Nessun diagramma da visualizzare',
   'no process or collaboration to display': 'Nessun processo o collaborazione da visualizzare',
   'no shape type specified': 'Nessun tipo di forma specificato',
+  'Open {element}': 'Apri {element}',
   'out of bounds release': 'Rilasciato fuori dai limiti',
   'Parallel gateway': 'Gateway parallelo (AND)',
   'Parallel multi-instance': 'Istanze multiple parallele',
@@ -6699,7 +6680,6 @@ __webpack_require__.r(__webpack_exports__);
   'Reacts when a condition is met; activity continues': 'Reagisce quando una condizione è soddisfatta; l\'attività prosegue',
   'Reacts when a transaction is canceled': 'Reagisce quando una transazione viene annullata',
   'Receive task': 'Attività di ricezione',
-  'Remove': 'Rimuovi',
   'Route the flow: branch or merge paths': 'Instradano il flusso: diramano o uniscono i percorsi',
   'Routes the token down one path, based on data': 'Instrada il token su un solo percorso, in base ai dati',
   'Runs a script': 'Esegue uno script',
@@ -6738,7 +6718,6 @@ __webpack_require__.r(__webpack_exports__);
   'Systems or organizations involved': 'Sistemi od organizzazioni coinvolti',
   'Taken only when its condition is met': 'Seguito solo quando la sua condizione è soddisfatta',
   'Takes every outgoing path whose condition is met': 'Percorre ogni percorso uscente la cui condizione è soddisfatta',
-  'Task': 'Attività',
   'Tasks': 'Attività',
   'Terminate end event': 'Evento di fine di terminazione',
   'The default path, taken when no other path condition is met': 'Il percorso predefinito, seguito quando nessun\'altra condizione è soddisfatta',
@@ -6749,7 +6728,6 @@ __webpack_require__.r(__webpack_exports__);
   'Timer start event (non-interrupting)': 'Evento di inizio temporizzatore (non interrompente)',
   'Timer start event': 'Evento di inizio temporizzatore',
   'Toggle non-interrupting': 'Imposta come non interrompente',
-  'Transaction': 'Transazione',
   'Triggers compensation of completed activities': 'Attiva la compensazione delle attività completate',
   'User task': 'Attività utente',
   'Wait for something to happen before continuing': 'Attendono che accada qualcosa prima di continuare',
@@ -6795,8 +6773,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * This file contains the translated strings used in the dmn-js component.
- * However, notice that these strings are currently not working. We are
- * still investigating how to apply them.
+ * They apply only when the translate module reaches all three DMN sub-editors
+ * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   '-': '-',
@@ -6816,15 +6794,13 @@ __webpack_require__.r(__webpack_exports__);
   'Add rule': 'Aggiungi regola',
   'Add text annotation': 'Aggiungi annotazione di testo',
   'Add values': 'Aggiungi valori',
-  'After': 'Dopo',
   'And': 'E',
-  'Annotation': 'Annotazione',
   'Annotations': 'Annotazioni',
+  'Any': 'Qualsiasi',
   'Append business knowledge model': 'Aggiungi modello di conoscenza aziendale',
   'Append decision': 'Aggiungi decisione',
   'Append input data': 'Aggiungi dati di input',
   'Append knowledge source': 'Aggiungi fonte di conoscenza',
-  'Before': 'Prima',
   'Between': 'Tra',
   'Boolean value': 'Valore booleano',
   'cellInput': 'Input cella',
@@ -6851,7 +6827,6 @@ __webpack_require__.r(__webpack_exports__);
   'Date and time value': 'Valore di data e ora',
   'Date and time': 'Data e ora',
   'Date value': 'Valore di data',
-  'Date': 'Data',
   'Decision name:': 'Nome della decisione:',
   'Decision name': 'Nome della decisione',
   'Definition ID': 'ID di definizione',
@@ -6888,7 +6863,6 @@ __webpack_require__.r(__webpack_exports__);
   'Exclude': 'Escludi',
   'Expression language:': 'Linguaggio di espressione:',
   'Expression language': 'Linguaggio di espressione',
-  'Expression': 'Espressione',
   'Function kind: {kind}': 'Tipo di funzione: {kind}',
   'Greater or equals': 'Maggiore o uguale',
   'Greater': 'Maggiore',
@@ -6913,15 +6887,19 @@ __webpack_require__.r(__webpack_exports__);
   'Match one': 'Una corrispondenza',
   'Move rule': 'Sposta regola',
   'name': 'Nome',
+  'No overlap is possible and all rules are disjoint. Only a single rule can be matched': 'Nessuna sovrapposizione è possibile e tutte le regole sono disgiunte. Può essere soddisfatta una sola regola',
   'No values': 'Nessun valore',
   'No': 'No',
+  'number': 'Numero',
+  'Open decision table': 'Apri tabella di decisione',
+  'Open literal expression': 'Apri espressione letterale',
   'Output label:': 'Etichetta di output:',
   'Output label': 'Etichetta di output',
+  'Output label: ': 'Etichetta di output: ',
   'Output name:': 'Nome di output:',
   'Output name': 'Nome di output',
   'Output type': 'Tipo di output',
   'Output values': 'Valori di output',
-  'Output': 'Output',
   'Paste input column left': 'Incolla colonna di input a sinistra',
   'Paste input column right': 'Incolla colonna di input a destra',
   'Paste output column left': 'Incolla colonna di output a sinistra',
@@ -6955,13 +6933,9 @@ __webpack_require__.r(__webpack_exports__);
   'Then': 'Allora',
   'Time value': 'Valore di ora',
   'Time': 'Ora',
-  'Type': 'Tipo',
   'Use now': 'Usa adesso',
   'Use today': 'Usa oggi',
-  'Value': 'Valore',
-  'Values': 'Valori',
   'Variable name:': 'Nome della variabile:',
-  'Variable name': 'Nome della variabile',
   'Variable type:': 'Tipo della variabile:',
   'Variable type': 'Tipo della variabile',
   'Version tag by which this decision can be referenced.': 'Tag di versione con cui è possibile referenziare questa decisione.',
@@ -7334,7 +7308,6 @@ __webpack_require__.r(__webpack_exports__);
   'ID must not contain spaces.': 'L\'ID non deve contenere spazi.',
   'Id must not contain spaces.': 'L\'ID non deve contenere spazi',
   'Id': 'ID',
-  'ID': 'ID',
   'Identifier computed from the process context that is used to correlate an incoming message (e.g. ': 'Identificatore calcolato dal contesto del processo, usato per correlare un messaggio in arrivo (ad es. ',
   'If turned on, all variables from the child process instance will be propagated to the parent process instance.': 'Se attivato, tutte le variabili dell\'istanza del processo figlio verranno propagate all\'istanza del processo padre.',
   'If turned on, all variables from the parent process instance will be propagated to the child process instance.': 'Se attivato, tutte le variabili dell\'istanza del processo padre verranno propagate all\'istanza del processo figlio.',
@@ -7364,7 +7337,6 @@ __webpack_require__.r(__webpack_exports__);
   'Job type': 'Tipo di job',
   'Job worker': 'Job worker',
   'JSON contains errors': 'Il JSON contiene errori',
-  'Key': 'Chiave',
   'Label': 'Etichetta',
   'latest': 'Più recente',
   'Latest binding': 'Binding all\'ultima versione',
@@ -7423,7 +7395,6 @@ __webpack_require__.r(__webpack_exports__);
   'Parameters': 'Parametri',
   'Participant Name': 'Nome del partecipante',
   'Participant ID': 'ID del partecipante',
-  'Priority': 'Priorità',
   'Process documentation': 'Documentazione del processo',
   'Process Id': 'ID del processo',
   'Process ID': 'ID del processo',
@@ -7496,7 +7467,6 @@ __webpack_require__.r(__webpack_exports__);
   'The due date as an EL expression (e.g. ${someDate}) or an ISO date (e.g. 2015-06-26T09:54:00).': 'La data di scadenza come espressione EL (ad es. ${someDate}) o come data ISO (ad es. 2015-06-26T09:54:00).',
   'The follow up date as an EL expression (e.g. ${someDate}) or an ': 'La data di follow-up come espressione EL (ad es. ${someDate}) oppure come ',
   'The number of times the engine tries executing this activity if a worker signals a failure. The default is three.': 'Il numero di volte che il motore tenta di eseguire questa attività se un worker segnala un errore. Il valore predefinito è tre.',
-  'This maps to the process definition key.': 'Questo si mappa alla chiave di definizione del processo.',
   'Throw expression': 'Espressione di lancio',
   'Time to live': 'Tempo di vita',
   'timeout': 'Timeout',
@@ -7629,14 +7599,14 @@ __webpack_require__.r(__webpack_exports__);
   'A task done by a person without any tooling or UI': 'ツールやUIを使わずに人が行うタスクです',
   'Activate create/remove space tool': 'スペース作成/削除ツールを有効化',
   'Activate global connect tool': 'グローバル接続ツールを有効化',
-  'Activate hand tool': 'ハンドツールを有効化',
-  'Activate lasso tool': 'なげなわツールを有効化',
   'Activities run in any order, any number of times': 'アクティビティを任意の順序で何度でも実行します',
   'Activities run in any order; shown collapsed': 'アクティビティを任意の順序で実行します。折りたたんで表示されます',
   'Ad-hoc': 'アドホック',
+  'Ad-hoc sub-process': 'アドホックサブプロセス',
+  'Ad-hoc sub-process (collapsed)': 'アドホックサブプロセス (折りたたみ)',
+  'Ad-hoc sub-process (expanded)': 'アドホックサブプロセス (展開)',
   'Add lane above': '上にレーンを追加',
   'Add lane below': '下にレーンを追加',
-  'Add text annotation': '注釈を追加',
   'Align elements': '要素を整列',
   'An unspecified step, often used as a placeholder': '種類を指定しないステップです。プレースホルダーとしてよく使われます',
   'Append compensation activity': '補正アクティビティを追加',
@@ -7652,6 +7622,7 @@ __webpack_require__.r(__webpack_exports__);
   'Atomic units of work in a process': 'プロセスにおける最小単位の作業です',
   'Attaches a compensation handler to the activity': 'アクティビティに補正ハンドラーを付加します',
   'Automated work carried out by a job worker or connector': 'ジョブワーカーまたはコネクタが実行する自動化された作業です',
+  'Boundary event': '境界イベント',
   'Boundary events': '境界イベント',
   'Broadcasts a signal': 'シグナルをブロードキャストします',
   'Business rule task': 'ビジネスルールタスク',
@@ -7660,9 +7631,7 @@ __webpack_require__.r(__webpack_exports__);
   'Cancel boundary event': 'キャンセル境界イベント',
   'Cancel end event': 'キャンセル終了イベント',
   'Cancels the transaction and ends the path': 'トランザクションをキャンセルし、経路を終了します',
-  'Change element': '要素を変更',
-  'Change type': 'タイプを変更',
-  'Collection': 'コレクション',
+  'Collaboration': 'コラボレーション',
   'Compensation boundary event': '補正境界イベント',
   'Compensation end event': '補正終了イベント',
   'Compensation intermediate throw event': '補正中間スローイベント',
@@ -7691,18 +7660,19 @@ __webpack_require__.r(__webpack_exports__);
   'Create task': 'タスクを作成',
   'Data': 'データ',
   'Data created and used within a process instance': 'プロセスインスタンス内で生成され、使用されるデータです',
+  'Data object must be placed within a pool/participant.': 'データオブジェクトはプール/参加者の中に配置する必要があります。',
   'Data object reference': 'データオブジェクト',
   'Data store reference': 'データストア',
   'Data that persists beyond the process instance': 'プロセスインスタンスを越えて保持されるデータです',
   'Data the process uses': 'プロセスが使用するデータです',
   'Default flow': 'デフォルトフロー',
-  'Delete': '削除',
   'Distribute elements horizontally': '要素を水平に分散',
   'Distribute elements vertically': '要素を垂直に分散',
   'Divide into three lanes': '3つのレーンに分割',
   'Divide into two lanes': '2つのレーンに分割',
   'element required': '要素が必要です',
   'Emit an event, then continue': 'イベントを送出してから続行します',
+  'Empty pool/participant (removes content)': '空のプール/参加者 (内容は削除されます)',
   'End event': '終了イベント',
   'End events': '終了イベント',
   'Ends the current path': '現在の経路を終了します',
@@ -7761,6 +7731,7 @@ __webpack_require__.r(__webpack_exports__);
   'no diagram to display': '表示する図がありません',
   'no process or collaboration to display': '表示するプロセスまたはコラボレーションがありません',
   'no shape type specified': '形状タイプが指定されていません',
+  'Open {element}': '{element} を開く',
   'out of bounds release': '境界外でリリースされました',
   'Parallel gateway': '並列ゲートウェイ (AND)',
   'Parallel multi-instance': '並列マルチインスタンス',
@@ -7776,7 +7747,6 @@ __webpack_require__.r(__webpack_exports__);
   'Reacts when a condition is met; activity continues': '条件が満たされると反応します。アクティビティは継続します',
   'Reacts when a transaction is canceled': 'トランザクションがキャンセルされたときに反応します',
   'Receive task': '受信タスク',
-  'Remove': '削除',
   'Route the flow: branch or merge paths': 'フローを制御します。経路を分岐または合流させます',
   'Routes the token down one path, based on data': 'データに基づいてトークンを1つの経路に振り分けます',
   'Runs a script': 'スクリプトを実行します',
@@ -7815,7 +7785,6 @@ __webpack_require__.r(__webpack_exports__);
   'Systems or organizations involved': '関与するシステムまたは組織です',
   'Taken only when its condition is met': '条件が満たされた場合にのみ通ります',
   'Takes every outgoing path whose condition is met': '条件を満たすすべての出力経路を通ります',
-  'Task': 'タスク',
   'Tasks': 'タスク',
   'Terminate end event': '終了イベント (終端)',
   'The default path, taken when no other path condition is met': '既定の経路です。他のどの経路の条件も満たされない場合に通ります',
@@ -7826,7 +7795,6 @@ __webpack_require__.r(__webpack_exports__);
   'Timer start event (non-interrupting)': 'タイマー開始イベント (非中断)',
   'Timer start event': 'タイマー開始イベント',
   'Toggle non-interrupting': '非中断に切り替え',
-  'Transaction': 'トランザクション',
   'Triggers compensation of completed activities': '完了したアクティビティの補正をトリガーします',
   'User task': 'ユーザータスク',
   'Wait for something to happen before continuing': '何かが起こるまで待機してから続行します',
@@ -7872,8 +7840,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * This file contains the translated strings used in the dmn-js component.
- * However, notice that these strings are currently not working. We are
- * still investigating how to apply them.
+ * They apply only when the translate module reaches all three DMN sub-editors
+ * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   '-': '-',
@@ -7893,15 +7861,13 @@ __webpack_require__.r(__webpack_exports__);
   'Add rule': 'ルールを追加',
   'Add text annotation': 'テキスト注釈を追加',
   'Add values': '値を追加',
-  'After': '後',
   'And': 'かつ',
-  'Annotation': '注釈',
   'Annotations': '注釈',
+  'Any': '任意',
   'Append business knowledge model': 'ビジネス知識モデルを追加',
   'Append decision': '決定を追加',
   'Append input data': '入力データを追加',
   'Append knowledge source': '知識ソースを追加',
-  'Before': '前',
   'Between': '間',
   'Boolean value': 'ブール値',
   'cellInput': 'セル入力',
@@ -7928,7 +7894,6 @@ __webpack_require__.r(__webpack_exports__);
   'Date and time value': '日時値',
   'Date and time': '日時',
   'Date value': '日付値',
-  'Date': '日付',
   'Decision name:': '決定名：',
   'Decision name': '決定名',
   'Definition ID': '定義ID',
@@ -7965,7 +7930,6 @@ __webpack_require__.r(__webpack_exports__);
   'Exclude': '除外',
   'Expression language:': '式言語：',
   'Expression language': '式言語',
-  'Expression': '式',
   'Function kind: {kind}': '関数の種類: {kind}',
   'Greater or equals': '以上',
   'Greater': 'より大きい',
@@ -7990,15 +7954,19 @@ __webpack_require__.r(__webpack_exports__);
   'Match one': '1つ一致',
   'Move rule': 'ルールを移動',
   'name': '名前',
+  'No overlap is possible and all rules are disjoint. Only a single rule can be matched': '重複はなく、すべてのルールは互いに素です。一致するルールは 1 つだけです',
   'No values': '値なし',
   'No': 'いいえ',
+  'number': '数値',
+  'Open decision table': '決定テーブルを開く',
+  'Open literal expression': 'リテラル式を開く',
   'Output label:': '出力ラベル：',
   'Output label': '出力ラベル',
+  'Output label: ': '出力ラベル： ',
   'Output name:': '出力名：',
   'Output name': '出力名',
   'Output type': '出力タイプ',
   'Output values': '出力値',
-  'Output': '出力',
   'Paste input column left': '左に入力列を貼り付け',
   'Paste input column right': '右に入力列を貼り付け',
   'Paste output column left': '左に出力列を貼り付け',
@@ -8032,13 +8000,9 @@ __webpack_require__.r(__webpack_exports__);
   'Then': 'その時',
   'Time value': '時刻値',
   'Time': '時刻',
-  'Type': 'タイプ',
   'Use now': '現在を使用',
   'Use today': '今日を使用',
-  'Value': '値',
-  'Values': '値',
   'Variable name:': '変数名：',
-  'Variable name': '変数名',
   'Variable type:': '変数タイプ：',
   'Variable type': '変数タイプ',
   'Version tag by which this decision can be referenced.': 'この決定を参照するためのバージョンタグ。',
@@ -8411,7 +8375,6 @@ __webpack_require__.r(__webpack_exports__);
   'ID must not contain spaces.': 'ID に空白を含めることはできません。',
   'Id must not contain spaces.': 'ID に空白を含めることはできません',
   'Id': 'ID',
-  'ID': 'ID',
   'Identifier computed from the process context that is used to correlate an incoming message (e.g. ': '受信メッセージを関連付けるために使用される、プロセスコンテキストから算出される識別子です (例: ',
   'If turned on, all variables from the child process instance will be propagated to the parent process instance.': 'オンにすると、子プロセスインスタンスのすべての変数が親プロセスインスタンスに伝播されます。',
   'If turned on, all variables from the parent process instance will be propagated to the child process instance.': 'オンにすると、親プロセスインスタンスのすべての変数が子プロセスインスタンスに伝播されます。',
@@ -8441,7 +8404,6 @@ __webpack_require__.r(__webpack_exports__);
   'Job type': 'ジョブタイプ',
   'Job worker': 'Job worker',
   'JSON contains errors': 'JSON にエラーがあります',
-  'Key': 'キー',
   'Label': 'ラベル',
   'latest': '最新',
   'Latest binding': '最新バージョンへのバインディング',
@@ -8500,7 +8462,6 @@ __webpack_require__.r(__webpack_exports__);
   'Parameters': 'パラメータ',
   'Participant Name': '参加者名',
   'Participant ID': '参加者ID',
-  'Priority': '優先度',
   'Process documentation': 'プロセスドキュメント',
   'Process Id': 'プロセスID',
   'Process ID': 'プロセスID',
@@ -8573,7 +8534,6 @@ __webpack_require__.r(__webpack_exports__);
   'The due date as an EL expression (e.g. ${someDate}) or an ISO date (e.g. 2015-06-26T09:54:00).': 'EL 式 (例: ${someDate}) または ISO 日付 (例: 2015-06-26T09:54:00) としての期日。',
   'The follow up date as an EL expression (e.g. ${someDate}) or an ': 'フォローアップ日を EL 式 (例: ${someDate}) または ',
   'The number of times the engine tries executing this activity if a worker signals a failure. The default is three.': 'worker が失敗を示した場合にエンジンがこのアクティビティを実行しようとする回数。デフォルトは3回です。',
-  'This maps to the process definition key.': 'これはプロセス定義キーにマップされます。',
   'Throw expression': 'スロー式',
   'Time to live': '有効期間',
   'timeout': 'タイムアウト',
@@ -8706,14 +8666,14 @@ __webpack_require__.r(__webpack_exports__);
   'A task done by a person without any tooling or UI': '도구나 UI 없이 사람이 수행하는 작업입니다',
   'Activate create/remove space tool': '공간 생성/제거 도구 활성화',
   'Activate global connect tool': '전역 연결 도구 활성화',
-  'Activate hand tool': '손 도구 활성화',
-  'Activate lasso tool': '올가미 도구 활성화',
   'Activities run in any order, any number of times': '활동이 임의의 순서로 횟수 제한 없이 실행됩니다',
   'Activities run in any order; shown collapsed': '활동이 임의의 순서로 실행되며, 접힌 상태로 표시됩니다',
   'Ad-hoc': '애드혹',
+  'Ad-hoc sub-process': '애드혹 하위 프로세스',
+  'Ad-hoc sub-process (collapsed)': '애드혹 하위 프로세스 (접힘)',
+  'Ad-hoc sub-process (expanded)': '애드혹 하위 프로세스 (확장)',
   'Add lane above': '위에 레인 추가',
   'Add lane below': '아래에 레인 추가',
-  'Add text annotation': '주석 추가',
   'Align elements': '요소 정렬',
   'An unspecified step, often used as a placeholder': '지정되지 않은 단계로, 주로 자리 표시자로 사용합니다',
   'Append compensation activity': '보상 작업 추가',
@@ -8729,6 +8689,7 @@ __webpack_require__.r(__webpack_exports__);
   'Atomic units of work in a process': '프로세스에서 더 나눌 수 없는 작업 단위입니다',
   'Attaches a compensation handler to the activity': '활동에 보상 처리기를 연결합니다',
   'Automated work carried out by a job worker or connector': '잡 워커 또는 커넥터가 수행하는 자동화된 작업입니다',
+  'Boundary event': '경계 이벤트',
   'Boundary events': '경계 이벤트',
   'Broadcasts a signal': '신호를 브로드캐스트합니다',
   'Business rule task': '비즈니스 규칙 작업',
@@ -8737,9 +8698,7 @@ __webpack_require__.r(__webpack_exports__);
   'Cancel boundary event': '취소 경계 이벤트',
   'Cancel end event': '취소 종료 이벤트',
   'Cancels the transaction and ends the path': '트랜잭션을 취소하고 경로를 종료합니다',
-  'Change element': '요소 변경',
-  'Change type': '유형 변경',
-  'Collection': '컬렉션',
+  'Collaboration': '협업',
   'Compensation boundary event': '보상 경계 이벤트',
   'Compensation end event': '보상 종료 이벤트',
   'Compensation intermediate throw event': '보상 중간 스로우 이벤트',
@@ -8768,18 +8727,19 @@ __webpack_require__.r(__webpack_exports__);
   'Create task': '작업 생성',
   'Data': '데이터',
   'Data created and used within a process instance': '프로세스 인스턴스 내에서 생성되고 사용되는 데이터입니다',
+  'Data object must be placed within a pool/participant.': '데이터 객체는 풀/참여자 안에 배치해야 합니다.',
   'Data object reference': '데이터 객체',
   'Data store reference': '데이터 저장소',
   'Data that persists beyond the process instance': '프로세스 인스턴스 이후에도 유지되는 데이터입니다',
   'Data the process uses': '프로세스가 사용하는 데이터입니다',
   'Default flow': '기본 흐름',
-  'Delete': '삭제',
   'Distribute elements horizontally': '요소를 수평으로 분배',
   'Distribute elements vertically': '요소를 수직으로 분배',
   'Divide into three lanes': '세 개의 레인으로 분할',
   'Divide into two lanes': '두 개의 레인으로 분할',
   'element required': '요소 필요',
   'Emit an event, then continue': '이벤트를 발생시킨 후 계속합니다',
+  'Empty pool/participant (removes content)': '빈 풀/참여자 (내용 제거됨)',
   'End event': '종료 이벤트',
   'End events': '종료 이벤트',
   'Ends the current path': '현재 경로를 종료합니다',
@@ -8838,6 +8798,7 @@ __webpack_require__.r(__webpack_exports__);
   'no diagram to display': '표시할 다이어그램이 없음',
   'no process or collaboration to display': '표시할 프로세스나 협업이 없음',
   'no shape type specified': '도형 유형이 지정되지 않음',
+  'Open {element}': '{element} 열기',
   'out of bounds release': '경계 밖에서 해제됨',
   'Parallel gateway': '병렬 게이트웨이 (AND)',
   'Parallel multi-instance': '병렬 다중 인스턴스',
@@ -8853,7 +8814,6 @@ __webpack_require__.r(__webpack_exports__);
   'Reacts when a condition is met; activity continues': '조건이 충족되면 반응하며, 활동은 계속됩니다',
   'Reacts when a transaction is canceled': '트랜잭션이 취소되면 반응합니다',
   'Receive task': '수신 작업',
-  'Remove': '제거',
   'Route the flow: branch or merge paths': '흐름을 제어합니다. 경로를 분기하거나 병합합니다',
   'Routes the token down one path, based on data': '데이터에 따라 토큰을 하나의 경로로 보냅니다',
   'Runs a script': '스크립트를 실행합니다',
@@ -8892,7 +8852,6 @@ __webpack_require__.r(__webpack_exports__);
   'Systems or organizations involved': '관련된 시스템 또는 조직입니다',
   'Taken only when its condition is met': '조건이 충족될 때만 사용합니다',
   'Takes every outgoing path whose condition is met': '조건이 충족되는 모든 출력 경로를 따릅니다',
-  'Task': '작업',
   'Tasks': '작업',
   'Terminate end event': '종료 이벤트 (종결)',
   'The default path, taken when no other path condition is met': '기본 경로로, 다른 경로의 조건이 모두 충족되지 않을 때 사용합니다',
@@ -8903,7 +8862,6 @@ __webpack_require__.r(__webpack_exports__);
   'Timer start event (non-interrupting)': '타이머 시작 이벤트 (비중단)',
   'Timer start event': '타이머 시작 이벤트',
   'Toggle non-interrupting': '비중단으로 전환',
-  'Transaction': '트랜잭션',
   'Triggers compensation of completed activities': '완료된 활동의 보상을 트리거합니다',
   'User task': '사용자 작업',
   'Wait for something to happen before continuing': '무언가가 일어날 때까지 기다린 후 계속합니다',
@@ -8949,8 +8907,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * This file contains the translated strings used in the dmn-js component.
- * However, notice that these strings are currently not working. We are
- * still investigating how to apply them.
+ * They apply only when the translate module reaches all three DMN sub-editors
+ * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   '-': '-',
@@ -8970,15 +8928,13 @@ __webpack_require__.r(__webpack_exports__);
   'Add rule': '규칙 추가',
   'Add text annotation': '텍스트 주석 추가',
   'Add values': '값 추가',
-  'After': '후',
   'And': '그리고',
-  'Annotation': '주석',
   'Annotations': '주석',
+  'Any': '임의',
   'Append business knowledge model': '비즈니스 지식 모델 추가',
   'Append decision': '결정 추가',
   'Append input data': '입력 데이터 추가',
   'Append knowledge source': '지식 소스 추가',
-  'Before': '전',
   'Between': '사이',
   'Boolean value': '부울 값',
   'cellInput': '셀 입력',
@@ -9005,7 +8961,6 @@ __webpack_require__.r(__webpack_exports__);
   'Date and time value': '날짜 및 시간 값',
   'Date and time': '날짜 및 시간',
   'Date value': '날짜 값',
-  'Date': '날짜',
   'Decision name:': '결정 이름:',
   'Decision name': '결정 이름',
   'Definition ID': '정의 ID',
@@ -9042,7 +8997,6 @@ __webpack_require__.r(__webpack_exports__);
   'Exclude': '제외',
   'Expression language:': '표현식 언어:',
   'Expression language': '표현식 언어',
-  'Expression': '표현식',
   'Function kind: {kind}': '함수 종류: {kind}',
   'Greater or equals': '크거나 같음',
   'Greater': '큼',
@@ -9067,15 +9021,19 @@ __webpack_require__.r(__webpack_exports__);
   'Match one': '하나 일치',
   'Move rule': '규칙 이동',
   'name': '이름',
+  'No overlap is possible and all rules are disjoint. Only a single rule can be matched': '중복이 불가능하며 모든 규칙이 서로 배타적입니다. 단 하나의 규칙만 일치할 수 있습니다',
   'No values': '값 없음',
   'No': '아니오',
+  'number': '숫자',
+  'Open decision table': '결정 테이블 열기',
+  'Open literal expression': '리터럴 표현식 열기',
   'Output label:': '출력 레이블:',
   'Output label': '출력 레이블',
+  'Output label: ': '출력 레이블: ',
   'Output name:': '출력 이름:',
   'Output name': '출력 이름',
   'Output type': '출력 유형',
   'Output values': '출력 값',
-  'Output': '출력',
   'Paste input column left': '왼쪽에 입력 열 붙여넣기',
   'Paste input column right': '오른쪽에 입력 열 붙여넣기',
   'Paste output column left': '왼쪽에 출력 열 붙여넣기',
@@ -9109,13 +9067,9 @@ __webpack_require__.r(__webpack_exports__);
   'Then': '그러면',
   'Time value': '시간 값',
   'Time': '시간',
-  'Type': '유형',
   'Use now': '지금 사용',
   'Use today': '오늘 사용',
-  'Value': '값',
-  'Values': '값',
   'Variable name:': '변수 이름:',
-  'Variable name': '변수 이름',
   'Variable type:': '변수 유형:',
   'Variable type': '변수 유형',
   'Version tag by which this decision can be referenced.': '이 결정을 참조하는 데 사용되는 버전 태그입니다.',
@@ -9488,7 +9442,6 @@ __webpack_require__.r(__webpack_exports__);
   'ID must not contain spaces.': 'ID에는 공백을 포함할 수 없습니다.',
   'Id must not contain spaces.': 'ID에는 공백을 포함할 수 없습니다',
   'Id': 'ID',
-  'ID': 'ID',
   'Identifier computed from the process context that is used to correlate an incoming message (e.g. ': '수신 메시지를 연관시키는 데 사용되며 프로세스 컨텍스트에서 계산되는 식별자입니다 (예: ',
   'If turned on, all variables from the child process instance will be propagated to the parent process instance.': '활성화하면 자식 프로세스 인스턴스의 모든 변수가 부모 프로세스 인스턴스로 전파됩니다.',
   'If turned on, all variables from the parent process instance will be propagated to the child process instance.': '활성화하면 부모 프로세스 인스턴스의 모든 변수가 자식 프로세스 인스턴스로 전파됩니다.',
@@ -9518,7 +9471,6 @@ __webpack_require__.r(__webpack_exports__);
   'Job type': '작업 유형',
   'Job worker': 'Job worker',
   'JSON contains errors': 'JSON에 오류가 있습니다',
-  'Key': '키',
   'Label': '레이블',
   'latest': '최신',
   'Latest binding': '최신 버전 바인딩',
@@ -9577,7 +9529,6 @@ __webpack_require__.r(__webpack_exports__);
   'Parameters': '매개변수',
   'Participant Name': '참여자 이름',
   'Participant ID': '참여자 ID',
-  'Priority': '우선 순위',
   'Process documentation': '프로세스 문서',
   'Process Id': '프로세스 ID',
   'Process ID': '프로세스 ID',
@@ -9650,7 +9601,6 @@ __webpack_require__.r(__webpack_exports__);
   'The due date as an EL expression (e.g. ${someDate}) or an ISO date (e.g. 2015-06-26T09:54:00).': 'EL 표현식 (예: ${someDate}) 또는 ISO 날짜 (예: 2015-06-26T09:54:00)로서의 마감일.',
   'The follow up date as an EL expression (e.g. ${someDate}) or an ': '후속 조치 날짜를 EL 표현식 (예: ${someDate}) 또는 ',
   'The number of times the engine tries executing this activity if a worker signals a failure. The default is three.': 'worker가 실패를 신호한 경우 엔진이 이 활동을 실행하려는 횟수. 기본값은 3회입니다.',
-  'This maps to the process definition key.': '이는 프로세스 정의 키에 매핑됩니다.',
   'Throw expression': '스로우 표현식',
   'Time to live': '수명',
   'timeout': '타임아웃',
@@ -9789,6 +9739,9 @@ __webpack_require__.r(__webpack_exports__);
   'Activate global connect tool': 'Activeer globaal verbindingsgereedschap',
   'Activities run in any order, any number of times': 'Activities lopen in willekeurige volgorde en een willekeurig aantal keren',
   'Activities run in any order; shown collapsed': 'Activities lopen in willekeurige volgorde; ingeklapt weergegeven',
+  'Ad-hoc sub-process': 'Ad-hoc Sub-Process',
+  'Ad-hoc sub-process (collapsed)': 'Ad-hoc Sub-Process (ingeklapt)',
+  'Ad-hoc sub-process (expanded)': 'Ad-hoc Sub-Process (uitgeklapt)',
   'Add lane above': 'Voeg lane erboven toe',
   'Add lane below': 'Voeg lane eronder toe',
   'Align elements': 'Lijn elementen uit',
@@ -9806,6 +9759,7 @@ __webpack_require__.r(__webpack_exports__);
   'Atomic units of work in a process': 'Ondeelbare eenheden werk binnen een proces',
   'Attaches a compensation handler to the activity': 'Koppelt een compensatie-handler aan de activity',
   'Automated work carried out by a job worker or connector': 'Geautomatiseerd werk dat door een job worker of connector wordt uitgevoerd',
+  'Boundary event': 'Boundary-Event',
   'Boundary events': 'Boundary-Events',
   'Broadcasts a signal': 'Zendt een signal uit',
   'Business rule task': 'Business-Rule-Task',
@@ -9814,7 +9768,7 @@ __webpack_require__.r(__webpack_exports__);
   'Cancel boundary event': 'Cancel-Boundary-Event',
   'Cancel end event': 'Cancel-End-Event',
   'Cancels the transaction and ends the path': 'Annuleert de transactie en beëindigt het pad',
-  'Change type': 'Wijzig type',
+  'Collaboration': 'Collaboration',
   'Compensation boundary event': 'Compensation-Boundary-Event',
   'Compensation end event': 'Compensation-End-Event',
   'Compensation intermediate throw event': 'Compensation-Intermediate-Throw-Event',
@@ -9843,6 +9797,7 @@ __webpack_require__.r(__webpack_exports__);
   'Create task': 'Maak task',
   'Data': 'Data',
   'Data created and used within a process instance': 'Gegevens die binnen een process instance worden aangemaakt en gebruikt',
+  'Data object must be placed within a pool/participant.': 'Data-object moet binnen een pool/participant worden geplaatst.',
   'Data object reference': 'Data-Object-Reference',
   'Data store reference': 'Data-Store-Reference',
   'Data that persists beyond the process instance': 'Gegevens die blijven bestaan na de process instance',
@@ -9853,6 +9808,7 @@ __webpack_require__.r(__webpack_exports__);
   'Divide into three lanes': 'Verdeel in drie lanes',
   'Divide into two lanes': 'Verdeel in twee lanes',
   'Emit an event, then continue': 'Sturen een event uit en gaan dan verder',
+  'Empty pool/participant (removes content)': 'Lege pool/participant (inhoud wordt verwijderd)',
   'End event': 'End-Event',
   'End events': 'End-Events',
   'Ends the current path': 'Beëindigt het huidige pad',
@@ -9907,6 +9863,7 @@ __webpack_require__.r(__webpack_exports__);
   'Message start event (non-interrupting)': 'Message-Start-Event (niet-onderbrekend)',
   'Models complex branching or merging behavior': 'Modelleert complex splits- of samenvoeggedrag',
   'Nested or reusable activities': 'Geneste of herbruikbare activities',
+  'Open {element}': '{element} openen',
   'Parallel gateway': 'Parallel-Gateway (AND)',
   'Parallel multi-instance': 'Parallelle multi-instance',
   'Participant multiplicity': 'Participant-multipliciteit',
@@ -9921,7 +9878,6 @@ __webpack_require__.r(__webpack_exports__);
   'Reacts when a condition is met; activity continues': 'Reageert zodra een conditie is vervuld; de activity loopt door',
   'Reacts when a transaction is canceled': 'Reageert wanneer een transactie wordt geannuleerd',
   'Receive task': 'Receive-Task',
-  'Remove': 'Verwijder',
   'no shape type specified': 'geen vorm type gekozen',
   'out of bounds release': 'release buiten bereik',
   'element required': 'element vereist',
@@ -10022,8 +9978,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * This file contains the translated strings used in the dmn-js component.
- * However, notice that these strings are currently not working. We are
- * still investigating how to apply them.
+ * They apply only when the translate module reaches all three DMN sub-editors
+ * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   '-': '-',
@@ -10045,6 +10001,7 @@ __webpack_require__.r(__webpack_exports__);
   'Add values': 'Voeg waarden toe',
   'And': 'En',
   'Annotations': 'Annotaties',
+  'Any': 'Elke',
   'Append business knowledge model': 'Voeg business knowledge model toe',
   'Append decision': 'Voeg decision toe',
   'Append input data': 'Voeg input data toe',
@@ -10109,7 +10066,6 @@ __webpack_require__.r(__webpack_exports__);
   'Equals': 'Gelijk aan',
   'Exactly': 'Precies',
   'Exclude': 'Uitsluiten',
-  'Expression': 'Expressie',
   'Expression language': 'Expression language',
   'Expression language:': 'Expression language:',
   'Function kind: {kind}': 'Functiesoort: {kind}',
@@ -10138,9 +10094,14 @@ __webpack_require__.r(__webpack_exports__);
   'Move rule': 'Verplaats regel',
   'name': 'naam',
   'No': 'Nee',
+  'No overlap is possible and all rules are disjoint. Only a single rule can be matched': 'Overlap is niet mogelijk en alle regels zijn disjunct. Er kan slechts één regel overeenkomen',
   'No values': 'Geen waarden',
+  'number': 'getal',
+  'Open decision table': 'Decision table openen',
+  'Open literal expression': 'Literal-Expression openen',
   'Output label': 'Output-label',
   'Output label:': 'Output-label:',
+  'Output label: ': 'Output-label: ',
   'Output name': 'Outputnaam',
   'Output name:': 'Outputnaam:',
   'Output type': 'Outputtype',
@@ -10180,7 +10141,6 @@ __webpack_require__.r(__webpack_exports__);
   'Then': 'Dan',
   'Time': 'Tijd',
   'Time value': 'Tijdwaarde',
-  'Type': 'Type',
   'Use now': 'Gebruik nu',
   'Use today': 'Gebruik vandaag',
   'value': 'waarde',
@@ -10850,6 +10810,9 @@ __webpack_require__.r(__webpack_exports__);
   'Activate global connect tool': 'Ativar ferramenta de conexão global',
   'Activities run in any order, any number of times': 'As atividades são executadas em qualquer ordem e quantas vezes for necessário',
   'Activities run in any order; shown collapsed': 'As atividades são executadas em qualquer ordem; exibido recolhido',
+  'Ad-hoc sub-process': 'Subprocesso ad-hoc',
+  'Ad-hoc sub-process (collapsed)': 'Subprocesso ad-hoc (recolhido)',
+  'Ad-hoc sub-process (expanded)': 'Subprocesso ad-hoc (expandido)',
   'Add lane above': 'Adicionar raia acima',
   'Add lane below': 'Adicionar raia abaixo',
   'Align elements': 'Alinhar elementos',
@@ -10867,6 +10830,7 @@ __webpack_require__.r(__webpack_exports__);
   'Atomic units of work in a process': 'Unidades atômicas de trabalho em um processo',
   'Attaches a compensation handler to the activity': 'Anexa um manipulador de compensação à atividade',
   'Automated work carried out by a job worker or connector': 'Trabalho automatizado executado por um job worker ou conector',
+  'Boundary event': 'Evento de Borda',
   'Boundary events': 'Eventos de Borda',
   'Broadcasts a signal': 'Transmite um sinal',
   'Business rule task': 'Atividade de Regra de Negócios',
@@ -10875,7 +10839,7 @@ __webpack_require__.r(__webpack_exports__);
   'Cancel boundary event': 'Evento de Borda de Cancelamento',
   'Cancel end event': 'Evento Final de Cancelamento',
   'Cancels the transaction and ends the path': 'Cancela a transação e encerra o caminho',
-  'Change type': 'Mudar tipo',
+  'Collaboration': 'Colaboração',
   'Compensation boundary event': 'Evento de Borda de Compensação',
   'Compensation end event': 'Evento Final de Compensação',
   'Compensation intermediate throw event': 'Evento Intermediário de Disparo de Compensação',
@@ -10904,6 +10868,7 @@ __webpack_require__.r(__webpack_exports__);
   'Create task': 'Criar atividade',
   'Data': 'Dados',
   'Data created and used within a process instance': 'Dados criados e usados dentro de uma instância de processo',
+  'Data object must be placed within a pool/participant.': 'O objeto de dados deve ser colocado dentro de um pool/participante.',
   'Data object reference': 'Referência de Objeto de Dados',
   'Data store reference': 'Referência de Repositório de Dados',
   'Data that persists beyond the process instance': 'Dados que persistem além da instância do processo',
@@ -10914,6 +10879,7 @@ __webpack_require__.r(__webpack_exports__);
   'Divide into three lanes': 'Dividir em três raias',
   'Divide into two lanes': 'Dividir em duas raias',
   'Emit an event, then continue': 'Emitem um evento e então continuam',
+  'Empty pool/participant (removes content)': 'Pool/participante vazio (remove o conteúdo)',
   'End event': 'Evento Final',
   'End events': 'Eventos Finais',
   'Ends the current path': 'Encerra o caminho atual',
@@ -10968,6 +10934,7 @@ __webpack_require__.r(__webpack_exports__);
   'Message start event (non-interrupting)': 'Evento de Início de Mensagem (não interruptivo)',
   'Models complex branching or merging behavior': 'Modela comportamentos complexos de ramificação ou união',
   'Nested or reusable activities': 'Atividades aninhadas ou reutilizáveis',
+  'Open {element}': 'Abrir {element}',
   'Parallel gateway': 'Gateway Paralelo (AND)',
   'Parallel multi-instance': 'Multi-instância paralela',
   'Participant multiplicity': 'Multiplicidade do participante',
@@ -10982,7 +10949,6 @@ __webpack_require__.r(__webpack_exports__);
   'Reacts when a condition is met; activity continues': 'Reage quando uma condição é atendida; a atividade continua',
   'Reacts when a transaction is canceled': 'Reage quando uma transação é cancelada',
   'Receive task': 'Atividade de Recebimento de Mensagem',
-  'Remove': 'Remover',
   'no shape type specified': 'nenhum tipo de forma especificado',
   'out of bounds release': 'solto fora da região delimitada',
   'element required': 'elemento necessário',
@@ -11083,8 +11049,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * This file contains the translated strings used in the dmn-js component.
- * However, notice that these strings are currently not working. We are
- * still investigating how to apply them.
+ * They apply only when the translate module reaches all three DMN sub-editors
+ * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   '-': '-',
@@ -11106,6 +11072,7 @@ __webpack_require__.r(__webpack_exports__);
   'Add values': 'Adicionar valores',
   'And': 'E',
   'Annotations': 'Anotações',
+  'Any': 'Qualquer',
   'Append business knowledge model': 'Anexar modelo de conhecimento de negócio',
   'Append decision': 'Anexar decisão',
   'Append input data': 'Anexar dados de entrada',
@@ -11170,7 +11137,6 @@ __webpack_require__.r(__webpack_exports__);
   'Equals': 'Igual a',
   'Exactly': 'Exatamente',
   'Exclude': 'Excluir do intervalo',
-  'Expression': 'Expressão',
   'Expression language': 'Linguagem de expressão',
   'Expression language:': 'Linguagem de expressão:',
   'Function kind: {kind}': 'Tipo de função: {kind}',
@@ -11199,9 +11165,14 @@ __webpack_require__.r(__webpack_exports__);
   'Move rule': 'Mover regra',
   'name': 'nome',
   'No': 'Não',
+  'No overlap is possible and all rules are disjoint. Only a single rule can be matched': 'Nenhuma sobreposição é possível e todas as regras são disjuntas. Apenas uma única regra pode corresponder',
   'No values': 'Sem valores',
+  'number': 'número',
+  'Open decision table': 'Abrir tabela de decisão',
+  'Open literal expression': 'Abrir expressão literal',
   'Output label': 'Rótulo de saída',
   'Output label:': 'Rótulo de saída:',
+  'Output label: ': 'Rótulo de saída: ',
   'Output name': 'Nome da saída',
   'Output name:': 'Nome da saída:',
   'Output type': 'Tipo de saída',
@@ -11241,7 +11212,6 @@ __webpack_require__.r(__webpack_exports__);
   'Then': 'Então',
   'Time': 'Hora',
   'Time value': 'Valor de hora',
-  'Type': 'Tipo',
   'Use now': 'Usar agora',
   'Use today': 'Usar hoje',
   'value': 'valor',
@@ -11783,7 +11753,6 @@ __webpack_require__.r(__webpack_exports__);
   'Version tag': 'Rótulo de Versão',
   'Element documentation': 'Documentação do Elemento',
   'Time to live': 'Tempo de Vida',
-  'Candidate starter groups': 'Grupos Candidatos de Início',
   'Candidate starter users': 'Usuários Candidatos de Início',
   'Event type': 'Tipo de Evento',
   'Listener type': 'Tipo de Listener',
@@ -11912,6 +11881,9 @@ __webpack_require__.r(__webpack_exports__);
   'Activate global connect tool': 'Активировать инструмент глобального соединения',
   'Activities run in any order, any number of times': 'Действия выполняются в произвольном порядке и любое число раз',
   'Activities run in any order; shown collapsed': 'Действия выполняются в произвольном порядке; отображается свёрнутым',
+  'Ad-hoc sub-process': 'Ad-hoc подпроцесс',
+  'Ad-hoc sub-process (collapsed)': 'Ad-hoc подпроцесс (свёрнутый)',
+  'Ad-hoc sub-process (expanded)': 'Ad-hoc подпроцесс (развёрнутый)',
   'Add lane above': 'Добавить дорожку сверху',
   'Add lane below': 'Добавить дорожку снизу',
   'Align elements': 'Выровнять элементы',
@@ -11929,6 +11901,7 @@ __webpack_require__.r(__webpack_exports__);
   'Atomic units of work in a process': 'Атомарные единицы работы в процессе',
   'Attaches a compensation handler to the activity': 'Присоединяет к действию обработчик компенсации',
   'Automated work carried out by a job worker or connector': 'Автоматизированная работа, выполняемая job worker или коннектором',
+  'Boundary event': 'Граничное событие',
   'Boundary events': 'Граничные события',
   'Broadcasts a signal': 'Рассылает сигнал',
   'Business rule task': 'Задача бизнес-правила',
@@ -11937,7 +11910,7 @@ __webpack_require__.r(__webpack_exports__);
   'Cancel boundary event': 'Граничное событие отмены',
   'Cancel end event': 'Конечное событие отмены',
   'Cancels the transaction and ends the path': 'Отменяет транзакцию и завершает путь',
-  'Change type': 'Изменить тип',
+  'Collaboration': 'Взаимодействие',
   'Compensation boundary event': 'Граничное событие компенсации',
   'Compensation end event': 'Конечное событие компенсации',
   'Compensation intermediate throw event': 'Промежуточное событие вызова компенсации',
@@ -11966,6 +11939,7 @@ __webpack_require__.r(__webpack_exports__);
   'Create task': 'Создать задачу',
   'Data': 'Данные',
   'Data created and used within a process instance': 'Данные, создаваемые и используемые в рамках экземпляра процесса',
+  'Data object must be placed within a pool/participant.': 'Объект данных должен быть размещён внутри пула/участника.',
   'Data object reference': 'Ссылка на объект данных',
   'Data store reference': 'Ссылка на хранилище данных',
   'Data that persists beyond the process instance': 'Данные, сохраняющиеся после завершения экземпляра процесса',
@@ -11976,6 +11950,7 @@ __webpack_require__.r(__webpack_exports__);
   'Divide into three lanes': 'Разделить на три дорожки',
   'Divide into two lanes': 'Разделить на две дорожки',
   'Emit an event, then continue': 'Порождают событие и продолжают выполнение',
+  'Empty pool/participant (removes content)': 'Пустой пул/участник (содержимое удаляется)',
   'End event': 'Конечное событие',
   'End events': 'Конечные события',
   'Ends the current path': 'Завершает текущий путь',
@@ -12030,6 +12005,7 @@ __webpack_require__.r(__webpack_exports__);
   'Message start event (non-interrupting)': 'Начальное событие сообщения (непрерывающее)',
   'Models complex branching or merging behavior': 'Моделирует сложное поведение ветвления или слияния',
   'Nested or reusable activities': 'Вложенные или повторно используемые действия',
+  'Open {element}': 'Открыть {element}',
   'Parallel gateway': 'Параллельный шлюз (AND)',
   'Parallel multi-instance': 'Параллельное многократное выполнение',
   'Participant multiplicity': 'Кратность участника',
@@ -12044,7 +12020,6 @@ __webpack_require__.r(__webpack_exports__);
   'Reacts when a condition is met; activity continues': 'Реагирует при выполнении условия; действие продолжается',
   'Reacts when a transaction is canceled': 'Реагирует на отмену транзакции',
   'Receive task': 'Задача получения',
-  'Remove': 'Удалить',
   'no shape type specified': 'не указан тип фигуры',
   'out of bounds release': 'выход за пределы',
   'element required': 'обязательный элемент',
@@ -12145,8 +12120,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * This file contains the translated strings used in the dmn-js component.
- * However, notice that these strings are currently not working. We are
- * still investigating how to apply them.
+ * They apply only when the translate module reaches all three DMN sub-editors
+ * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   '-': '-',
@@ -12168,6 +12143,7 @@ __webpack_require__.r(__webpack_exports__);
   'Add values': 'Добавить значения',
   'And': 'И',
   'Annotations': 'Аннотации',
+  'Any': 'Любое',
   'Append business knowledge model': 'Добавить модель бизнес-знаний',
   'Append decision': 'Добавить решение',
   'Append input data': 'Добавить входные данные',
@@ -12232,7 +12208,6 @@ __webpack_require__.r(__webpack_exports__);
   'Equals': 'Равно',
   'Exactly': 'Точно',
   'Exclude': 'Исключить',
-  'Expression': 'Выражение',
   'Expression language': 'Язык выражений',
   'Expression language:': 'Язык выражений:',
   'Function kind: {kind}': 'Вид функции: {kind}',
@@ -12261,9 +12236,14 @@ __webpack_require__.r(__webpack_exports__);
   'Move rule': 'Переместить правило',
   'name': 'название',
   'No': 'Нет',
+  'No overlap is possible and all rules are disjoint. Only a single rule can be matched': 'Пересечение невозможно, все правила непересекающиеся. Может совпасть только одно правило',
   'No values': 'Нет значений',
+  'number': 'число',
+  'Open decision table': 'Открыть таблицу решений',
+  'Open literal expression': 'Открыть литеральное выражение',
   'Output label': 'Метка выхода',
   'Output label:': 'Метка выхода:',
+  'Output label: ': 'Метка выхода: ',
   'Output name': 'Название выхода',
   'Output name:': 'Название выхода:',
   'Output type': 'Тип выхода',
@@ -12303,7 +12283,6 @@ __webpack_require__.r(__webpack_exports__);
   'Then': 'Тогда',
   'Time': 'Время',
   'Time value': 'Значение времени',
-  'Type': 'Тип',
   'Use now': 'Использовать текущее время',
   'Use today': 'Использовать сегодняшнюю дату',
   'value': 'значение',
@@ -12973,6 +12952,9 @@ __webpack_require__.r(__webpack_exports__);
   'Activate global connect tool': '激活全局连接工具',
   'Activities run in any order, any number of times': '活动以任意顺序、任意次数执行',
   'Activities run in any order; shown collapsed': '活动以任意顺序执行；以折叠方式显示',
+  'Ad-hoc sub-process': '临时子流程',
+  'Ad-hoc sub-process (collapsed)': '临时子流程（折叠）',
+  'Ad-hoc sub-process (expanded)': '临时子流程（展开）',
   'Add lane above': '在上方添加泳道',
   'Add lane below': '在下方添加泳道',
   'Align elements': '对齐元素',
@@ -12990,6 +12972,7 @@ __webpack_require__.r(__webpack_exports__);
   'Atomic units of work in a process': '流程中不可再分的工作单元',
   'Attaches a compensation handler to the activity': '为该活动附加补偿处理器',
   'Automated work carried out by a job worker or connector': '由 job worker 或连接器执行的自动化工作',
+  'Boundary event': '边界事件',
   'Boundary events': '边界事件',
   'Broadcasts a signal': '广播一个信号',
   'Business rule task': '业务规则任务',
@@ -12999,6 +12982,7 @@ __webpack_require__.r(__webpack_exports__);
   'Cancel end event': '取消结束事件',
   'Cancels the transaction and ends the path': '取消事务并结束该路径',
   'Change type': '改变类型',
+  'Collaboration': '协作',
   'Compensation boundary event': '补偿边界事件',
   'Compensation end event': '补偿结束事件',
   'Compensation intermediate throw event': '补偿中间抛出事件',
@@ -13027,6 +13011,7 @@ __webpack_require__.r(__webpack_exports__);
   'Create task': '创建任务',
   'Data': '数据',
   'Data created and used within a process instance': '在流程实例内创建并使用的数据',
+  'Data object must be placed within a pool/participant.': '数据对象必须放置在池/参与者内。',
   'Data object reference': '数据对象引用',
   'Data store reference': '数据存储引用',
   'Data that persists beyond the process instance': '在流程实例结束后仍然保留的数据',
@@ -13037,6 +13022,7 @@ __webpack_require__.r(__webpack_exports__);
   'Divide into three lanes': '拆分为三条泳道',
   'Divide into two lanes': '拆分为两条泳道',
   'Emit an event, then continue': '抛出一个事件，然后继续',
+  'Empty pool/participant (removes content)': '空池/参与者（移除内容）',
   'End event': '结束事件',
   'End events': '结束事件',
   'Ends the current path': '结束当前路径',
@@ -13091,6 +13077,7 @@ __webpack_require__.r(__webpack_exports__);
   'Message start event (non-interrupting)': '消息开始事件（非中断）',
   'Models complex branching or merging behavior': '对复杂的分支或汇聚行为建模',
   'Nested or reusable activities': '嵌套或可复用的活动',
+  'Open {element}': '打开 {element}',
   'Parallel gateway': '并行网关（AND）',
   'Parallel multi-instance': '并行多实例',
   'Participant multiplicity': '参与者多重性',
@@ -13206,8 +13193,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * This file contains the translated strings used in the dmn-js component.
- * However, notice that these strings are currently not working. We are
- * still investigating how to apply them.
+ * They apply only when the translate module reaches all three DMN sub-editors
+ * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   '-': '-',
@@ -13229,6 +13216,7 @@ __webpack_require__.r(__webpack_exports__);
   'Add values': '添加值',
   'And': '并且',
   'Annotations': '注释',
+  'Any': '任意',
   'Append business knowledge model': '追加业务知识模型',
   'Append decision': '追加决策',
   'Append input data': '追加输入数据',
@@ -13292,7 +13280,6 @@ __webpack_require__.r(__webpack_exports__);
   'Equals': '等于',
   'Exactly': '恰好',
   'Exclude': '排除',
-  'Expression': '表达式',
   'Expression language': '表达式语言',
   'Expression language:': '表达式语言：',
   'Function kind: {kind}': '函数类型：{kind}',
@@ -13321,9 +13308,14 @@ __webpack_require__.r(__webpack_exports__);
   'Move rule': '移动规则',
   'name': '名称',
   'No': '否',
+  'No overlap is possible and all rules are disjoint. Only a single rule can be matched': '不允许重叠，所有规则互斥。只能匹配一条规则',
   'No values': '没有值',
+  'number': '数字',
+  'Open decision table': '打开决策表',
+  'Open literal expression': '打开字面量表达式',
   'Output label': '输出标签',
   'Output label:': '输出标签：',
+  'Output label: ': '输出标签： ',
   'Output name': '输出名称',
   'Output name:': '输出名称：',
   'Output type': '输出类型',
@@ -13674,7 +13666,6 @@ __webpack_require__.r(__webpack_exports__);
   'enum': '枚举',
   'Error': '错误',
   'Error event documentation': '错误事件文档',
-  'Errors': '错误',
   'Escalation': '升级',
   'Evaluate a business rule, for example a DMN decision. To add a custom implementation, use a job worker. ': '执行业务规则，例如 DMN 决策。如需添加自定义实现，请使用 job worker。 ',
   'Event Type': '事件类型',
@@ -14032,6 +14023,9 @@ __webpack_require__.r(__webpack_exports__);
   'Activate global connect tool': '激活全局連線工具',
   'Activities run in any order, any number of times': '活動以任意順序、任意次數執行',
   'Activities run in any order; shown collapsed': '活動以任意順序執行；以摺疊方式顯示',
+  'Ad-hoc sub-process': '臨時子流程',
+  'Ad-hoc sub-process (collapsed)': '臨時子流程（摺疊）',
+  'Ad-hoc sub-process (expanded)': '臨時子流程（展開）',
   'Add lane above': '在上方新增泳道',
   'Add lane below': '在下方新增泳道',
   'Align elements': '對齊元素',
@@ -14049,6 +14043,7 @@ __webpack_require__.r(__webpack_exports__);
   'Atomic units of work in a process': '流程中不可再分的工作單元',
   'Attaches a compensation handler to the activity': '為該活動附加補償處理常式',
   'Automated work carried out by a job worker or connector': '由 job worker 或連接器執行的自動化工作',
+  'Boundary event': '邊界事件',
   'Boundary events': '邊界事件',
   'Broadcasts a signal': '廣播一個訊號',
   'Business rule task': '業務規則任務',
@@ -14058,6 +14053,7 @@ __webpack_require__.r(__webpack_exports__);
   'Cancel end event': '取消結束事件',
   'Cancels the transaction and ends the path': '取消交易並結束該路徑',
   'Change type': '改變类型',
+  'Collaboration': '協作',
   'Compensation boundary event': '補償邊界事件',
   'Compensation end event': '補償結束事件',
   'Compensation intermediate throw event': '補償中間拋出事件',
@@ -14086,6 +14082,7 @@ __webpack_require__.r(__webpack_exports__);
   'Create task': '建立任務',
   'Data': '資料',
   'Data created and used within a process instance': '在流程實例內建立並使用的資料',
+  'Data object must be placed within a pool/participant.': '資料對象必須放置在池/參與者內。',
   'Data object reference': '資料對象引用',
   'Data store reference': '資料存储引用',
   'Data that persists beyond the process instance': '在流程實例結束後仍然保留的資料',
@@ -14096,6 +14093,7 @@ __webpack_require__.r(__webpack_exports__);
   'Divide into three lanes': '拆分為三條泳道',
   'Divide into two lanes': '拆分為两條泳道',
   'Emit an event, then continue': '拋出一個事件，然後繼續',
+  'Empty pool/participant (removes content)': '空池/參與者（移除內容）',
   'End event': '結束事件',
   'End events': '結束事件',
   'Ends the current path': '結束目前路徑',
@@ -14150,6 +14148,7 @@ __webpack_require__.r(__webpack_exports__);
   'Message start event (non-interrupting)': '訊息開始事件（非中斷）',
   'Models complex branching or merging behavior': '為複雜的分支或匯聚行為建模',
   'Nested or reusable activities': '巢狀或可重複使用的活動',
+  'Open {element}': '開啟 {element}',
   'Parallel gateway': '平行閘道（AND）',
   'Parallel multi-instance': '平行多執行個體',
   'Participant multiplicity': '參與者多重性',
@@ -14265,8 +14264,8 @@ __webpack_require__.r(__webpack_exports__);
 
 /**
  * This file contains the translated strings used in the dmn-js component.
- * However, notice that these strings are currently not working. We are
- * still investigating how to apply them.
+ * They apply only when the translate module reaches all three DMN sub-editors
+ * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = ({
   '-': '-',
@@ -14288,6 +14287,7 @@ __webpack_require__.r(__webpack_exports__);
   'Add values': '新增值',
   'And': '并且',
   'Annotations': '注释',
+  'Any': '任意',
   'Append business knowledge model': '追加業務知識模型',
   'Append decision': '追加決策',
   'Append input data': '追加輸入資料',
@@ -14351,7 +14351,6 @@ __webpack_require__.r(__webpack_exports__);
   'Equals': '等于',
   'Exactly': '恰好',
   'Exclude': '排除',
-  'Expression': '表达式',
   'Expression language': '運算式語言',
   'Expression language:': '運算式語言：',
   'Function kind: {kind}': '函數類型：{kind}',
@@ -14380,9 +14379,14 @@ __webpack_require__.r(__webpack_exports__);
   'Move rule': '移動規則',
   'name': '名稱',
   'No': '否',
+  'No overlap is possible and all rules are disjoint. Only a single rule can be matched': '不允許重疊，所有規則互斥。只能匹配一條規則',
   'No values': '没有值',
+  'number': '數字',
+  'Open decision table': '開啟決策表',
+  'Open literal expression': '開啟字面量運算式',
   'Output label': '輸出標籤',
   'Output label:': '輸出標籤：',
+  'Output label: ': '輸出標籤： ',
   'Output name': '輸出名稱',
   'Output name:': '輸出名稱：',
   'Output type': '輸出類型',
@@ -14733,7 +14737,6 @@ __webpack_require__.r(__webpack_exports__);
   'enum': '枚舉',
   'Error': '錯誤',
   'Error event documentation': '錯誤事件說明文件',
-  'Errors': '錯誤',
   'Escalation': '升级',
   'Evaluate a business rule, for example a DMN decision. To add a custom implementation, use a job worker. ': '執行業務規則，例如 DMN 決策。如需新增自定义實作，請使用 job worker。 ',
   'Event Type': '事件類型',
@@ -15085,7 +15088,9 @@ console.log("Please help us translate by creating a pull request!");
  * This function initializes the translation plugin.
  */
 function Translator() {
-  let currentLanguage = languages[this.currentLanguage()];
+  // Fall back rather than trust the stored value: an unknown key used to throw
+  // on the first translated string and blank the editor.
+  let currentLanguage = languages[this.currentLanguage()] || languages[defaultLanguage];
 
   // Return the translation function. It takes the template string and the parameters,
   // translates it and returns it.
@@ -15130,8 +15135,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ ConfigModal)
 /* harmony export */ });
-/* harmony import */ var camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! camunda-modeler-plugin-helpers/react */ "./node_modules/camunda-modeler-plugin-helpers/react.js");
-/* harmony import */ var camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! camunda-modeler-plugin-helpers/vendor/react */ "./node_modules/camunda-modeler-plugin-helpers/vendor/react.js");
+/* harmony import */ var camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var camunda_modeler_plugin_helpers_components_Modal_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! camunda-modeler-plugin-helpers/components/Modal.js */ "./node_modules/camunda-modeler-plugin-helpers/components/Modal.js");
 /**
  * Copyright 2025 Miragon GmbH
@@ -15153,23 +15158,23 @@ __webpack_require__.r(__webpack_exports__);
 
 const Title = camunda_modeler_plugin_helpers_components_Modal_js__WEBPACK_IMPORTED_MODULE_1__["default"].Title || (({
   children
-}) => /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, children));
+}) => /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, children));
 const Body = camunda_modeler_plugin_helpers_components_Modal_js__WEBPACK_IMPORTED_MODULE_1__["default"].Body || (({
   children
-}) => /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, children));
+}) => /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, children));
 const Footer = camunda_modeler_plugin_helpers_components_Modal_js__WEBPACK_IMPORTED_MODULE_1__["default"].Footer || (({
   children
-}) => /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, children));
+}) => /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, children));
 function ConfigModal({
   onClose
 }) {
-  return /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(camunda_modeler_plugin_helpers_components_Modal_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  return /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(camunda_modeler_plugin_helpers_components_Modal_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
     onClose: onClose
-  }, /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Title, null, "Language changed"), /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Body, null, /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Restart the modeler to apply the configuration.")), /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Footer, null, /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+  }, /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Title, null, "Language changed"), /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Body, null, /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Restart the modeler to apply the configuration.")), /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Footer, null, /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
     id: "languageChangeButton"
-  }, /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+  }, /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
     type: "button",
-    class: "btn btn-primary",
+    className: "btn btn-primary",
     onClick: () => onClose()
   }, "Ok"))));
 }
@@ -15187,8 +15192,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ I18nPlugin)
 /* harmony export */ });
-/* harmony import */ var camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! camunda-modeler-plugin-helpers/react */ "./node_modules/camunda-modeler-plugin-helpers/react.js");
-/* harmony import */ var camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! camunda-modeler-plugin-helpers/vendor/react */ "./node_modules/camunda-modeler-plugin-helpers/vendor/react.js");
+/* harmony import */ var camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var camunda_modeler_plugin_helpers_components_Fill_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! camunda-modeler-plugin-helpers/components/Fill.js */ "./node_modules/camunda-modeler-plugin-helpers/components/Fill.js");
 /* harmony import */ var react_select__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-select */ "./node_modules/react-select/dist/react-select.esm.js");
 /* harmony import */ var _bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../bpmnjs-i18n-extension */ "./client/bpmnjs-i18n-extension/index.js");
@@ -15220,10 +15225,6 @@ const defaultLanguage = "en";
 
 //config key
 const configKey = "i18n";
-const defaultState = {
-  currentLanguage: defaultLanguage,
-  modalOpen: false
-};
 const options = [{
   value: 'de',
   label: 'Deutsch'
@@ -15262,11 +15263,17 @@ const options = [{
   label: '한국어'
 }];
 
+// react-select renders the whole option, not the locale key.
+const defaultState = {
+  currentLanguage: options.find(option => option.value === defaultLanguage),
+  modalOpen: false
+};
+
 /**
  * An example client extension plugin to enable auto saving functionality
  * into the Camunda Modeler
  */
-class I18nPlugin extends camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0__.PureComponent {
+class I18nPlugin extends camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0__.PureComponent {
   constructor(props) {
     super(props);
     this.state = defaultState;
@@ -15279,27 +15286,34 @@ class I18nPlugin extends camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_
       subscribe
     } = this.props;
 
-    // retrieve plugin related information from the application configuration
-    config.getForPlugin(configKey, 'config').then(config => {
-      if (config) {
-        this.setState(config);
-        _bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__["default"].translateModule.prototype.currentLanguage = function () {
-          return config.currentLanguage.value;
-        };
-        subscribe('bpmn.modeler.configure', event => {
-          const {
-            middlewares
-          } = event;
-          middlewares.push(this.addModule(_bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__["default"]));
-        });
-        subscribe('dmn.modeler.configure', event => {
-          const {
-            middlewares
-          } = event;
-          middlewares.push(this.addDmdModule(_bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__["default"]));
-        });
-      }
+    // Subscribe synchronously: inside the `if (config)` below, a fresh
+    // install never injected the translate module at all.
+    subscribe('bpmn.modeler.configure', event => {
+      const {
+        middlewares
+      } = event;
+      middlewares.push(this.addModule(_bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__["default"]));
     });
+    subscribe('dmn.modeler.configure', event => {
+      const {
+        middlewares
+      } = event;
+      middlewares.push(this.addDmdModule(_bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__["default"]));
+    });
+
+    // retrieve plugin related information from the application configuration
+    config.getForPlugin(configKey, 'config').then(stored => {
+      if (!stored || !stored.currentLanguage) {
+        return;
+      }
+      this.setState(stored);
+
+      // Older versions persisted a plain string, current ones an option.
+      const language = stored.currentLanguage.value || stored.currentLanguage;
+      _bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__["default"].translateModule.prototype.currentLanguage = function () {
+        return language;
+      };
+    }).catch(console.error);
   }
 
   /**
@@ -15361,10 +15375,10 @@ class I18nPlugin extends camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_
     });
   }
   render() {
-    return /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(camunda_modeler_plugin_helpers_components_Fill_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    return /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0__.Fragment, null, /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(camunda_modeler_plugin_helpers_components_Fill_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
       slot: "tab-actions",
       group: "9_language"
-    }, /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_select__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    }, /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_select__WEBPACK_IMPORTED_MODULE_2__["default"], {
       styles: {
         control: provided => ({
           ...provided,
@@ -15392,7 +15406,7 @@ class I18nPlugin extends camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_
       options: options,
       onChange: this.handleLanguageChanged,
       value: this.state.currentLanguage
-    })), this.state.modalOpen && /*#__PURE__*/camunda_modeler_plugin_helpers_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_ConfigModal__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    })), this.state.modalOpen && /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_ConfigModal__WEBPACK_IMPORTED_MODULE_4__["default"], {
       onClose: this.handleClosed
     }));
   }
@@ -15895,19 +15909,6 @@ function getPluginsDirectory() {
 
 /***/ },
 
-/***/ "./node_modules/camunda-modeler-plugin-helpers/react.js"
-/*!**************************************************************!*\
-  !*** ./node_modules/camunda-modeler-plugin-helpers/react.js ***!
-  \**************************************************************/
-(module, __unused_webpack_exports, __webpack_require__) {
-
-console.error('Warning: This module is deprecated and will be removed in future versions.');
-
-module.exports = __webpack_require__(/*! ./vendor/react.js */ "./node_modules/camunda-modeler-plugin-helpers/vendor/react.js");
-
-
-/***/ },
-
 /***/ "./node_modules/camunda-modeler-plugin-helpers/vendor/react.js"
 /*!*********************************************************************!*\
   !*** ./node_modules/camunda-modeler-plugin-helpers/vendor/react.js ***!
@@ -16196,7 +16197,7 @@ function memoizeOne(resultFn, isEqual) {
       "function" ===
         typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart &&
       __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-    var React = __webpack_require__(/*! react */ "./node_modules/camunda-modeler-plugin-helpers/react.js"),
+    var React = __webpack_require__(/*! react */ "./node_modules/camunda-modeler-plugin-helpers/vendor/react.js"),
       Internals = {
         d: {
           f: noop,
@@ -16531,7 +16532,7 @@ function memoizeOne(resultFn, isEqual) {
     exports.useFormStatus = function () {
       return resolveDispatcher().useHostTransitionStatus();
     };
-    exports.version = "19.2.5";
+    exports.version = "19.2.8";
     "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ &&
       "function" ===
         typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop &&
@@ -16813,7 +16814,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @babel/runtime/helpers/esm/inherits */ "./node_modules/@babel/runtime/helpers/esm/inherits.js");
 /* harmony import */ var _babel_runtime_helpers_esm_createSuper__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/esm/createSuper */ "./node_modules/@babel/runtime/helpers/esm/createSuper.js");
 /* harmony import */ var _babel_runtime_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/esm/toConsumableArray */ "./node_modules/@babel/runtime/helpers/esm/toConsumableArray.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/camunda-modeler-plugin-helpers/react.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react */ "./node_modules/camunda-modeler-plugin-helpers/vendor/react.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_7__);
 /* harmony import */ var _index_641ee5b8_esm_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./index-641ee5b8.esm.js */ "./node_modules/react-select/dist/index-641ee5b8.esm.js");
 /* harmony import */ var _emotion_react__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @emotion/react */ "./node_modules/@emotion/react/dist/emotion-react.browser.esm.js");
@@ -18543,7 +18544,7 @@ var Select = /*#__PURE__*/function (_Component) {
     }
     return _this;
   }
-  (0,_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(Select, [{
+  ;(0,_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_3__["default"])(Select, [{
     key: "componentDidMount",
     value: function componentDidMount() {
       this.startListeningComposition();
@@ -19542,7 +19543,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_esm_typeof__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @babel/runtime/helpers/esm/typeof */ "./node_modules/@babel/runtime/helpers/esm/typeof.js");
 /* harmony import */ var _babel_runtime_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @babel/runtime/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime/helpers/esm/taggedTemplateLiteral.js");
 /* harmony import */ var _babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime/helpers/esm/defineProperty */ "./node_modules/@babel/runtime/helpers/esm/defineProperty.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/camunda-modeler-plugin-helpers/react.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react */ "./node_modules/camunda-modeler-plugin-helpers/vendor/react.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var _floating_ui_dom__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! @floating-ui/dom */ "./node_modules/@floating-ui/dom/dist/floating-ui.dom.browser.mjs");
@@ -20951,23 +20952,22 @@ var defaultComponents = function defaultComponents(props) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* empty/unused harmony star reexport */
+/* empty/unused harmony star reexport */
+/* empty/unused harmony star reexport */
+/* empty/unused harmony star reexport */
+/* empty/unused harmony star reexport */
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   NonceProvider: () => (/* binding */ NonceProvider),
-/* harmony export */   components: () => (/* reexport safe */ _index_641ee5b8_esm_js__WEBPACK_IMPORTED_MODULE_6__.c),
-/* harmony export */   createFilter: () => (/* reexport safe */ _Select_ef7c0426_esm_js__WEBPACK_IMPORTED_MODULE_3__.c),
-/* harmony export */   "default": () => (/* binding */ StateManagedSelect$1),
-/* harmony export */   defaultTheme: () => (/* reexport safe */ _Select_ef7c0426_esm_js__WEBPACK_IMPORTED_MODULE_3__.d),
-/* harmony export */   mergeStyles: () => (/* reexport safe */ _Select_ef7c0426_esm_js__WEBPACK_IMPORTED_MODULE_3__.m),
-/* harmony export */   useStateManager: () => (/* reexport safe */ _useStateManager_7e1e8489_esm_js__WEBPACK_IMPORTED_MODULE_0__.u)
+/* harmony export */   "default": () => (/* binding */ StateManagedSelect$1)
 /* harmony export */ });
 /* harmony import */ var _useStateManager_7e1e8489_esm_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./useStateManager-7e1e8489.esm.js */ "./node_modules/react-select/dist/useStateManager-7e1e8489.esm.js");
-/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/camunda-modeler-plugin-helpers/react.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _Select_ef7c0426_esm_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./Select-ef7c0426.esm.js */ "./node_modules/react-select/dist/Select-ef7c0426.esm.js");
-/* harmony import */ var _emotion_react__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! @emotion/react */ "./node_modules/@emotion/react/dist/emotion-element-6a883da9.browser.esm.js");
-/* harmony import */ var _emotion_cache__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @emotion/cache */ "./node_modules/@emotion/cache/dist/emotion-cache.browser.esm.js");
-/* harmony import */ var _index_641ee5b8_esm_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./index-641ee5b8.esm.js */ "./node_modules/react-select/dist/index-641ee5b8.esm.js");
+/* harmony import */ var _babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/extends */ "./node_modules/@babel/runtime/helpers/esm/extends.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/camunda-modeler-plugin-helpers/vendor/react.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _Select_ef7c0426_esm_js__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./Select-ef7c0426.esm.js */ "./node_modules/react-select/dist/Select-ef7c0426.esm.js");
+/* harmony import */ var _emotion_react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! @emotion/react */ "./node_modules/@emotion/react/dist/emotion-element-6a883da9.browser.esm.js");
+/* harmony import */ var _emotion_cache__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! @emotion/cache */ "./node_modules/@emotion/cache/dist/emotion-cache.browser.esm.js");
 /* harmony import */ var _babel_runtime_helpers_objectSpread2__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! @babel/runtime/helpers/objectSpread2 */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
 /* harmony import */ var _babel_runtime_helpers_slicedToArray__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! @babel/runtime/helpers/slicedToArray */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
 /* harmony import */ var _babel_runtime_helpers_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! @babel/runtime/helpers/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
@@ -21007,9 +21007,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var StateManagedSelect = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_2__.forwardRef)(function (props, ref) {
+var StateManagedSelect = /*#__PURE__*/(0,react__WEBPACK_IMPORTED_MODULE_3__.forwardRef)(function (props, ref) {
   var baseSelectProps = (0,_useStateManager_7e1e8489_esm_js__WEBPACK_IMPORTED_MODULE_0__.u)(props);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_Select_ef7c0426_esm_js__WEBPACK_IMPORTED_MODULE_3__.S, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_1__["default"])({
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(_Select_ef7c0426_esm_js__WEBPACK_IMPORTED_MODULE_4__.S, (0,_babel_runtime_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_2__["default"])({
     ref: ref
   }, baseSelectProps));
 });
@@ -21019,13 +21019,13 @@ var NonceProvider = (function (_ref) {
   var nonce = _ref.nonce,
     children = _ref.children,
     cacheKey = _ref.cacheKey;
-  var emotionCache = (0,react__WEBPACK_IMPORTED_MODULE_2__.useMemo)(function () {
-    return (0,_emotion_cache__WEBPACK_IMPORTED_MODULE_5__["default"])({
+  var emotionCache = (0,react__WEBPACK_IMPORTED_MODULE_3__.useMemo)(function () {
+    return (0,_emotion_cache__WEBPACK_IMPORTED_MODULE_6__["default"])({
       key: cacheKey,
       nonce: nonce
     });
   }, [cacheKey, nonce]);
-  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_2__.createElement(_emotion_react__WEBPACK_IMPORTED_MODULE_4__.C, {
+  return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_3__.createElement(_emotion_react__WEBPACK_IMPORTED_MODULE_5__.C, {
     value: emotionCache
   }, children);
 });
@@ -21049,7 +21049,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_helpers_esm_objectSpread2__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectSpread2 */ "./node_modules/@babel/runtime/helpers/esm/objectSpread2.js");
 /* harmony import */ var _babel_runtime_helpers_esm_slicedToArray__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime/helpers/esm/slicedToArray */ "./node_modules/@babel/runtime/helpers/esm/slicedToArray.js");
 /* harmony import */ var _babel_runtime_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @babel/runtime/helpers/esm/objectWithoutProperties */ "./node_modules/@babel/runtime/helpers/esm/objectWithoutProperties.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/camunda-modeler-plugin-helpers/react.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react */ "./node_modules/camunda-modeler-plugin-helpers/vendor/react.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_3__);
 
 
@@ -21139,7 +21139,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
 /* harmony export */   "default": () => (/* binding */ index)
 /* harmony export */ });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/camunda-modeler-plugin-helpers/react.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/camunda-modeler-plugin-helpers/vendor/react.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 
 
@@ -22999,21 +22999,21 @@ const size = function (options) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
+/* empty/unused harmony star reexport */
+/* empty/unused harmony star reexport */
+/* empty/unused harmony star reexport */
+/* empty/unused harmony star reexport */
+/* empty/unused harmony star reexport */
+/* empty/unused harmony star reexport */
+/* empty/unused harmony star reexport */
+/* empty/unused harmony star reexport */
+/* empty/unused harmony star reexport */
+/* empty/unused harmony star reexport */
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   arrow: () => (/* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.arrow),
-/* harmony export */   autoPlacement: () => (/* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.autoPlacement),
 /* harmony export */   autoUpdate: () => (/* binding */ autoUpdate),
 /* harmony export */   computePosition: () => (/* binding */ computePosition),
-/* harmony export */   detectOverflow: () => (/* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.detectOverflow),
-/* harmony export */   flip: () => (/* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.flip),
 /* harmony export */   getOverflowAncestors: () => (/* binding */ getOverflowAncestors),
-/* harmony export */   hide: () => (/* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.hide),
-/* harmony export */   inline: () => (/* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.inline),
-/* harmony export */   limitShift: () => (/* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.limitShift),
-/* harmony export */   offset: () => (/* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.offset),
-/* harmony export */   platform: () => (/* binding */ platform),
-/* harmony export */   shift: () => (/* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.shift),
-/* harmony export */   size: () => (/* reexport safe */ _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__.size)
+/* harmony export */   platform: () => (/* binding */ platform)
 /* harmony export */ });
 /* harmony import */ var _floating_ui_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @floating-ui/core */ "./node_modules/@floating-ui/core/dist/floating-ui.core.browser.mjs");
 
@@ -24730,17 +24730,17 @@ function combine (array, callback) {
 /******/ 	});
 /************************************************************************/
 /******/ 	// The module cache
-/******/ 	var __webpack_module_cache__ = {};
+/******/ 	const __webpack_module_cache__ = {};
 /******/ 	
 /******/ 	// The require function
 /******/ 	function __webpack_require__(moduleId) {
 /******/ 		// Check if module is in cache
-/******/ 		var cachedModule = __webpack_module_cache__[moduleId];
+/******/ 		const cachedModule = __webpack_module_cache__[moduleId];
 /******/ 		if (cachedModule !== undefined) {
 /******/ 			return cachedModule.exports;
 /******/ 		}
 /******/ 		// Create a new module (and put it into the cache)
-/******/ 		var module = __webpack_module_cache__[moduleId] = {
+/******/ 		const module = __webpack_module_cache__[moduleId] = {
 /******/ 			// no module.id needed
 /******/ 			// no module.loaded needed
 /******/ 			exports: {}
@@ -24749,7 +24749,7 @@ function combine (array, callback) {
 /******/ 		// Execute the module function
 /******/ 		if (!(moduleId in __webpack_modules__)) {
 /******/ 			delete __webpack_module_cache__[moduleId];
-/******/ 			var e = new Error("Cannot find module '" + moduleId + "'");
+/******/ 			const e = new Error("Cannot find module '" + moduleId + "'");
 /******/ 			e.code = 'MODULE_NOT_FOUND';
 /******/ 			throw e;
 /******/ 		}
@@ -24764,7 +24764,7 @@ function combine (array, callback) {
 /******/ 	(() => {
 /******/ 		// getDefaultExport function for compatibility with non-harmony modules
 /******/ 		__webpack_require__.n = (module) => {
-/******/ 			var getter = module && module.__esModule ?
+/******/ 			const getter = module && module.__esModule ?
 /******/ 				() => (module['default']) :
 /******/ 				() => (module);
 /******/ 			__webpack_require__.d(getter, { a: getter });
@@ -24774,11 +24774,26 @@ function combine (array, callback) {
 /******/ 	
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
-/******/ 		// define getter functions for harmony exports
+/******/ 		// define getter/value functions for harmony exports
 /******/ 		__webpack_require__.d = (exports, definition) => {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 			if(Array.isArray(definition)) {
+/******/ 				var i = 0;
+/******/ 				while(i < definition.length) {
+/******/ 					var key = definition[i++];
+/******/ 					var binding = definition[i++];
+/******/ 					if(!__webpack_require__.o(exports, key)) {
+/******/ 						if(binding === 0) {
+/******/ 							Object.defineProperty(exports, key, { enumerable: true, value: definition[i++] });
+/******/ 						} else {
+/******/ 							Object.defineProperty(exports, key, { enumerable: true, get: binding });
+/******/ 						}
+/******/ 					} else if(binding === 0) { i++; }
+/******/ 				}
+/******/ 			} else {
+/******/ 				for(var key in definition) {
+/******/ 					if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
+/******/ 						Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
+/******/ 					}
 /******/ 				}
 /******/ 			}
 /******/ 		};
@@ -24805,7 +24820,7 @@ function combine (array, callback) {
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
 /******/ 		__webpack_require__.r = (exports) => {
-/******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			if(Symbol.toStringTag) {
 /******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
@@ -24813,7 +24828,7 @@ function combine (array, callback) {
 /******/ 	})();
 /******/ 	
 /************************************************************************/
-var __webpack_exports__ = {};
+let __webpack_exports__ = {};
 // This entry needs to be wrapped in an IIFE because it needs to be in strict mode.
 (() => {
 "use strict";

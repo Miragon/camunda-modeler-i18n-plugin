@@ -16,8 +16,8 @@
 
 /**
  * This file contains the translated strings used in the dmn-js component.
- * However, notice that these strings are currently not working. We are
- * still investigating how to apply them.
+ * They apply only when the translate module reaches all three DMN sub-editors
+ * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 export default {
     '-': '-',
@@ -39,6 +39,7 @@ export default {
     'Add values': 'Ajouter des valeurs',
     'And': 'Et',
     'Annotations': 'Annotations',
+    'Any': 'Quelconque',
     'Append business knowledge model': 'Ajouter un modèle de connaissance métier',
     'Append decision': 'Ajouter une décision',
     'Append input data': 'Ajouter des données d\'entrée',
@@ -103,7 +104,6 @@ export default {
     'Equals': 'Égal à',
     'Exactly': 'Exactement',
     'Exclude': 'Exclure',
-    'Expression': 'Expression',
     'Expression language': 'Langage d\'expression',
     'Expression language:': 'Langage d\'expression :',
     'Function kind: {kind}': 'Type de fonction : {kind}',
@@ -132,9 +132,14 @@ export default {
     'Move rule': 'Déplacer la règle',
     'name': 'nom',
     'No': 'Non',
+    'No overlap is possible and all rules are disjoint. Only a single rule can be matched': 'Aucun chevauchement n\'est possible et toutes les règles sont disjointes. Une seule règle peut correspondre',
     'No values': 'Aucune valeur',
+    'number': 'nombre',
+    'Open decision table': 'Ouvrir la table de décision',
+    'Open literal expression': 'Ouvrir l\'expression littérale',
     'Output label': 'Libellé de sortie',
     'Output label:': 'Libellé de sortie :',
+    'Output label: ': 'Libellé de sortie : ',
     'Output name': 'Nom de la sortie',
     'Output name:': 'Nom de la sortie :',
     'Output type': 'Type de sortie',
@@ -174,7 +179,6 @@ export default {
     'Then': 'Alors',
     'Time': 'Heure',
     'Time value': 'Valeur d\'heure',
-    'Type': 'Type',
     'Use now': 'Utiliser maintenant',
     'Use today': 'Utiliser aujourd\'hui',
     'value': 'valeur',
