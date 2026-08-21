@@ -1,0 +1,89 @@
+{
+    "locales": {
+        "de": {
+            "keys": 1016,
+            "untranslated": 41,
+            "translated": 975,
+            "coverage": 96,
+            "duplicates": 0
+        },
+        "en": {
+            "keys": 1016,
+            "untranslated": 0,
+            "translated": 1016,
+            "coverage": 100,
+            "duplicates": 0,
+            "reference": true
+        },
+        "es": {
+            "keys": 1016,
+            "untranslated": 36,
+            "translated": 980,
+            "coverage": 96.5,
+            "duplicates": 0
+        },
+        "fr": {
+            "keys": 1016,
+            "untranslated": 64,
+            "translated": 952,
+            "coverage": 93.7,
+            "duplicates": 0
+        },
+        "it": {
+            "keys": 1016,
+            "untranslated": 37,
+            "translated": 979,
+            "coverage": 96.4,
+            "duplicates": 0
+        },
+        "ja": {
+            "keys": 1016,
+            "untranslated": 23,
+            "translated": 993,
+            "coverage": 97.7,
+            "duplicates": 0
+        },
+        "ko": {
+            "keys": 1016,
+            "untranslated": 27,
+            "translated": 989,
+            "coverage": 97.3,
+            "duplicates": 0
+        },
+        "nl-nl": {
+            "keys": 1016,
+            "untranslated": 152,
+            "translated": 864,
+            "coverage": 85,
+            "duplicates": 0
+        },
+        "pt-br": {
+            "keys": 1016,
+            "untranslated": 39,
+            "translated": 977,
+            "coverage": 96.2,
+            "duplicates": 0
+        },
+        "ru": {
+            "keys": 1016,
+            "untranslated": 32,
+            "translated": 984,
+            "coverage": 96.9,
+            "duplicates": 0
+        },
+        "zh-Hans": {
+            "keys": 1016,
+            "untranslated": 27,
+            "translated": 989,
+            "coverage": 97.3,
+            "duplicates": 0
+        },
+        "zh-Hant": {
+            "keys": 1016,
+            "untranslated": 27,
+            "translated": 989,
+            "coverage": 97.3,
+            "duplicates": 0
+        }
+    }
+}

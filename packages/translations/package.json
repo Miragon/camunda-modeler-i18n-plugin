@@ -1,0 +1,51 @@
+{
+    "name": "@miragon/bpmn-modeler-i18n",
+    "version": "0.1.0",
+    "description": "Shared translations for the bpmn-js / dmn-js modeler UI: a didi translate module with runtime language switching and 12 bundled languages.",
+    "author": "Miragon GmbH <info@miragon.io>",
+    "license": "MIT",
+    "type": "module",
+    "keywords": [
+        "bpmn",
+        "dmn",
+        "bpmn-js",
+        "dmn-js",
+        "i18n",
+        "translations",
+        "modeler"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com/Miragon/camunda-modeler-i18n-plugin.git",
+        "directory": "packages/translations"
+    },
+    "homepage": "https://github.com/Miragon/camunda-modeler-i18n-plugin/tree/develop/packages/translations#readme",
+    "bugs": {
+        "url": "https://github.com/Miragon/camunda-modeler-i18n-plugin/issues"
+    },
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.ts",
+            "import": "./dist/index.js"
+        },
+        "./package.json": "./package.json"
+    },
+    "module": "./dist/index.js",
+    "types": "./dist/index.d.ts",
+    "files": [
+        "dist"
+    ],
+    "publishConfig": {
+        "access": "public"
+    },
+    "scripts": {
+        "build": "tsc -p tsconfig.build.json",
+        "typecheck": "tsc -p tsconfig.json --noEmit",
+        "test": "vitest run"
+    },
+    "devDependencies": {
+        "@types/node": "24.13.3",
+        "typescript": "6.0.3",
+        "vitest": "3.2.4"
+    }
+}

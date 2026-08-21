@@ -1,5 +1,11 @@
-/node_modules/
+node_modules/
 .idea
 yarn.lock
 .DS_Store
 .claude/logs/
+
+# Build output of publishable packages.
+# (apps/camunda-modeler-i18n-plugin/dist is committed on purpose and is NOT matched here.)
+/packages/*/dist/
+*.tsbuildinfo
+coverage/

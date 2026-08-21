@@ -1,0 +1,53 @@
+name: Feature Request
+description: Suggest a new feature or enhancement for the plugin or the translations library
+title: '[Feat]: '
+labels:
+    - enhancement
+body:
+    - type: markdown
+      attributes:
+          value: |
+              Thanks for suggesting a new feature! Please describe what you'd like to see and why it would be useful.
+
+    - type: textarea
+      id: summary
+      attributes:
+          label: Summary
+          description: A clear and concise description of the feature you are requesting.
+          placeholder: As a modeler user, I want ...
+      validations:
+          required: true
+
+    - type: textarea
+      id: motivation
+      attributes:
+          label: Motivation
+          description: Why is this feature needed? What problem does it solve?
+      validations:
+          required: true
+
+    - type: textarea
+      id: solution
+      attributes:
+          label: Proposed Solution
+          description: How should the feature work?
+      validations:
+          required: false
+
+    - type: textarea
+      id: acceptance
+      attributes:
+          label: Acceptance Criteria
+          description: What conditions must be met for this feature to be considered complete?
+          placeholder: |
+              - [ ] ...
+      validations:
+          required: false
+
+    - type: textarea
+      id: alternatives
+      attributes:
+          label: Alternatives Considered
+          description: Any alternative solutions or approaches you've considered?
+      validations:
+          required: false

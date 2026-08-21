@@ -1,0 +1,14 @@
+**/dist/**
+**/node_modules/**
+**/*.tsbuildinfo
+package-lock.json
+LICENSE
+
+# Local, gitignored working directories (Conductor / agent scratch).
+.context/**
+.claude/**
+
+# Generated / vendored data — not hand-edited, keep out of the formatter.
+apps/camunda-modeler-i18n-plugin/docs/COVERAGE.md
+apps/camunda-modeler-i18n-plugin/test/fixtures/**
+**/CHANGELOG.md

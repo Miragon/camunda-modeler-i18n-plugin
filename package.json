@@ -1,72 +1,64 @@
 {
-    "name": "camunda-modeler-i18n-plugin",
-    "version": "3.0.0",
-    "description": "This plugin allows you to translate the UI of the Camunda Modeler. It contains translations for German, English, Portuguese, Russian, Chinese (Traditional and Simplified) and Dutch and can be easily extended or customized.",
+    "name": "@miragon/modeler-i18n-workspace",
+    "version": "0.0.0",
+    "description": "Monorepo for the shared modeler translations library (@miragon/bpmn-modeler-i18n) and the Camunda Modeler i18n plugin.",
     "author": "Miragon GmbH <info@miragon.io>",
     "homepage": "https://github.com/Miragon/camunda-modeler-i18n-plugin",
     "bugs": {
         "url": "https://github.com/Miragon/camunda-modeler-i18n-plugin/issues"
     },
-    "license": "Apache-2.0",
-    "supportedModeler": "5.50.1",
-    "files": [
-        "dist",
-        "index.js"
-    ],
-    "main": "index.js",
+    "license": "MIT",
+    "private": true,
+    "type": "module",
     "repository": {
         "type": "git",
         "url": "ssh://git@github.com/Miragon/camunda-modeler-i18n-plugin.git"
     },
-    "scripts": {
-        "build": "webpack",
-        "check:translations": "node test/drift/report.mjs",
-        "check:translations:baseline": "node test/drift/report.mjs --update-baseline",
-        "check:translations:coverage": "node test/drift/report.mjs --write-coverage",
-        "check:translations:seed": "node test/drift/report.mjs --seed-runtime-keys",
-        "dev": "webpack -w",
-        "e2e:setup": "node test/e2e/setup.mjs",
-        "harvest": "node test/drift/harvest.mjs",
-        "harvest:check": "node test/drift/harvest.mjs --check",
-        "sync:modeler-deps": "node test/drift/sync.mjs --write-deps",
-        "sync:upstream-keys": "node test/drift/sync.mjs",
-        "test": "vitest run",
-        "test:e2e": "vitest run --config vitest.e2e.config.mjs",
-        "test:integration": "vitest run --config vitest.integration.config.mjs",
-        "test:watch": "vitest"
-    },
+    "workspaces": [
+        "packages/*",
+        "apps/*"
+    ],
     "engines": {
         "node": ">=24"
     },
-    "keywords": [
-        "camunda",
-        "modeler",
-        "plugin",
-        "i18n"
-    ],
-    "dependencies": {
-        "ids": "3.0.2",
-        "react": "19.2.8",
-        "react-dom": "19.2.8",
-        "react-select": "5.10.2"
+    "scripts": {
+        "build": "npm run build -w packages/translations && npm run build -w apps/camunda-modeler-i18n-plugin",
+        "build:lib": "npm run build -w packages/translations",
+        "dev": "npm run dev -w apps/camunda-modeler-i18n-plugin",
+        "pretest": "npm run build:lib",
+        "test": "npm run test --workspaces --if-present",
+        "test:watch": "npm run test:watch -w apps/camunda-modeler-i18n-plugin",
+        "pretest:integration": "npm run build:lib",
+        "test:integration": "npm run test:integration -w apps/camunda-modeler-i18n-plugin",
+        "pretest:e2e": "npm run build",
+        "test:e2e": "npm run test:e2e -w apps/camunda-modeler-i18n-plugin",
+        "e2e:setup": "npm run e2e:setup -w apps/camunda-modeler-i18n-plugin",
+        "harvest": "npm run harvest -w apps/camunda-modeler-i18n-plugin",
+        "harvest:check": "npm run harvest:check -w apps/camunda-modeler-i18n-plugin",
+        "check:translations": "npm run build:lib && npm run check:translations -w apps/camunda-modeler-i18n-plugin",
+        "check:translations:baseline": "npm run build:lib && npm run check:translations:baseline -w apps/camunda-modeler-i18n-plugin",
+        "check:translations:coverage": "npm run build:lib && npm run check:translations:coverage -w apps/camunda-modeler-i18n-plugin",
+        "check:translations:seed": "npm run build:lib && npm run check:translations:seed -w apps/camunda-modeler-i18n-plugin",
+        "sync:app-shell-keys": "npm run sync:app-shell-keys -w apps/camunda-modeler-i18n-plugin",
+        "sync:modeler-deps": "npm run sync:modeler-deps -w apps/camunda-modeler-i18n-plugin",
+        "sync:upstream-keys": "npm run sync:upstream-keys -w apps/camunda-modeler-i18n-plugin",
+        "lint": "eslint .",
+        "typecheck": "npm run typecheck -w packages/translations",
+        "format": "prettier --write .",
+        "format:check": "prettier --check .",
+        "knip": "knip",
+        "depcruise": "depcruise packages apps --config .dependency-cruiser.cjs"
     },
     "devDependencies": {
-        "@babel/core": "7.29.7",
-        "@babel/preset-react": "7.29.7",
-        "@testing-library/react": "16.3.2",
-        "babel-loader": "10.1.1",
-        "camunda-bpmn-js": "5.30.2",
-        "camunda-dmn-js": "3.8.1",
-        "camunda-modeler-plugin-helpers": "6.0.0",
-        "copyfiles": "2.4.1",
-        "esbuild": "0.28.2",
-        "install": "0.13.0",
-        "jsdom": "26.1.0",
-        "npm-run-all": "4.1.5",
-        "playwright": "1.62.1",
-        "vitest": "3.2.4",
-        "webpack": "5.109.2",
-        "webpack-cli": "7.2.2"
+        "@eslint/js": "10.0.1",
+        "dependency-cruiser": "18.2.0",
+        "eslint": "10.8.1",
+        "eslint-config-prettier": "10.1.8",
+        "globals": "17.11.0",
+        "knip": "6.32.2",
+        "prettier": "3.9.6",
+        "typescript": "6.0.3",
+        "typescript-eslint": "8.67.0"
     },
     "overrides": {
         "@bpmn-io/properties-panel": "3.48.0",
