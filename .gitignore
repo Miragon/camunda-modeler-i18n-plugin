@@ -9,3 +9,5 @@ yarn.lock
 /packages/*/dist/
 *.tsbuildinfo
 coverage/
+.claude/settings.json
+.claude/settings.local.json
