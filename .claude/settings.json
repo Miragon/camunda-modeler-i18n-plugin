@@ -8,7 +8,31 @@
             "Grep",
             "Bash(mkdir:*)",
             "Bash(ls:*)",
-            "Bash(npm:*)"
+            "Bash(cat:*)",
+            "Bash(npm:*)",
+            "Bash(npx:*)",
+            "Bash(node:*)",
+            "Bash(git status)",
+            "Bash(git diff:*)",
+            "Bash(git log:*)",
+            "Bash(git show:*)",
+            "Bash(git add:*)",
+            "Bash(git mv:*)",
+            "Bash(git restore:*)",
+            "Bash(git stash:*)",
+            "Bash(gh pr view:*)",
+            "Bash(gh pr diff:*)",
+            "Bash(gh pr list:*)",
+            "Bash(gh issue view:*)",
+            "Bash(gh issue list:*)"
+        ],
+        "deny": [
+            "Read(./.env)",
+            "Read(./.env.*)",
+            "Read(./**/*.pem)",
+            "Read(./**/*.key)",
+            "Bash(git push --force:*)",
+            "Bash(rm -rf:*)"
         ]
     }
 }
