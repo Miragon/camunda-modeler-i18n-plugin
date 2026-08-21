@@ -1,0 +1,69 @@
+{
+    "name": "camunda-modeler-i18n-plugin",
+    "version": "3.0.0",
+    "description": "This plugin allows you to translate the UI of the Camunda Modeler. It contains translations for German, English, Portuguese, Russian, Chinese (Traditional and Simplified) and Dutch and can be easily extended or customized.",
+    "author": "Miragon GmbH <info@miragon.io>",
+    "homepage": "https://github.com/Miragon/camunda-modeler-i18n-plugin",
+    "bugs": {
+        "url": "https://github.com/Miragon/camunda-modeler-i18n-plugin/issues"
+    },
+    "license": "MIT",
+    "supportedModeler": "5.50.1",
+    "files": [
+        "dist",
+        "index.js"
+    ],
+    "main": "index.js",
+    "repository": {
+        "type": "git",
+        "url": "ssh://git@github.com/Miragon/camunda-modeler-i18n-plugin.git"
+    },
+    "scripts": {
+        "build": "webpack",
+        "check:translations": "node test/drift/report.mjs",
+        "check:translations:baseline": "node test/drift/report.mjs --update-baseline",
+        "check:translations:coverage": "node test/drift/report.mjs --write-coverage",
+        "check:translations:seed": "node test/drift/report.mjs --seed-runtime-keys",
+        "dev": "webpack -w",
+        "e2e:setup": "node test/e2e/setup.mjs",
+        "harvest": "node test/drift/harvest.mjs",
+        "harvest:check": "node test/drift/harvest.mjs --check",
+        "sync:app-shell-keys": "node test/drift/sync-app-shell.mjs",
+        "sync:modeler-deps": "node test/drift/sync.mjs --write-deps",
+        "sync:upstream-keys": "node test/drift/sync.mjs",
+        "test": "vitest run",
+        "test:e2e": "vitest run --config vitest.e2e.config.mjs",
+        "test:integration": "vitest run --config vitest.integration.config.mjs",
+        "test:watch": "vitest"
+    },
+    "engines": {
+        "node": ">=24"
+    },
+    "keywords": [
+        "camunda",
+        "modeler",
+        "plugin",
+        "i18n"
+    ],
+    "dependencies": {
+        "@miragon/bpmn-modeler-i18n": "0.1.0",
+        "react": "19.2.8",
+        "react-dom": "19.2.8",
+        "react-select": "5.10.2"
+    },
+    "devDependencies": {
+        "@babel/core": "7.29.7",
+        "@babel/preset-react": "7.29.7",
+        "@testing-library/react": "16.3.2",
+        "babel-loader": "10.1.1",
+        "camunda-bpmn-js": "5.30.2",
+        "camunda-dmn-js": "3.8.1",
+        "camunda-modeler-plugin-helpers": "6.0.0",
+        "esbuild": "0.28.2",
+        "jsdom": "26.1.0",
+        "playwright": "1.62.1",
+        "vitest": "3.2.4",
+        "webpack": "5.109.2",
+        "webpack-cli": "7.2.2"
+    }
+}

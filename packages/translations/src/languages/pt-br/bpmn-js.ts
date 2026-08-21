@@ -1,0 +1,284 @@
+/**
+ * This file contains the strings used in the bpmn-js module.
+ */
+const translations: Record<string, string> = {
+    'A participant shown as a black box': 'Um participante exibido como caixa-preta',
+    'A participant with its process shown inside':
+        'Um participante com seu processo exibido internamente',
+    'A subprocess that completes as a whole, or is compensated':
+        'Um subprocesso que é concluído como um todo ou é compensado',
+    'A subprocess triggered by an event in its scope':
+        'Um subprocesso acionado por um evento em seu escopo',
+    'A task done by a person without any tooling or UI':
+        'Uma tarefa feita por uma pessoa sem ferramentas ou interface',
+    'Activate create/remove space tool': 'Ativar ferramenta de adicionar/remover espaço',
+    'Activate global connect tool': 'Ativar ferramenta de conexão global',
+    'Activities run in any order, any number of times':
+        'As atividades são executadas em qualquer ordem e quantas vezes for necessário',
+    'Activities run in any order; shown collapsed':
+        'As atividades são executadas em qualquer ordem; exibido recolhido',
+    'Ad-hoc sub-process': 'Subprocesso ad-hoc',
+    'Ad-hoc sub-process (collapsed)': 'Subprocesso ad-hoc (recolhido)',
+    'Ad-hoc sub-process (expanded)': 'Subprocesso ad-hoc (expandido)',
+    'Add lane above': 'Adicionar raia acima',
+    'Add lane below': 'Adicionar raia abaixo',
+    'Align elements': 'Alinhar elementos',
+    'An unspecified step, often used as a placeholder':
+        'Uma etapa não especificada, muitas vezes usada como espaço reservado',
+    'Append compensation activity': 'Adicionar atividade de compensação',
+    'Append conditional intermediate catch event':
+        'Anexar evento intermediário condicional de recebimento',
+    'Append end event': 'Anexar evento final',
+    'Append gateway': 'Anexar gateway',
+    'Append intermediate/boundary event': 'Anexar evento intermediário/de borda',
+    'Append message intermediate catch event':
+        'Anexar evento intermediário de recebimento de mensagem',
+    'Append receive task': 'Anexar atividade de recebimento de mensagem',
+    'Append signal intermediate catch event': 'Anexar evento intermediário de recebimento de sinal',
+    'Append task': 'Anexar atividade',
+    'Append timer intermediate catch event': 'Anexar evento intermediário de temporizador',
+    'Atomic units of work in a process': 'Unidades atômicas de trabalho em um processo',
+    'Attaches a compensation handler to the activity':
+        'Anexa um manipulador de compensação à atividade',
+    'Automated work carried out by a job worker or connector':
+        'Trabalho automatizado executado por um job worker ou conector',
+    'Boundary event': 'Evento de Borda',
+    'Boundary events': 'Eventos de Borda',
+    'Broadcasts a signal': 'Transmite um sinal',
+    'Business rule task': 'Atividade de Regra de Negócios',
+    'Call activity': 'Atividade de Chamada',
+    'Calls another process as a reusable subprocess':
+        'Chama outro processo como subprocesso reutilizável',
+    'Cancel boundary event': 'Evento de Borda de Cancelamento',
+    'Cancel end event': 'Evento Final de Cancelamento',
+    'Cancels the transaction and ends the path': 'Cancela a transação e encerra o caminho',
+    Collaboration: 'Colaboração',
+    'Compensation boundary event': 'Evento de Borda de Compensação',
+    'Compensation end event': 'Evento Final de Compensação',
+    'Compensation intermediate throw event': 'Evento Intermediário de Disparo de Compensação',
+    'Compensation start event': 'Evento de Início de Compensação',
+    'Complex gateway': 'Gateway Complexo',
+    'Conditional boundary event': 'Evento de Borda Condicional',
+    'Conditional boundary event (non-interrupting)':
+        'Evento de Borda Condicional (não interruptivo)',
+    'Conditional flow': 'Fluxo Condicional',
+    'Conditional intermediate catch event': 'Evento Intermediário Condicional de Recebimento',
+    'Conditional start event': 'Evento de Início Condicional',
+    'Conditional start event (non-interrupting)': 'Evento de Início Condicional (não interruptivo)',
+    'Connect to other element': 'Conectar a outro elemento',
+    'Connect using association': 'Conectar usando associação',
+    'Connect using data input association': 'Conectar usando associação de dados de entrada',
+    'Connects one element to the next in the flow': 'Conecta um elemento ao próximo no fluxo',
+    'Continues from a matching link event': 'Continua a partir de um evento de link correspondente',
+    'Create data object reference': 'Criar referência de objeto de dados',
+    'Create data store reference': 'Criar referência de repositório de dados',
+    'Create end event': 'Criar evento final',
+    'Create expanded sub-process': 'Criar subprocesso expandido',
+    'Create gateway': 'Criar gateway',
+    'Create group': 'Criar grupo',
+    'Create intermediate/boundary event': 'Criar evento intermediário/de borda',
+    'Create pool/participant': 'Criar pool/participante',
+    'Create start event': 'Criar evento de início',
+    'Create task': 'Criar atividade',
+    Data: 'Dados',
+    'Data created and used within a process instance':
+        'Dados criados e usados dentro de uma instância de processo',
+    'Data object must be placed within a pool/participant.':
+        'O objeto de dados deve ser colocado dentro de um pool/participante.',
+    'Data object reference': 'Referência de Objeto de Dados',
+    'Data store reference': 'Referência de Repositório de Dados',
+    'Data that persists beyond the process instance':
+        'Dados que persistem além da instância do processo',
+    'Data the process uses': 'Dados que o processo utiliza',
+    'Default flow': 'Fluxo Padrão',
+    'Distribute elements horizontally': 'Distribuir elementos horizontalmente',
+    'Distribute elements vertically': 'Distribuir elementos verticalmente',
+    'Divide into three lanes': 'Dividir em três raias',
+    'Divide into two lanes': 'Dividir em duas raias',
+    'Emit an event, then continue': 'Emitem um evento e então continuam',
+    'Empty pool/participant (removes content)': 'Pool/participante vazio (remove o conteúdo)',
+    'End event': 'Evento Final',
+    'End events': 'Eventos Finais',
+    'Ends the current path': 'Encerra o caminho atual',
+    'Ends the path and broadcasts a signal': 'Encerra o caminho e transmite um sinal',
+    'Ends the path and raises an escalation': 'Encerra o caminho e lança um escalonamento',
+    'Ends the path and sends a message': 'Encerra o caminho e envia uma mensagem',
+    'Ends the path and triggers compensation': 'Encerra o caminho e dispara a compensação',
+    'Ends the path by throwing an error': 'Encerra o caminho lançando um erro',
+    'Error boundary event': 'Evento de Borda de Erro',
+    'Error end event': 'Evento Final de Erro',
+    'Error start event': 'Evento de Início de Erro',
+    'Escalation boundary event': 'Evento de Borda de Escalonamento',
+    'Escalation boundary event (non-interrupting)':
+        'Evento de Borda de Escalonamento (não interruptivo)',
+    'Escalation end event': 'Evento Final de Escalonamento',
+    'Escalation intermediate throw event': 'Evento Intermediário de Disparo de Escalonamento',
+    'Escalation start event': 'Evento de Início de Escalonamento',
+    'Escalation start event (non-interrupting)':
+        'Evento de Início de Escalonamento (não interruptivo)',
+    'Evaluates a business rule, typically a DMN decision':
+        'Avalia uma regra de negócio, normalmente uma decisão DMN',
+    'Event sub-process': 'Subprocesso de Evento',
+    'Event-based gateway': 'Gateway Baseado em Eventos',
+    Events: 'Eventos',
+    'Exclusive gateway': 'Gateway Exclusivo (XOR)',
+    'Expanded pool/participant': 'Pool/participante expandido',
+    'Fires on a timer while the activity continues':
+        'Dispara em um temporizador enquanto a atividade continua',
+    'Follows the path of whichever event occurs first':
+        'Segue o caminho do evento que ocorrer primeiro',
+    Gateways: 'Gateways',
+    'Groups elements into a subprocess, shown collapsed':
+        'Agrupa elementos em um subprocesso, exibido recolhido',
+    'Groups elements into a subprocess, shown inline':
+        'Agrupa elementos em um subprocesso, exibido expandido',
+    'Handles an event that occurs while an activity is active':
+        'Trata um evento que ocorre enquanto uma atividade está ativa',
+    'Immediately ends all active paths in the scope':
+        'Encerra imediatamente todos os caminhos ativos do escopo',
+    'Inclusive gateway': 'Gateway Inclusivo (OR)',
+    'Intermediate catch events': 'Eventos Intermediários de Recebimento',
+    'Intermediate throw event': 'Evento Intermediário de Disparo',
+    'Intermediate throw events': 'Eventos Intermediários de Disparo',
+    'Interrupts the activity on a defined timer':
+        'Interrompe a atividade em um temporizador definido',
+    'Interrupts the activity on a matching signal':
+        'Interrompe a atividade em um sinal correspondente',
+    'Interrupts the activity on an escalation': 'Interrompe a atividade em um escalonamento',
+    'Interrupts the activity when a condition is met':
+        'Interrompe a atividade quando uma condição é atendida',
+    'Interrupts the activity when a message is received':
+        'Interrompe a atividade quando uma mensagem é recebida',
+    'Interrupts the activity when it throws an error':
+        'Interrompe a atividade quando ela lança um erro',
+    'Jumps to a matching link event': 'Salta para um evento de link correspondente',
+    'Link intermediate catch event': 'Evento Intermediário de Recebimento de Link',
+    'Link intermediate throw event': 'Evento Intermediário de Disparo de Link',
+    'Manual task': 'Atividade Manual',
+    'Marks a point in the flow': 'Marca um ponto no fluxo',
+    'Message boundary event': 'Evento de Borda de Mensagem',
+    'Message boundary event (non-interrupting)': 'Evento de Borda de Mensagem (não interruptivo)',
+    'Message end event': 'Evento Final de Mensagem',
+    'Message intermediate catch event': 'Evento Intermediário de Recebimento de Mensagem',
+    'Message intermediate throw event': 'Evento Intermediário de Disparo de Mensagem',
+    'Message start event': 'Evento de Início de Mensagem',
+    'Message start event (non-interrupting)': 'Evento de Início de Mensagem (não interruptivo)',
+    'Models complex branching or merging behavior':
+        'Modela comportamentos complexos de ramificação ou união',
+    'Nested or reusable activities': 'Atividades aninhadas ou reutilizáveis',
+    'Open {element}': 'Abrir {element}',
+    'Parallel gateway': 'Gateway Paralelo (AND)',
+    'Parallel multi-instance': 'Multi-instância paralela',
+    'Participant multiplicity': 'Multiplicidade do participante',
+    Participants: 'Participantes',
+    'Preconfigured elements': 'Elementos pré-configurados',
+    'Publishes a message to a receiver': 'Publica uma mensagem para um destinatário',
+    'Raises an escalation to a higher scope': 'Lança um escalonamento para um escopo superior',
+    'React to something while an activity is running':
+        'Reagem a algo enquanto uma atividade está em execução',
+    'Reacts to a message while the activity continues':
+        'Reage a uma mensagem enquanto a atividade continua',
+    'Reacts to a signal while the activity continues':
+        'Reage a um sinal enquanto a atividade continua',
+    'Reacts to an escalation while the activity continues':
+        'Reage a um escalonamento enquanto a atividade continua',
+    'Reacts when a condition is met; activity continues':
+        'Reage quando uma condição é atendida; a atividade continua',
+    'Reacts when a transaction is canceled': 'Reage quando uma transação é cancelada',
+    'Receive task': 'Atividade de Recebimento de Mensagem',
+    'no shape type specified': 'nenhum tipo de forma especificado',
+    'out of bounds release': 'solto fora da região delimitada',
+    'element required': 'elemento necessário',
+    Loop: 'Loop',
+    'Ad-hoc': 'Ad-hoc',
+    'no diagram to display': 'nenhum diagrama para exibir',
+    'no process or collaboration to display': 'nenhum processo ou colaboração para exibir',
+    'Route the flow: branch or merge paths': 'Direcionam o fluxo: ramificam ou unem caminhos',
+    'Routes the token down one path, based on data':
+        'Direciona o token por um único caminho, com base nos dados',
+    'Runs a script': 'Executa um script',
+    'Script task': 'Atividade de Script',
+    'Send task': 'Atividade de Envio de Mensagem',
+    'Sends a message': 'Envia uma mensagem',
+    'Sequence flow': 'Fluxo de Sequência',
+    'Sequential multi-instance': 'Multi-instância sequencial',
+    'Service task': 'Atividade de Serviço',
+    'Signal boundary event': 'Evento de Borda de Sinal',
+    'Signal boundary event (non-interrupting)': 'Evento de Borda de Sinal (não interruptivo)',
+    'Signal end event': 'Evento Final de Sinal',
+    'Signal intermediate catch event': 'Evento Intermediário de Recebimento de Sinal',
+    'Signal intermediate throw event': 'Evento Intermediário de Disparo de Sinal',
+    'Signal start event': 'Evento de Início de Sinal',
+    'Signal start event (non-interrupting)': 'Evento de Início de Sinal (não interruptivo)',
+    'Splits the flow into parallel paths, or joins them':
+        'Divide o fluxo em caminhos paralelos ou os une',
+    'Start event': 'Evento de Início',
+    'Start events': 'Eventos de Início',
+    'Starts an event subprocess on a message, without interrupting':
+        'Inicia um subprocesso de evento em uma mensagem, sem interromper',
+    'Starts an event subprocess on a signal, without interrupting':
+        'Inicia um subprocesso de evento em um sinal, sem interromper',
+    'Starts an event subprocess on a timer, without interrupting':
+        'Inicia um subprocesso de evento em um temporizador, sem interromper',
+    'Starts an event subprocess on an escalation':
+        'Inicia um subprocesso de evento em um escalonamento',
+    'Starts an event subprocess on an escalation, without interrupting':
+        'Inicia um subprocesso de evento em um escalonamento, sem interromper',
+    'Starts an event subprocess to handle compensation':
+        'Inicia um subprocesso de evento para tratar a compensação',
+    'Starts an event subprocess when a condition is met, without interrupting':
+        'Inicia um subprocesso de evento quando uma condição é atendida, sem interromper',
+    'Starts an event subprocess when an error is thrown':
+        'Inicia um subprocesso de evento quando um erro é lançado',
+    'Starts the process on a defined timer': 'Inicia o processo em um temporizador definido',
+    'Starts the process when a condition is met':
+        'Inicia o processo quando uma condição é atendida',
+    'Starts the process when a matching signal is broadcast':
+        'Inicia o processo quando um sinal correspondente é transmitido',
+    'Starts the process when a message is received':
+        'Inicia o processo quando uma mensagem é recebida',
+    'Sub-process': 'Subprocesso',
+    'Sub-process (collapsed)': 'Subprocesso (recolhido)',
+    'Sub-process (expanded)': 'Subprocesso (expandido)',
+    'Sub-processes': 'Subprocessos',
+    'Systems or organizations involved': 'Sistemas ou organizações envolvidos',
+    'Taken only when its condition is met': 'Seguido apenas quando sua condição é atendida',
+    'Takes every outgoing path whose condition is met':
+        'Segue todos os caminhos de saída cuja condição é atendida',
+    Tasks: 'Tarefas',
+    'Terminate end event': 'Evento Final de Terminação',
+    'The default path, taken when no other path condition is met':
+        'O caminho padrão, seguido quando nenhuma outra condição de caminho é atendida',
+    'Things a process reacts to or emits': 'Coisas às quais um processo reage ou que ele emite',
+    'Timer boundary event': 'Evento de Borda de Temporizador',
+    'Timer boundary event (non-interrupting)': 'Evento de Borda de Temporizador (não interruptivo)',
+    'Timer intermediate catch event': 'Evento Intermediário de Temporizador',
+    'Timer start event': 'Evento de Início de Temporizador',
+    'Timer start event (non-interrupting)': 'Evento de Início de Temporizador (não interruptivo)',
+    'Toggle non-interrupting': 'Alternar para não interruptivo',
+    'Triggers compensation of completed activities':
+        'Dispara a compensação das atividades concluídas',
+    'User task': 'Atividade de Usuário',
+    'Wait for something to happen before continuing':
+        'Aguardam que algo aconteça antes de continuar',
+    'Waits for a defined time or duration': 'Aguarda um instante ou uma duração definidos',
+    'Waits for a matching signal to be broadcast':
+        'Aguarda a transmissão de um sinal correspondente',
+    'Waits for a message to be received': 'Aguarda o recebimento de uma mensagem',
+    'Waits until a condition is met': 'Aguarda até que uma condição seja atendida',
+    'Waits until a message is received': 'Aguarda até que uma mensagem seja recebida',
+    'Where a process or path begins': 'Onde um processo ou caminho começa',
+    'Where a process path ends': 'Onde um caminho do processo termina',
+    'Where the process begins': 'Onde o processo começa',
+    'Work that needs to be done by a person': 'Trabalho que precisa ser feito por uma pessoa',
+    Group: 'Grupo',
+    Process: 'Processo',
+    'Text Annotation': 'Anotação de texto',
+    'Intermediate Catch Event': 'Evento Intermediário de Recebimento',
+    'Collapsed Sub Process': 'Subprocesso recolhido',
+    'No Issues': 'Sem problemas',
+    'Toggle linting overlays': 'Alternar sobreposições de linting',
+    'Issues for child elements': 'Problemas em elementos filhos',
+    '{errors} Errors, {warnings} Warnings': '{errors} erros, {warnings} avisos',
+};
+export default translations;

@@ -1,11 +1,11 @@
 ---
 name: i18n-translate
 description: >
-  Translate Camunda Modeler i18n plugin keys into a target language, using the German translation as the
-  authoritative base. Use this skill whenever the user wants to add a new language, translate keys,
-  fill in missing translations for an existing language, or update/complete a partial translation in the
-  camunda-modeler-i18n-plugin repository. Also trigger when the user mentions locale codes, language names,
-  or talks about translating the modeler UI.
+    Translate Camunda Modeler i18n plugin keys into a target language, using the German translation as the
+    authoritative base. Use this skill whenever the user wants to add a new language, translate keys,
+    fill in missing translations for an existing language, or update/complete a partial translation in the
+    camunda-modeler-i18n-plugin repository. Also trigger when the user mentions locale codes, language names,
+    or talks about translating the modeler UI.
 ---
 
 # i18n Translation Skill
@@ -22,6 +22,7 @@ the most complete and serves as the authoritative source for all keys and their 
 ## Inputs
 
 The user provides:
+
 - **Target language** — a language name (e.g. "Spanish", "Italian") or locale code (e.g. "es", "ja")
 
 ## Workflow
@@ -29,6 +30,7 @@ The user provides:
 ### Step 1: Determine locale code and label
 
 Map the user's input to:
+
 - A **locale code** for file/folder naming (e.g. `es`, `ja`, `ko`). Use the same conventions as existing
   locales in the project — lowercase, hyphens for regional variants (e.g. `pt-br`, `zh-Hans`).
 - A **variable-safe key** for use in JS imports (replace `-` with `_`, e.g. `pt_br`, `zh_Hans`).
@@ -60,6 +62,7 @@ Each file exports a default object of `{ 'English key': 'German translation' }` 
 For each key that needs translation, translate the **German value** into the target language.
 
 Translation rules:
+
 - The **object keys** (left side) are English strings used as lookup identifiers by the modeler runtime.
   **Never modify the keys.** Only translate the values (right side).
 - Preserve `{parameter}` placeholders exactly as they appear (e.g. `{element}`, `{count}`, `{semantic}`).
@@ -82,7 +85,8 @@ Translate in batches per file. After each file, briefly summarize the count of t
 Each of the four files must follow this exact format. See [references/file-template.md](references/file-template.md) for the full template.
 
 Key points:
-- No per-file license header (the project is licensed Apache 2.0 centrally via `LICENSE`/`NOTICE`)
+
+- No per-file license header (the project is licensed MIT centrally via `LICENSE`)
 - Use `export default { ... };` syntax
 - Keep keys in the same order as the German source file
 - One key-value pair per line, single-quoted strings, trailing comma on each entry
@@ -104,7 +108,7 @@ export default {
     ...bpmnJs,
     ...dmnJs,
     ...propertiesPanel,
-    ...other
+    ...other,
 };
 ```
 
@@ -123,6 +127,7 @@ Skip this step if the language already exists in the plugin.
 ### Step 8: Summary
 
 After all files are written, output a summary:
+
 - Language added/updated: name and locale code
 - Files created or modified (with paths)
 - Total keys translated

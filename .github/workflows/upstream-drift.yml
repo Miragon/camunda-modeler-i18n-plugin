@@ -5,78 +5,79 @@ name: Upstream drift
 # fails on Camunda's release schedule instead of ours.
 
 on:
-  schedule:
-    - cron: '0 5 * * 1'
-  workflow_dispatch:
-    inputs:
-      modeler:
-        description: "Modeler version to check against (e.g. latest, v5.51.0)"
-        required: false
-        default: latest
+    schedule:
+        - cron: '0 5 * * 1'
+    workflow_dispatch:
+        inputs:
+            modeler:
+                description: 'Modeler version to check against (e.g. latest, v5.51.0)'
+                required: false
+                default: latest
 
 # Two runs at once would both look for the drift issue, both fail to find it, and
 # both create one.
 concurrency:
-  group: ${{ github.workflow }}
-  cancel-in-progress: false
+    group: ${{ github.workflow }}
+    cancel-in-progress: false
 
 permissions:
-  contents: read
-  issues: write
+    contents: read
+    issues: write
 
 jobs:
-  drift:
-    name: Check against the latest Camunda Modeler
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+    drift:
+        name: Check against the latest Camunda Modeler
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
-        with:
-          node-version: 24
-          cache: npm
+            - uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
+              with:
+                  node-version: 24
+                  cache: npm
 
-      - run: npm ci
+            - run: npm ci
 
-      - name: Install Chromium
-        run: npx playwright install --with-deps chromium
+            - name: Install Chromium
+              run: npx playwright install --with-deps chromium
 
-      - name: Refresh the published key list
-        id: sync
-        run: |
-          {
-            echo 'report<<REPORT_EOF'
-            node test/drift/sync.mjs --modeler "${{ inputs.modeler || 'latest' }}" 2>&1 || true
-            echo 'REPORT_EOF'
-          } >> "$GITHUB_OUTPUT"
+            - name: Refresh the published key list
+              id: sync
+              run: |
+                  {
+                    echo 'report<<REPORT_EOF'
+                    node apps/camunda-modeler-i18n-plugin/test/drift/sync.mjs --modeler "${{ inputs.modeler || 'latest' }}" 2>&1 || true
+                    echo 'REPORT_EOF'
+                  } >> "$GITHUB_OUTPUT"
 
-      # Records the palette and create-menu labels that only exist at runtime,
-      # roughly a third of the strings we translate.
-      - name: Re-harvest from real editors
-        run: node test/drift/harvest.mjs || true
+            # Records the palette and create-menu labels that only exist at runtime,
+            # roughly a third of the strings we translate.
+            - name: Re-harvest from real editors
+              run: node apps/camunda-modeler-i18n-plugin/test/drift/harvest.mjs || true
 
-      - name: Check translations
-        id: check
-        run: |
-          {
-            echo 'report<<REPORT_EOF'
-            node test/drift/report.mjs || echo "__FAILED__"
-            echo 'REPORT_EOF'
-          } >> "$GITHUB_OUTPUT"
+            - name: Check translations
+              id: check
+              run: |
+                  npm run build:lib
+                  {
+                    echo 'report<<REPORT_EOF'
+                    node apps/camunda-modeler-i18n-plugin/test/drift/report.mjs || echo "__FAILED__"
+                    echo 'REPORT_EOF'
+                  } >> "$GITHUB_OUTPUT"
 
-      - name: Report drift
-        if: contains(steps.check.outputs.report, '__FAILED__')
-        uses: ./.github/actions/drift-issue
-        with:
-          title: Translations are behind the Camunda Modeler
-          report: |
-            ${{ steps.sync.outputs.report }}
+            - name: Report drift
+              if: contains(steps.check.outputs.report, '__FAILED__')
+              uses: ./.github/actions/drift-issue
+              with:
+                  title: Translations are behind the Camunda Modeler
+                  report: |
+                      ${{ steps.sync.outputs.report }}
 
-            ${{ steps.check.outputs.report }}
-          context: >-
-            The scheduled check against the newest Camunda Modeler release found
-            UI strings with no translation.
+                      ${{ steps.check.outputs.report }}
+                  context: >-
+                      The scheduled check against the newest Camunda Modeler release found
+                      UI strings with no translation.
 
-      - name: Fail on drift
-        if: contains(steps.check.outputs.report, '__FAILED__')
-        run: exit 1
+            - name: Fail on drift
+              if: contains(steps.check.outputs.report, '__FAILED__')
+              run: exit 1

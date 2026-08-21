@@ -3,7 +3,7 @@
 Every translation file in this project follows this exact structure.
 
 Source files carry **no per-file license header**. The project is licensed
-Apache 2.0 centrally via the `LICENSE` and `NOTICE` files at the repo root.
+MIT centrally via the `LICENSE` file at the repo root.
 
 ## Translation File (e.g., bpmn-js.js)
 
@@ -18,6 +18,7 @@ export default {
 ```
 
 **File-specific doc comments:**
+
 - `bpmn-js.js`: `This file contains the strings used in the bpmn-js module.`
 - `dmn-js.js`: `This file contains the translated strings used in the dmn-js component.`
 - `properties-panel.js`: `This file contains the translations used by the bpmn-js-properties-panel component.`
@@ -38,7 +39,7 @@ export default {
     ...bpmnJs,
     ...dmnJs,
     ...propertiesPanel,
-    ...other
+    ...other,
 };
 ```
 

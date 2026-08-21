@@ -1,0 +1,15 @@
+{
+    "$schema": "https://unpkg.com/knip@6/schema.json",
+    "ignoreExportsUsedInFile": true,
+    "workspaces": {
+        "packages/translations": {
+            "entry": ["src/index.ts"],
+            "project": ["src/**/*.ts", "test/**/*.ts"]
+        },
+        "apps/camunda-modeler-i18n-plugin": {
+            "entry": ["test/integration/{harvest-entry,translate-entry}.js"],
+            "project": ["**/*.{js,mjs}"],
+            "ignore": ["dist/**"]
+        }
+    }
+}
