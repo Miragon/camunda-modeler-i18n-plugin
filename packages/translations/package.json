@@ -1,6 +1,6 @@
 {
     "name": "@miragon/bpmn-modeler-i18n",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "description": "Shared translations for the bpmn-js / dmn-js modeler UI: a didi translate module with runtime language switching and 12 bundled languages.",
     "author": "Miragon GmbH <info@miragon.io>",
     "license": "MIT",

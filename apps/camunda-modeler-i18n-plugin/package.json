@@ -1,6 +1,6 @@
 {
     "name": "camunda-modeler-i18n-plugin",
-    "version": "3.0.0",
+    "version": "3.1.0",
     "description": "This plugin allows you to translate the UI of the Camunda Modeler. It contains translations for German, English, Portuguese, Russian, Chinese (Traditional and Simplified) and Dutch and can be easily extended or customized.",
     "author": "Miragon GmbH <info@miragon.io>",
     "homepage": "https://github.com/Miragon/camunda-modeler-i18n-plugin",
@@ -46,7 +46,7 @@
         "i18n"
     ],
     "dependencies": {
-        "@miragon/bpmn-modeler-i18n": "0.1.0",
+        "@miragon/bpmn-modeler-i18n": "0.2.0",
         "react": "19.2.8",
         "react-dom": "19.2.8",
         "react-select": "5.10.2"
