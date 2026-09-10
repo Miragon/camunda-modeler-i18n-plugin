@@ -60,7 +60,7 @@
         "camunda-dmn-js": "3.8.1",
         "camunda-modeler-plugin-helpers": "6.0.0",
         "esbuild": "0.28.2",
-        "jsdom": "26.1.0",
+        "jsdom": "30.0.1",
         "playwright": "1.62.1",
         "vitest": "4.1.11",
         "webpack": "5.109.2",
