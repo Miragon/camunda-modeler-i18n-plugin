@@ -54,16 +54,16 @@
     "devDependencies": {
         "@babel/core": "7.29.7",
         "@babel/preset-react": "7.29.7",
-        "@testing-library/react": "16.3.2",
+        "@testing-library/react": "16.3.3",
         "babel-loader": "10.1.1",
-        "camunda-bpmn-js": "5.31.1",
-        "camunda-dmn-js": "3.8.1",
+        "camunda-bpmn-js": "5.34.0",
+        "camunda-dmn-js": "3.8.3",
         "camunda-modeler-plugin-helpers": "6.0.0",
         "esbuild": "0.28.2",
         "jsdom": "26.1.0",
-        "playwright": "1.62.1",
+        "playwright": "1.63.0",
         "vitest": "4.1.11",
-        "webpack": "5.109.2",
-        "webpack-cli": "7.2.2"
+        "webpack": "5.110.3",
+        "webpack-cli": "7.2.3"
     }
 }
