@@ -63,7 +63,7 @@ supportedLanguages.forEach(({ locale, label }) => {
 
 ## Contributing
 
-Contributions are very welcome — especially **new languages and native-speaker corrections**, the most valuable thing you can send. Adding a language, the setup and quality gate, the monorepo layout, and the release flow all live in [CONTRIBUTING.md](CONTRIBUTING.md). In short: `npm ci && npm run build && npm test`, Node >= 24, and Conventional-Commit PR titles.
+Contributions are very welcome — especially **new languages and native-speaker corrections**, the most valuable thing you can send. Adding a language, the setup and quality gate, the monorepo layout, and the release flow all live in [CONTRIBUTING.md](CONTRIBUTING.md). In short: `npm ci && npm run build && npm test`, Node >= 24.15, and Conventional-Commit PR titles.
 
 ## License
 

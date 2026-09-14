@@ -1,6 +1,6 @@
 version: 2
 updates:
-    # npm — grouped minor+patch, each major reviewed individually
+    # npm — keep coupled Babel updates together and Modeler updates separate
     - package-ecosystem: npm
       directory: '/'
       schedule:
@@ -14,7 +14,22 @@ updates:
       cooldown:
           default-days: 5
       open-pull-requests-limit: 10
+      ignore:
+          # TypeScript 7 cannot satisfy the current typescript-eslint peers.
+          - dependency-name: typescript
+            update-types:
+                - version-update:semver-major
       groups:
+          babel:
+              patterns:
+                  - '@babel/*'
+          modeler-dependencies:
+              patterns:
+                  - camunda-bpmn-js
+                  - camunda-dmn-js
+              update-types:
+                  - minor
+                  - patch
           production-dependencies:
               dependency-type: production
               update-types:
@@ -22,6 +37,10 @@ updates:
                   - patch
           development-dependencies:
               dependency-type: development
+              exclude-patterns:
+                  - '@babel/*'
+                  - camunda-bpmn-js
+                  - camunda-dmn-js
               update-types:
                   - minor
                   - patch

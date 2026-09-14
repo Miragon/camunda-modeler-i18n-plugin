@@ -12,7 +12,7 @@ npm run build
 npm test
 ```
 
-This is an npm-workspaces monorepo (Node >= 24, pinned by `.nvmrc`). All commands run from the repo root; the root scripts delegate to the workspaces and build the library before anything that consumes it. Two workspaces:
+This is an npm-workspaces monorepo (Node 24.15 or newer; `.nvmrc` selects Node 24 LTS). All commands run from the repo root; the root scripts delegate to the workspaces and build the library before anything that consumes it. Two workspaces:
 
 - `packages/translations/` — the shared library `@miragon/bpmn-modeler-i18n` (TypeScript, published to npm). Holds the translation data and the runtime translator.
 - `apps/camunda-modeler-i18n-plugin/` — the Camunda Modeler plugin (JavaScript, webpack). Consumes the library and ships as a GitHub release zip.
