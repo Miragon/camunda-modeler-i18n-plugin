@@ -15,7 +15,11 @@ module.exports = {
                 use: {
                     loader: 'babel-loader',
                     options: {
-                        presets: ['@babel/preset-react'],
+                        // The Modeler supplies React.createElement; keep Babel 8
+                        // from importing the automatic JSX runtime.
+                        presets: [
+                            ['@babel/preset-react', { runtime: 'classic', development: false }],
+                        ],
                     },
                 },
             },

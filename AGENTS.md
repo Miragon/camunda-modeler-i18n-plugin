@@ -116,7 +116,7 @@ Configured at the root: **ESLint** (`eslint.config.mjs`, flat config — typescr
 - **Legacy locale codes.** Older plugin versions persisted JS-identifier keys (`pt_br`, `nl_nl`, `zh_Hans`, `zh_Hant`); the library uses BCP-47 (`pt-br`, …). `canonicalLocale` in `client/bpmnjs-i18n-extension/index.js` maps the legacy keys so a previously saved selection keeps working. `apps/camunda-modeler-i18n-plugin/test/unit/locales.spec.mjs` guards it.
 - **No duplicate keys / key parity / placeholders** are enforced in the library by `packages/translations/test/locales.spec.ts`. A key repeated across a locale's four files is silently shadowed by the barrel spread; the test keeps duplicates at zero.
 - **`apps/camunda-modeler-i18n-plugin/dist/` is committed.** After changing plugin _or_ library source, run `npm run build` and commit the updated `dist/client.js` (webpack inlines the library into it). CI's `build` job rebuilds and fails on a stale `apps/camunda-modeler-i18n-plugin/dist/`. Reproducibility rests on the lockfile (which is why the transitive `@emotion` versions react-select pulls in are pinned there).
-- **Node 24 everywhere.** Active LTS, pinned by `.nvmrc` and used by every workflow. No version matrix on purpose: the shipped bundle is webpack output running inside Electron, so a user's Node version never enters into it.
+- **Node 24 everywhere (24.15 minimum for development).** Active LTS, selected by `.nvmrc` and used by every workflow. Babel 8 and jsdom 30 require recent Node 24 releases. No version matrix on purpose: the shipped bundle is webpack output running inside Electron, so a user's Node version never enters into it.
 
 ## Build & Deploy for Local Testing
 
@@ -136,5 +136,5 @@ The E2E suite does the same automatically: plugin discovery globs `plugins/<name
 ## Webpack Notes (`apps/camunda-modeler-i18n-plugin/webpack.config.js`)
 
 - React is aliased to `camunda-modeler-plugin-helpers/vendor/react` (the modeler provides React at runtime).
-- Babel with `@babel/preset-react` handles JSX transformation.
+- Babel 8 with `@babel/preset-react` handles JSX transformation using explicit `runtime: 'classic'` and `development: false` options. The root `babel-loader` override keeps the loader on the same Babel core as the plugin; `test/contract/build-toolchain.spec.mjs` guards against silently resolving an older hoisted core. Update core, preset, and the loader override together.
 - Output mode is `development` with `cheap-module-source-map` devtool. The imported library is bundled in, so `dist/client.js` is self-contained.
