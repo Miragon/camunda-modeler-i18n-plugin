@@ -63,7 +63,7 @@
         "jsdom": "30.0.1",
         "playwright": "1.63.0",
         "vitest": "4.1.11",
-        "webpack": "5.110.3",
+        "webpack": "5.111.0",
         "webpack-cli": "7.2.3"
     }
 }
