@@ -62,7 +62,7 @@
     },
     "overrides": {
         "babel-loader": {
-            "@babel/core": "8.0.1"
+            "@babel/core": "8.0.5"
         },
         "@bpmn-io/properties-panel": "3.48.0",
         "bpmn-js": "18.22.1",
