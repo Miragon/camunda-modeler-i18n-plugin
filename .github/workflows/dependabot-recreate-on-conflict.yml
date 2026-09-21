@@ -1,0 +1,27 @@
+# Recreate Dependabot PRs stuck on a merge conflict so they re-arm auto-merge.
+name: Dependabot recreate on conflict
+
+on:
+    schedule:
+        - cron: '0 */6 * * *'
+    workflow_dispatch:
+
+permissions:
+    contents: read
+    pull-requests: write
+
+jobs:
+    recreate:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Recreate conflicting Dependabot PRs
+              env:
+                  GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+                  REPO: ${{ github.repository }}
+              run: |
+                  gh pr list --repo "$REPO" --author 'app/dependabot' --state open \
+                    --json number,mergeable \
+                    --jq '.[] | select(.mergeable=="CONFLICTING") | .number' \
+                  | while read -r pr; do
+                      gh pr comment "$pr" --repo "$REPO" --body "@dependabot recreate"
+                    done
