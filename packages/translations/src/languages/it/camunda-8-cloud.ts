@@ -2,6 +2,22 @@
  * This file contains the translations used by the bpmn-js-properties-panel component.
  */
 const translations: Record<string, string> = {
+    'Choose {configuration}': 'Scegli {configuration}',
+    'Configuration not found': 'Configurazione non trovata',
+    Configurations: 'Configurazioni',
+    'Could not load configurations': 'Impossibile caricare le configurazioni',
+    'Incompatible configuration type': 'Tipo di configurazione non compatibile',
+    'Loading...': 'Caricamento...',
+    'More actions': 'Altre azioni',
+    'No cluster connected': 'Nessun cluster connesso',
+    'No compatible configurations are available in the connected cluster':
+        'Nessuna configurazione compatibile è disponibile nel cluster connesso',
+    'Not found on cluster': 'Non trovato nel cluster',
+    'Refreshing configurations...': 'Aggiornamento delle configurazioni...',
+    Unset: 'Non impostato',
+    Upgrade: 'Aggiorna',
+    'Version {version} · Requires version {minimumVersion}+':
+        'Versione {version} · Richiede la versione {minimumVersion}+',
     ' or ': ' o ',
     ') to identify the error. ': ") per identificare l'errore. ",
     ') to match a specific error, or leave empty to catch any error. ':

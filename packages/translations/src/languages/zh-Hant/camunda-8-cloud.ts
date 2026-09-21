@@ -2,6 +2,22 @@
  * This file contains the translations used by the bpmn-js-properties-panel component.
  */
 const translations: Record<string, string> = {
+    'Choose {configuration}': '選擇{configuration}',
+    'Configuration not found': '找不到設定',
+    Configurations: '設定',
+    'Could not load configurations': '無法載入設定',
+    'Incompatible configuration type': '不相容的設定類型',
+    'Loading...': '載入中...',
+    'More actions': '更多操作',
+    'No cluster connected': '未連接叢集',
+    'No compatible configurations are available in the connected cluster':
+        '所連接的叢集中沒有可用的相容設定',
+    'Not found on cluster': '在叢集中找不到',
+    'Refreshing configurations...': '正在重新整理設定...',
+    Unset: '未設定',
+    Upgrade: '升級',
+    'Version {version} · Requires version {minimumVersion}+':
+        '版本 {version} · 需要版本 {minimumVersion}+',
     ' or ': ' 或 ',
     ') to identify the error. ': ')以標識该錯誤。 ',
     ') to match a specific error, or leave empty to catch any error. ':
