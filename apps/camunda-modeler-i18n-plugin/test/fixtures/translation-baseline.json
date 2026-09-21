@@ -1,88 +1,88 @@
 {
     "locales": {
         "de": {
-            "keys": 1016,
+            "keys": 1039,
             "untranslated": 41,
-            "translated": 975,
-            "coverage": 96,
+            "translated": 998,
+            "coverage": 96.1,
             "duplicates": 0
         },
         "en": {
-            "keys": 1016,
+            "keys": 1039,
             "untranslated": 0,
-            "translated": 1016,
+            "translated": 1039,
             "coverage": 100,
             "duplicates": 0,
             "reference": true
         },
         "es": {
-            "keys": 1016,
+            "keys": 1039,
             "untranslated": 36,
-            "translated": 980,
+            "translated": 1003,
             "coverage": 96.5,
             "duplicates": 0
         },
         "fr": {
-            "keys": 1016,
-            "untranslated": 64,
-            "translated": 952,
+            "keys": 1039,
+            "untranslated": 65,
+            "translated": 974,
             "coverage": 93.7,
             "duplicates": 0
         },
         "it": {
-            "keys": 1016,
+            "keys": 1039,
             "untranslated": 37,
-            "translated": 979,
+            "translated": 1002,
             "coverage": 96.4,
             "duplicates": 0
         },
         "ja": {
-            "keys": 1016,
+            "keys": 1039,
             "untranslated": 23,
-            "translated": 993,
-            "coverage": 97.7,
+            "translated": 1016,
+            "coverage": 97.8,
             "duplicates": 0
         },
         "ko": {
-            "keys": 1016,
+            "keys": 1039,
             "untranslated": 27,
-            "translated": 989,
-            "coverage": 97.3,
+            "translated": 1012,
+            "coverage": 97.4,
             "duplicates": 0
         },
         "nl-nl": {
-            "keys": 1016,
+            "keys": 1039,
             "untranslated": 152,
-            "translated": 864,
-            "coverage": 85,
+            "translated": 887,
+            "coverage": 85.4,
             "duplicates": 0
         },
         "pt-br": {
-            "keys": 1016,
+            "keys": 1039,
             "untranslated": 39,
-            "translated": 977,
+            "translated": 1000,
             "coverage": 96.2,
             "duplicates": 0
         },
         "ru": {
-            "keys": 1016,
+            "keys": 1039,
             "untranslated": 32,
-            "translated": 984,
+            "translated": 1007,
             "coverage": 96.9,
             "duplicates": 0
         },
         "zh-Hans": {
-            "keys": 1016,
+            "keys": 1039,
             "untranslated": 27,
-            "translated": 989,
-            "coverage": 97.3,
+            "translated": 1012,
+            "coverage": 97.4,
             "duplicates": 0
         },
         "zh-Hant": {
-            "keys": 1016,
+            "keys": 1039,
             "untranslated": 27,
-            "translated": 989,
-            "coverage": 97.3,
+            "translated": 1012,
+            "coverage": 97.4,
             "duplicates": 0
         }
     }
