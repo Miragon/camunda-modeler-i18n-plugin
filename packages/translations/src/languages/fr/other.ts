@@ -15,6 +15,7 @@ const translations: Record<string, string> = {
     Applied: 'Appliqué',
     'Assign to process variable': 'Affecter à une variable de processus',
     'Candidate starter groups': 'Groupes initiateurs candidats',
+    Change: 'Changer',
     'Choose element template': "Choisir un modèle d'élément",
     Collect: 'Collecter',
     collectEntries: 'collectEntries',
