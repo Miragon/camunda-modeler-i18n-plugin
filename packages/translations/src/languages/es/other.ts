@@ -18,6 +18,7 @@ const translations: Record<string, string> = {
     'Business Rule Task': 'Tarea de regla de negocio',
     'Call Activity': 'Actividad de llamada',
     'Candidate starter groups': 'Grupos de iniciadores potenciales',
+    Change: 'Cambiar',
     'Choose element template': 'Elegir plantilla de elemento',
     'Close minimap': 'Cerrar minimapa',
     Collect: 'Recolectar',

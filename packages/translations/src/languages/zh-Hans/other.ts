@@ -15,6 +15,7 @@ const translations: Record<string, string> = {
     Applied: '已应用',
     'Assign to process variable': '赋值给流程变量',
     'Candidate starter groups': '候选发起组',
+    Change: '更改',
     'Choose element template': '选择元素模板',
     Collect: '收集',
     collectEntries: 'collectEntries',

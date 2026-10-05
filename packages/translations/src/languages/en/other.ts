@@ -18,6 +18,7 @@ const translations: Record<string, string> = {
     'Business Rule Task': 'Business Rule Task',
     'Call Activity': 'Call Activity',
     'Candidate starter groups': 'Candidate starter groups',
+    Change: 'Change',
     'Choose element template': 'Choose element template',
     'Close minimap': 'Close minimap',
     Collect: 'Collect',
