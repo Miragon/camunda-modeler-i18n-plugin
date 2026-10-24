@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/Miragon/camunda-modeler-i18n-plugin/compare/bpmn-modeler-i18n-v0.2.0...bpmn-modeler-i18n-v0.2.1) (2026-10-24)
+
+
+### Bug Fixes
+
+* **plugin:** keep DMN sub-editor modules contributed by other plugins ([#143](https://github.com/Miragon/camunda-modeler-i18n-plugin/issues/143)) ([0d0f941](https://github.com/Miragon/camunda-modeler-i18n-plugin/commit/0d0f941b76b181903e304fb211ff77d983df085f))
+
 ## [0.2.0](https://github.com/Miragon/camunda-modeler-i18n-plugin/compare/bpmn-modeler-i18n-v0.1.0...bpmn-modeler-i18n-v0.2.0) (2026-08-21)
 
 
