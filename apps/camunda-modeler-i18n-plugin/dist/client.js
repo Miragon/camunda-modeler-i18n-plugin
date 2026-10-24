@@ -2345,98 +2345,138 @@ var weakMemoize = function weakMemoize(func) {
 
 /***/ },
 
-/***/ "./client/bpmnjs-i18n-extension/index.js"
+/***/ "./client/editors/EditorModuleInjector.js"
+/*!************************************************!*\
+  !*** ./client/editors/EditorModuleInjector.js ***!
+  \************************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ EditorModuleInjector)
+/* harmony export */ });
+const dmnEditors = ['drd', 'decisionTable', 'literalExpression'];
+class EditorModuleInjector {
+  #extensionModule;
+  constructor(extensionModule) {
+    this.#extensionModule = extensionModule;
+  }
+  subscribeTo(subscribe) {
+    subscribe('bpmn.modeler.configure', ({
+      middlewares
+    }) => {
+      middlewares.push(config => this.extendBpmn(config));
+    });
+    subscribe('dmn.modeler.configure', ({
+      middlewares
+    }) => {
+      middlewares.push(config => this.extendDmn(config));
+    });
+  }
+  extendBpmn(config) {
+    return this.#withExtensionModule(config);
+  }
+  extendDmn(config) {
+    const extendedEditors = dmnEditors.map(editor => [editor, this.#withExtensionModule(config[editor])]);
+    return {
+      ...config,
+      ...Object.fromEntries(extendedEditors)
+    };
+  }
+  #withExtensionModule(editorConfig = {}) {
+    return {
+      ...editorConfig,
+      additionalModules: [...(editorConfig.additionalModules || []), this.#extensionModule]
+    };
+  }
+}
+
+/***/ },
+
+/***/ "./client/language/LanguageOptions.js"
+/*!********************************************!*\
+  !*** ./client/language/LanguageOptions.js ***!
+  \********************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ LanguageOptions)
+/* harmony export */ });
+/* harmony import */ var _miragon_bpmn_modeler_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @miragon/bpmn-modeler-i18n */ "../../packages/translations/dist/index.js");
+
+class LanguageOptions {
+  #options = _miragon_bpmn_modeler_i18n__WEBPACK_IMPORTED_MODULE_0__.supportedLanguages.map(({
+    label,
+    locale
+  }) => ({
+    value: locale,
+    label
+  }));
+  all() {
+    return this.#options;
+  }
+  find(locale) {
+    return this.#options.find(option => option.value === locale);
+  }
+}
+
+/***/ },
+
+/***/ "./client/language/LanguagePreference.js"
 /*!***********************************************!*\
-  !*** ./client/bpmnjs-i18n-extension/index.js ***!
+  !*** ./client/language/LanguagePreference.js ***!
   \***********************************************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
-/* harmony export */   i18n: () => (/* reexport safe */ _miragon_bpmn_modeler_i18n__WEBPACK_IMPORTED_MODULE_0__.i18n),
-/* harmony export */   optionFor: () => (/* binding */ optionFor),
-/* harmony export */   options: () => (/* binding */ options),
-/* harmony export */   supportedLanguages: () => (/* reexport safe */ _miragon_bpmn_modeler_i18n__WEBPACK_IMPORTED_MODULE_0__.supportedLanguages)
+/* harmony export */   "default": () => (/* binding */ LanguagePreference)
 /* harmony export */ });
-/* harmony import */ var _miragon_bpmn_modeler_i18n__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @miragon/bpmn-modeler-i18n */ "../../packages/translations/dist/index.js");
-/**
- * The plugin's translation seam.
- *
- * Translation data and the runtime translator now live in the shared
- * `@miragon/bpmn-modeler-i18n` package. This module re-exports its didi
- * `TranslateModule` (injected into each editor as an additional module) plus the
- * shared `i18n` singleton (used to switch language) and `supportedLanguages`
- * (used to build the dropdown), so the rest of the plugin has a single import.
- */
+/* harmony import */ var _LanguageOptions__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./LanguageOptions */ "./client/language/LanguageOptions.js");
 
+const pluginKey = 'i18n';
+const configName = 'config';
 
-
-// The plugin's long-standing call for translation contributions. Fires at bundle
-// load; the contract test asserts on it.
-console.log('Please help us translate by creating a pull request!');
-
-// Dropdown options derived from the shared library, so a language added there
-// shows up in the plugin automatically. `value` is the BCP-47 locale code.
-const options = _miragon_bpmn_modeler_i18n__WEBPACK_IMPORTED_MODULE_0__.supportedLanguages.map(({
-  label,
-  locale
-}) => ({
-  value: locale,
-  label
-}));
-const optionFor = locale => options.find(option => option.value === locale);
-
-/* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_miragon_bpmn_modeler_i18n__WEBPACK_IMPORTED_MODULE_0__.TranslateModule);
-
-/***/ },
-
-/***/ "./client/config/ConfigModal.js"
-/*!**************************************!*\
-  !*** ./client/config/ConfigModal.js ***!
-  \**************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ ConfigModal)
-/* harmony export */ });
-/* harmony import */ var camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! camunda-modeler-plugin-helpers/vendor/react */ "../../node_modules/camunda-modeler-plugin-helpers/vendor/react.js");
-/* harmony import */ var camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var camunda_modeler_plugin_helpers_components_Modal_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! camunda-modeler-plugin-helpers/components/Modal.js */ "../../node_modules/camunda-modeler-plugin-helpers/components/Modal.js");
-
-
-const Title = camunda_modeler_plugin_helpers_components_Modal_js__WEBPACK_IMPORTED_MODULE_1__["default"].Title || (({
-  children
-}) => /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("h2", null, children));
-const Body = camunda_modeler_plugin_helpers_components_Modal_js__WEBPACK_IMPORTED_MODULE_1__["default"].Body || (({
-  children
-}) => /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, children));
-const Footer = camunda_modeler_plugin_helpers_components_Modal_js__WEBPACK_IMPORTED_MODULE_1__["default"].Footer || (({
-  children
-}) => /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", null, children));
-function ConfigModal({
-  onClose
-}) {
-  return /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(camunda_modeler_plugin_helpers_components_Modal_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
-    onClose: onClose
-  }, /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Title, null, "Language changed"), /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Body, null, /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Restart the modeler to apply the configuration.")), /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(Footer, null, /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
-    id: "languageChangeButton"
-  }, /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
-    type: "button",
-    className: "btn btn-primary",
-    onClick: () => onClose()
-  }, "Ok"))));
+// Older plugin versions persisted JS-identifier locale keys; the library uses BCP-47.
+const legacyLocales = {
+  pt_br: 'pt-br',
+  nl_nl: 'nl-nl',
+  zh_Hans: 'zh-Hans',
+  zh_Hant: 'zh-Hant'
+};
+class LanguagePreference {
+  static DEFAULT_LOCALE = 'en';
+  #config;
+  #options = new _LanguageOptions__WEBPACK_IMPORTED_MODULE_0__["default"]();
+  constructor(config) {
+    this.#config = config;
+  }
+  async load() {
+    const stored = await this.#config.getForPlugin(pluginKey, configName);
+    return this.#decode(stored);
+  }
+  save(locale) {
+    return this.#config.setForPlugin(pluginKey, configName, {
+      currentLanguage: this.#options.find(locale)
+    });
+  }
+  #decode(stored) {
+    const storedValue = stored?.currentLanguage?.value || stored?.currentLanguage;
+    const locale = legacyLocales[storedValue] || storedValue;
+    return this.#options.find(locale) ? locale : LanguagePreference.DEFAULT_LOCALE;
+  }
 }
 
 /***/ },
 
-/***/ "./client/config/I18nPlugin.js"
-/*!*************************************!*\
-  !*** ./client/config/I18nPlugin.js ***!
-  \*************************************/
+/***/ "./client/toolbar/I18nPlugin.js"
+/*!**************************************!*\
+  !*** ./client/toolbar/I18nPlugin.js ***!
+  \**************************************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -2448,10 +2488,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var camunda_modeler_plugin_helpers_components_Fill_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! camunda-modeler-plugin-helpers/components/Fill.js */ "../../node_modules/camunda-modeler-plugin-helpers/components/Fill.js");
 /* harmony import */ var react_select__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-select */ "../../node_modules/react-select/dist/react-select.esm.js");
-/* harmony import */ var _bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../bpmnjs-i18n-extension */ "./client/bpmnjs-i18n-extension/index.js");
-/* harmony import */ var _ConfigModal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ConfigModal */ "./client/config/ConfigModal.js");
-/* harmony import */ var _editorMiddlewares__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./editorMiddlewares */ "./client/config/editorMiddlewares.js");
-/* harmony import */ var _languagePreference__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./languagePreference */ "./client/config/languagePreference.js");
+/* harmony import */ var _miragon_bpmn_modeler_i18n__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! @miragon/bpmn-modeler-i18n */ "../../packages/translations/dist/index.js");
+/* harmony import */ var _editors_EditorModuleInjector__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../editors/EditorModuleInjector */ "./client/editors/EditorModuleInjector.js");
+/* harmony import */ var _language_LanguageOptions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../language/LanguageOptions */ "./client/language/LanguageOptions.js");
+/* harmony import */ var _language_LanguagePreference__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../language/LanguagePreference */ "./client/language/LanguagePreference.js");
+/* harmony import */ var _RestartModal__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./RestartModal */ "./client/toolbar/RestartModal.js");
 
 
 
@@ -2459,64 +2500,62 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const defaultState = {
-  currentLanguage: (0,_bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__.optionFor)(_languagePreference__WEBPACK_IMPORTED_MODULE_6__.defaultLanguage),
-  modalOpen: false
+
+const selectStyles = {
+  control: provided => ({
+    ...provided,
+    width: 125,
+    minHeight: 24,
+    marginRight: 10,
+    marginTop: 2,
+    '&>div:first-of-type': {
+      padding: '0px 4px'
+    },
+    '&>div:last-child>div': {
+      padding: '0px 8px'
+    },
+    '&>div>span': {
+      display: 'none'
+    }
+  }),
+  menu: provided => ({
+    ...provided,
+    zIndex: 101,
+    marginTop: 0
+  })
 };
-
-/**
- * An example client extension plugin to enable auto saving functionality
- * into the Camunda Modeler
- */
 class I18nPlugin extends camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0__.PureComponent {
   constructor(props) {
     super(props);
-    this.state = defaultState;
+    this.languageOptions = new _language_LanguageOptions__WEBPACK_IMPORTED_MODULE_5__["default"]();
+    this.languagePreference = new _language_LanguagePreference__WEBPACK_IMPORTED_MODULE_6__["default"](props.config);
+    this.state = {
+      currentLanguage: this.languageOptions.find(_language_LanguagePreference__WEBPACK_IMPORTED_MODULE_6__["default"].DEFAULT_LOCALE),
+      restartPromptOpen: false
+    };
     this.handleLanguageChanged = this.handleLanguageChanged.bind(this);
-    this.handleClosed = this.handleClosed.bind(this);
+    this.handleRestartPromptClosed = this.handleRestartPromptClosed.bind(this);
   }
   componentDidMount() {
-    const {
-      config,
-      subscribe
-    } = this.props;
-
-    // Subscribe synchronously: inside the `if (config)` below, a fresh
-    // install never injected the translate module at all.
-    subscribe('bpmn.modeler.configure', event => {
-      const {
-        middlewares
-      } = event;
-      middlewares.push((0,_editorMiddlewares__WEBPACK_IMPORTED_MODULE_5__.bpmnMiddleware)(_bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__["default"]));
-    });
-    subscribe('dmn.modeler.configure', event => {
-      const {
-        middlewares
-      } = event;
-      middlewares.push((0,_editorMiddlewares__WEBPACK_IMPORTED_MODULE_5__.dmnMiddleware)(_bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__["default"]));
-    });
-    (0,_languagePreference__WEBPACK_IMPORTED_MODULE_6__.loadLanguage)(config).then(locale => {
+    new _editors_EditorModuleInjector__WEBPACK_IMPORTED_MODULE_4__["default"](_miragon_bpmn_modeler_i18n__WEBPACK_IMPORTED_MODULE_3__.TranslateModule).subscribeTo(this.props.subscribe);
+    this.languagePreference.load().then(locale => {
       this.setState({
-        currentLanguage: (0,_bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__.optionFor)(locale)
+        currentLanguage: this.languageOptions.find(locale)
       });
-
-      // Switch the shared translator so editors created afterwards
-      // render in the stored language.
-      _bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__.i18n.setLanguage(locale);
+      _miragon_bpmn_modeler_i18n__WEBPACK_IMPORTED_MODULE_3__.i18n.setLanguage(locale);
     }).catch(console.error);
   }
   handleLanguageChanged(language) {
-    ;(0,_languagePreference__WEBPACK_IMPORTED_MODULE_6__.saveLanguage)(this.props.config, language.value).catch(console.error);
-    _bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__.i18n.setLanguage(language.value);
+    this.languagePreference.save(language.value).catch(console.error);
+    _miragon_bpmn_modeler_i18n__WEBPACK_IMPORTED_MODULE_3__.i18n.setLanguage(language.value);
     this.setState({
       currentLanguage: language,
-      modalOpen: true
+      restartPromptOpen: true
     });
   }
-  handleClosed() {
+  handleRestartPromptClosed() {
     this.setState({
-      ...this.state,
-      modalOpen: false
+      restartPromptOpen: false
     });
   }
   render() {
@@ -2524,101 +2563,51 @@ class I18nPlugin extends camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IM
       slot: "tab-actions",
       group: "9_language"
     }, /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(react_select__WEBPACK_IMPORTED_MODULE_2__["default"], {
-      styles: {
-        control: provided => ({
-          ...provided,
-          width: 125,
-          minHeight: 24,
-          marginRight: 10,
-          marginTop: 2,
-          '&>div:first-of-type': {
-            padding: '0px 4px'
-          },
-          '&>div:last-child>div': {
-            padding: '0px 8px'
-          },
-          '&>div>span': {
-            display: 'none'
-          }
-        }),
-        menu: provided => ({
-          ...provided,
-          zIndex: 101,
-          marginTop: 0
-        })
-      },
+      styles: selectStyles,
       name: "language_selection",
-      options: _bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__.options,
+      options: this.languageOptions.all(),
       onChange: this.handleLanguageChanged,
       value: this.state.currentLanguage
-    })), this.state.modalOpen && /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_ConfigModal__WEBPACK_IMPORTED_MODULE_4__["default"], {
-      onClose: this.handleClosed
+    })), this.state.restartPromptOpen && /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(_RestartModal__WEBPACK_IMPORTED_MODULE_7__["default"], {
+      onClose: this.handleRestartPromptClosed
     }));
   }
 }
 
 /***/ },
 
-/***/ "./client/config/editorMiddlewares.js"
-/*!********************************************!*\
-  !*** ./client/config/editorMiddlewares.js ***!
-  \********************************************/
+/***/ "./client/toolbar/RestartModal.js"
+/*!****************************************!*\
+  !*** ./client/toolbar/RestartModal.js ***!
+  \****************************************/
 (__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   bpmnMiddleware: () => (/* binding */ bpmnMiddleware),
-/* harmony export */   dmnMiddleware: () => (/* binding */ dmnMiddleware)
+/* harmony export */   "default": () => (/* binding */ RestartModal)
 /* harmony export */ });
-const dmnEditors = ['drd', 'decisionTable', 'literalExpression'];
-const withModule = (editorConfig = {}, extensionModule) => ({
-  ...editorConfig,
-  additionalModules: [...(editorConfig.additionalModules || []), extensionModule]
-});
-const bpmnMiddleware = extensionModule => config => withModule(config, extensionModule);
-const dmnMiddleware = extensionModule => config => ({
-  ...config,
-  ...Object.fromEntries(dmnEditors.map(editor => [editor, withModule(config[editor], extensionModule)]))
-});
+/* harmony import */ var camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! camunda-modeler-plugin-helpers/vendor/react */ "../../node_modules/camunda-modeler-plugin-helpers/vendor/react.js");
+/* harmony import */ var camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var camunda_modeler_plugin_helpers_components_Modal_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! camunda-modeler-plugin-helpers/components/Modal.js */ "../../node_modules/camunda-modeler-plugin-helpers/components/Modal.js");
 
-/***/ },
 
-/***/ "./client/config/languagePreference.js"
-/*!*********************************************!*\
-  !*** ./client/config/languagePreference.js ***!
-  \*********************************************/
-(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   defaultLanguage: () => (/* binding */ defaultLanguage),
-/* harmony export */   loadLanguage: () => (/* binding */ loadLanguage),
-/* harmony export */   saveLanguage: () => (/* binding */ saveLanguage)
-/* harmony export */ });
-/* harmony import */ var _bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../bpmnjs-i18n-extension */ "./client/bpmnjs-i18n-extension/index.js");
-
-const defaultLanguage = 'en';
-const configKey = 'i18n';
-const configName = 'config';
-
-// Older plugin versions persisted JS-identifier locale keys; the library uses BCP-47.
-const legacyLocales = {
-  pt_br: 'pt-br',
-  nl_nl: 'nl-nl',
-  zh_Hans: 'zh-Hans',
-  zh_Hant: 'zh-Hant'
-};
-const decode = stored => {
-  const storedValue = stored?.currentLanguage?.value || stored?.currentLanguage;
-  const locale = legacyLocales[storedValue] || storedValue;
-  return (0,_bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_0__.optionFor)(locale) ? locale : defaultLanguage;
-};
-const loadLanguage = config => config.getForPlugin(configKey, configName).then(decode);
-const saveLanguage = (config, locale) => config.setForPlugin(configKey, configName, {
-  currentLanguage: (0,_bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_0__.optionFor)(locale)
-});
+class RestartModal extends camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0__.PureComponent {
+  render() {
+    const {
+      onClose
+    } = this.props;
+    return /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(camunda_modeler_plugin_helpers_components_Modal_js__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      onClose: onClose
+    }, /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(camunda_modeler_plugin_helpers_components_Modal_js__WEBPACK_IMPORTED_MODULE_1__["default"].Title, null, "Language changed"), /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(camunda_modeler_plugin_helpers_components_Modal_js__WEBPACK_IMPORTED_MODULE_1__["default"].Body, null, /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("p", null, "Restart the modeler to apply the configuration.")), /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement(camunda_modeler_plugin_helpers_components_Modal_js__WEBPACK_IMPORTED_MODULE_1__["default"].Footer, null, /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("div", {
+      id: "languageChangeButton"
+    }, /*#__PURE__*/camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IMPORTED_MODULE_0___default().createElement("button", {
+      type: "button",
+      className: "btn btn-primary",
+      onClick: () => onClose()
+    }, "Ok"))));
+  }
+}
 
 /***/ },
 
@@ -11312,32 +11301,19 @@ function rectToClientRect(rect) {
 
 /***/ },
 
-/***/ "../../packages/translations/dist/TranslateModule.js"
-/*!***********************************************************!*\
-  !*** ../../packages/translations/dist/TranslateModule.js ***!
-  \***********************************************************/
+/***/ "../../packages/translations/dist/CustomTranslator.js"
+/*!************************************************************!*\
+  !*** ../../packages/translations/dist/CustomTranslator.js ***!
+  \************************************************************/
 (__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   CustomTranslator: () => (/* binding */ CustomTranslator),
-/* harmony export */   TranslateModule: () => (/* binding */ TranslateModule),
-/* harmony export */   i18n: () => (/* binding */ i18n)
+/* harmony export */   CustomTranslator: () => (/* binding */ CustomTranslator)
 /* harmony export */ });
 /* harmony import */ var _languages_index_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./languages/index.js */ "../../packages/translations/dist/languages/index.js");
-/**
- * Custom translator for bpmn-js / dmn-js that supports runtime language switching.
- *
- * Exposes a shared singleton {@link i18n} and a didi module ({@link TranslateModule})
- * that registers the same instance under the `translate` and `customTranslator`
- * services. UI that lives outside the modeler's DI container can import {@link i18n}
- * directly and subscribe to {@link CustomTranslator.onChange} to refresh labels when
- * the active language changes.
- */
 
-// Template keys already reported as missing, to avoid console spam.
-const missingKeys = new Set();
 /**
  * Translates template strings using the active language dictionary.
  *
@@ -11352,6 +11328,7 @@ class CustomTranslator {
   locale = 'en';
   dictionary = _languages_index_js__WEBPACK_IMPORTED_MODULE_0__.dictionaries['en'];
   listeners = new Set();
+  reportedMissingKeys = new Set();
   // Consumer-supplied entries merged on top of the bundled dictionaries, per
   // locale. Lets a host add its own keys (or override a shared translation)
   // without those strings living in this library. See {@link extend}.
@@ -11368,12 +11345,17 @@ class CustomTranslator {
    * @returns The translated (or original) string with placeholders resolved.
    */
   translate(template, replacements) {
-    if (this.locale !== 'en' && !this.dictionary[template] && !missingKeys.has(template)) {
-      missingKeys.add(template);
-      console.log(`Missing translation [${this.locale}]: ${template}`);
-    }
+    this.reportIfMissing(template);
     const translation = this.dictionary[template] || template;
     return translation.replace(/{([^}]+)}/g, (_, key) => (replacements || {})[key] ?? `{${key}}`);
+  }
+  reportIfMissing(template) {
+    const isMissing = this.locale !== 'en' && !this.dictionary[template];
+    if (!isMissing || this.reportedMissingKeys.has(template)) {
+      return;
+    }
+    this.reportedMissingKeys.add(template);
+    console.log(`Missing translation [${this.locale}]: ${template}`);
   }
   /**
    * Switches the active language dictionary and notifies subscribers.
@@ -11448,14 +11430,22 @@ class CustomTranslator {
     };
   }
 }
-/**
- * Shared singleton translator used across a modeler instance.
- *
- * The {@link TranslateModule} below registers this same instance as the modeler's
- * `customTranslator` / `translate` services, so every caller reads from one
- * dictionary and reacts to one {@link CustomTranslator.setLanguage} call.
- */
-const i18n = new CustomTranslator();
+
+/***/ },
+
+/***/ "../../packages/translations/dist/TranslateModule.js"
+/*!***********************************************************!*\
+  !*** ../../packages/translations/dist/TranslateModule.js ***!
+  \***********************************************************/
+(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   TranslateModule: () => (/* binding */ TranslateModule)
+/* harmony export */ });
+/* harmony import */ var _i18n_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./i18n.js */ "../../packages/translations/dist/i18n.js");
+
 /**
  * didi module that binds the shared {@link i18n} instance as the modeler's
  * `customTranslator` service and exposes its `translate` method as the callable
@@ -11463,15 +11453,33 @@ const i18n = new CustomTranslator();
  */
 const TranslateModule = {
   __init__: ['customTranslator'],
-  customTranslator: ['value', i18n],
-  translate: ['factory', function translateFactory(customTranslator) {
-    return function translate(template, replacements) {
-      return customTranslator.translate(template, replacements);
-    };
-  }]
+  customTranslator: ['value', _i18n_js__WEBPACK_IMPORTED_MODULE_0__.i18n],
+  translate: ['factory', ['customTranslator', customTranslator => (template, replacements) => customTranslator.translate(template, replacements)]]
 };
-// Make the translate factory injectable.
-TranslateModule.translate[1].$inject = ['customTranslator'];
+
+/***/ },
+
+/***/ "../../packages/translations/dist/i18n.js"
+/*!************************************************!*\
+  !*** ../../packages/translations/dist/i18n.js ***!
+  \************************************************/
+(__unused_webpack___webpack_module__, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   i18n: () => (/* binding */ i18n)
+/* harmony export */ });
+/* harmony import */ var _CustomTranslator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CustomTranslator.js */ "../../packages/translations/dist/CustomTranslator.js");
+
+/**
+ * Shared singleton translator used across a modeler instance.
+ *
+ * {@link TranslateModule} registers this same instance as the modeler's
+ * `customTranslator` / `translate` services, so every caller reads from one
+ * dictionary and reacts to one {@link CustomTranslator.setLanguage} call.
+ */
+const i18n = new _CustomTranslator_js__WEBPACK_IMPORTED_MODULE_0__.CustomTranslator();
 
 /***/ },
 
@@ -11484,14 +11492,16 @@ TranslateModule.translate[1].$inject = ['customTranslator'];
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   CustomTranslator: () => (/* reexport safe */ _TranslateModule_js__WEBPACK_IMPORTED_MODULE_0__.CustomTranslator),
-/* harmony export */   TranslateModule: () => (/* reexport safe */ _TranslateModule_js__WEBPACK_IMPORTED_MODULE_0__.TranslateModule),
-/* harmony export */   dictionaries: () => (/* reexport safe */ _languages_index_js__WEBPACK_IMPORTED_MODULE_1__.dictionaries),
-/* harmony export */   i18n: () => (/* reexport safe */ _TranslateModule_js__WEBPACK_IMPORTED_MODULE_0__.i18n),
-/* harmony export */   supportedLanguages: () => (/* reexport safe */ _languages_index_js__WEBPACK_IMPORTED_MODULE_1__.supportedLanguages)
+/* harmony export */   CustomTranslator: () => (/* reexport safe */ _CustomTranslator_js__WEBPACK_IMPORTED_MODULE_0__.CustomTranslator),
+/* harmony export */   TranslateModule: () => (/* reexport safe */ _TranslateModule_js__WEBPACK_IMPORTED_MODULE_2__.TranslateModule),
+/* harmony export */   dictionaries: () => (/* reexport safe */ _languages_index_js__WEBPACK_IMPORTED_MODULE_3__.dictionaries),
+/* harmony export */   i18n: () => (/* reexport safe */ _i18n_js__WEBPACK_IMPORTED_MODULE_1__.i18n),
+/* harmony export */   supportedLanguages: () => (/* reexport safe */ _languages_index_js__WEBPACK_IMPORTED_MODULE_3__.supportedLanguages)
 /* harmony export */ });
-/* harmony import */ var _TranslateModule_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./TranslateModule.js */ "../../packages/translations/dist/TranslateModule.js");
-/* harmony import */ var _languages_index_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./languages/index.js */ "../../packages/translations/dist/languages/index.js");
+/* harmony import */ var _CustomTranslator_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./CustomTranslator.js */ "../../packages/translations/dist/CustomTranslator.js");
+/* harmony import */ var _i18n_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./i18n.js */ "../../packages/translations/dist/i18n.js");
+/* harmony import */ var _TranslateModule_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./TranslateModule.js */ "../../packages/translations/dist/TranslateModule.js");
+/* harmony import */ var _languages_index_js__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./languages/index.js */ "../../packages/translations/dist/languages/index.js");
 /**
  * Public API of @miragon/bpmn-modeler-i18n.
  *
@@ -11500,6 +11510,8 @@ __webpack_require__.r(__webpack_exports__);
  * plus a didi translate module and supported-language metadata. Consumed by the
  * Camunda Modeler i18n plugin and the Miragon BPMN Modeler.
  */
+
+
 
 
 
@@ -26869,10 +26881,11 @@ let __webpack_exports__ = {};
   \*************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var camunda_modeler_plugin_helpers__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! camunda-modeler-plugin-helpers */ "../../node_modules/camunda-modeler-plugin-helpers/index.js");
-/* harmony import */ var _config_I18nPlugin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./config/I18nPlugin */ "./client/config/I18nPlugin.js");
+/* harmony import */ var _toolbar_I18nPlugin__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./toolbar/I18nPlugin */ "./client/toolbar/I18nPlugin.js");
 
 
-(0,camunda_modeler_plugin_helpers__WEBPACK_IMPORTED_MODULE_0__.registerClientExtension)(_config_I18nPlugin__WEBPACK_IMPORTED_MODULE_1__["default"]);
+console.log('Please help us translate by creating a pull request!');
+(0,camunda_modeler_plugin_helpers__WEBPACK_IMPORTED_MODULE_0__.registerClientExtension)(_toolbar_I18nPlugin__WEBPACK_IMPORTED_MODULE_1__["default"]);
 })();
 
 /******/ })()

@@ -79,6 +79,35 @@ export default tseslint.config(
         },
     },
 
+    // Classes first: behaviour lives in classes, one per file; pure helpers go to a
+    // `utils/` folder. Scripts, specs and browser test entries are exempt.
+    {
+        files: [
+            'packages/translations/src/**/*.ts',
+            'apps/camunda-modeler-i18n-plugin/client/**/*.js',
+            'apps/camunda-modeler-i18n-plugin/test/lib/**/*.mjs',
+        ],
+        ignores: ['**/utils/**'],
+        rules: {
+            'max-classes-per-file': ['error', 1],
+            'no-restricted-syntax': [
+                'error',
+                ...[
+                    'Program > FunctionDeclaration',
+                    'Program > ExportNamedDeclaration > FunctionDeclaration',
+                    'Program > ExportDefaultDeclaration > FunctionDeclaration',
+                    'Program > ExportDefaultDeclaration > ArrowFunctionExpression',
+                    'Program > VariableDeclaration > VariableDeclarator > :matches(ArrowFunctionExpression, FunctionExpression)',
+                    'Program > ExportNamedDeclaration > VariableDeclaration > VariableDeclarator > :matches(ArrowFunctionExpression, FunctionExpression)',
+                ].map((selector) => ({
+                    selector,
+                    message:
+                        'Top-level functions belong in a class, or in a utils/ module when they are pure helpers.',
+                })),
+            ],
+        },
+    },
+
     // Plugin manifest (CommonJS).
     {
         files: ['apps/camunda-modeler-i18n-plugin/index.js'],

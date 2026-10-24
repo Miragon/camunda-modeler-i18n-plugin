@@ -6,7 +6,7 @@
 import BpmnModeler from 'camunda-bpmn-js/lib/camunda-cloud/Modeler';
 import { CamundaCloudModeler as DmnModeler } from 'camunda-dmn-js';
 
-import translateModule, { i18n } from '../../client/bpmnjs-i18n-extension/index.js';
+import { TranslateModule as translateModule, i18n } from '@miragon/bpmn-modeler-i18n';
 
 import DIAGRAM from './fixtures/harvest.bpmn';
 import DECISION from './fixtures/harvest.dmn';

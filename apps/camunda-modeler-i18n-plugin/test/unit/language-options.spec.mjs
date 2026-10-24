@@ -1,18 +1,16 @@
 /**
- * Plugin-side locale wiring.
- *
  * The translation data and its invariants (key parity, placeholders, duplicate
  * keys) live in and are tested by `@miragon/bpmn-modeler-i18n`. What remains
- * plugin-specific is the seam in `bpmnjs-i18n-extension`: the dropdown options
- * derived from the library.
+ * plugin-specific are the dropdown options derived from the library.
  */
 
 import { describe, it, expect } from 'vitest';
 
 import { supportedLanguages } from '@miragon/bpmn-modeler-i18n';
-import { options } from '../../client/bpmnjs-i18n-extension/index.js';
+import LanguageOptions from '../../client/language/LanguageOptions.js';
 
 const localeCodes = supportedLanguages.map((l) => l.locale);
+const options = new LanguageOptions().all();
 
 describe('dropdown options', () => {
     it('offers exactly one option per shipped language', () => {

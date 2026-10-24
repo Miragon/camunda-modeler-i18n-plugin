@@ -13,22 +13,23 @@ import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 
 import { _electron as electron } from 'playwright';
 
-import { modelerBinary, createProfile, cleanup } from './modeler.mjs';
+import ModelerProfile from '../lib/ModelerProfile.mjs';
+import ModelerRelease from '../lib/ModelerRelease.mjs';
 
-const executablePath = modelerBinary();
+const executablePath = new ModelerRelease().executable();
 
 /**
  * Launches against a throwaway profile and opens a Camunda 8 BPMN diagram, so
  * the palette and properties panel are on screen.
  *
- * @param {Object} options passed to `createProfile`
+ * @param {Object} options passed to `ModelerProfile.create`
  */
 async function open(options) {
-    const { profile } = createProfile(options);
+    const profile = ModelerProfile.create(options);
 
     const app = await electron.launch({
         executablePath,
-        args: [`--user-data-dir=${profile}`, '--disable-remote-interaction=true'],
+        args: [`--user-data-dir=${profile.dir}`, '--disable-remote-interaction=true'],
     });
 
     const window = await app.firstWindow();
@@ -74,9 +75,7 @@ describe.skipIf(!executablePath)('Camunda Modeler with the plugin installed', ()
     afterAll(async () => {
         for (const session of [german, english]) {
             await session?.app.close().catch(() => {});
-            if (session) {
-                cleanup(session.profile);
-            }
+            session?.profile.remove();
         }
     });
 

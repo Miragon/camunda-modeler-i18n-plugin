@@ -12,18 +12,16 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-import { PUBLISHED_FIXTURE } from '../lib/upstream.mjs';
+import { PLUGIN_ROOT, PUBLISHED_FIXTURE, WORKSPACE_ROOT } from '../lib/paths.mjs';
 
 // The plugin package (holds `supportedModeler` and the camunda-* dev-deps) and
 // the workspace root (holds the `overrides` block npm only honors at the root).
-const ROOT = path.resolve(import.meta.dirname, '..', '..');
-const WORKSPACE_ROOT = path.resolve(ROOT, '..', '..');
-const PLUGIN_PKG = path.join(ROOT, 'package.json');
+const PLUGIN_PKG = path.join(PLUGIN_ROOT, 'package.json');
 const ROOT_PKG = path.join(WORKSPACE_ROOT, 'package.json');
 
 // npm workspaces hoist dependencies to the root node_modules, but a conflict can
 // leave one nested under the plugin.
-const NODE_MODULES_ROOTS = [WORKSPACE_ROOT, ROOT];
+const NODE_MODULES_ROOTS = [WORKSPACE_ROOT, PLUGIN_ROOT];
 
 const args = process.argv.slice(2);
 const checkOnly = args.includes('--check');
@@ -183,4 +181,4 @@ if (checkOnly) {
 }
 
 fs.writeFileSync(PUBLISHED_FIXTURE, JSON.stringify(keys, null, 2) + '\n');
-console.log(`\nWrote ${path.relative(ROOT, PUBLISHED_FIXTURE)}`);
+console.log(`\nWrote ${path.relative(PLUGIN_ROOT, PUBLISHED_FIXTURE)}`);

@@ -6,9 +6,9 @@
 
 import { describe, it, expect } from 'vitest';
 
-import { analyse } from '../lib/drift.mjs';
+import TranslationDrift from '../lib/TranslationDrift.mjs';
 
-const result = analyse();
+const result = new TranslationDrift().analyse();
 
 describe('translation drift', () => {
     it('discovers upstream keys to compare against', () => {
@@ -26,14 +26,6 @@ describe('translation drift', () => {
                 'Run `npm run check:translations` for the full report, then use the ' +
                 '/i18n-translate skill to fill the gaps.',
         ).toEqual([]);
-    });
-
-    it('keeps every locale in sync with the reference', () => {
-        expect(result.parityErrors).toEqual([]);
-    });
-
-    it('preserves interpolation placeholders', () => {
-        expect(result.placeholderErrors).toEqual([]);
     });
 
     it('does not lose translation coverage', () => {
