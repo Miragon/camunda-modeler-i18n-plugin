@@ -16261,7 +16261,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // All supported languages with display names and dictionaries (dropdown order).
-const supportedLanguages = [{
+const languages = [{
   label: 'Deutsch',
   locale: 'de',
   dictionary: _de_index_js__WEBPACK_IMPORTED_MODULE_0__["default"]
@@ -16310,21 +16310,12 @@ const supportedLanguages = [{
   locale: 'ko',
   dictionary: _ko_index_js__WEBPACK_IMPORTED_MODULE_11__["default"]
 }];
+const supportedLanguages = languages;
 // Map from locale code to merged dictionary for fast lookup.
-const dictionaries = {
-  de: _de_index_js__WEBPACK_IMPORTED_MODULE_0__["default"],
-  en: _en_index_js__WEBPACK_IMPORTED_MODULE_1__["default"],
-  es: _es_index_js__WEBPACK_IMPORTED_MODULE_2__["default"],
-  fr: _fr_index_js__WEBPACK_IMPORTED_MODULE_3__["default"],
-  it: _it_index_js__WEBPACK_IMPORTED_MODULE_4__["default"],
-  'pt-br': _pt_br_index_js__WEBPACK_IMPORTED_MODULE_5__["default"],
-  'zh-Hans': _zh_Hans_index_js__WEBPACK_IMPORTED_MODULE_6__["default"],
-  'zh-Hant': _zh_Hant_index_js__WEBPACK_IMPORTED_MODULE_7__["default"],
-  ru: _ru_index_js__WEBPACK_IMPORTED_MODULE_8__["default"],
-  'nl-nl': _nl_nl_index_js__WEBPACK_IMPORTED_MODULE_9__["default"],
-  ja: _ja_index_js__WEBPACK_IMPORTED_MODULE_10__["default"],
-  ko: _ko_index_js__WEBPACK_IMPORTED_MODULE_11__["default"]
-};
+const dictionaries = Object.fromEntries(languages.map(({
+  locale,
+  dictionary
+}) => [locale, dictionary]));
 
 /***/ },
 

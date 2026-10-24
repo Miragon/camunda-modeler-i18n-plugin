@@ -59,7 +59,7 @@ npm run test:e2e             # drive the real Modeler with the plugin installed
 ### The shared library (`packages/translations`)
 
 - **`src/languages/<locale>/{bpmn-js,dmn-js,other,camunda-8-cloud,camunda-7-platform}.ts`** — the translation data, one flat `Record<string, string>` per file (English source string → localized value). Split into engine-agnostic core (`bpmn-js`, `dmn-js`, `other`) and per-engine property overlays (`camunda-8-cloud` = C8, `camunda-7-platform` = C7 — the Camunda version is visible in the file name). A per-locale `index.ts` barrel spreads all five into one dictionary. The C7 overlay is generated uniformly across locales; `test/platforms.spec.ts` guards each overlay (parity, placeholders, disjointness). C7 property labels the browser harness can't reach live in `known-runtime-keys.json`.
-- **`src/languages/index.ts`** — the registry: the `SupportedLocale` union, `supportedLanguages` (label + locale + dictionary per language, in dropdown order), and the `dictionaries` map.
+- **`src/languages/index.ts`** — the registry: one list of languages (label + locale + dictionary, in dropdown order) exported as `supportedLanguages`, from which the `SupportedLocale` union and the `dictionaries` map are derived.
 - **`src/TranslateModule.ts`** — `CustomTranslator` (lookup, English fallback, `{param}` interpolation, missing-key logging, `setLanguage`/`getLocale`/`onChange`), a shared **`i18n`** singleton, and the didi **`TranslateModule`** that binds it as the modeler's `translate` / `customTranslator` services.
 - **`src/index.ts`** — public API: `TranslateModule`, `CustomTranslator`, `i18n`, `supportedLanguages`, `dictionaries`, and types `SupportedLocale` / `LanguageEntry`. Built with `tsc` (NodeNext, so relative imports carry explicit `.js` extensions) to `dist/` — gitignored; only the plugin's dist is committed.
 
@@ -76,7 +76,7 @@ The plugin entry point (`apps/camunda-modeler-i18n-plugin/index.js`) names the p
 ### Adding a new language
 
 1. Add `packages/translations/src/languages/<locale>/` with `bpmn-js.ts`, `dmn-js.ts`, `other.ts`, `camunda-8-cloud.ts`, `camunda-7-platform.ts` and an `index.ts` barrel.
-2. Register the locale in `packages/translations/src/languages/index.ts` (add to the `SupportedLocale` union, `supportedLanguages`, and `dictionaries`).
+2. Register the locale in `packages/translations/src/languages/index.ts` (one entry in the `languages` list; the `SupportedLocale` union and `dictionaries` follow).
 
 The plugin dropdown updates automatically. German is the authoritative base; the `/i18n-translate` skill helps fill a language.
 
