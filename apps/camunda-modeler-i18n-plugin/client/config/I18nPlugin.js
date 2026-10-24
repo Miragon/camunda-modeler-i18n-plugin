@@ -3,6 +3,7 @@ import Fill from 'camunda-modeler-plugin-helpers/components/Fill.js';
 import Select from 'react-select';
 import translateModule, { i18n, options, canonicalLocale } from '../bpmnjs-i18n-extension';
 import ConfigModal from './ConfigModal';
+import { bpmnMiddleware, dmnMiddleware } from './editorMiddlewares';
 
 // The default language
 const defaultLanguage = 'en';
@@ -36,12 +37,12 @@ export default class I18nPlugin extends PureComponent {
         // install never injected the translate module at all.
         subscribe('bpmn.modeler.configure', (event) => {
             const { middlewares } = event;
-            middlewares.push(this.addModule(translateModule));
+            middlewares.push(bpmnMiddleware(translateModule));
         });
 
         subscribe('dmn.modeler.configure', (event) => {
             const { middlewares } = event;
-            middlewares.push(this.addDmdModule(translateModule));
+            middlewares.push(dmnMiddleware(translateModule));
         });
 
         // retrieve plugin related information from the application configuration
@@ -65,52 +66,6 @@ export default class I18nPlugin extends PureComponent {
                 i18n.setLanguage(locale);
             })
             .catch(console.error);
-    }
-
-    /**
-     * Returns a bpmn.modeler.configure middleware
-     * that adds the specific module.
-     *
-     * @param {didi.Module} extensionModule
-     *
-     * @return {Function}
-     */
-    addModule(extensionModule) {
-        return (config) => {
-            const additionalModules = config.additionalModules || [];
-
-            return {
-                ...config,
-                additionalModules: [...additionalModules, extensionModule],
-            };
-        };
-    }
-
-    /**
-     * Returns a bpmn.modeler.configure middleware
-     * that adds the specific module.
-     *
-     * @param {didi.Module} extensionModule
-     *
-     * @return {Function}
-     */
-    addDmdModule(extensionModule) {
-        return (config) => {
-            const additionalModules = config.additionalModules || [];
-
-            return {
-                ...config,
-                drd: {
-                    additionalModules: [...additionalModules, extensionModule],
-                },
-                decisionTable: {
-                    additionalModules: [...additionalModules, extensionModule],
-                },
-                literalExpression: {
-                    additionalModules: [...additionalModules, extensionModule],
-                },
-            };
-        };
     }
 
     handleLanguageChanged(language) {

@@ -2460,6 +2460,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_select__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-select */ "../../node_modules/react-select/dist/react-select.esm.js");
 /* harmony import */ var _bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../bpmnjs-i18n-extension */ "./client/bpmnjs-i18n-extension/index.js");
 /* harmony import */ var _ConfigModal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ConfigModal */ "./client/config/ConfigModal.js");
+/* harmony import */ var _editorMiddlewares__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./editorMiddlewares */ "./client/config/editorMiddlewares.js");
+
 
 
 
@@ -2501,13 +2503,13 @@ class I18nPlugin extends camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IM
       const {
         middlewares
       } = event;
-      middlewares.push(this.addModule(_bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__["default"]));
+      middlewares.push((0,_editorMiddlewares__WEBPACK_IMPORTED_MODULE_5__.bpmnMiddleware)(_bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__["default"]));
     });
     subscribe('dmn.modeler.configure', event => {
       const {
         middlewares
       } = event;
-      middlewares.push(this.addDmdModule(_bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__["default"]));
+      middlewares.push((0,_editorMiddlewares__WEBPACK_IMPORTED_MODULE_5__.dmnMiddleware)(_bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__["default"]));
     });
 
     // retrieve plugin related information from the application configuration
@@ -2528,50 +2530,6 @@ class I18nPlugin extends camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IM
       // render in the stored language.
       _bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__.i18n.setLanguage(locale);
     }).catch(console.error);
-  }
-
-  /**
-   * Returns a bpmn.modeler.configure middleware
-   * that adds the specific module.
-   *
-   * @param {didi.Module} extensionModule
-   *
-   * @return {Function}
-   */
-  addModule(extensionModule) {
-    return config => {
-      const additionalModules = config.additionalModules || [];
-      return {
-        ...config,
-        additionalModules: [...additionalModules, extensionModule]
-      };
-    };
-  }
-
-  /**
-   * Returns a bpmn.modeler.configure middleware
-   * that adds the specific module.
-   *
-   * @param {didi.Module} extensionModule
-   *
-   * @return {Function}
-   */
-  addDmdModule(extensionModule) {
-    return config => {
-      const additionalModules = config.additionalModules || [];
-      return {
-        ...config,
-        drd: {
-          additionalModules: [...additionalModules, extensionModule]
-        },
-        decisionTable: {
-          additionalModules: [...additionalModules, extensionModule]
-        },
-        literalExpression: {
-          additionalModules: [...additionalModules, extensionModule]
-        }
-      };
-    };
   }
   handleLanguageChanged(language) {
     this.props.config.setForPlugin(configKey, 'config', {
@@ -2626,6 +2584,31 @@ class I18nPlugin extends camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IM
     }));
   }
 }
+
+/***/ },
+
+/***/ "./client/config/editorMiddlewares.js"
+/*!********************************************!*\
+  !*** ./client/config/editorMiddlewares.js ***!
+  \********************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   bpmnMiddleware: () => (/* binding */ bpmnMiddleware),
+/* harmony export */   dmnMiddleware: () => (/* binding */ dmnMiddleware)
+/* harmony export */ });
+const dmnEditors = ['drd', 'decisionTable', 'literalExpression'];
+const withModule = (editorConfig = {}, extensionModule) => ({
+  ...editorConfig,
+  additionalModules: [...(editorConfig.additionalModules || []), extensionModule]
+});
+const bpmnMiddleware = extensionModule => config => withModule(config, extensionModule);
+const dmnMiddleware = extensionModule => config => ({
+  ...config,
+  ...Object.fromEntries(dmnEditors.map(editor => [editor, withModule(config[editor], extensionModule)]))
+});
 
 /***/ },
 
