@@ -41,7 +41,7 @@ export function analyse({ raw = false } = {}) {
     }
 
     const { keys: upstream, skipped, dynamic } = collectUpstreamKeys();
-    const ourKeys = new Set(reference.dictionary.keys());
+    const ourKeys = new Set(reference.keys());
 
     const missing = [...upstream]
         .filter(([key]) => !ourKeys.has(key) && !ignored.has(key))
@@ -56,8 +56,8 @@ export function analyse({ raw = false } = {}) {
     const parityErrors = [];
     const placeholderErrors = [];
 
-    for (const [name, locale] of locales) {
-        const keys = new Set(locale.dictionary.keys());
+    for (const [name, dictionary] of locales) {
+        const keys = new Set(dictionary.keys());
         const isReference = name === REFERENCE_LOCALE;
 
         if (!isReference) {
@@ -75,7 +75,7 @@ export function analyse({ raw = false } = {}) {
 
         let untranslated = 0;
 
-        for (const [key, value] of locale.dictionary) {
+        for (const [key, value] of dictionary) {
             if (placeholders(value).join(',') !== placeholders(key).join(',')) {
                 placeholderErrors.push({ locale: name, key, value });
             }
@@ -89,13 +89,10 @@ export function analyse({ raw = false } = {}) {
         const count = isReference ? 0 : untranslated;
 
         report[name] = {
-            keys: locale.dictionary.size,
+            keys: dictionary.size,
             untranslated: count,
-            translated: locale.dictionary.size - count,
-            coverage: +((100 * (locale.dictionary.size - count)) / locale.dictionary.size).toFixed(
-                1,
-            ),
-            duplicates: locale.duplicates.length,
+            translated: dictionary.size - count,
+            coverage: +((100 * (dictionary.size - count)) / dictionary.size).toFixed(1),
             reference: isReference || undefined,
         };
     }
@@ -112,11 +109,6 @@ export function analyse({ raw = false } = {}) {
         if (stats.untranslated > before.untranslated) {
             regressions.push(
                 `${name}: untranslated rose ${before.untranslated} -> ${stats.untranslated}`,
-            );
-        }
-        if (stats.duplicates > before.duplicates) {
-            regressions.push(
-                `${name}: duplicate keys rose ${before.duplicates} -> ${stats.duplicates}`,
             );
         }
     }
@@ -187,12 +179,12 @@ export function format(result) {
         lines.push(`  not installed, skipped   : ${result.skippedPackages.join(', ')}`);
     }
 
-    lines.push('', '  locale    keys  translated  coverage  dupes');
+    lines.push('', '  locale    keys  translated  coverage');
 
     for (const [name, s] of Object.entries(result.locales)) {
         lines.push(
             `  ${name.padEnd(9)} ${String(s.keys).padStart(4)}  ${String(s.translated).padStart(10)}  ` +
-                `${`${s.coverage}%`.padStart(6)}  ${String(s.duplicates).padStart(5)}`,
+                `${`${s.coverage}%`.padStart(6)}`,
         );
     }
 
