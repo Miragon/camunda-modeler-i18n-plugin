@@ -335,6 +335,7 @@ const translations: Record<string, string> = {
     'Script task documentation': 'Documentação da Atividade de Script',
     'Script type': 'Tipo de script',
     'Section contains an error': 'A seção contém um erro',
+    'Section contains a warning': 'A seção contém um aviso',
     'Section contains edits': 'A seção contém alterações',
     'Select an element to edit its properties.':
         'Selecione um elemento para editar suas propriedades.',

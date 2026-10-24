@@ -372,6 +372,7 @@ const translations: Record<string, string> = {
     'Script task documentation': '指令碼任務說明文件',
     'Script type': '指令碼類型',
     'Section contains an error': '该區塊包含錯誤',
+    'Section contains a warning': '该區塊包含警告',
     'Section contains edits': '该區塊包含修改',
     'Select an element to edit its properties.': '請選取一個元素以編輯其屬性。',
     'send ': '發送 ',

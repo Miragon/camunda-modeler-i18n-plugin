@@ -380,6 +380,7 @@ const translations: Record<string, string> = {
     'Script task documentation': 'Документация по задаче сценария',
     'Script type': 'Тип сценария',
     'Section contains an error': 'Раздел содержит ошибку',
+    'Section contains a warning': 'Раздел содержит предупреждение',
     'Section contains edits': 'Раздел содержит изменения',
     'Select an element to edit its properties.': 'Выберите элемент, чтобы изменить его свойства.',
     'send ': 'отправить ',
