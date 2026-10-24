@@ -381,6 +381,7 @@ const translations: Record<string, string> = {
     'Script type': 'スクリプトタイプ',
     Script: 'スクリプト',
     'Section contains an error': 'セクションにエラーがあります',
+    'Section contains a warning': 'セクションに警告があります',
     'Section contains edits': 'セクションに変更があります',
     'Select an element to edit its properties.': 'プロパティを編集する要素を選択してください。',
     'Send task documentation': '送信タスクのドキュメント',

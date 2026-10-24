@@ -2705,7 +2705,10 @@ function returnOrThrow(getter, minimalModelerVersion) {
   let result;
   try {
     result = getter();
-  } catch (error) {}
+  } catch {
+
+    // the Modeler does not provide the export
+  }
 
   if (!result) {
     throw new Error(`Not compatible with Camunda Modeler < ${minimalModelerVersion}`);
@@ -3018,7 +3021,7 @@ function registerPlatformDmnJSModdleExtension(descriptor) {
 function registerDmnJSPlugin(module, components) {
 
   if (!Array.isArray(components)) {
-    components = [ components ]
+    components = [ components ];
   }
 
   components.forEach(c => registerClientPlugin(module, `dmn.modeler.${c}.additionalModules`));
@@ -3046,7 +3049,7 @@ function registerDmnJSPlugin(module, components) {
 function registerCloudDmnJSPlugin(module, components) {
 
   if (!Array.isArray(components)) {
-    components = [ components ]
+    components = [ components ];
   }
 
   components.forEach(c => registerClientPlugin(module, `dmn.cloud.modeler.${c}.additionalModules`));
@@ -3074,7 +3077,7 @@ function registerCloudDmnJSPlugin(module, components) {
 function registerPlatformDmnJSPlugin(module, components) {
 
   if (!Array.isArray(components)) {
-    components = [ components ]
+    components = [ components ];
   }
 
   components.forEach(c => registerClientPlugin(module, `dmn.platform.modeler.${c}.additionalModules`));
@@ -3955,7 +3958,7 @@ function memoizeOne(resultFn, isEqual) {
     exports.useFormStatus = function () {
       return resolveDispatcher().useHostTransitionStatus();
     };
-    exports.version = "19.3.0";
+    exports.version = "19.3.1";
     "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ &&
       "function" ===
         typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop &&
@@ -12258,6 +12261,7 @@ const translations = {
   'Script type': 'Skripttyp',
   Script: 'Skript',
   'Section contains an error': 'Abschnitt enthält einen Fehler',
+  'Section contains a warning': 'Abschnitt enthält eine Warnung',
   'Section contains edits': 'Abschnitt enthält Änderungen',
   'Select an element to edit its properties.': 'Wählen Sie ein Element aus, um dessen Eigenschaften zu bearbeiten.',
   'Send task documentation': 'Dokumentation zur Sendaufgabe',
@@ -13436,6 +13440,7 @@ const translations = {
   'Script type': 'Script type',
   Script: 'Script',
   'Section contains an error': 'Section contains an error',
+  'Section contains a warning': 'Section contains a warning',
   'Section contains edits': 'Section contains edits',
   'Select an element to edit its properties.': 'Select an element to edit its properties.',
   'Send task documentation': 'Send task documentation',
@@ -14614,6 +14619,7 @@ const translations = {
   'Script type': 'Tipo de script',
   Script: 'Script',
   'Section contains an error': 'La sección contiene un error',
+  'Section contains a warning': 'La sección contiene una advertencia',
   'Section contains edits': 'La sección contiene cambios',
   'Select an element to edit its properties.': 'Seleccione un elemento para editar sus propiedades.',
   'Send task documentation': 'Documentación de tarea de envío',
@@ -15793,6 +15799,7 @@ const translations = {
   'Script task documentation': 'Documentation de la tâche de script',
   'Script type': 'Type de script',
   'Section contains an error': 'La section contient une erreur',
+  'Section contains a warning': 'La section contient un avertissement',
   'Section contains edits': 'La section contient des modifications',
   'Select an element to edit its properties.': 'Sélectionnez un élément pour modifier ses propriétés.',
   'send ': 'envoyer ',
@@ -17072,6 +17079,7 @@ const translations = {
   'Script type': 'Tipo di script',
   Script: 'Script',
   'Section contains an error': 'La sezione contiene un errore',
+  'Section contains a warning': 'La sezione contiene un avviso',
   'Section contains edits': 'La sezione contiene modifiche',
   'Select an element to edit its properties.': 'Seleziona un elemento per modificarne le proprietà.',
   'Send task documentation': 'Documentazione attività di invio',
@@ -18250,6 +18258,7 @@ const translations = {
   'Script type': 'スクリプトタイプ',
   Script: 'スクリプト',
   'Section contains an error': 'セクションにエラーがあります',
+  'Section contains a warning': 'セクションに警告があります',
   'Section contains edits': 'セクションに変更があります',
   'Select an element to edit its properties.': 'プロパティを編集する要素を選択してください。',
   'Send task documentation': '送信タスクのドキュメント',
@@ -19428,6 +19437,7 @@ const translations = {
   'Script type': '스크립트 유형',
   Script: '스크립트',
   'Section contains an error': '섹션에 오류가 있습니다',
+  'Section contains a warning': '섹션에 경고가 있습니다',
   'Section contains edits': '섹션에 변경 사항이 있습니다',
   'Select an element to edit its properties.': '속성을 편집할 요소를 선택하십시오.',
   'Send task documentation': '전송 작업 문서',
@@ -20607,6 +20617,7 @@ const translations = {
   'Script task documentation': 'Documentatie over de Script-Task',
   'Script type': 'Scripttype',
   'Section contains an error': 'De sectie bevat een fout',
+  'Section contains a warning': 'De sectie bevat een waarschuwing',
   'Section contains edits': 'De sectie bevat wijzigingen',
   'Select an element to edit its properties.': 'Selecteer een element om de eigenschappen te bewerken.',
   'send ': 'verstuur ',
@@ -21737,6 +21748,7 @@ const translations = {
   'Script task documentation': 'Documentação da Atividade de Script',
   'Script type': 'Tipo de script',
   'Section contains an error': 'A seção contém um erro',
+  'Section contains a warning': 'A seção contém um aviso',
   'Section contains edits': 'A seção contém alterações',
   'Select an element to edit its properties.': 'Selecione um elemento para editar suas propriedades.',
   'send ': 'enviar ',
@@ -22961,6 +22973,7 @@ const translations = {
   'Script task documentation': 'Документация по задаче сценария',
   'Script type': 'Тип сценария',
   'Section contains an error': 'Раздел содержит ошибку',
+  'Section contains a warning': 'Раздел содержит предупреждение',
   'Section contains edits': 'Раздел содержит изменения',
   'Select an element to edit its properties.': 'Выберите элемент, чтобы изменить его свойства.',
   'send ': 'отправить ',
@@ -24139,6 +24152,7 @@ const translations = {
   'Script task documentation': '脚本任务文档',
   'Script type': '脚本类型',
   'Section contains an error': '该区块包含错误',
+  'Section contains a warning': '该区块包含警告',
   'Section contains edits': '该区块包含修改',
   'Select an element to edit its properties.': '请选择一个元素以编辑其属性。',
   'send ': '发送 ',
@@ -25317,6 +25331,7 @@ const translations = {
   'Script task documentation': '指令碼任務說明文件',
   'Script type': '指令碼類型',
   'Section contains an error': '该區塊包含錯誤',
+  'Section contains a warning': '该區塊包含警告',
   'Section contains edits': '该區塊包含修改',
   'Select an element to edit its properties.': '請選取一個元素以編輯其屬性。',
   'send ': '發送 ',

@@ -379,6 +379,7 @@ const translations: Record<string, string> = {
     'Script type': '스크립트 유형',
     Script: '스크립트',
     'Section contains an error': '섹션에 오류가 있습니다',
+    'Section contains a warning': '섹션에 경고가 있습니다',
     'Section contains edits': '섹션에 변경 사항이 있습니다',
     'Select an element to edit its properties.': '속성을 편집할 요소를 선택하십시오.',
     'Send task documentation': '전송 작업 문서',

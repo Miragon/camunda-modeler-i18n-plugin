@@ -381,6 +381,7 @@ const translations: Record<string, string> = {
     'Script type': 'Tipo de script',
     Script: 'Script',
     'Section contains an error': 'La sección contiene un error',
+    'Section contains a warning': 'La sección contiene una advertencia',
     'Section contains edits': 'La sección contiene cambios',
     'Select an element to edit its properties.':
         'Seleccione un elemento para editar sus propiedades.',
