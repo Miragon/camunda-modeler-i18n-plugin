@@ -7,7 +7,7 @@
 
 **Speak your language in the Camunda Modeler.** A plugin that adds a language selector to the toolbar and translates the bpmn-js / dmn-js editor UI — palette, context pad, properties panel, and general strings — into 12 languages, switchable on the fly. It's built on a shared, npm-published translations library, and both live in this monorepo.
 
-![The Camunda Modeler with the i18n plugin, its UI translated to German](apps/camunda-modeler-i18n-plugin/img/screenshot.png)
+![Switching the Camunda Modeler from English to German, restarting, and modelling an end event in the German UI](apps/camunda-modeler-i18n-plugin/img/demo.gif)
 
 ## Install the plugin
 
