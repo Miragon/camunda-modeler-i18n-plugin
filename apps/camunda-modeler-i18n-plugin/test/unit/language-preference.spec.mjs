@@ -1,13 +1,11 @@
 import { describe, it, expect, vi } from 'vitest';
 
 import { supportedLanguages } from '@miragon/bpmn-modeler-i18n';
-import {
-    defaultLanguage,
-    loadLanguage,
-    saveLanguage,
-} from '../../client/config/languagePreference.js';
+import LanguagePreference from '../../client/language/LanguagePreference.js';
 
 const localeCodes = supportedLanguages.map((l) => l.locale);
+
+const loadLanguage = (config) => new LanguagePreference(config).load();
 
 const storedConfig = (stored) => ({
     getForPlugin: vi.fn().mockResolvedValue(stored),
@@ -46,7 +44,9 @@ describe('loading the language', () => {
     it.each([undefined, {}, { currentLanguage: 'xx' }])(
         'falls back to the default language for %j',
         async (stored) => {
-            expect(await loadLanguage(storedConfig(stored))).toBe(defaultLanguage);
+            expect(await loadLanguage(storedConfig(stored))).toBe(
+                LanguagePreference.DEFAULT_LOCALE,
+            );
         },
     );
 });
@@ -55,7 +55,7 @@ describe('saving the language', () => {
     it('stores the option shape every plugin version can read', async () => {
         const config = { setForPlugin: vi.fn().mockResolvedValue() };
 
-        await saveLanguage(config, 'fr');
+        await new LanguagePreference(config).save('fr');
 
         expect(config.setForPlugin).toHaveBeenCalledWith('i18n', 'config', {
             currentLanguage: { value: 'fr', label: 'Français' },

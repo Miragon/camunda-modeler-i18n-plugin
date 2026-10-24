@@ -1,18 +1,19 @@
 import { describe, it, expect } from 'vitest';
 
-import { bpmnMiddleware, dmnMiddleware } from '../../client/config/editorMiddlewares.js';
+import EditorModuleInjector from '../../client/editors/EditorModuleInjector.js';
 
 const translateModule = { __init__: ['customTranslator'] };
 const otherModule = { __init__: [] };
 const dmnEditors = ['drd', 'decisionTable', 'literalExpression'];
+const injector = new EditorModuleInjector(translateModule);
 
-describe('bpmn middleware', () => {
+describe('extending a BPMN editor', () => {
     it('adds the module to an empty config', () => {
-        expect(bpmnMiddleware(translateModule)({}).additionalModules).toEqual([translateModule]);
+        expect(injector.extendBpmn({}).additionalModules).toEqual([translateModule]);
     });
 
     it('keeps modules and options other plugins contributed', () => {
-        const config = bpmnMiddleware(translateModule)({
+        const config = injector.extendBpmn({
             additionalModules: [otherModule],
             keyboard: { bindTo: 'window' },
         });
@@ -22,15 +23,13 @@ describe('bpmn middleware', () => {
     });
 });
 
-describe('dmn middleware', () => {
+describe('extending a DMN editor', () => {
     it.each(dmnEditors)('adds the module to the %s editor', (editor) => {
-        expect(dmnMiddleware(translateModule)({})[editor].additionalModules).toEqual([
-            translateModule,
-        ]);
+        expect(injector.extendDmn({})[editor].additionalModules).toEqual([translateModule]);
     });
 
     it.each(dmnEditors)('keeps what other plugins contributed to the %s editor', (editor) => {
-        const config = dmnMiddleware(translateModule)({
+        const config = injector.extendDmn({
             [editor]: { additionalModules: [otherModule], moddleExtensions: { x: {} } },
         });
 
@@ -39,7 +38,7 @@ describe('dmn middleware', () => {
     });
 
     it('leaves the rest of the config untouched', () => {
-        const config = dmnMiddleware(translateModule)({ common: { keyboard: {} } });
+        const config = injector.extendDmn({ common: { keyboard: {} } });
 
         expect(config.common).toEqual({ keyboard: {} });
     });

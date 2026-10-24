@@ -18,7 +18,7 @@ import * as React from 'react';
  * so this must be read *after* the plugin is loaded within the same test.
  */
 async function loadTranslator() {
-    return (await import('../../client/bpmnjs-i18n-extension/index.js')).i18n;
+    return (await import('@miragon/bpmn-modeler-i18n')).i18n;
 }
 
 /** Records what the component renders into a Fill without a real slot host. */
@@ -45,7 +45,7 @@ function installModelerGlobals() {
 
 /** Imported after the globals exist; plugin-helpers resolves them on load. */
 async function loadPlugin() {
-    return (await import('../../client/config/I18nPlugin.js')).default;
+    return (await import('../../client/toolbar/I18nPlugin.js')).default;
 }
 
 /** Minimal stand-ins for the two props the Modeler passes a client extension. */
@@ -152,8 +152,7 @@ describe('I18nPlugin', () => {
 
         it('adds the translate module to the BPMN editor', async () => {
             const I18nPlugin = await loadPlugin();
-            const translateModule = (await import('../../client/bpmnjs-i18n-extension/index.js'))
-                .default;
+            const { TranslateModule: translateModule } = await import('@miragon/bpmn-modeler-i18n');
             const { props, subscriptions } = createProps(stored);
 
             await act(async () => {
@@ -183,8 +182,7 @@ describe('I18nPlugin', () => {
 
         it('adds the translate module to all three DMN sub-editors', async () => {
             const I18nPlugin = await loadPlugin();
-            const translateModule = (await import('../../client/bpmnjs-i18n-extension/index.js'))
-                .default;
+            const { TranslateModule: translateModule } = await import('@miragon/bpmn-modeler-i18n');
             const { props, subscriptions } = createProps(stored);
 
             await act(async () => {

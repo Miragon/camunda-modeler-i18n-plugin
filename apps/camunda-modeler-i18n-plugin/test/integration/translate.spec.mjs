@@ -6,7 +6,7 @@
 
 import { describe, it, expect, beforeAll } from 'vitest';
 
-import { runInBrowser } from '../lib/browser.mjs';
+import BrowserSandbox from '../lib/BrowserSandbox.mjs';
 
 const ENTRY = 'test/integration/translate-entry.js';
 
@@ -15,8 +15,10 @@ describe('translation in a real editor', () => {
     let english;
 
     beforeAll(async () => {
-        german = await runInBrowser(ENTRY, "window.__inspect('de')");
-        english = await runInBrowser(ENTRY, "window.__inspect('en')");
+        const sandbox = new BrowserSandbox();
+
+        german = await sandbox.run(ENTRY, "window.__inspect('de')");
+        english = await sandbox.run(ENTRY, "window.__inspect('en')");
     }, 120000);
 
     it('loads both editors without a page error', () => {

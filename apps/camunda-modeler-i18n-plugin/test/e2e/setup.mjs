@@ -7,8 +7,8 @@
  * and `plugin.spec.mjs` skips itself when the binary is absent.
  */
 
-import { modelerBinary, CACHE } from './modeler.mjs';
+import ModelerRelease from '../lib/ModelerRelease.mjs';
 
-const binary = modelerBinary({ download: true });
+const binary = new ModelerRelease().executable({ download: true });
 
-console.log(`Camunda Modeler ready:\n  ${binary}\n  cache: ${CACHE}`);
+console.log(`Camunda Modeler ready:\n  ${binary}\n  cache: ${ModelerRelease.CACHE}`);

@@ -15,6 +15,13 @@ module.exports = {
             to: { path: '^apps/camunda-modeler-i18n-plugin' },
         },
         {
+            name: 'utils-are-leaves',
+            comment: 'utils/ hold pure helpers; they must not reach back into the classes.',
+            severity: 'error',
+            from: { path: '(^|/)utils/' },
+            to: { path: '^(packages|apps)/', pathNot: '(^|/)utils/' },
+        },
+        {
             name: 'no-circular',
             comment: 'No circular dependencies.',
             severity: 'error',
