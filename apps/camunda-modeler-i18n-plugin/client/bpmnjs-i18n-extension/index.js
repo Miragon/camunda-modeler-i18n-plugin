@@ -18,16 +18,7 @@ console.log('Please help us translate by creating a pull request!');
 // shows up in the plugin automatically. `value` is the BCP-47 locale code.
 export const options = supportedLanguages.map(({ label, locale }) => ({ value: locale, label }));
 
-// Older plugin versions persisted JS-identifier locale keys (e.g. `pt_br`); the
-// shared library uses BCP-47 codes (`pt-br`). Map the legacy keys so a language
-// a user selected before this change keeps working after the upgrade.
-const legacyLocales = {
-    pt_br: 'pt-br',
-    nl_nl: 'nl-nl',
-    zh_Hans: 'zh-Hans',
-    zh_Hant: 'zh-Hant',
-};
-export const canonicalLocale = (code) => legacyLocales[code] || code;
+export const optionFor = (locale) => options.find((option) => option.value === locale);
 
 export { i18n, supportedLanguages };
 

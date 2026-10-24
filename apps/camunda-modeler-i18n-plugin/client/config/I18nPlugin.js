@@ -1,19 +1,13 @@
 import React, { Fragment, PureComponent } from 'camunda-modeler-plugin-helpers/vendor/react';
 import Fill from 'camunda-modeler-plugin-helpers/components/Fill.js';
 import Select from 'react-select';
-import translateModule, { i18n, options, canonicalLocale } from '../bpmnjs-i18n-extension';
+import translateModule, { i18n, options, optionFor } from '../bpmnjs-i18n-extension';
 import ConfigModal from './ConfigModal';
 import { bpmnMiddleware, dmnMiddleware } from './editorMiddlewares';
+import { defaultLanguage, loadLanguage, saveLanguage } from './languagePreference';
 
-// The default language
-const defaultLanguage = 'en';
-
-//config key
-const configKey = 'i18n';
-
-// react-select renders the whole option, not the locale key.
 const defaultState = {
-    currentLanguage: options.find((option) => option.value === defaultLanguage),
+    currentLanguage: optionFor(defaultLanguage),
     modalOpen: false,
 };
 
@@ -45,21 +39,9 @@ export default class I18nPlugin extends PureComponent {
             middlewares.push(dmnMiddleware(translateModule));
         });
 
-        // retrieve plugin related information from the application configuration
-        config
-            .getForPlugin(configKey, 'config')
-            .then((stored) => {
-                if (!stored || !stored.currentLanguage) {
-                    return;
-                }
-
-                // Older versions persisted a plain string, current ones an option.
-                const storedValue = stored.currentLanguage.value || stored.currentLanguage;
-                const locale = canonicalLocale(storedValue);
-                const option =
-                    options.find((o) => o.value === locale) || defaultState.currentLanguage;
-
-                this.setState({ currentLanguage: option });
+        loadLanguage(config)
+            .then((locale) => {
+                this.setState({ currentLanguage: optionFor(locale) });
 
                 // Switch the shared translator so editors created afterwards
                 // render in the stored language.
@@ -69,9 +51,7 @@ export default class I18nPlugin extends PureComponent {
     }
 
     handleLanguageChanged(language) {
-        this.props.config
-            .setForPlugin(configKey, 'config', { currentLanguage: language })
-            .catch(console.error);
+        saveLanguage(this.props.config, language.value).catch(console.error);
         i18n.setLanguage(language.value);
         this.setState({ currentLanguage: language, modalOpen: true });
     }
