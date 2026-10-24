@@ -19,34 +19,8 @@ import nlNl from './nl-nl/index.js';
 import ja from './ja/index.js';
 import ko from './ko/index.js';
 
-/**
- * A locale code supported by the translations library.
- */
-export type SupportedLocale =
-    | 'de'
-    | 'en'
-    | 'es'
-    | 'fr'
-    | 'it'
-    | 'pt-br'
-    | 'zh-Hans'
-    | 'zh-Hant'
-    | 'ru'
-    | 'nl-nl'
-    | 'ja'
-    | 'ko';
-
-/**
- * Metadata for a single supported language.
- */
-export interface LanguageEntry {
-    readonly label: string;
-    readonly locale: SupportedLocale;
-    readonly dictionary: Record<string, string>;
-}
-
 // All supported languages with display names and dictionaries (dropdown order).
-export const supportedLanguages: readonly LanguageEntry[] = [
+const languages = [
     { label: 'Deutsch', locale: 'de', dictionary: de },
     { label: 'English', locale: 'en', dictionary: en },
     { label: 'Español', locale: 'es', dictionary: es },
@@ -61,18 +35,23 @@ export const supportedLanguages: readonly LanguageEntry[] = [
     { label: '한국어', locale: 'ko', dictionary: ko },
 ] as const;
 
+/**
+ * A locale code supported by the translations library.
+ */
+export type SupportedLocale = (typeof languages)[number]['locale'];
+
+/**
+ * Metadata for a single supported language.
+ */
+export interface LanguageEntry {
+    readonly label: string;
+    readonly locale: SupportedLocale;
+    readonly dictionary: Record<string, string>;
+}
+
+export const supportedLanguages: readonly LanguageEntry[] = languages;
+
 // Map from locale code to merged dictionary for fast lookup.
-export const dictionaries: Record<SupportedLocale, Record<string, string>> = {
-    de,
-    en,
-    es,
-    fr,
-    it,
-    'pt-br': ptBr,
-    'zh-Hans': zhHans,
-    'zh-Hant': zhHant,
-    ru,
-    'nl-nl': nlNl,
-    ja,
-    ko,
-};
+export const dictionaries = Object.fromEntries(
+    languages.map(({ locale, dictionary }) => [locale, dictionary]),
+) as Record<SupportedLocale, Record<string, string>>;

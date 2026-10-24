@@ -59,7 +59,7 @@ npm run test:e2e             # drive the real Modeler with the plugin installed
 ### The shared library (`packages/translations`)
 
 - **`src/languages/<locale>/{bpmn-js,dmn-js,other,camunda-8-cloud,camunda-7-platform}.ts`** — the translation data, one flat `Record<string, string>` per file (English source string → localized value). Split into engine-agnostic core (`bpmn-js`, `dmn-js`, `other`) and per-engine property overlays (`camunda-8-cloud` = C8, `camunda-7-platform` = C7 — the Camunda version is visible in the file name). A per-locale `index.ts` barrel spreads all five into one dictionary. The C7 overlay is generated uniformly across locales; `test/platforms.spec.ts` guards each overlay (parity, placeholders, disjointness). C7 property labels the browser harness can't reach live in `known-runtime-keys.json`.
-- **`src/languages/index.ts`** — the registry: the `SupportedLocale` union, `supportedLanguages` (label + locale + dictionary per language, in dropdown order), and the `dictionaries` map.
+- **`src/languages/index.ts`** — the registry: one list of languages (label + locale + dictionary, in dropdown order) exported as `supportedLanguages`, from which the `SupportedLocale` union and the `dictionaries` map are derived.
 - **`src/TranslateModule.ts`** — `CustomTranslator` (lookup, English fallback, `{param}` interpolation, missing-key logging, `setLanguage`/`getLocale`/`onChange`), a shared **`i18n`** singleton, and the didi **`TranslateModule`** that binds it as the modeler's `translate` / `customTranslator` services.
 - **`src/index.ts`** — public API: `TranslateModule`, `CustomTranslator`, `i18n`, `supportedLanguages`, `dictionaries`, and types `SupportedLocale` / `LanguageEntry`. Built with `tsc` (NodeNext, so relative imports carry explicit `.js` extensions) to `dist/` — gitignored; only the plugin's dist is committed.
 
@@ -67,14 +67,16 @@ npm run test:e2e             # drive the real Modeler with the plugin installed
 
 The plugin entry point (`apps/camunda-modeler-i18n-plugin/index.js`) names the plugin and points at the compiled bundle (`dist/client.js`); webpack bundles `client/index.js` into it (inlining the library, so the shipped plugin is self-contained).
 
-- **`client/config/I18nPlugin.js`** — React component. Renders the language dropdown, subscribes to `bpmn.modeler.configure` / `dmn.modeler.configure` to inject `TranslateModule` as middleware into each editor (DMN into `drd`/`decisionTable`/`literalExpression`), and persists the selection via `config.getForPlugin`/`setForPlugin` under key `"i18n"`. On config load and on change it calls **`i18n.setLanguage(...)`**.
-- **`client/bpmnjs-i18n-extension/index.js`** — the plugin's translation seam. Re-exports the library's `TranslateModule` (default), `i18n` and `supportedLanguages`, and defines plugin-local `options` (dropdown, derived from `supportedLanguages`) and `canonicalLocale` (legacy locale mapping, below). Logs the "help us translate" greeting at load.
+- **`client/config/I18nPlugin.js`** — React component. Renders the language dropdown, subscribes to `bpmn.modeler.configure` / `dmn.modeler.configure` to push the editor middlewares, and persists the selection through `languagePreference`. On config load and on change it calls **`i18n.setLanguage(...)`**.
+- **`client/bpmnjs-i18n-extension/index.js`** — the plugin's translation seam. Re-exports the library's `TranslateModule` (default), `i18n` and `supportedLanguages`, and defines plugin-local `options` / `optionFor` (dropdown, derived from `supportedLanguages`). Logs the "help us translate" greeting at load.
+- **`client/config/languagePreference.js`** — loads and saves the selected locale (`config.getForPlugin`/`setForPlugin` under key `"i18n"`), decoding every format older versions stored and falling back to `en`.
+- **`client/config/editorMiddlewares.js`** — the `bpmn.modeler.configure` / `dmn.modeler.configure` middlewares that add `TranslateModule`, extending each DMN sub-editor's own `additionalModules`.
 - **`client/config/ConfigModal.js`** — modal prompting a restart after a language change.
 
 ### Adding a new language
 
 1. Add `packages/translations/src/languages/<locale>/` with `bpmn-js.ts`, `dmn-js.ts`, `other.ts`, `camunda-8-cloud.ts`, `camunda-7-platform.ts` and an `index.ts` barrel.
-2. Register the locale in `packages/translations/src/languages/index.ts` (add to the `SupportedLocale` union, `supportedLanguages`, and `dictionaries`).
+2. Register the locale in `packages/translations/src/languages/index.ts` (one entry in the `languages` list; the `SupportedLocale` union and `dictionaries` follow).
 
 The plugin dropdown updates automatically. German is the authoritative base; the `/i18n-translate` skill helps fill a language.
 
@@ -83,7 +85,7 @@ The plugin dropdown updates automatically. German is the authoritative base; the
 Library tests live in `packages/translations/test/`; plugin tests in `apps/camunda-modeler-i18n-plugin/test/` (shared helpers in `apps/camunda-modeler-i18n-plugin/test/lib/`):
 
 - **`packages/translations/test/`** — `locales.spec.ts` (key parity vs the English reference, `{placeholder}` preservation, no empty values, zero cross-file duplicate keys) and `TranslateModule.spec.ts` (lookup, fallback, interpolation, language switching, `onChange`). These are the invariants that used to live in the plugin.
-- **`apps/camunda-modeler-i18n-plugin/test/unit/`** — the plugin-side seam only: the dropdown `options` agree with the library and the legacy locale mapping is correct.
+- **`apps/camunda-modeler-i18n-plugin/test/unit/`** — the plugin-side seam only: the dropdown `options` agree with the library, the language preference decodes every stored format, and the editor middlewares keep what other plugins contributed.
 - **`apps/camunda-modeler-i18n-plugin/test/contract/`** — the contract with the Modeler (jsdom). Loads the built `dist/client.js` with `window.react` / `window.components` stubbed and asserts it registers itself; renders `I18nPlugin` to pin the `tab-actions` slot, both editor subscriptions, the middleware shape, and that the stored language reaches `i18n`.
 - **`apps/camunda-modeler-i18n-plugin/test/integration/`** — real editors in Chromium via Playwright. jsdom implements no SVG layout, which is why bpmn-js tests itself in a browser too. Own config/script so `npm test` stays browserless.
 - **`apps/camunda-modeler-i18n-plugin/test/e2e/`** — the real Camunda Modeler via Playwright's Electron runner. Downloads the release named by `supportedModeler`, installs the plugin into a throwaway `--user-data-dir`, and asserts the palette and properties panel are translated. A second spec packs the zip the release attaches and installs _that_, so a packaging mistake fails here. Excluded from `npm test`; skipped when the Modeler is not cached.
@@ -112,8 +114,8 @@ Configured at the root: **ESLint** (`eslint.config.mjs`, flat config — typescr
 
 ## Gotchas
 
-- **Language state is a shared singleton, not prototype mutation.** The old `Translator.prototype.currentLanguage` bridge is gone. `I18nPlugin` calls `i18n.setLanguage(canonicalLocale(stored))` on config load and on change; the didi `TranslateModule` binds that same `i18n` instance into every editor. A language change still needs a modeler restart (bpmn-js re-invokes `translate()` only on re-render), which is why `ConfigModal` prompts it.
-- **Legacy locale codes.** Older plugin versions persisted JS-identifier keys (`pt_br`, `nl_nl`, `zh_Hans`, `zh_Hant`); the library uses BCP-47 (`pt-br`, …). `canonicalLocale` in `client/bpmnjs-i18n-extension/index.js` maps the legacy keys so a previously saved selection keeps working. `apps/camunda-modeler-i18n-plugin/test/unit/locales.spec.mjs` guards it.
+- **Language state is a shared singleton, not prototype mutation.** The old `Translator.prototype.currentLanguage` bridge is gone. `I18nPlugin` calls `i18n.setLanguage(...)` with the locale from `loadLanguage` on config load and on change; the didi `TranslateModule` binds that same `i18n` instance into every editor. A language change still needs a modeler restart (bpmn-js re-invokes `translate()` only on re-render), which is why `ConfigModal` prompts it.
+- **Legacy locale codes.** Older plugin versions persisted JS-identifier keys (`pt_br`, `nl_nl`, `zh_Hans`, `zh_Hant`); the library uses BCP-47 (`pt-br`, …). `client/config/languagePreference.js` maps the legacy keys so a previously saved selection keeps working. `apps/camunda-modeler-i18n-plugin/test/unit/language-preference.spec.mjs` guards it.
 - **No duplicate keys / key parity / placeholders** are enforced in the library by `packages/translations/test/locales.spec.ts`. A key repeated across a locale's four files is silently shadowed by the barrel spread; the test keeps duplicates at zero.
 - **`apps/camunda-modeler-i18n-plugin/dist/` is committed.** After changing plugin _or_ library source, run `npm run build` and commit the updated `dist/client.js` (webpack inlines the library into it). CI's `build` job rebuilds and fails on a stale `apps/camunda-modeler-i18n-plugin/dist/`. Reproducibility rests on the lockfile (which is why the transitive `@emotion` versions react-select pulls in are pinned there).
 - **Node 24 everywhere (24.15 minimum for development).** Active LTS, selected by `.nvmrc` and used by every workflow. Babel 8 and jsdom 30 require recent Node 24 releases. No version matrix on purpose: the shipped bundle is webpack output running inside Electron, so a user's Node version never enters into it.

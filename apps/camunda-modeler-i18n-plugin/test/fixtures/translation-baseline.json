@@ -4,86 +4,74 @@
             "keys": 1039,
             "untranslated": 41,
             "translated": 998,
-            "coverage": 96.1,
-            "duplicates": 0
+            "coverage": 96.1
         },
         "en": {
             "keys": 1039,
             "untranslated": 0,
             "translated": 1039,
             "coverage": 100,
-            "duplicates": 0,
             "reference": true
         },
         "es": {
             "keys": 1039,
             "untranslated": 36,
             "translated": 1003,
-            "coverage": 96.5,
-            "duplicates": 0
+            "coverage": 96.5
         },
         "fr": {
             "keys": 1039,
             "untranslated": 65,
             "translated": 974,
-            "coverage": 93.7,
-            "duplicates": 0
+            "coverage": 93.7
         },
         "it": {
             "keys": 1039,
             "untranslated": 37,
             "translated": 1002,
-            "coverage": 96.4,
-            "duplicates": 0
+            "coverage": 96.4
         },
         "ja": {
             "keys": 1039,
             "untranslated": 23,
             "translated": 1016,
-            "coverage": 97.8,
-            "duplicates": 0
+            "coverage": 97.8
         },
         "ko": {
             "keys": 1039,
             "untranslated": 27,
             "translated": 1012,
-            "coverage": 97.4,
-            "duplicates": 0
+            "coverage": 97.4
         },
         "nl-nl": {
             "keys": 1039,
             "untranslated": 152,
             "translated": 887,
-            "coverage": 85.4,
-            "duplicates": 0
+            "coverage": 85.4
         },
         "pt-br": {
             "keys": 1039,
             "untranslated": 39,
             "translated": 1000,
-            "coverage": 96.2,
-            "duplicates": 0
+            "coverage": 96.2
         },
         "ru": {
             "keys": 1039,
             "untranslated": 32,
             "translated": 1007,
-            "coverage": 96.9,
-            "duplicates": 0
+            "coverage": 96.9
         },
         "zh-Hans": {
             "keys": 1039,
             "untranslated": 27,
             "translated": 1012,
-            "coverage": 97.4,
-            "duplicates": 0
+            "coverage": 97.4
         },
         "zh-Hant": {
             "keys": 1039,
             "untranslated": 27,
             "translated": 1012,
-            "coverage": 97.4,
-            "duplicates": 0
+            "coverage": 97.4
         }
     }
 }

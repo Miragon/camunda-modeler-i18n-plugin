@@ -5,37 +5,18 @@
  * The library's own test suite guards key parity, `{placeholder}` preservation
  * and duplicate keys. Here the drift engine only needs each locale's merged
  * key→value dictionary to compare against the strings the Modeler asks to
- * translate, so this is a thin adapter over the library's `dictionaries` export.
+ * translate.
  */
 
 import { dictionaries } from '@miragon/bpmn-modeler-i18n';
 
-/** @return {String[]} supported locale codes, e.g. ['de', 'en', 'pt-br', ...] */
-export function listLocales() {
-    return Object.keys(dictionaries).sort();
-}
-
-/** Loads a locale's merged dictionary in the shape the drift engine expects. */
-export function loadLocale(locale) {
-    const dictionary = dictionaries[locale];
-
-    if (!dictionary) {
-        throw new Error(`unknown locale: ${locale}`);
-    }
-
-    // `duplicates` / `unresolved` are guarded in the library's own tests now, so
-    // they are always empty here; the drift ratchet reads them as zero.
-    return {
-        locale,
-        dictionary: new Map(Object.entries(dictionary)),
-        duplicates: [],
-        unresolved: [],
-    };
-}
-
-/** @return {Map<String, ReturnType<typeof loadLocale>>} */
+/** @return {Map<String, Map<String, String>>} locale code → merged dictionary, sorted by code */
 export function loadAllLocales() {
-    return new Map(listLocales().map((locale) => [locale, loadLocale(locale)]));
+    return new Map(
+        Object.keys(dictionaries)
+            .sort()
+            .map((locale) => [locale, new Map(Object.entries(dictionaries[locale]))]),
+    );
 }
 
 /** Extracts the `{placeholder}` names a string interpolates. */

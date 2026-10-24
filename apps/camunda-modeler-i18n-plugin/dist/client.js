@@ -2354,9 +2354,9 @@ var weakMemoize = function weakMemoize(func) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   canonicalLocale: () => (/* binding */ canonicalLocale),
 /* harmony export */   "default": () => (__WEBPACK_DEFAULT_EXPORT__),
 /* harmony export */   i18n: () => (/* reexport safe */ _miragon_bpmn_modeler_i18n__WEBPACK_IMPORTED_MODULE_0__.i18n),
+/* harmony export */   optionFor: () => (/* binding */ optionFor),
 /* harmony export */   options: () => (/* binding */ options),
 /* harmony export */   supportedLanguages: () => (/* reexport safe */ _miragon_bpmn_modeler_i18n__WEBPACK_IMPORTED_MODULE_0__.supportedLanguages)
 /* harmony export */ });
@@ -2386,17 +2386,7 @@ const options = _miragon_bpmn_modeler_i18n__WEBPACK_IMPORTED_MODULE_0__.supporte
   value: locale,
   label
 }));
-
-// Older plugin versions persisted JS-identifier locale keys (e.g. `pt_br`); the
-// shared library uses BCP-47 codes (`pt-br`). Map the legacy keys so a language
-// a user selected before this change keeps working after the upgrade.
-const legacyLocales = {
-  pt_br: 'pt-br',
-  nl_nl: 'nl-nl',
-  zh_Hans: 'zh-Hans',
-  zh_Hant: 'zh-Hant'
-};
-const canonicalLocale = code => legacyLocales[code] || code;
+const optionFor = locale => options.find(option => option.value === locale);
 
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (_miragon_bpmn_modeler_i18n__WEBPACK_IMPORTED_MODULE_0__.TranslateModule);
 
@@ -2460,21 +2450,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_select__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-select */ "../../node_modules/react-select/dist/react-select.esm.js");
 /* harmony import */ var _bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../bpmnjs-i18n-extension */ "./client/bpmnjs-i18n-extension/index.js");
 /* harmony import */ var _ConfigModal__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./ConfigModal */ "./client/config/ConfigModal.js");
+/* harmony import */ var _editorMiddlewares__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./editorMiddlewares */ "./client/config/editorMiddlewares.js");
+/* harmony import */ var _languagePreference__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./languagePreference */ "./client/config/languagePreference.js");
 
 
 
 
 
 
-// The default language
-const defaultLanguage = 'en';
 
-//config key
-const configKey = 'i18n';
-
-// react-select renders the whole option, not the locale key.
 const defaultState = {
-  currentLanguage: _bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__.options.find(option => option.value === defaultLanguage),
+  currentLanguage: (0,_bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__.optionFor)(_languagePreference__WEBPACK_IMPORTED_MODULE_6__.defaultLanguage),
   modalOpen: false
 };
 
@@ -2501,27 +2487,17 @@ class I18nPlugin extends camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IM
       const {
         middlewares
       } = event;
-      middlewares.push(this.addModule(_bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__["default"]));
+      middlewares.push((0,_editorMiddlewares__WEBPACK_IMPORTED_MODULE_5__.bpmnMiddleware)(_bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__["default"]));
     });
     subscribe('dmn.modeler.configure', event => {
       const {
         middlewares
       } = event;
-      middlewares.push(this.addDmdModule(_bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__["default"]));
+      middlewares.push((0,_editorMiddlewares__WEBPACK_IMPORTED_MODULE_5__.dmnMiddleware)(_bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__["default"]));
     });
-
-    // retrieve plugin related information from the application configuration
-    config.getForPlugin(configKey, 'config').then(stored => {
-      if (!stored || !stored.currentLanguage) {
-        return;
-      }
-
-      // Older versions persisted a plain string, current ones an option.
-      const storedValue = stored.currentLanguage.value || stored.currentLanguage;
-      const locale = (0,_bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__.canonicalLocale)(storedValue);
-      const option = _bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__.options.find(o => o.value === locale) || defaultState.currentLanguage;
+    (0,_languagePreference__WEBPACK_IMPORTED_MODULE_6__.loadLanguage)(config).then(locale => {
       this.setState({
-        currentLanguage: option
+        currentLanguage: (0,_bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__.optionFor)(locale)
       });
 
       // Switch the shared translator so editors created afterwards
@@ -2529,54 +2505,8 @@ class I18nPlugin extends camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IM
       _bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__.i18n.setLanguage(locale);
     }).catch(console.error);
   }
-
-  /**
-   * Returns a bpmn.modeler.configure middleware
-   * that adds the specific module.
-   *
-   * @param {didi.Module} extensionModule
-   *
-   * @return {Function}
-   */
-  addModule(extensionModule) {
-    return config => {
-      const additionalModules = config.additionalModules || [];
-      return {
-        ...config,
-        additionalModules: [...additionalModules, extensionModule]
-      };
-    };
-  }
-
-  /**
-   * Returns a bpmn.modeler.configure middleware
-   * that adds the specific module.
-   *
-   * @param {didi.Module} extensionModule
-   *
-   * @return {Function}
-   */
-  addDmdModule(extensionModule) {
-    return config => {
-      const additionalModules = config.additionalModules || [];
-      return {
-        ...config,
-        drd: {
-          additionalModules: [...additionalModules, extensionModule]
-        },
-        decisionTable: {
-          additionalModules: [...additionalModules, extensionModule]
-        },
-        literalExpression: {
-          additionalModules: [...additionalModules, extensionModule]
-        }
-      };
-    };
-  }
   handleLanguageChanged(language) {
-    this.props.config.setForPlugin(configKey, 'config', {
-      currentLanguage: language
-    }).catch(console.error);
+    ;(0,_languagePreference__WEBPACK_IMPORTED_MODULE_6__.saveLanguage)(this.props.config, language.value).catch(console.error);
     _bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_3__.i18n.setLanguage(language.value);
     this.setState({
       currentLanguage: language,
@@ -2626,6 +2556,69 @@ class I18nPlugin extends camunda_modeler_plugin_helpers_vendor_react__WEBPACK_IM
     }));
   }
 }
+
+/***/ },
+
+/***/ "./client/config/editorMiddlewares.js"
+/*!********************************************!*\
+  !*** ./client/config/editorMiddlewares.js ***!
+  \********************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   bpmnMiddleware: () => (/* binding */ bpmnMiddleware),
+/* harmony export */   dmnMiddleware: () => (/* binding */ dmnMiddleware)
+/* harmony export */ });
+const dmnEditors = ['drd', 'decisionTable', 'literalExpression'];
+const withModule = (editorConfig = {}, extensionModule) => ({
+  ...editorConfig,
+  additionalModules: [...(editorConfig.additionalModules || []), extensionModule]
+});
+const bpmnMiddleware = extensionModule => config => withModule(config, extensionModule);
+const dmnMiddleware = extensionModule => config => ({
+  ...config,
+  ...Object.fromEntries(dmnEditors.map(editor => [editor, withModule(config[editor], extensionModule)]))
+});
+
+/***/ },
+
+/***/ "./client/config/languagePreference.js"
+/*!*********************************************!*\
+  !*** ./client/config/languagePreference.js ***!
+  \*********************************************/
+(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   defaultLanguage: () => (/* binding */ defaultLanguage),
+/* harmony export */   loadLanguage: () => (/* binding */ loadLanguage),
+/* harmony export */   saveLanguage: () => (/* binding */ saveLanguage)
+/* harmony export */ });
+/* harmony import */ var _bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../bpmnjs-i18n-extension */ "./client/bpmnjs-i18n-extension/index.js");
+
+const defaultLanguage = 'en';
+const configKey = 'i18n';
+const configName = 'config';
+
+// Older plugin versions persisted JS-identifier locale keys; the library uses BCP-47.
+const legacyLocales = {
+  pt_br: 'pt-br',
+  nl_nl: 'nl-nl',
+  zh_Hans: 'zh-Hans',
+  zh_Hant: 'zh-Hant'
+};
+const decode = stored => {
+  const storedValue = stored?.currentLanguage?.value || stored?.currentLanguage;
+  const locale = legacyLocales[storedValue] || storedValue;
+  return (0,_bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_0__.optionFor)(locale) ? locale : defaultLanguage;
+};
+const loadLanguage = config => config.getForPlugin(configKey, configName).then(decode);
+const saveLanguage = (config, locale) => config.setForPlugin(configKey, configName, {
+  currentLanguage: (0,_bpmnjs_i18n_extension__WEBPACK_IMPORTED_MODULE_0__.optionFor)(locale)
+});
 
 /***/ },
 
@@ -16268,7 +16261,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 // All supported languages with display names and dictionaries (dropdown order).
-const supportedLanguages = [{
+const languages = [{
   label: 'Deutsch',
   locale: 'de',
   dictionary: _de_index_js__WEBPACK_IMPORTED_MODULE_0__["default"]
@@ -16317,21 +16310,12 @@ const supportedLanguages = [{
   locale: 'ko',
   dictionary: _ko_index_js__WEBPACK_IMPORTED_MODULE_11__["default"]
 }];
+const supportedLanguages = languages;
 // Map from locale code to merged dictionary for fast lookup.
-const dictionaries = {
-  de: _de_index_js__WEBPACK_IMPORTED_MODULE_0__["default"],
-  en: _en_index_js__WEBPACK_IMPORTED_MODULE_1__["default"],
-  es: _es_index_js__WEBPACK_IMPORTED_MODULE_2__["default"],
-  fr: _fr_index_js__WEBPACK_IMPORTED_MODULE_3__["default"],
-  it: _it_index_js__WEBPACK_IMPORTED_MODULE_4__["default"],
-  'pt-br': _pt_br_index_js__WEBPACK_IMPORTED_MODULE_5__["default"],
-  'zh-Hans': _zh_Hans_index_js__WEBPACK_IMPORTED_MODULE_6__["default"],
-  'zh-Hant': _zh_Hant_index_js__WEBPACK_IMPORTED_MODULE_7__["default"],
-  ru: _ru_index_js__WEBPACK_IMPORTED_MODULE_8__["default"],
-  'nl-nl': _nl_nl_index_js__WEBPACK_IMPORTED_MODULE_9__["default"],
-  ja: _ja_index_js__WEBPACK_IMPORTED_MODULE_10__["default"],
-  ko: _ko_index_js__WEBPACK_IMPORTED_MODULE_11__["default"]
-};
+const dictionaries = Object.fromEntries(languages.map(({
+  locale,
+  dictionary
+}) => [locale, dictionary]));
 
 /***/ },
 

@@ -57,7 +57,7 @@ release-please-config.json, .release-please-manifest.json
 packages/translations/  # @miragon/bpmn-modeler-i18n (tsc → dist, gitignored)
   src/index.ts                       public API
   src/TranslateModule.ts             CustomTranslator + i18n singleton + didi TranslateModule
-  src/languages/index.ts             registry: SupportedLocale, supportedLanguages, dictionaries
+  src/languages/index.ts             registry: one languages list → supportedLanguages, SupportedLocale, dictionaries
   src/languages/<locale>/*.ts        the translation data (4 files + an index.ts barrel per locale)
   test/                              locale invariants + translator behavior
 apps/camunda-modeler-i18n-plugin/    # the Camunda Modeler plugin
@@ -73,7 +73,7 @@ One boundary is enforced by `npm run depcruise` and matters more than it looks: 
 Languages live in the library. The German (`de`) translation is the authoritative base, and the `/i18n-translate` skill can generate a full first pass from it for a native speaker to refine.
 
 1. **Data files.** Add `packages/translations/src/languages/<locale>/` (BCP-47 code, e.g. `pt-br`) with `bpmn-js.ts`, `dmn-js.ts`, `properties-panel.ts`, `other.ts`, and an `index.ts` barrel that spreads the four.
-2. **Register it.** Add the locale to `packages/translations/src/languages/index.ts`: the `SupportedLocale` union, the `supportedLanguages` array (with its native label), and the `dictionaries` map. The plugin's dropdown picks it up automatically.
+2. **Register it.** Add one entry (with its native label) to the `languages` list in `packages/translations/src/languages/index.ts`; the `SupportedLocale` union and the `dictionaries` map are derived from it. The plugin's dropdown picks it up automatically.
 3. **Keep it consistent.** Every locale must cover the same keys as the English reference, preserve `{placeholder}` tokens, and have no duplicate keys — `packages/translations/test/locales.spec.ts` enforces all three. Run `npm test`.
 
 Fixing an existing translation is just editing the value in the relevant `<locale>/*.ts` file. The key is the English source string; don't change it.
