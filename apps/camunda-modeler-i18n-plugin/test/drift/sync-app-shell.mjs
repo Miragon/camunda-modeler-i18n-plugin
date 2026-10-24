@@ -26,9 +26,8 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-import { APP_SHELL_FIXTURE } from '../lib/upstream.mjs';
+import { APP_SHELL_FIXTURE, PLUGIN_ROOT } from '../lib/paths.mjs';
 
-const ROOT = path.resolve(import.meta.dirname, '..', '..');
 const checkOnly = process.argv.includes('--check');
 
 // The linting panel's own strings. Scraped live so a new one can't slip in
@@ -151,4 +150,4 @@ if (checkOnly) {
 }
 
 fs.writeFileSync(APP_SHELL_FIXTURE, JSON.stringify(keys, null, 4) + '\n');
-console.log(`\nWrote ${path.relative(ROOT, APP_SHELL_FIXTURE)}`);
+console.log(`\nWrote ${path.relative(PLUGIN_ROOT, APP_SHELL_FIXTURE)}`);

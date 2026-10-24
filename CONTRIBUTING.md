@@ -56,17 +56,21 @@ tsconfig.base.json, eslint.config.mjs, .prettierrc.json, knip.json, .dependency-
 release-please-config.json, .release-please-manifest.json
 packages/translations/  # @miragon/bpmn-modeler-i18n (tsc → dist, gitignored)
   src/index.ts                       public API
-  src/TranslateModule.ts             CustomTranslator + i18n singleton + didi TranslateModule
+  src/CustomTranslator.ts            the runtime translator class
+  src/i18n.ts                        the shared CustomTranslator singleton
+  src/TranslateModule.ts             didi module binding i18n as translate / customTranslator
   src/languages/index.ts             registry: one languages list → supportedLanguages, SupportedLocale, dictionaries
   src/languages/<locale>/*.ts        the translation data (4 files + an index.ts barrel per locale)
   test/                              locale invariants + translator behavior
 apps/camunda-modeler-i18n-plugin/    # the Camunda Modeler plugin
   index.js, webpack.config.js, dist/ (COMMITTED)
-  client/                            React UI + the bpmnjs-i18n-extension seam onto the library
+  client/{toolbar,language,editors}  React UI, language options/preference, editor wiring (one class per file)
   test/{unit,contract,integration,e2e,drift,lib}
 ```
 
 One boundary is enforced by `npm run depcruise` and matters more than it looks: the **translations library must stay a leaf** — the plugin depends on it, never the reverse — and there must be no dependency cycles. `npm run knip` covers what dependency-cruiser structurally cannot: it works per **export**, so it catches a helper exported but imported nowhere, plus unused dependencies in `package.json`.
+
+**Classes first**: in `packages/translations/src`, `client/` and `test/lib/`, behaviour lives in classes (one per file) and pure helpers go to a `utils/` folder. ESLint rejects top-level functions anywhere else.
 
 ## Adding or fixing a language
 

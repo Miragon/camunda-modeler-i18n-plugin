@@ -15,10 +15,11 @@ import { describe, it, expect, beforeAll, afterAll } from 'vitest';
 
 import { _electron as electron } from 'playwright';
 
-import { modelerBinary, createProfile, cleanup } from './modeler.mjs';
+import ModelerProfile from '../lib/ModelerProfile.mjs';
+import ModelerRelease from '../lib/ModelerRelease.mjs';
+import { PLUGIN_ROOT } from '../lib/paths.mjs';
 
-const ROOT = path.resolve(import.meta.dirname, '..', '..');
-const executablePath = modelerBinary();
+const executablePath = new ModelerRelease().executable();
 
 /** Mirrors the `zip -r ... index.js dist/` step in release.yml. */
 function packRelease() {
@@ -26,7 +27,7 @@ function packRelease() {
     const archive = path.join(workspace, 'plugin.zip');
     const unpacked = path.join(workspace, 'unpacked');
 
-    execFileSync('zip', ['-r', '-q', archive, 'index.js', 'dist/'], { cwd: ROOT });
+    execFileSync('zip', ['-r', '-q', archive, 'index.js', 'dist/'], { cwd: PLUGIN_ROOT });
     fs.mkdirSync(unpacked, { recursive: true });
     execFileSync('unzip', ['-q', archive, '-d', unpacked]);
 
@@ -43,11 +44,11 @@ describe.skipIf(!executablePath)('the released artefact', () => {
     beforeAll(async () => {
         release = packRelease();
 
-        ({ profile } = createProfile({ language: 'de', source: release.unpacked }));
+        profile = ModelerProfile.create({ language: 'de', source: release.unpacked });
 
         app = await electron.launch({
             executablePath,
-            args: [`--user-data-dir=${profile}`, '--disable-remote-interaction=true'],
+            args: [`--user-data-dir=${profile.dir}`, '--disable-remote-interaction=true'],
         });
 
         const window = await app.firstWindow();
@@ -69,11 +70,9 @@ describe.skipIf(!executablePath)('the released artefact', () => {
 
     afterAll(async () => {
         await app?.close().catch(() => {});
-        if (profile) {
-            cleanup(profile);
-        }
+        profile?.remove();
         if (release) {
-            cleanup(release.workspace);
+            fs.rmSync(release.workspace, { recursive: true, force: true });
         }
     });
 

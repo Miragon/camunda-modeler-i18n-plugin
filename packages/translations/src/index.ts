@@ -7,6 +7,8 @@
  * Camunda Modeler i18n plugin and the Miragon BPMN Modeler.
  */
 
-export { TranslateModule, CustomTranslator, i18n } from './TranslateModule.js';
+export { CustomTranslator } from './CustomTranslator.js';
+export { i18n } from './i18n.js';
+export { TranslateModule } from './TranslateModule.js';
 export { supportedLanguages, dictionaries } from './languages/index.js';
 export type { SupportedLocale, LanguageEntry } from './languages/index.js';

@@ -13,15 +13,14 @@ import fs from 'node:fs';
 import os from 'node:os';
 import path from 'node:path';
 
-import { runInBrowser } from '../lib/browser.mjs';
-import { HARVESTED_FIXTURE } from '../lib/upstream.mjs';
+import BrowserSandbox from '../lib/BrowserSandbox.mjs';
+import { HARVESTED_FIXTURE, PLUGIN_ROOT } from '../lib/paths.mjs';
 
-const ROOT = path.resolve(import.meta.dirname, '..', '..');
 const ENTRY = 'test/integration/harvest-entry.js';
 
 const checkOnly = process.argv.includes('--check');
 
-const result = await runInBrowser(ENTRY, 'window.__harvest()');
+const result = await new BrowserSandbox().run(ENTRY, 'window.__harvest()');
 
 if (!result.ok) {
     console.error(`Harvest failed: ${result.error}\n${result.stack ?? ''}`);
@@ -65,7 +64,7 @@ if (checkOnly) {
 }
 
 const payload = {
-    harvestedFrom: JSON.parse(fs.readFileSync(path.join(ROOT, 'package.json'), 'utf8'))
+    harvestedFrom: JSON.parse(fs.readFileSync(path.join(PLUGIN_ROOT, 'package.json'), 'utf8'))
         .supportedModeler,
     node: process.version.replace(/\.\d+$/, ''),
     platform: os.type(),
@@ -73,4 +72,4 @@ const payload = {
 };
 
 fs.writeFileSync(HARVESTED_FIXTURE, JSON.stringify(payload, null, 2) + '\n');
-console.log(`\nWrote ${path.relative(ROOT, HARVESTED_FIXTURE)}`);
+console.log(`\nWrote ${path.relative(PLUGIN_ROOT, HARVESTED_FIXTURE)}`);

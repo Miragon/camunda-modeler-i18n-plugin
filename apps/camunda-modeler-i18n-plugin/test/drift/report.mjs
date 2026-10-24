@@ -11,15 +11,10 @@
 import fs from 'node:fs';
 import path from 'node:path';
 
-import {
-    analyse,
-    format,
-    coverageMarkdown,
-    BASELINE_FILE,
-    RUNTIME_KEYS_FILE,
-} from '../lib/drift.mjs';
+import DriftReport from '../lib/DriftReport.mjs';
+import TranslationDrift from '../lib/TranslationDrift.mjs';
+import { BASELINE_FILE, COVERAGE_FILE, PLUGIN_ROOT, RUNTIME_KEYS_FILE } from '../lib/paths.mjs';
 
-const ROOT = path.resolve(import.meta.dirname, '..', '..');
 const args = process.argv.slice(2);
 
 const has = (flag) => args.includes(flag);
@@ -27,32 +22,30 @@ const has = (flag) => args.includes(flag);
 if (has('--seed-runtime-keys')) {
     // Seeded from the raw analysis; feeding the reported `unknown` list back in
     // would be self-erasing, since it already has the allowlist subtracted.
-    const { unknown } = analyse({ raw: true });
+    const { unknown } = new TranslationDrift({ raw: true }).analyse();
 
     fs.writeFileSync(RUNTIME_KEYS_FILE, JSON.stringify(unknown, null, 4) + '\n');
-    console.log(`Wrote ${unknown.length} keys to ${path.relative(ROOT, RUNTIME_KEYS_FILE)}`);
+    console.log(`Wrote ${unknown.length} keys to ${path.relative(PLUGIN_ROOT, RUNTIME_KEYS_FILE)}`);
 }
 
-let result = analyse();
+let result = new TranslationDrift().analyse();
 
 if (has('--write-coverage')) {
-    const file = path.join(ROOT, 'docs', 'COVERAGE.md');
-
-    fs.mkdirSync(path.dirname(file), { recursive: true });
-    fs.writeFileSync(file, coverageMarkdown(result));
-    console.log(`Coverage written to ${path.relative(ROOT, file)}`);
+    fs.mkdirSync(path.dirname(COVERAGE_FILE), { recursive: true });
+    fs.writeFileSync(COVERAGE_FILE, new DriftReport(result).toCoverageMarkdown());
+    console.log(`Coverage written to ${path.relative(PLUGIN_ROOT, COVERAGE_FILE)}`);
 }
 
 if (has('--update-baseline')) {
     fs.writeFileSync(BASELINE_FILE, JSON.stringify({ locales: result.locales }, null, 4) + '\n');
-    console.log(`Baseline written to ${path.relative(ROOT, BASELINE_FILE)}`);
+    console.log(`Baseline written to ${path.relative(PLUGIN_ROOT, BASELINE_FILE)}`);
 
     // Recompute against the floor we just wrote: the whole point of this flag is
     // to accept the current numbers, so the ratchet must no longer report them as
     // regressions. Genuine problems (missing, parity, placeholders) still block.
-    result = analyse();
+    result = new TranslationDrift().analyse();
 }
 
-console.log(has('--json') ? JSON.stringify(result, null, 2) : format(result));
+console.log(has('--json') ? JSON.stringify(result, null, 2) : new DriftReport(result).toText());
 
 process.exit(result.blocking ? 1 : 0);

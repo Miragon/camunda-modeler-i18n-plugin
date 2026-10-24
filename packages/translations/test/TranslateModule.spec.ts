@@ -5,7 +5,8 @@
 
 import { describe, it, expect, vi } from 'vitest';
 
-import { CustomTranslator, TranslateModule } from '../src/TranslateModule.js';
+import { CustomTranslator } from '../src/CustomTranslator.js';
+import { TranslateModule } from '../src/TranslateModule.js';
 import { dictionaries } from '../src/languages/index.js';
 
 describe('CustomTranslator', () => {
@@ -109,9 +110,11 @@ describe('TranslateModule (didi wiring)', () => {
         expect(TranslateModule.customTranslator[0]).toBe('value');
         expect(TranslateModule.translate[0]).toBe('factory');
 
-        const factory = TranslateModule.translate[1] as (
-            t: CustomTranslator,
-        ) => (s: string, r?: Record<string, string>) => string;
+        const [dependency, factory] = TranslateModule.translate[1] as [
+            string,
+            (t: CustomTranslator) => (s: string, r?: Record<string, string>) => string,
+        ];
+        expect(dependency).toBe('customTranslator');
         const translator = new CustomTranslator();
         translator.setLanguage('de');
         const translate = factory(translator);
