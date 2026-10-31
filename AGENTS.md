@@ -143,5 +143,5 @@ The E2E suite does the same automatically: plugin discovery globs `plugins/<name
 ## Webpack Notes (`apps/camunda-modeler-i18n-plugin/webpack.config.js`)
 
 - React is aliased to `camunda-modeler-plugin-helpers/vendor/react` (the modeler provides React at runtime).
-- Babel 8 with `@babel/preset-react` handles JSX transformation using explicit `runtime: 'classic'` and `development: false` options. The root `babel-loader` override keeps the loader on the same Babel core as the plugin; `test/contract/build-toolchain.spec.mjs` guards against silently resolving an older hoisted core. Update core, preset, and the loader override together.
+- Babel 8 with `@babel/preset-react` handles JSX transformation using explicit `runtime: 'classic'` and `development: false` options. `test/contract/build-toolchain.spec.mjs` guards against the loader silently resolving an older hoisted core. Update core and preset together.
 - Output mode is `development` with `cheap-module-source-map` devtool. The imported library is bundled in, so `dist/client.js` is self-contained.
