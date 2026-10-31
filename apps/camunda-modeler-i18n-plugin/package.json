@@ -56,7 +56,7 @@
         "@babel/preset-react": "8.0.1",
         "@testing-library/react": "16.3.3",
         "babel-loader": "10.1.1",
-        "camunda-bpmn-js": "5.37.0",
+        "camunda-bpmn-js": "5.38.0",
         "camunda-dmn-js": "3.9.0",
         "camunda-modeler-plugin-helpers": "7.0.0",
         "esbuild": "0.28.2",
