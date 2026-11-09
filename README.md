@@ -1,70 +1,80 @@
-# Camunda Modeler i18n
+# Camunda Modeler i18n Plugin
 
-[![npm version](https://img.shields.io/npm/v/@miragon/bpmn-modeler-i18n.svg)](https://www.npmjs.com/package/@miragon/bpmn-modeler-i18n)
+[![GitHub release](https://img.shields.io/github/v/release/Miragon/camunda-modeler-i18n-plugin?filter=plugin-*&label=release)](https://github.com/Miragon/camunda-modeler-i18n-plugin/releases?q=plugin-v&expanded=true)
 [![CI](https://github.com/Miragon/camunda-modeler-i18n-plugin/actions/workflows/ci.yml/badge.svg)](https://github.com/Miragon/camunda-modeler-i18n-plugin/actions/workflows/ci.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
-[![Languages](https://img.shields.io/badge/languages-12-informational.svg)](packages/translations/README.md#supported-locales)
+[![License: MIT](https://img.shields.io/github/license/Miragon/camunda-modeler-i18n-plugin)](LICENSE)
 
-**Speak your language in the Camunda Modeler.** A plugin that adds a language selector to the toolbar and translates the bpmn-js / dmn-js editor UI — palette, context pad, properties panel, and general strings — into 12 languages, switchable on the fly. It's built on a shared, npm-published translations library, and both live in this monorepo.
+![Picking German from the language dropdown in the Camunda Modeler toolbar, restarting, and modelling an end event with German labels](apps/camunda-modeler-i18n-plugin/img/demo.gif)
 
-![Switching the Camunda Modeler from English to German, restarting, and modelling an end event in the German UI](apps/camunda-modeler-i18n-plugin/img/demo.gif)
+**Model BPMN and DMN in the Camunda Modeler in your own language.**
 
-## Install the plugin
-
-Grab the latest [release zip](https://github.com/Miragon/camunda-modeler-i18n-plugin/releases/latest), unzip it into your Camunda Modeler's `resources/plugins/` folder, and restart — a language dropdown appears in the toolbar. Per-OS steps are in the [plugin README](apps/camunda-modeler-i18n-plugin/README.md).
-
-> **Modeling outside the Camunda Modeler?** Miragon also builds the **[Miragon BPMN Modeler](https://miragon.github.io/bpmn-modeler/)** — a BPMN/DMN modeler for VS Code and the browser (Camunda 7 & 8, Operaton, CIB seven), and a second home for these translations. A capable, open alternative when you'd rather model where your code already lives.
+A plugin by Miragon for the Camunda Modeler desktop app that adds a language dropdown to the toolbar and translates the editors into 11 languages besides English.
 
 ## Why
 
-The bpmn-js / dmn-js UI is English out of the box, and every product that embeds it ends up re-translating the same palette and properties-panel strings. Maintaining that per product is wasted effort and a slow drift into inconsistent BPMN/DMN wording — and because an editor depends on none of the libraries whose strings it shows, a Modeler release that adds UI text produces no error anywhere until a user hits an untranslated label.
+The Camunda Modeler's editors only speak English, so a team that thinks in another language translates every label in their heads.
 
-This repo fixes both:
+## What you get
 
-- **One source of truth** — 12 languages, maintained once in `@miragon/bpmn-modeler-i18n` and consumed by the Camunda Modeler plugin, the Miragon BPMN Modeler, and any bpmn-js / dmn-js host. No more copy-pasted dictionaries drifting apart.
-- **Drift-proof** — the build discovers what the Modeler asks to translate (published lists + static extraction + runtime harvesting) and fails when a string has no translation, so new UI text can't ship untranslated.
-- **Consistent** — the same term for the same BPMN/DMN concept everywhere, guarded by key-parity and placeholder checks across all 12 locales.
-- **Easy to extend** — a new language is a folder of files plus one registry entry; the German base and the `/i18n-translate` skill generate a first pass for native speakers to refine.
+- **Every editor panel.** The tool palette, the menu next to a selected element and the properties panel of the BPMN and DMN editors show translated labels.
+- **Camunda 7 and Camunda 8.** The properties of both engines are translated.
+- **Your choice remembered.** The Modeler keeps the language you picked across restarts, per user.
 
-## Packages
+Camunda Forms, the lint messages and the Modeler's own menus and dialogs are not translated yet.
 
-| Package                                               | Path                                                                    | Description                                                                                                                           |
-| ----------------------------------------------------- | ----------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
-| [`@miragon/bpmn-modeler-i18n`](packages/translations) | `packages/translations/`                                                | Shared bpmn-js / dmn-js UI translations plus a didi translate module. TypeScript, published to npm.                                   |
-| Camunda Modeler i18n plugin                           | [`apps/camunda-modeler-i18n-plugin/`](apps/camunda-modeler-i18n-plugin) | The Camunda Modeler client plugin. Adds a language selector to the toolbar and consumes the library. Shipped as a GitHub release zip. |
+## Supported languages
 
-The plugin depends on the library; the library stands alone and can be consumed
-by any bpmn-js / dmn-js host (see [Consuming the library](#consuming-the-library)).
+| In the dropdown          | Language            |
+| ------------------------ | ------------------- |
+| Deutsch                  | German              |
+| English                  | English             |
+| Español                  | Spanish             |
+| Français                 | French              |
+| Italiano                 | Italian             |
+| Português (Brasil)       | Portuguese (Brazil) |
+| 简体中文                 | Simplified Chinese  |
+| 繁体中文                 | Traditional Chinese |
+| Русский                  | Russian             |
+| Nederlands (Netherlands) | Dutch               |
+| 日本語                   | Japanese            |
+| 한국어                   | Korean              |
 
-## Consuming the library
+Some strings stay English; the [coverage report](apps/camunda-modeler-i18n-plugin/docs/COVERAGE.md) shows how complete each language is. Missing your language? [Ask for it in an issue](https://github.com/Miragon/camunda-modeler-i18n-plugin/issues).
 
-Any bpmn-js / dmn-js host can use `@miragon/bpmn-modeler-i18n` directly:
+## Install
 
-```bash
-npm install @miragon/bpmn-modeler-i18n
-```
+The plugin is tested with Camunda Modeler 5.50.1. Your plugins folder depends on your operating system:
 
-```js
-import BpmnModeler from 'bpmn-js/lib/Modeler';
-import { TranslateModule, i18n, supportedLanguages } from '@miragon/bpmn-modeler-i18n';
+| Operating system | Plugins folder                                                    |
+| ---------------- | ----------------------------------------------------------------- |
+| Windows          | `%APPDATA%\camunda-modeler\resources\plugins`                     |
+| macOS            | `~/Library/Application Support/camunda-modeler/resources/plugins` |
+| Linux            | `~/.config/camunda-modeler/resources/plugins`                     |
 
-const modeler = new BpmnModeler({
-    additionalModules: [TranslateModule],
-});
+1. Download `plugin-v<version>.zip` under **Assets** of the newest [plugin release](https://github.com/Miragon/camunda-modeler-i18n-plugin/releases?q=plugin-v&expanded=true).
+2. Create a folder named `i18n` in the plugins folder for your system, and the `resources/plugins` folders above it if they are missing.
+3. Unzip the download into it, so that `index.js` and `dist/` sit directly in `i18n`, not in a subfolder.
 
-// Switch language at runtime (refresh the diagram to re-render existing labels).
-i18n.setLanguage('de');
+To install for everyone on a machine, see Camunda's [search paths](https://docs.camunda.io/docs/components/modeler/desktop-modeler/search-paths/).
 
-// Build a language picker from the registry.
-supportedLanguages.forEach(({ locale, label }) => {
-    // …render an option for each { locale, label }
-});
-```
+## Get started
+
+1. Start the Camunda Modeler, or quit and reopen it if it was running, and open a BPMN or DMN diagram.
+2. Pick your language in the toolbar dropdown.
+3. Save your work and restart the Modeler, as the dialog asks.
+
+## Help and feedback
+
+- **Wrong or missing translation:** [open an issue](https://github.com/Miragon/camunda-modeler-i18n-plugin/issues) with the language and the exact English text.
+- **Plugin does not show up:** compare your folder with the [plugin README](apps/camunda-modeler-i18n-plugin/README.md#installation), then open an issue.
+- **Questions and professional support:** write to [info@miragon.io](mailto:info@miragon.io).
+- **Modelling in VS Code or the browser:** the [Miragon BPMN Modeler](https://miragon.github.io/bpmn-modeler/) uses these translations too.
+- **Your own bpmn-js app:** use the npm package [`@miragon/bpmn-modeler-i18n`](packages/translations/README.md).
 
 ## Contributing
 
-Contributions are very welcome — especially **new languages and native-speaker corrections**, the most valuable thing you can send. Adding a language, the setup and quality gate, the monorepo layout, and the release flow all live in [CONTRIBUTING.md](CONTRIBUTING.md). In short: `npm ci && npm run build && npm test`, Node >= 24.15, and Conventional-Commit PR titles.
+We do not accept outside pull requests right now; suggest translation fixes in an issue instead. How to build and test the plugin is in [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## License
 
-MIT — Copyright (c) 2026 Miragon GmbH. See [LICENSE](LICENSE).
+[MIT](LICENSE) © Miragon GmbH
