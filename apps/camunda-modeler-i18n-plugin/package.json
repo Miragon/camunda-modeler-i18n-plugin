@@ -61,8 +61,8 @@
         "camunda-modeler-plugin-helpers": "7.0.0",
         "esbuild": "0.28.2",
         "jsdom": "31.0.0",
-        "playwright": "1.64.1",
-        "vitest": "5.0.5",
+        "playwright": "1.65.0",
+        "vitest": "5.1.0",
         "webpack": "5.112.2",
         "webpack-cli": "7.3.1"
     }
