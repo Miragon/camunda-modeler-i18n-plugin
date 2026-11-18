@@ -12379,6 +12379,8 @@ __webpack_require__.r(__webpack_exports__);
  * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 const translations = {
+  '"value"': '"Wert"',
+  '"value", "value", ...': '"Wert", "Wert", ...',
   '-': '-',
   'Activate hand tool': 'Handwerkzeug aktivieren',
   'Activate lasso tool': 'Lassowerkzeug aktivieren',
@@ -12419,9 +12421,11 @@ const translations = {
   'Copy output column': 'Ausgabespalte kopieren',
   'Copy rule': 'Regel kopieren',
   'Create decision': 'Entscheidung erzeugen',
+  'Create decision service': 'Entscheidungsservice erzeugen',
   'Create input data': 'Eingabedaten erzeugen',
   'Create knowledge model': 'Wissensmodell erzeugen',
   'Create knowledge source': 'Wissensquelle erstellen',
+  Custom: 'Benutzerdefiniert',
   'Custom values': 'Benutzerdefinierte Werte',
   'Cut input column': 'Eingabespalte ausschneiden',
   'Cut output column': 'Ausgabespalte ausschneiden',
@@ -12464,6 +12468,7 @@ const translations = {
   Exactly: 'Genau',
   Exclude: 'Ausschließen',
   'Expression language:': 'Ausdruckssprache:',
+  'Expression language: {expressionLanguageLabel}': 'Ausdruckssprache: {expressionLanguageLabel}',
   'Expression language': 'Ausdruckssprache',
   'Function kind: {kind}': 'Funktionsart: {kind}',
   'Greater or equals': 'Größer oder gleich',
@@ -12499,6 +12504,7 @@ const translations = {
   'Output label': 'Ausgabebezeichnung',
   'Output label: ': 'Ausgabebezeichnung: ',
   'Output name:': 'Ausgabename:',
+  'Output name: ': 'Ausgabename: ',
   'Output name': 'Ausgabename',
   'Output type': 'Ausgabetyp',
   'Output values': 'Ausgabewerte',
@@ -12544,7 +12550,10 @@ const translations = {
   'View DRD': 'DRD anzeigen',
   When: 'Wenn',
   Yes: 'Ja',
-  value: 'Wert'
+  value: 'Wert',
+  'e.g. { example } ': 'z. B. { example } ',
+  'e.g. { sample }': 'z. B. { sample }',
+  'e.g. {sample}': 'z. B. {sample}'
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (translations);
 
@@ -13558,6 +13567,8 @@ __webpack_require__.r(__webpack_exports__);
  * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 const translations = {
+  '"value"': '"value"',
+  '"value", "value", ...': '"value", "value", ...',
   '-': '-',
   'Activate hand tool': 'Activate hand tool',
   'Activate lasso tool': 'Activate lasso tool',
@@ -13598,9 +13609,11 @@ const translations = {
   'Copy output column': 'Copy output column',
   'Copy rule': 'Copy rule',
   'Create decision': 'Create decision',
+  'Create decision service': 'Create decision service',
   'Create input data': 'Create input data',
   'Create knowledge model': 'Create knowledge model',
   'Create knowledge source': 'Create knowledge source',
+  Custom: 'Custom',
   'Custom values': 'Custom values',
   'Cut input column': 'Cut input column',
   'Cut output column': 'Cut output column',
@@ -13643,6 +13656,7 @@ const translations = {
   Exactly: 'Exactly',
   Exclude: 'Exclude',
   'Expression language:': 'Expression language:',
+  'Expression language: {expressionLanguageLabel}': 'Expression language: {expressionLanguageLabel}',
   'Expression language': 'Expression language',
   'Function kind: {kind}': 'Function kind: {kind}',
   'Greater or equals': 'Greater or equals',
@@ -13678,6 +13692,7 @@ const translations = {
   'Output label': 'Output label',
   'Output label: ': 'Output label: ',
   'Output name:': 'Output name:',
+  'Output name: ': 'Output name: ',
   'Output name': 'Output name',
   'Output type': 'Output type',
   'Output values': 'Output values',
@@ -13723,7 +13738,10 @@ const translations = {
   'View DRD': 'View DRD',
   When: 'When',
   Yes: 'Yes',
-  value: 'value'
+  value: 'value',
+  'e.g. { example } ': 'e.g. { example } ',
+  'e.g. { sample }': 'e.g. { sample }',
+  'e.g. {sample}': 'e.g. {sample}'
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (translations);
 
@@ -14737,6 +14755,8 @@ __webpack_require__.r(__webpack_exports__);
  * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 const translations = {
+  '"value"': '"valor"',
+  '"value", "value", ...': '"valor", "valor", ...',
   '-': '-',
   'Activate hand tool': 'Activar herramienta de mano',
   'Activate lasso tool': 'Activar herramienta de lazo',
@@ -14777,9 +14797,11 @@ const translations = {
   'Copy output column': 'Copiar columna de salida',
   'Copy rule': 'Copiar regla',
   'Create decision': 'Crear decisión',
+  'Create decision service': 'Crear servicio de decisión',
   'Create input data': 'Crear datos de entrada',
   'Create knowledge model': 'Crear modelo de conocimiento',
   'Create knowledge source': 'Crear fuente de conocimiento',
+  Custom: 'Personalizado',
   'Custom values': 'Valores personalizados',
   'Cut input column': 'Cortar columna de entrada',
   'Cut output column': 'Cortar columna de salida',
@@ -14822,6 +14844,7 @@ const translations = {
   Exactly: 'Exactamente',
   Exclude: 'Excluir',
   'Expression language:': 'Lenguaje de expresión:',
+  'Expression language: {expressionLanguageLabel}': 'Lenguaje de expresión: {expressionLanguageLabel}',
   'Expression language': 'Lenguaje de expresión',
   'Function kind: {kind}': 'Tipo de función: {kind}',
   'Greater or equals': 'Mayor o igual',
@@ -14857,6 +14880,7 @@ const translations = {
   'Output label': 'Etiqueta de salida',
   'Output label: ': 'Etiqueta de salida: ',
   'Output name:': 'Nombre de salida:',
+  'Output name: ': 'Nombre de salida: ',
   'Output name': 'Nombre de salida',
   'Output type': 'Tipo de salida',
   'Output values': 'Valores de salida',
@@ -14902,7 +14926,10 @@ const translations = {
   'View DRD': 'Ver DRD',
   When: 'Cuando',
   Yes: 'Sí',
-  value: 'valor'
+  value: 'valor',
+  'e.g. { example } ': 'p. ej. { example } ',
+  'e.g. { sample }': 'p. ej. { sample }',
+  'e.g. {sample}': 'p. ej. {sample}'
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (translations);
 
@@ -15917,6 +15944,8 @@ __webpack_require__.r(__webpack_exports__);
  * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 const translations = {
+  '"value"': '"valeur"',
+  '"value", "value", ...': '"valeur", "valeur", ...',
   '-': '-',
   'Activate hand tool': "Activer l'outil main",
   'Activate lasso tool': "Activer l'outil lasso",
@@ -15957,9 +15986,11 @@ const translations = {
   'Copy output column': 'Copier la colonne de sortie',
   'Copy rule': 'Copier la règle',
   'Create decision': 'Créer une décision',
+  'Create decision service': 'Créer un service de décision',
   'Create input data': "Créer des données d'entrée",
   'Create knowledge model': 'Créer un modèle de connaissance',
   'Create knowledge source': 'Créer une source de connaissance',
+  Custom: 'Personnalisé',
   'Custom values': 'Valeurs personnalisées',
   'Cut input column': "Couper la colonne d'entrée",
   'Cut output column': 'Couper la colonne de sortie',
@@ -16003,6 +16034,7 @@ const translations = {
   Exclude: 'Exclure',
   'Expression language': "Langage d'expression",
   'Expression language:': "Langage d'expression :",
+  'Expression language: {expressionLanguageLabel}': "Langage d'expression : {expressionLanguageLabel}",
   'Function kind: {kind}': 'Type de fonction : {kind}',
   Greater: 'Supérieur à',
   'Greater or equals': 'Supérieur ou égal à',
@@ -16039,6 +16071,7 @@ const translations = {
   'Output label: ': 'Libellé de sortie : ',
   'Output name': 'Nom de la sortie',
   'Output name:': 'Nom de la sortie :',
+  'Output name: ': 'Nom de la sortie : ',
   'Output type': 'Type de sortie',
   'Output values': 'Valeurs de sortie',
   'Paste input column left': "Coller la colonne d'entrée à gauche",
@@ -16085,7 +16118,10 @@ const translations = {
   'Version tag by which this decision can be referenced.': 'Étiquette de version permettant de référencer cette décision.',
   'View DRD': 'Afficher le DRD',
   When: 'Quand',
-  Yes: 'Oui'
+  Yes: 'Oui',
+  'e.g. { example } ': 'p. ex. { example } ',
+  'e.g. { sample }': 'p. ex. { sample }',
+  'e.g. {sample}': 'p. ex. {sample}'
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (translations);
 
@@ -17197,6 +17233,8 @@ __webpack_require__.r(__webpack_exports__);
  * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 const translations = {
+  '"value"': '"valore"',
+  '"value", "value", ...': '"valore", "valore", ...',
   '-': '-',
   'Activate hand tool': 'Attiva strumento mano',
   'Activate lasso tool': 'Attiva strumento lazo',
@@ -17237,9 +17275,11 @@ const translations = {
   'Copy output column': 'Copia colonna di output',
   'Copy rule': 'Copia regola',
   'Create decision': 'Crea decisione',
+  'Create decision service': 'Crea servizio decisionale',
   'Create input data': 'Crea dati di input',
   'Create knowledge model': 'Crea modello di conoscenza',
   'Create knowledge source': 'Crea fonte di conoscenza',
+  Custom: 'Personalizzato',
   'Custom values': 'Valori personalizzati',
   'Cut input column': 'Taglia colonna di input',
   'Cut output column': 'Taglia colonna di output',
@@ -17282,6 +17322,7 @@ const translations = {
   Exactly: 'Esattamente',
   Exclude: 'Escludi',
   'Expression language:': 'Linguaggio di espressione:',
+  'Expression language: {expressionLanguageLabel}': 'Linguaggio di espressione: {expressionLanguageLabel}',
   'Expression language': 'Linguaggio di espressione',
   'Function kind: {kind}': 'Tipo di funzione: {kind}',
   'Greater or equals': 'Maggiore o uguale',
@@ -17317,6 +17358,7 @@ const translations = {
   'Output label': 'Etichetta di output',
   'Output label: ': 'Etichetta di output: ',
   'Output name:': 'Nome di output:',
+  'Output name: ': 'Nome di output: ',
   'Output name': 'Nome di output',
   'Output type': 'Tipo di output',
   'Output values': 'Valori di output',
@@ -17362,7 +17404,10 @@ const translations = {
   'View DRD': 'Visualizza DRD',
   When: 'Quando',
   Yes: 'Sì',
-  value: 'valore'
+  value: 'valore',
+  'e.g. { example } ': 'es. { example } ',
+  'e.g. { sample }': 'es. { sample }',
+  'e.g. {sample}': 'es. {sample}'
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (translations);
 
@@ -18376,6 +18421,8 @@ __webpack_require__.r(__webpack_exports__);
  * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 const translations = {
+  '"value"': '"値"',
+  '"value", "value", ...': '"値", "値", ...',
   '-': '-',
   'Activate hand tool': 'ハンドツールを有効化',
   'Activate lasso tool': 'なげなわツールを有効化',
@@ -18416,9 +18463,11 @@ const translations = {
   'Copy output column': '出力列をコピー',
   'Copy rule': 'ルールをコピー',
   'Create decision': '決定を作成',
+  'Create decision service': '決定サービスを作成',
   'Create input data': '入力データを作成',
   'Create knowledge model': '知識モデルを作成',
   'Create knowledge source': '知識ソースを作成',
+  Custom: 'カスタム',
   'Custom values': 'カスタム値',
   'Cut input column': '入力列を切り取り',
   'Cut output column': '出力列を切り取り',
@@ -18461,6 +18510,7 @@ const translations = {
   Exactly: '正確に',
   Exclude: '除外',
   'Expression language:': '式言語：',
+  'Expression language: {expressionLanguageLabel}': '式言語：{expressionLanguageLabel}',
   'Expression language': '式言語',
   'Function kind: {kind}': '関数の種類: {kind}',
   'Greater or equals': '以上',
@@ -18496,6 +18546,7 @@ const translations = {
   'Output label': '出力ラベル',
   'Output label: ': '出力ラベル： ',
   'Output name:': '出力名：',
+  'Output name: ': '出力名： ',
   'Output name': '出力名',
   'Output type': '出力タイプ',
   'Output values': '出力値',
@@ -18541,7 +18592,10 @@ const translations = {
   'View DRD': 'DRDを表示',
   When: 'いつ',
   Yes: 'はい',
-  value: '値'
+  value: '値',
+  'e.g. { example } ': '例：{ example } ',
+  'e.g. { sample }': '例：{ sample }',
+  'e.g. {sample}': '例：{sample}'
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (translations);
 
@@ -19555,6 +19609,8 @@ __webpack_require__.r(__webpack_exports__);
  * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 const translations = {
+  '"value"': '"값"',
+  '"value", "value", ...': '"값", "값", ...',
   '-': '-',
   'Activate hand tool': '손 도구 활성화',
   'Activate lasso tool': '올가미 도구 활성화',
@@ -19595,9 +19651,11 @@ const translations = {
   'Copy output column': '출력 열 복사',
   'Copy rule': '규칙 복사',
   'Create decision': '결정 생성',
+  'Create decision service': '결정 서비스 생성',
   'Create input data': '입력 데이터 생성',
   'Create knowledge model': '지식 모델 생성',
   'Create knowledge source': '지식 소스 생성',
+  Custom: '사용자 정의',
   'Custom values': '사용자 정의 값',
   'Cut input column': '입력 열 잘라내기',
   'Cut output column': '출력 열 잘라내기',
@@ -19640,6 +19698,7 @@ const translations = {
   Exactly: '정확히',
   Exclude: '제외',
   'Expression language:': '표현식 언어:',
+  'Expression language: {expressionLanguageLabel}': '표현식 언어: {expressionLanguageLabel}',
   'Expression language': '표현식 언어',
   'Function kind: {kind}': '함수 종류: {kind}',
   'Greater or equals': '크거나 같음',
@@ -19675,6 +19734,7 @@ const translations = {
   'Output label': '출력 레이블',
   'Output label: ': '출력 레이블: ',
   'Output name:': '출력 이름:',
+  'Output name: ': '출력 이름: ',
   'Output name': '출력 이름',
   'Output type': '출력 유형',
   'Output values': '출력 값',
@@ -19720,7 +19780,10 @@ const translations = {
   'View DRD': 'DRD 보기',
   When: '언제',
   Yes: '예',
-  value: '값'
+  value: '값',
+  'e.g. { example } ': '예: { example } ',
+  'e.g. { sample }': '예: { sample }',
+  'e.g. {sample}': '예: {sample}'
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (translations);
 
@@ -20735,6 +20798,8 @@ __webpack_require__.r(__webpack_exports__);
  * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 const translations = {
+  '"value"': '"waarde"',
+  '"value", "value", ...': '"waarde", "waarde", ...',
   '-': '-',
   'Activate hand tool': 'Activeer handgereedschap',
   'Activate lasso tool': 'Activeer lassogereedschap',
@@ -20775,9 +20840,11 @@ const translations = {
   'Copy output column': 'Kopieer outputkolom',
   'Copy rule': 'Kopieer regel',
   'Create decision': 'Maak decision',
+  'Create decision service': 'Maak decision service',
   'Create input data': 'Maak input data',
   'Create knowledge model': 'Maak knowledge model',
   'Create knowledge source': 'Maak knowledge source',
+  Custom: 'Aangepast',
   'Custom values': 'Aangepaste waarden',
   'Cut input column': 'Knip inputkolom',
   'Cut output column': 'Knip outputkolom',
@@ -20821,6 +20888,7 @@ const translations = {
   Exclude: 'Uitsluiten',
   'Expression language': 'Expression language',
   'Expression language:': 'Expression language:',
+  'Expression language: {expressionLanguageLabel}': 'Expressietaal: {expressionLanguageLabel}',
   'Function kind: {kind}': 'Functiesoort: {kind}',
   Greater: 'Groter dan',
   'Greater or equals': 'Groter dan of gelijk aan',
@@ -20857,6 +20925,7 @@ const translations = {
   'Output label: ': 'Output-label: ',
   'Output name': 'Outputnaam',
   'Output name:': 'Outputnaam:',
+  'Output name: ': 'Outputnaam: ',
   'Output type': 'Outputtype',
   'Output values': 'Outputwaarden',
   'Paste input column left': 'Plak inputkolom links',
@@ -20903,7 +20972,10 @@ const translations = {
   'Version tag by which this decision can be referenced.': 'Version tag waarmee naar deze decision kan worden verwezen.',
   'View DRD': 'Bekijk DRD',
   When: 'Wanneer',
-  Yes: 'Ja'
+  Yes: 'Ja',
+  'e.g. { example } ': 'bijv. { example } ',
+  'e.g. { sample }': 'bijv. { sample }',
+  'e.g. {sample}': 'bijv. {sample}'
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (translations);
 
@@ -21914,6 +21986,8 @@ __webpack_require__.r(__webpack_exports__);
  * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 const translations = {
+  '"value"': '"valor"',
+  '"value", "value", ...': '"valor", "valor", ...',
   '-': '-',
   'Activate hand tool': 'Ativar ferramenta de mão',
   'Activate lasso tool': 'Ativar ferramenta de laço',
@@ -21954,9 +22028,11 @@ const translations = {
   'Copy output column': 'Copiar coluna de saída',
   'Copy rule': 'Copiar regra',
   'Create decision': 'Criar decisão',
+  'Create decision service': 'Criar serviço de decisão',
   'Create input data': 'Criar dados de entrada',
   'Create knowledge model': 'Criar modelo de conhecimento',
   'Create knowledge source': 'Criar fonte de conhecimento',
+  Custom: 'Personalizado',
   'Custom values': 'Valores personalizados',
   'Cut input column': 'Recortar coluna de entrada',
   'Cut output column': 'Recortar coluna de saída',
@@ -22000,6 +22076,7 @@ const translations = {
   Exclude: 'Excluir do intervalo',
   'Expression language': 'Linguagem de expressão',
   'Expression language:': 'Linguagem de expressão:',
+  'Expression language: {expressionLanguageLabel}': 'Linguagem de expressão: {expressionLanguageLabel}',
   'Function kind: {kind}': 'Tipo de função: {kind}',
   Greater: 'Maior que',
   'Greater or equals': 'Maior ou igual a',
@@ -22036,6 +22113,7 @@ const translations = {
   'Output label: ': 'Rótulo de saída: ',
   'Output name': 'Nome da saída',
   'Output name:': 'Nome da saída:',
+  'Output name: ': 'Nome da saída: ',
   'Output type': 'Tipo de saída',
   'Output values': 'Valores de saída',
   'Paste input column left': 'Colar coluna de entrada à esquerda',
@@ -22082,7 +22160,10 @@ const translations = {
   'Version tag by which this decision can be referenced.': 'Tag de versão pela qual esta decisão pode ser referenciada.',
   'View DRD': 'Visualizar DRD',
   When: 'Quando',
-  Yes: 'Sim'
+  Yes: 'Sim',
+  'e.g. { example } ': 'ex.: { example } ',
+  'e.g. { sample }': 'ex.: { sample }',
+  'e.g. {sample}': 'ex.: {sample}'
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (translations);
 
@@ -23093,6 +23174,8 @@ __webpack_require__.r(__webpack_exports__);
  * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 const translations = {
+  '"value"': '"значение"',
+  '"value", "value", ...': '"значение", "значение", ...',
   '-': '-',
   'Activate hand tool': 'Активировать инструмент «рука»',
   'Activate lasso tool': 'Активировать инструмент «лассо»',
@@ -23133,9 +23216,11 @@ const translations = {
   'Copy output column': 'Копировать выходной столбец',
   'Copy rule': 'Копировать правило',
   'Create decision': 'Создать решение',
+  'Create decision service': 'Создать сервис решений',
   'Create input data': 'Создать входные данные',
   'Create knowledge model': 'Создать модель знаний',
   'Create knowledge source': 'Создать источник знаний',
+  Custom: 'Пользовательские',
   'Custom values': 'Пользовательские значения',
   'Cut input column': 'Вырезать входной столбец',
   'Cut output column': 'Вырезать выходной столбец',
@@ -23179,6 +23264,7 @@ const translations = {
   Exclude: 'Исключить',
   'Expression language': 'Язык выражений',
   'Expression language:': 'Язык выражений:',
+  'Expression language: {expressionLanguageLabel}': 'Язык выражений: {expressionLanguageLabel}',
   'Function kind: {kind}': 'Вид функции: {kind}',
   Greater: 'Больше',
   'Greater or equals': 'Больше или равно',
@@ -23215,6 +23301,7 @@ const translations = {
   'Output label: ': 'Метка выхода: ',
   'Output name': 'Название выхода',
   'Output name:': 'Название выхода:',
+  'Output name: ': 'Название выхода: ',
   'Output type': 'Тип выхода',
   'Output values': 'Выходные значения',
   'Paste input column left': 'Вставить входной столбец слева',
@@ -23261,7 +23348,10 @@ const translations = {
   'Version tag by which this decision can be referenced.': 'Тег версии, по которому можно ссылаться на это решение.',
   'View DRD': 'Показать DRD',
   When: 'Когда',
-  Yes: 'Да'
+  Yes: 'Да',
+  'e.g. { example } ': 'например, { example } ',
+  'e.g. { sample }': 'например, { sample }',
+  'e.g. {sample}': 'например, {sample}'
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (translations);
 
@@ -24273,6 +24363,8 @@ __webpack_require__.r(__webpack_exports__);
  * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 const translations = {
+  '"value"': '"值"',
+  '"value", "value", ...': '"值", "值", ...',
   '-': '-',
   'Activate hand tool': '激活抓手工具',
   'Activate lasso tool': '激活套索工具',
@@ -24312,9 +24404,11 @@ const translations = {
   'Copy output column': '复制输出列',
   'Copy rule': '复制规则',
   'Create decision': '创建决策',
+  'Create decision service': '创建决策服务',
   'Create input data': '创建输入数据',
   'Create knowledge model': '创建知识模型',
   'Create knowledge source': '创建知识来源',
+  Custom: '自定义',
   'Custom values': '自定义值',
   'Cut input column': '剪切输入列',
   'Cut output column': '剪切输出列',
@@ -24358,6 +24452,7 @@ const translations = {
   Exclude: '排除',
   'Expression language': '表达式语言',
   'Expression language:': '表达式语言：',
+  'Expression language: {expressionLanguageLabel}': '表达式语言：{expressionLanguageLabel}',
   'Function kind: {kind}': '函数类型：{kind}',
   Greater: '大于',
   'Greater or equals': '大于或等于',
@@ -24394,6 +24489,7 @@ const translations = {
   'Output label: ': '输出标签： ',
   'Output name': '输出名称',
   'Output name:': '输出名称：',
+  'Output name: ': '输出名称： ',
   'Output type': '输出类型',
   'Output values': '输出值',
   'Paste input column left': '在左侧粘贴输入列',
@@ -24439,7 +24535,10 @@ const translations = {
   'View DRD': '查看 DRD',
   When: '当',
   Then: '然后',
-  Yes: '是'
+  Yes: '是',
+  'e.g. { example } ': '例如：{ example } ',
+  'e.g. { sample }': '例如：{ sample }',
+  'e.g. {sample}': '例如：{sample}'
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (translations);
 
@@ -25452,6 +25551,8 @@ __webpack_require__.r(__webpack_exports__);
  * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 const translations = {
+  '"value"': '"值"',
+  '"value", "value", ...': '"值", "值", ...',
   '-': '-',
   'Activate hand tool': '激活抓手工具',
   'Activate lasso tool': '激活套索工具',
@@ -25491,9 +25592,11 @@ const translations = {
   'Copy output column': '複製輸出列',
   'Copy rule': '複製規則',
   'Create decision': '建立決策',
+  'Create decision service': '建立決策服務',
   'Create input data': '建立輸入資料',
   'Create knowledge model': '建立知識模型',
   'Create knowledge source': '建立知識來源',
+  Custom: '自訂',
   'Custom values': '自定义值',
   'Cut input column': '剪下輸入列',
   'Cut output column': '剪下輸出列',
@@ -25537,6 +25640,7 @@ const translations = {
   Exclude: '排除',
   'Expression language': '運算式語言',
   'Expression language:': '運算式語言：',
+  'Expression language: {expressionLanguageLabel}': '運算式語言：{expressionLanguageLabel}',
   'Function kind: {kind}': '函數類型：{kind}',
   Greater: '大于',
   'Greater or equals': '大于或等于',
@@ -25573,6 +25677,7 @@ const translations = {
   'Output label: ': '輸出標籤： ',
   'Output name': '輸出名稱',
   'Output name:': '輸出名稱：',
+  'Output name: ': '輸出名稱： ',
   'Output type': '輸出類型',
   'Output values': '輸出值',
   'Paste input column left': '在左侧貼上輸入列',
@@ -25618,7 +25723,10 @@ const translations = {
   'View DRD': '查看 DRD',
   When: '当',
   Then: '然后',
-  Yes: '是'
+  Yes: '是',
+  'e.g. { example } ': '例如：{ example } ',
+  'e.g. { sample }': '例如：{ sample }',
+  'e.g. {sample}': '例如：{sample}'
 };
 /* harmony default export */ const __WEBPACK_DEFAULT_EXPORT__ = (translations);
 

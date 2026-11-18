@@ -4,6 +4,8 @@
  * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 const translations: Record<string, string> = {
+    '"value"': '"값"',
+    '"value", "value", ...': '"값", "값", ...',
     '-': '-',
     'Activate hand tool': '손 도구 활성화',
     'Activate lasso tool': '올가미 도구 활성화',
@@ -44,9 +46,11 @@ const translations: Record<string, string> = {
     'Copy output column': '출력 열 복사',
     'Copy rule': '규칙 복사',
     'Create decision': '결정 생성',
+    'Create decision service': '결정 서비스 생성',
     'Create input data': '입력 데이터 생성',
     'Create knowledge model': '지식 모델 생성',
     'Create knowledge source': '지식 소스 생성',
+    Custom: '사용자 정의',
     'Custom values': '사용자 정의 값',
     'Cut input column': '입력 열 잘라내기',
     'Cut output column': '출력 열 잘라내기',
@@ -90,6 +94,7 @@ const translations: Record<string, string> = {
     Exactly: '정확히',
     Exclude: '제외',
     'Expression language:': '표현식 언어:',
+    'Expression language: {expressionLanguageLabel}': '표현식 언어: {expressionLanguageLabel}',
     'Expression language': '표현식 언어',
     'Function kind: {kind}': '함수 종류: {kind}',
     'Greater or equals': '크거나 같음',
@@ -126,6 +131,7 @@ const translations: Record<string, string> = {
     'Output label': '출력 레이블',
     'Output label: ': '출력 레이블: ',
     'Output name:': '출력 이름:',
+    'Output name: ': '출력 이름: ',
     'Output name': '출력 이름',
     'Output type': '출력 유형',
     'Output values': '출력 값',
@@ -173,5 +179,8 @@ const translations: Record<string, string> = {
     When: '언제',
     Yes: '예',
     value: '값',
+    'e.g. { example } ': '예: { example } ',
+    'e.g. { sample }': '예: { sample }',
+    'e.g. {sample}': '예: {sample}',
 };
 export default translations;

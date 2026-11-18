@@ -4,6 +4,8 @@
  * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 const translations: Record<string, string> = {
+    '"value"': '"値"',
+    '"value", "value", ...': '"値", "値", ...',
     '-': '-',
     'Activate hand tool': 'ハンドツールを有効化',
     'Activate lasso tool': 'なげなわツールを有効化',
@@ -44,9 +46,11 @@ const translations: Record<string, string> = {
     'Copy output column': '出力列をコピー',
     'Copy rule': 'ルールをコピー',
     'Create decision': '決定を作成',
+    'Create decision service': '決定サービスを作成',
     'Create input data': '入力データを作成',
     'Create knowledge model': '知識モデルを作成',
     'Create knowledge source': '知識ソースを作成',
+    Custom: 'カスタム',
     'Custom values': 'カスタム値',
     'Cut input column': '入力列を切り取り',
     'Cut output column': '出力列を切り取り',
@@ -90,6 +94,7 @@ const translations: Record<string, string> = {
     Exactly: '正確に',
     Exclude: '除外',
     'Expression language:': '式言語：',
+    'Expression language: {expressionLanguageLabel}': '式言語：{expressionLanguageLabel}',
     'Expression language': '式言語',
     'Function kind: {kind}': '関数の種類: {kind}',
     'Greater or equals': '以上',
@@ -126,6 +131,7 @@ const translations: Record<string, string> = {
     'Output label': '出力ラベル',
     'Output label: ': '出力ラベル： ',
     'Output name:': '出力名：',
+    'Output name: ': '出力名： ',
     'Output name': '出力名',
     'Output type': '出力タイプ',
     'Output values': '出力値',
@@ -173,5 +179,8 @@ const translations: Record<string, string> = {
     When: 'いつ',
     Yes: 'はい',
     value: '値',
+    'e.g. { example } ': '例：{ example } ',
+    'e.g. { sample }': '例：{ sample }',
+    'e.g. {sample}': '例：{sample}',
 };
 export default translations;

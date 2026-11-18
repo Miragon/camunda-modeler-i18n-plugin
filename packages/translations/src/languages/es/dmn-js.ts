@@ -4,6 +4,8 @@
  * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 const translations: Record<string, string> = {
+    '"value"': '"valor"',
+    '"value", "value", ...': '"valor", "valor", ...',
     '-': '-',
     'Activate hand tool': 'Activar herramienta de mano',
     'Activate lasso tool': 'Activar herramienta de lazo',
@@ -44,9 +46,11 @@ const translations: Record<string, string> = {
     'Copy output column': 'Copiar columna de salida',
     'Copy rule': 'Copiar regla',
     'Create decision': 'Crear decisión',
+    'Create decision service': 'Crear servicio de decisión',
     'Create input data': 'Crear datos de entrada',
     'Create knowledge model': 'Crear modelo de conocimiento',
     'Create knowledge source': 'Crear fuente de conocimiento',
+    Custom: 'Personalizado',
     'Custom values': 'Valores personalizados',
     'Cut input column': 'Cortar columna de entrada',
     'Cut output column': 'Cortar columna de salida',
@@ -90,6 +94,8 @@ const translations: Record<string, string> = {
     Exactly: 'Exactamente',
     Exclude: 'Excluir',
     'Expression language:': 'Lenguaje de expresión:',
+    'Expression language: {expressionLanguageLabel}':
+        'Lenguaje de expresión: {expressionLanguageLabel}',
     'Expression language': 'Lenguaje de expresión',
     'Function kind: {kind}': 'Tipo de función: {kind}',
     'Greater or equals': 'Mayor o igual',
@@ -126,6 +132,7 @@ const translations: Record<string, string> = {
     'Output label': 'Etiqueta de salida',
     'Output label: ': 'Etiqueta de salida: ',
     'Output name:': 'Nombre de salida:',
+    'Output name: ': 'Nombre de salida: ',
     'Output name': 'Nombre de salida',
     'Output type': 'Tipo de salida',
     'Output values': 'Valores de salida',
@@ -173,5 +180,8 @@ const translations: Record<string, string> = {
     When: 'Cuando',
     Yes: 'Sí',
     value: 'valor',
+    'e.g. { example } ': 'p. ej. { example } ',
+    'e.g. { sample }': 'p. ej. { sample }',
+    'e.g. {sample}': 'p. ej. {sample}',
 };
 export default translations;

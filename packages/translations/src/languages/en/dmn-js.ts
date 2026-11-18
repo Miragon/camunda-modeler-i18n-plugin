@@ -4,6 +4,8 @@
  * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 const translations: Record<string, string> = {
+    '"value"': '"value"',
+    '"value", "value", ...': '"value", "value", ...',
     '-': '-',
     'Activate hand tool': 'Activate hand tool',
     'Activate lasso tool': 'Activate lasso tool',
@@ -44,9 +46,11 @@ const translations: Record<string, string> = {
     'Copy output column': 'Copy output column',
     'Copy rule': 'Copy rule',
     'Create decision': 'Create decision',
+    'Create decision service': 'Create decision service',
     'Create input data': 'Create input data',
     'Create knowledge model': 'Create knowledge model',
     'Create knowledge source': 'Create knowledge source',
+    Custom: 'Custom',
     'Custom values': 'Custom values',
     'Cut input column': 'Cut input column',
     'Cut output column': 'Cut output column',
@@ -90,6 +94,8 @@ const translations: Record<string, string> = {
     Exactly: 'Exactly',
     Exclude: 'Exclude',
     'Expression language:': 'Expression language:',
+    'Expression language: {expressionLanguageLabel}':
+        'Expression language: {expressionLanguageLabel}',
     'Expression language': 'Expression language',
     'Function kind: {kind}': 'Function kind: {kind}',
     'Greater or equals': 'Greater or equals',
@@ -126,6 +132,7 @@ const translations: Record<string, string> = {
     'Output label': 'Output label',
     'Output label: ': 'Output label: ',
     'Output name:': 'Output name:',
+    'Output name: ': 'Output name: ',
     'Output name': 'Output name',
     'Output type': 'Output type',
     'Output values': 'Output values',
@@ -173,5 +180,8 @@ const translations: Record<string, string> = {
     When: 'When',
     Yes: 'Yes',
     value: 'value',
+    'e.g. { example } ': 'e.g. { example } ',
+    'e.g. { sample }': 'e.g. { sample }',
+    'e.g. {sample}': 'e.g. {sample}',
 };
 export default translations;
