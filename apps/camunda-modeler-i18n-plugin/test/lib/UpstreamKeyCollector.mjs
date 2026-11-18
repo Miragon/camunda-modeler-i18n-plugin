@@ -27,7 +27,7 @@ import {
 } from './paths.mjs';
 import { listJsFiles } from './utils/listJsFiles.mjs';
 import { readJson } from './utils/readJson.mjs';
-import { unquoteJsLiteral } from './utils/unquoteJsLiteral.mjs';
+import { scanTranslateCalls } from './utils/scanTranslateCalls.mjs';
 
 const require = createRequire(import.meta.url);
 
@@ -48,15 +48,6 @@ const SCAN_PACKAGES = [
     '@bpmn-io/properties-panel',
     'bpmn-js-element-templates',
 ];
-
-// The lookbehind rejects `transform: 'translate(' + x` from SVG plumbing and
-// method calls like `canvas.translate(...)`.
-const TRANSLATE_LITERAL = /(?<!['"`.])\btranslate\(\s*('(?:[^'\\]|\\.)*'|"(?:[^"\\]|\\.)*")/g;
-const TRANSLATE_DYNAMIC = /(?<!['"`.])\btranslate\(\s*(?:`|[A-Za-z_$][\w$]*\s*[,)])/g;
-
-// JSDoc documents the translate stub with a worked example that would otherwise
-// be extracted as a real UI string.
-const JSDOC_BLOCK = /\/\*\*[\s\S]*?\*\//g;
 
 export default class UpstreamKeyCollector {
     /**
@@ -106,26 +97,10 @@ export default class UpstreamKeyCollector {
             const keys = new Set();
 
             for (const file of listJsFiles(dir)) {
-                const src = fs.readFileSync(file, 'utf8').replace(JSDOC_BLOCK, '');
+                const found = scanTranslateCalls(fs.readFileSync(file, 'utf8'));
 
-                for (const match of src.matchAll(TRANSLATE_LITERAL)) {
-                    const key = unquoteJsLiteral(match[1]);
-
-                    if (key === null) {
-                        continue;
-                    }
-
-                    // A literal that is only the prefix of a key computed at runtime,
-                    // e.g. `translate('Align elements ' + alignment)`.
-                    if (/^\s*\+/.test(src.slice(match.index + match[0].length))) {
-                        dynamic++;
-                        continue;
-                    }
-
-                    keys.add(key);
-                }
-
-                dynamic += [...src.matchAll(TRANSLATE_DYNAMIC)].length;
+                found.keys.forEach((key) => keys.add(key));
+                dynamic += found.dynamic;
             }
 
             bySource[pkg] = [...keys].sort();

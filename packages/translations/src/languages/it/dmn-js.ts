@@ -4,6 +4,8 @@
  * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 const translations: Record<string, string> = {
+    '"value"': '"valore"',
+    '"value", "value", ...': '"valore", "valore", ...',
     '-': '-',
     'Activate hand tool': 'Attiva strumento mano',
     'Activate lasso tool': 'Attiva strumento lazo',
@@ -44,9 +46,11 @@ const translations: Record<string, string> = {
     'Copy output column': 'Copia colonna di output',
     'Copy rule': 'Copia regola',
     'Create decision': 'Crea decisione',
+    'Create decision service': 'Crea servizio decisionale',
     'Create input data': 'Crea dati di input',
     'Create knowledge model': 'Crea modello di conoscenza',
     'Create knowledge source': 'Crea fonte di conoscenza',
+    Custom: 'Personalizzato',
     'Custom values': 'Valori personalizzati',
     'Cut input column': 'Taglia colonna di input',
     'Cut output column': 'Taglia colonna di output',
@@ -90,6 +94,8 @@ const translations: Record<string, string> = {
     Exactly: 'Esattamente',
     Exclude: 'Escludi',
     'Expression language:': 'Linguaggio di espressione:',
+    'Expression language: {expressionLanguageLabel}':
+        'Linguaggio di espressione: {expressionLanguageLabel}',
     'Expression language': 'Linguaggio di espressione',
     'Function kind: {kind}': 'Tipo di funzione: {kind}',
     'Greater or equals': 'Maggiore o uguale',
@@ -126,6 +132,7 @@ const translations: Record<string, string> = {
     'Output label': 'Etichetta di output',
     'Output label: ': 'Etichetta di output: ',
     'Output name:': 'Nome di output:',
+    'Output name: ': 'Nome di output: ',
     'Output name': 'Nome di output',
     'Output type': 'Tipo di output',
     'Output values': 'Valori di output',
@@ -173,5 +180,8 @@ const translations: Record<string, string> = {
     When: 'Quando',
     Yes: 'Sì',
     value: 'valore',
+    'e.g. { example } ': 'es. { example } ',
+    'e.g. { sample }': 'es. { sample }',
+    'e.g. {sample}': 'es. {sample}',
 };
 export default translations;

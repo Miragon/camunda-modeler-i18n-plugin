@@ -4,6 +4,8 @@
  * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 const translations: Record<string, string> = {
+    '"value"': '"Wert"',
+    '"value", "value", ...': '"Wert", "Wert", ...',
     '-': '-',
     'Activate hand tool': 'Handwerkzeug aktivieren',
     'Activate lasso tool': 'Lassowerkzeug aktivieren',
@@ -44,9 +46,11 @@ const translations: Record<string, string> = {
     'Copy output column': 'Ausgabespalte kopieren',
     'Copy rule': 'Regel kopieren',
     'Create decision': 'Entscheidung erzeugen',
+    'Create decision service': 'Entscheidungsservice erzeugen',
     'Create input data': 'Eingabedaten erzeugen',
     'Create knowledge model': 'Wissensmodell erzeugen',
     'Create knowledge source': 'Wissensquelle erstellen',
+    Custom: 'Benutzerdefiniert',
     'Custom values': 'Benutzerdefinierte Werte',
     'Cut input column': 'Eingabespalte ausschneiden',
     'Cut output column': 'Ausgabespalte ausschneiden',
@@ -90,6 +94,7 @@ const translations: Record<string, string> = {
     Exactly: 'Genau',
     Exclude: 'Ausschließen',
     'Expression language:': 'Ausdruckssprache:',
+    'Expression language: {expressionLanguageLabel}': 'Ausdruckssprache: {expressionLanguageLabel}',
     'Expression language': 'Ausdruckssprache',
     'Function kind: {kind}': 'Funktionsart: {kind}',
     'Greater or equals': 'Größer oder gleich',
@@ -126,6 +131,7 @@ const translations: Record<string, string> = {
     'Output label': 'Ausgabebezeichnung',
     'Output label: ': 'Ausgabebezeichnung: ',
     'Output name:': 'Ausgabename:',
+    'Output name: ': 'Ausgabename: ',
     'Output name': 'Ausgabename',
     'Output type': 'Ausgabetyp',
     'Output values': 'Ausgabewerte',
@@ -174,5 +180,8 @@ const translations: Record<string, string> = {
     When: 'Wenn',
     Yes: 'Ja',
     value: 'Wert',
+    'e.g. { example } ': 'z. B. { example } ',
+    'e.g. { sample }': 'z. B. { sample }',
+    'e.g. {sample}': 'z. B. {sample}',
 };
 export default translations;

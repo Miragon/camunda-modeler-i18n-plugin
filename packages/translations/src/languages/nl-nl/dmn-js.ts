@@ -4,6 +4,8 @@
  * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 const translations: Record<string, string> = {
+    '"value"': '"waarde"',
+    '"value", "value", ...': '"waarde", "waarde", ...',
     '-': '-',
     'Activate hand tool': 'Activeer handgereedschap',
     'Activate lasso tool': 'Activeer lassogereedschap',
@@ -44,9 +46,11 @@ const translations: Record<string, string> = {
     'Copy output column': 'Kopieer outputkolom',
     'Copy rule': 'Kopieer regel',
     'Create decision': 'Maak decision',
+    'Create decision service': 'Maak decision service',
     'Create input data': 'Maak input data',
     'Create knowledge model': 'Maak knowledge model',
     'Create knowledge source': 'Maak knowledge source',
+    Custom: 'Aangepast',
     'Custom values': 'Aangepaste waarden',
     'Cut input column': 'Knip inputkolom',
     'Cut output column': 'Knip outputkolom',
@@ -91,6 +95,7 @@ const translations: Record<string, string> = {
     Exclude: 'Uitsluiten',
     'Expression language': 'Expression language',
     'Expression language:': 'Expression language:',
+    'Expression language: {expressionLanguageLabel}': 'Expressietaal: {expressionLanguageLabel}',
     'Function kind: {kind}': 'Functiesoort: {kind}',
     Greater: 'Groter dan',
     'Greater or equals': 'Groter dan of gelijk aan',
@@ -128,6 +133,7 @@ const translations: Record<string, string> = {
     'Output label: ': 'Output-label: ',
     'Output name': 'Outputnaam',
     'Output name:': 'Outputnaam:',
+    'Output name: ': 'Outputnaam: ',
     'Output type': 'Outputtype',
     'Output values': 'Outputwaarden',
     'Paste input column left': 'Plak inputkolom links',
@@ -176,5 +182,8 @@ const translations: Record<string, string> = {
     'View DRD': 'Bekijk DRD',
     When: 'Wanneer',
     Yes: 'Ja',
+    'e.g. { example } ': 'bijv. { example } ',
+    'e.g. { sample }': 'bijv. { sample }',
+    'e.g. {sample}': 'bijv. {sample}',
 };
 export default translations;

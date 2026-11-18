@@ -4,6 +4,8 @@
  * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 const translations: Record<string, string> = {
+    '"value"': '"值"',
+    '"value", "value", ...': '"值", "值", ...',
     '-': '-',
     'Activate hand tool': '激活抓手工具',
     'Activate lasso tool': '激活套索工具',
@@ -43,9 +45,11 @@ const translations: Record<string, string> = {
     'Copy output column': '複製輸出列',
     'Copy rule': '複製規則',
     'Create decision': '建立決策',
+    'Create decision service': '建立決策服務',
     'Create input data': '建立輸入資料',
     'Create knowledge model': '建立知識模型',
     'Create knowledge source': '建立知識來源',
+    Custom: '自訂',
     'Custom values': '自定义值',
     'Cut input column': '剪下輸入列',
     'Cut output column': '剪下輸出列',
@@ -89,6 +93,7 @@ const translations: Record<string, string> = {
     Exclude: '排除',
     'Expression language': '運算式語言',
     'Expression language:': '運算式語言：',
+    'Expression language: {expressionLanguageLabel}': '運算式語言：{expressionLanguageLabel}',
     'Function kind: {kind}': '函數類型：{kind}',
     Greater: '大于',
     'Greater or equals': '大于或等于',
@@ -126,6 +131,7 @@ const translations: Record<string, string> = {
     'Output label: ': '輸出標籤： ',
     'Output name': '輸出名稱',
     'Output name:': '輸出名稱：',
+    'Output name: ': '輸出名稱： ',
     'Output type': '輸出類型',
     'Output values': '輸出值',
     'Paste input column left': '在左侧貼上輸入列',
@@ -172,5 +178,8 @@ const translations: Record<string, string> = {
     When: '当',
     Then: '然后',
     Yes: '是',
+    'e.g. { example } ': '例如：{ example } ',
+    'e.g. { sample }': '例如：{ sample }',
+    'e.g. {sample}': '例如：{sample}',
 };
 export default translations;

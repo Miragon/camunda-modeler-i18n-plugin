@@ -4,6 +4,8 @@
  * (drd, decisionTable, literalExpression); see I18nPlugin.addDmdModule.
  */
 const translations: Record<string, string> = {
+    '"value"': '"valeur"',
+    '"value", "value", ...': '"valeur", "valeur", ...',
     '-': '-',
     'Activate hand tool': "Activer l'outil main",
     'Activate lasso tool': "Activer l'outil lasso",
@@ -44,9 +46,11 @@ const translations: Record<string, string> = {
     'Copy output column': 'Copier la colonne de sortie',
     'Copy rule': 'Copier la règle',
     'Create decision': 'Créer une décision',
+    'Create decision service': 'Créer un service de décision',
     'Create input data': "Créer des données d'entrée",
     'Create knowledge model': 'Créer un modèle de connaissance',
     'Create knowledge source': 'Créer une source de connaissance',
+    Custom: 'Personnalisé',
     'Custom values': 'Valeurs personnalisées',
     'Cut input column': "Couper la colonne d'entrée",
     'Cut output column': 'Couper la colonne de sortie',
@@ -91,6 +95,8 @@ const translations: Record<string, string> = {
     Exclude: 'Exclure',
     'Expression language': "Langage d'expression",
     'Expression language:': "Langage d'expression :",
+    'Expression language: {expressionLanguageLabel}':
+        "Langage d'expression : {expressionLanguageLabel}",
     'Function kind: {kind}': 'Type de fonction : {kind}',
     Greater: 'Supérieur à',
     'Greater or equals': 'Supérieur ou égal à',
@@ -128,6 +134,7 @@ const translations: Record<string, string> = {
     'Output label: ': 'Libellé de sortie : ',
     'Output name': 'Nom de la sortie',
     'Output name:': 'Nom de la sortie :',
+    'Output name: ': 'Nom de la sortie : ',
     'Output type': 'Type de sortie',
     'Output values': 'Valeurs de sortie',
     'Paste input column left': "Coller la colonne d'entrée à gauche",
@@ -176,5 +183,8 @@ const translations: Record<string, string> = {
     'View DRD': 'Afficher le DRD',
     When: 'Quand',
     Yes: 'Oui',
+    'e.g. { example } ': 'p. ex. { example } ',
+    'e.g. { sample }': 'p. ex. { sample }',
+    'e.g. {sample}': 'p. ex. {sample}',
 };
 export default translations;
