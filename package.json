@@ -51,14 +51,14 @@
     },
     "devDependencies": {
         "@eslint/js": "10.0.1",
-        "dependency-cruiser": "18.7.1",
-        "eslint": "10.14.0",
+        "dependency-cruiser": "18.7.2",
+        "eslint": "10.15.0",
         "eslint-config-prettier": "10.1.8",
         "globals": "17.14.0",
-        "knip": "6.44.1",
-        "prettier": "3.9.10",
+        "knip": "6.45.1",
+        "prettier": "3.10.1",
         "typescript": "6.0.3",
-        "typescript-eslint": "8.72.1"
+        "typescript-eslint": "8.72.2"
     },
     "overrides": {
         "@bpmn-io/properties-panel": "3.48.0",
